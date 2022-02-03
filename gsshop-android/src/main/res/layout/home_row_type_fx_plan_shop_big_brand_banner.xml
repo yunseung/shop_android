@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pranshop_viewpager_height" />
+
+    <FrameLayout
+        android:id="@+id/button_prev"
+        android:layout_width="34dp"
+        android:layout_height="45dp"
+        android:clickable="true"
+        android:layout_marginTop="77dp"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/arrow_left_android" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/button_next"
+        android:layout_width="34dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="77dp"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:padding="10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/arrow_right_android" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/round"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="#ffffff"
+        android:textSize="13sp"
+        android:typeface="sans" />
+</RelativeLayout>

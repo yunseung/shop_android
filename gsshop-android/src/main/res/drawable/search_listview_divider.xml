@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+	<!--20190213 최근검색어 양쪽 끝에 margin 제거, 이민수 매니저님 협의-->
+	<item
+		android:left="0dp"
+		android:right="0dp">
+		
+		<shape android:shape="rectangle" >
+		    <solid android:color="@color/list_item_divider" />
+		</shape>
+	</item>
+	
+</layer-list>

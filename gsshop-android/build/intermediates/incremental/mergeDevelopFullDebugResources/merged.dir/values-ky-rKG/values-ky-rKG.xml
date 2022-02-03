@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="exo_controls_fastforward_description">"Алдыга түрүү"</string>
+    <string name="exo_controls_next_description">"Кийинки трек"</string>
+    <string name="exo_controls_pause_description">"Тындыруу"</string>
+    <string name="exo_controls_play_description">"Ойнотуу"</string>
+    <string name="exo_controls_previous_description">"Мурунку трек"</string>
+    <string name="exo_controls_repeat_all_description">"Баарын кайталоо"</string>
+    <string name="exo_controls_repeat_off_description">"Эч бирин кайталабоо"</string>
+    <string name="exo_controls_repeat_one_description">"Бирөөнү кайталоо"</string>
+    <string name="exo_controls_rewind_description">"Артка түрүү"</string>
+    <string name="exo_controls_shuffle_description">"Аралаштыруу"</string>
+    <string name="exo_controls_stop_description">"Токтотуу"</string>
+    <string msgid="1087209702421076105" name="fingerprint_acquired_imager_dirty">"Манжа изинин сенсору кирдеп калган. Тазалап, кайра аракет кылыңыз."</string>
+    <string msgid="4596546021310923214" name="fingerprint_acquired_insufficient">"Манжа изи иштелбей койду. Кайра аракет кылыңыз."</string>
+    <string msgid="735082772341716043" name="fingerprint_acquired_partial">"Манжа изи жарым-жартылай аныкталды. Кайра аракет кылыңыз."</string>
+    <string msgid="6470642383109155969" name="fingerprint_acquired_too_fast">"Манжа өтө тез жылдырылды. Кайра аракет кылыңыз."</string>
+    <string msgid="59250885689661653" name="fingerprint_acquired_too_slow">"Манжа өтө жай жылды. Кайра аракет кылыңыз."</string>
+    <string msgid="4402024612660774395" name="fingerprint_error_canceled">"Манжа изи иш-аракети жокко чыгарылды."</string>
+    <string msgid="7955921658939936596" name="fingerprint_error_hw_not_available">"Манжа изинин аппараттык камсыздоосу жеткиликтүү эмес."</string>
+    <string msgid="5536934748136933450" name="fingerprint_error_lockout">"Аракеттер өтө көп болду. Кийинчерээк кайра аракет кылыңыз."</string>
+    <string msgid="1055819001126053318" name="fingerprint_error_no_space">"Манжа изин сактоо мүмкүн эмес. Учурдагы манжа изин алып салыңыз."</string>
+    <string msgid="3927186043737732875" name="fingerprint_error_timeout">"Манжа изин күтүү мөөнөтү бүттү. Кайра аракет кылыңыз."</string>
+    <string msgid="6107816084103552441" name="fingerprint_error_unable_to_process">"Кайра бир аракеттениңиз."</string>
+    <string msgid="2690661881608146617" name="fingerprint_not_recognized">"Таанылган жок"</string>
+    <string msgid="4516019619850763049" name="fingerprints">"Манжа издери:"</string>
+</resources>

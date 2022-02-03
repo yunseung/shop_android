@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 컨텐츠(상품이미지, 남은시간, 상품명, 가격등) 영역 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_view"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimg_tv" />
+
+    <View
+        android:id="@+id/dim"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#33000000" />
+
+    <Button
+        android:id="@+id/play"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/mc_ic_play_an"
+        android:contentDescription="@string/common_play"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="63dp"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="5.62dp"
+        android:paddingBottom="5.62dp"
+        android:background="@drawable/tv_gradation"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/GoodsTitleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:ellipsize="none"
+            android:layout_toLeftOf="@+id/txt_price"
+            android:paddingRight="16.87dp"/>
+    </RelativeLayout>
+
+    <gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout
+        android:id="@+id/tv_live_progress"
+        android:layout_width="128dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/txt_remain_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:paddingLeft="51dp"
+            android:textColor="#ffffff"
+            android:typeface="sans"
+            android:textSize="14dp" />
+    </gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        layout="@layout/count_layout" />
+
+</RelativeLayout>

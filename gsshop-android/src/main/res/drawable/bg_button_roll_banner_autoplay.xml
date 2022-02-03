@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- GS Super 자동 롤링 이미지 배너 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/pause_super_an" />
+    <item android:drawable="@drawable/play_super_an" />
+</selector>

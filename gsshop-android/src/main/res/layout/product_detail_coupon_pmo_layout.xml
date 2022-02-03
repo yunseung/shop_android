@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:visibility="visible">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/bg_coupon_white"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_pmo_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:singleLine="true" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_coupon_download_area"
+        android:layout_width="142dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_coupon_green"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:id="@+id/tv_pmo_prc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btn_download_coupon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/icon_download_coupon" />
+    </LinearLayout>
+
+</LinearLayout>

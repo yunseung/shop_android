@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 메인 앱위젯 -->
+<!-- 전체 배경 이미지에 margin이 들어가 있기 때문에(그림자 포함) layout에 따로 margin을 넣지는 않음 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/appwidget_bg"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/tv_play"
+                android:src="@drawable/appwidget_tv_product_sample" />
+
+            <ImageView
+                android:id="@+id/btn_play_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/tv_play"
+                android:src="@drawable/btn_appwidget_play" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp" >
+
+            <ImageButton
+                android:id="@+id/btn_order_tv_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_appwidget_tv_order"
+                android:contentDescription="@string/order_product" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_tab_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_appwidget_search"
+            android:contentDescription="@string/menu_search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_tab_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_appwidget_cart"
+            android:contentDescription="@string/menu_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_tab_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_appwidget_order"
+            android:contentDescription="@string/menu_order" />
+    </LinearLayout>
+
+</LinearLayout>

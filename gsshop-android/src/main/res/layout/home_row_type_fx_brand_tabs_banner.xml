@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e5e5" />
+    
+    <View
+        android:layout_marginTop="@dimen/brand_menu_staggered_outer_space"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/event_menu_staggered_outer_space"
+        android:layout_marginRight="@dimen/event_menu_staggered_outer_space"
+        android:background="#e5e5e5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_tab_height"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="@dimen/event_menu_staggered_outer_space"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/view_tabs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <Button
+                android:id="@+id/category_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/home_brand_list_category_1"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <Button
+                android:id="@+id/category_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/home_brand_list_category_2"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <Button
+                android:id="@+id/category_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/home_brand_list_category_3"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <Button
+                android:id="@+id/category_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/home_brand_list_category_4"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/event_menu_staggered_outer_space"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/event_menu_staggered_outer_space"
+        android:layout_marginRight="@dimen/event_menu_staggered_outer_space"
+        android:background="#e5e5e5" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="@dimen/brand_menu_staggered_outer_space"
+        android:background="#D9D9D9" />
+
+</LinearLayout>

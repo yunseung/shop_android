@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
+
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+
+        -->
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+
+    <style name="NoTitleNullBackgroundTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <!-- intro 화면에서 사용하는 theme -->
+    <style name="NoTitleBlackBackgroundTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+    
+    <!-- push popup theme -->
+    <style name="push_popup_theme" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Home Pull to Refresh Progressbar Theme -->
+    <style name="HomeThemeProgressbar" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowTitleStyle">@null</item>
+    </style>
+
+    <!-- 대분류매장 > 상품더보기 Theme -->
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- 프로모션 애니메이션 정의 -->
+    <style name="PromotionAni">
+        <item name="android:windowEnterAnimation">@anim/anim_pm_slide_up</item>
+    </style>
+    
+    <!-- 갤러리 관련 -->
+    <!-- dialog animation -->
+    <style name="SlideInRightAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_right</item>
+    </style>
+    
+    <style name="text_category">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="text_live_category">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    
+    <!-- 검색 레이어 fade 애니메이션. -->
+    <style name="FadeInAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="SlideUpAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+    <style name="MobileLivePrdSlide">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <!-- 숏방 -->
+    <style name="Shortbang" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 바로구매 -->
+    <style name="DirectOrder" parent="android:Theme.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="MobileLivePrd">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    <!-- set the rounded drawable as background to your bottom sheet -->
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+    <style name="navigation_menu" parent="@style/Theme.AppCompat.Light">
+        <!--<item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="Autocomplete" parent="Widget.AppCompat.Light.AutoCompleteTextView">
+        <item name="android:autoCompleteTextViewStyle">@style/Widget.AppCompat.AutoCompleteTextView</item>
+        <item name="android:dropDownItemStyle">@style/Widget.AppCompat.Spinner.DropDown</item>
+        <item name="android:background">@android:color/darker_gray</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/black</item>
+    </style>
+
+    <style name="BrightcoveControlBar.Custom">
+        <item name="brightcove_seekbar">true</item>
+        <item name="brightcove_vr_mode">false</item>
+    </style>
+
+    <style name="BrightcoveControlBar.Custom.FullScreen" parent="BrightcoveControlBar.Custom">
+        <!-- If you would like to station the control bar at the bottom of the screen, set false  -->
+        <item name="brightcove_align">false</item>
+    </style>
+
+    <style name="BrightcoveControlBar.Custom.VodShop">
+        <item name="brightcove_seekbar">false</item>
+        <item name="brightcove_vr_mode">false</item>
+    </style>
+
+    <declare-styleable name="CropImageView">
+        <attr format="reference|color" name="highlightColor"/>
+        <attr format="boolean" name="showThirds" value="false"/>
+        <attr format="boolean" name="showCircle" value="false"/>
+        <attr name="showHandles" value = "1">
+            <enum name="changing" value="0"/>
+            <enum name="always" value="1"/>
+            <enum name="never" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- RecyclerTabLayout -->
+    <style name="rtl_RecyclerTabLayout">
+        <item name="rtl_tabMinWidth">72dp</item>
+        <item name="rtl_tabMaxWidth">264dp</item>
+        <item name="rtl_tabIndicatorColor">?attr/colorAccent</item>
+        <item name="rtl_tabIndicatorHeight">2dp</item>
+        <item name="rtl_tabPaddingStart">12dp</item>
+        <item name="rtl_tabPaddingEnd">12dp</item>
+        <item name="rtl_tabBackground">?attr/selectableItemBackground</item>
+        <item name="rtl_tabTextAppearance">@style/rtl_RecyclerTabLayout.Tab</item>
+        <item name="rtl_tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+    <style name="rtl_RecyclerTabLayout.Tab">
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="underline">
+        <item name="android:background">@drawable/underline_f9d106_op20</item>
+    </style>
+
+    <style name="tabStyleExclusive">
+        <item name="android:textSize">17sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

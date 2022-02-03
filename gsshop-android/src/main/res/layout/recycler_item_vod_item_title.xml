@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recycler_item_top"
+    android:layout_width="match_parent"
+    android:layout_height="37dp">
+
+    <!-- 방송종류 -->
+    <ImageView
+        android:id="@+id/img_brd_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"/>
+
+    <!-- 방송시간 -->
+    <TextView
+        android:id="@+id/promotionName"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_toRightOf="@+id/img_brd_kind"
+        android:layout_centerVertical="true"
+        android:textColor="#111111"
+        android:textSize="14dp"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        />
+
+    <!-- 구매수량 -->
+    <TextView
+        android:id="@+id/txt_sales_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="#888888"
+        android:textSize="14dp"
+        android:typeface="sans"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        />
+
+</RelativeLayout>

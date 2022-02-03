@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="8dp"
+    android:layout_marginBottom="12dp"
+    android:duplicateParentState="false"
+    android:orientation="horizontal"
+    android:paddingLeft="14dp"
+    android:visibility="visible">
+
+    <!-- 상단라인 -->
+    <View
+        android:id="@+id/view_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:background="#f4f4f4" />
+
+    <FrameLayout
+        android:id="@+id/fl_image_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_top_line">
+
+        <ImageView
+            android:id="@+id/iv_card_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_top_line"
+        android:layout_toRightOf="@id/fl_image_area"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_card_pmo_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="24dp"
+            android:layout_weight="10000"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+
+        <!-- 더보기 아이콘 -->
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/chevron_right_4"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

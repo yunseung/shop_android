@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 검색/카테고리 화면 검색바 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_tab_height"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp">
+            
+        <FrameLayout
+            android:id="@+id/search_border_layout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/main_search_box" >
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:paddingLeft="38dp"
+                android:paddingRight="68dp"
+                android:singleLine="true"
+                android:contentDescription="@string/search_description_search_main"
+                android:hint="@string/search_description_search_main"
+                android:textColor="#111111"
+                android:textColorHint="#888888"
+                android:textCursorDrawable="@drawable/search_edit_text_cursor"
+                android:textSize="16dp"
+                android:typeface="sans" >
+                <requestFocus />
+            </EditText>
+
+            <LinearLayout
+                android:id="@+id/lay_delete_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:layout_gravity="right|center_vertical"
+                android:gravity="center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/btn_delete_keyword"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:contentDescription="@android:string/cancel"
+                    android:src="@drawable/ic_close2_720"
+                    android:clickable="false"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:contentDescription="@android:string/search_go"
+                android:layout_marginLeft="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_search2_and" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/close_text"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/search_bar_close"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textSize="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

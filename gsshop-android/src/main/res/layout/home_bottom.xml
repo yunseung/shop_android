@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- footer 위의 listView item이 9dp의 bottom padding을 가지고 있어서 footer의 top padding 16.87dp에서 9dp 뺐음 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_home_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e5e5e5"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:orientation="vertical" >
+
+        <!-- 푸터 상단 영역 (이용안내 | 개인정보 취급...) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_bottom_terms"
+                style="@style/font_main_info_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_header_terms" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="@dimen/horizontal_bar_padding"
+                android:layout_marginRight="@dimen/horizontal_bar_padding"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:id="@+id/txt_bottom_private"
+                style="@style/font_main_info_private"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_header_private"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="@dimen/horizontal_bar_padding"
+                android:layout_marginRight="@dimen/horizontal_bar_padding"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:id="@+id/txt_bottom_teen"
+                style="@style/font_main_info_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_header_teen" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="@dimen/horizontal_bar_padding"
+                android:layout_marginRight="@dimen/horizontal_bar_padding"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:id="@+id/txt_bottom_push"
+                style="@style/font_main_info_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_header_push"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+        <!-- 사명/대표자 -->
+        <TextView
+            style="@style/font_main_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:text="@string/layout_main_info_ceo"
+            android:textStyle="bold" />
+
+        <!-- 주소정보 등 -->
+        <TextView
+            style="@style/font_main_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/layout_main_info" />
+
+        <!-- 콜센터 -->
+        <LinearLayout
+            android:id="@+id/txt_bottom_call_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:contentDescription="콜센터로 전화걸기"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/phone_footer" />
+
+        </LinearLayout>
+
+        <!-- 사업자정보, 채무보증 등 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/txt_bottom_trade_commission"
+                style="@style/font_main_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_sub1" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="@dimen/horizontal_bar_padding"
+                android:layout_marginRight="@dimen/horizontal_bar_padding"
+                android:background="#d9d9d9" />
+
+            <TextView
+                android:id="@+id/txt_bottom_debt_guarantee"
+                style="@style/font_main_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/layout_main_info_sub2" />
+
+        </LinearLayout>
+
+        <!-- family site -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/font_main_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/layout_main_info_family"
+                android:text="@string/layout_main_info_family" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/arrow_footer" />
+
+            <ImageView
+                android:id="@+id/iv_family_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="텐바이텐"
+                android:src="@drawable/family_10" />
+
+            <ImageView
+                android:id="@+id/iv_family_npoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:contentDescription="GS앤포인트"
+                android:src="@drawable/npoint_android" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

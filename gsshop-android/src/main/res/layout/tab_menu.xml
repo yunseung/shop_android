@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 메인 탭메뉴 -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_tab_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:baselineAligned="true"
+    android:gravity="bottom">
+
+    <ImageView
+        android:id="@+id/iv_tooltip_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.0"
+        android:background="@drawable/tooltip_category"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_tab_category"
+        app:layout_constraintLeft_toRightOf="@id/btn_tab_home"
+        app:layout_constraintRight_toLeftOf="@id/fl_tab_my_shop" />
+
+
+    <LinearLayout
+        android:id="@+id/btn_tab_home"
+        style="@style/TabMenuLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_tab_category">
+
+        <ImageView
+            style="@style/TabMenuImageViewNew"
+            android:background="@null"
+            android:nextFocusLeft="@+id/btn_tab_myshop"
+            android:src="@drawable/btn_menu_home" />
+
+        <TextView
+            style="@style/TabMenuTextView"
+            android:text="@string/menu_home" />
+    </LinearLayout>
+
+    <!-- 카테고리 -->
+
+    <LinearLayout
+        android:id="@+id/btn_tab_category"
+        style="@style/TabMenuLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_tab_home"
+        app:layout_constraintRight_toLeftOf="@id/fl_tab_my_shop">
+
+        <ImageView
+            style="@style/TabMenuImageViewNew"
+            android:src="@drawable/btn_menu_category" />
+
+        <TextView
+            style="@style/TabMenuTextView"
+            android:text="@string/menu_category" />
+    </LinearLayout>
+
+    <!-- 마이쇼핑 -->
+
+    <FrameLayout
+        android:id="@+id/fl_tab_my_shop"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_tab_category"
+        app:layout_constraintRight_toLeftOf="@id/btn_tab_zzim_prd">
+
+        <LinearLayout
+            android:id="@+id/btn_tab_myshop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/TabMenuImageViewNew"
+                android:src="@drawable/btn_menu_myshop" />
+
+            <TextView
+                style="@style/TabMenuTextView"
+                android:text="@string/menu_myshop" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_myshop_badge"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginLeft="12.5dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/bg_ee1f60_radius25" />
+    </FrameLayout>
+
+    <!-- 찜목록 -->
+
+    <LinearLayout
+        android:id="@+id/btn_tab_zzim_prd"
+        style="@style/TabMenuLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/fl_tab_my_shop"
+        app:layout_constraintRight_toLeftOf="@id/btn_tab_last_prd">
+
+        <ImageView
+            style="@style/TabMenuImageViewNew"
+            android:src="@drawable/btn_menu_zzim_prd" />
+
+        <TextView
+            style="@style/TabMenuTextView"
+            android:text="@string/menu_zzim_prd" />
+    </LinearLayout>
+
+    <!-- 최근본상품 -->
+
+    <LinearLayout
+        android:id="@+id/btn_tab_last_prd"
+        style="@style/TabMenuLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_tab_zzim_prd"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/last_prd_default"
+            style="@style/TabMenuImageViewNew"
+            android:src="@drawable/btn_menu_last_prd"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/last_prd_circle"
+            android:layout_width="29dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:visibility="gone">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_tab_last_prd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/circle_background" />
+
+        </FrameLayout>
+
+        <TextView
+            style="@style/TabMenuTextView"
+            android:text="@string/menu_last_prd" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#4d000000"
+        app:layout_constraintTop_toTopOf="@id/btn_tab_zzim_prd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

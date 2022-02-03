@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 날방 생방송 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="#fde5e3"
+        android:orientation="vertical">
+
+        <!-- 생방송 상단 영역 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vh_blank_space_middle"
+            android:paddingRight="@dimen/vh_blank_space_middle">
+
+            <!-- 생방송시간 동안 (방송중 노출) -->
+            <LinearLayout
+                android:id="@+id/lay_live_onair_top"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#afffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ico_noti"
+                        android:layout_marginRight="7dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_live_onair_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:textColor="#444444"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 생방송 3시간 전 이전 (표시할 UI 없음) -->
+
+            <!-- 생방송 3시간 전 ~ 생방송시간 (남은시간 표시) -->
+            <LinearLayout
+                android:id="@+id/lay_3h_after_top"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#afffffff" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="14dp"
+                        android:src="@drawable/ico_noti"
+                        android:layout_marginRight="7dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nalbang_3h_remain_head"
+                        android:textColor="#111111"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txt_before_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#ff2c36"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nalbang_3h_remain_tail"
+                        android:textColor="#111111"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- 생방송 컨텐츠 영역 (상품이미지) -->
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vh_blank_space_middle"
+            android:paddingRight="@dimen/vh_blank_space_middle">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/root_view"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/main_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/noimg_tv" />
+
+                <TextView
+                    android:id="@+id/txt_play_time"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:textColor="#ffffff"
+                    android:background="#99222222"
+                    android:layout_width="49dp"
+                    android:layout_height="21dp" />
+
+                <gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout
+                    android:id="@+id/tv_live_progress"
+                    android:layout_width="112dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/onair_nalbang"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/txt_remain_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="16.87dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:paddingLeft="45dp"
+                        android:textColor="#ffffff"
+                        android:typeface="sans"
+                        android:textSize="12dp" />
+                </gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!-- 생방송 하단 영역 (상품정보) -->
+        <LinearLayout
+            android:id="@+id/lay_bottom_prd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible"
+            android:paddingLeft="@dimen/vh_blank_space_middle"
+            android:paddingRight="@dimen/vh_blank_space_middle">
+
+            <!-- 상품정보가 있는 VOD -->
+            <RelativeLayout
+                android:id="@+id/lay_bottom_prd_vp"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:paddingTop="9dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/txt_title_vp"
+                    style="@style/NalbangLiveTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+
+                    <TextView
+                        android:id="@+id/txt_badge_per"
+                        style="@style/NalbangLiveDiscountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom" />
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        style="@style/NalbangDealPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:maxLength="23"
+                        android:gravity="bottom"
+                        android:layout_marginBottom="1dp"
+                        android:lineSpacingExtra="0dip"
+                        android:layout_marginLeft="8dp"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_price_unit"
+                        style="@style/NalbangDealPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:paddingBottom="1.8dp"
+                        android:textSize="15sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txt_base_price"
+                        style="@style/NalbangDealPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#888888"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:lineSpacingExtra="0dip"
+                        android:layout_marginLeft="9dp"
+                        android:paddingBottom="3dp"
+                        android:textSize="11.5dp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/txt_base_price_unit"
+                        style="@style/NalbangDealPriceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#888888"
+                        android:gravity="bottom"
+                        android:layout_gravity="bottom"
+                        android:lineSpacingExtra="0dip"
+                        android:paddingBottom="3dp"
+                        android:textSize="11.5dp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:id="@+id/valueInfo"
+                        style="@style/DealValueInfoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:lineSpacingExtra="0dip"
+                        android:layout_marginLeft="7dp"
+                        android:gravity="bottom"
+                        android:paddingBottom="2dp"
+                        android:layout_toRightOf="@+id/layout_base_price" />
+
+                    <ImageView
+                        android:id="@+id/delivery_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3.2dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_sales_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="#666666"
+                    android:textStyle="normal"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <!-- 상품정보가 없는 VOD -->
+            <RelativeLayout
+                android:id="@+id/lay_bottom_prd_vnp"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:paddingTop="9dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/txt_title_vnp"
+                    style="@style/NalbangLiveTitleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- 생방송 하단 영역 (날톡정보) -->
+        <LinearLayout
+            android:id="@+id/lay_bottom_naltalk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_naltalk"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/live_logo"
+                        android:layout_width="58dp"
+                        android:layout_height="19dp"
+                        android:background="@drawable/ico_talk"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="fitXY" />
+
+                    <TextSwitcher
+                        android:id="@+id/switcher"
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/live_logo"
+                        android:layout_centerVertical="true"
+                        android:textColor="#444444"
+                        android:gravity="center" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/line_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/home_row_bottom_shadow" />
+
+</LinearLayout>

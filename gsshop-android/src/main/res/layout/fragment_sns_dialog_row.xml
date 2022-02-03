@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 공유하기 팝업의 리스트뷰에 들어갈 아이템 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/sns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50.62dp"
+        android:background="@drawable/bg_list_item" >
+
+        <ImageView
+            android:id="@+id/sns_icon"
+            android:layout_width="33.75dp"
+            android:layout_height="33.75dp"
+            android:layout_marginLeft="79.87dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/sns_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22.5dp"
+            android:layout_gravity="center"
+            android:textColor="#444444"
+            android:typeface="sans"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

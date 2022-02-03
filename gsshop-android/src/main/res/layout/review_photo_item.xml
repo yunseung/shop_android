@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 상품평 작성/수정 화면에서 하단 첨부이미지 리스트 영역 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_photo"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/view_photo"
+        android:layout_width="58dip"
+        android:layout_height="58dip"
+        android:background="@drawable/bg_button1" >
+
+        <!-- 사용자가 선택한 이미지 -->
+        <ImageView
+            android:id="@+id/img_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@android:string/untitled"
+            android:scaleType="fitXY"
+            android:src="@drawable/app_icon" />
+
+        <!-- 삭제버튼 -->
+        <ImageButton
+            android:id="@+id/btn_delete_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:background="@android:color/transparent"
+            android:contentDescription="@android:string/untitled"
+            android:src="@drawable/btn_delete_review" />
+    </FrameLayout>
+
+    <!-- 피커 이미지 -->
+    <ImageButton
+        android:id="@+id/btn_take_photo"
+        android:layout_width="58dip"
+        android:layout_height="58dip"
+        android:background="@drawable/bg_button1"
+        android:contentDescription="@android:string/untitled"
+        android:scaleType="fitXY"
+        android:src="@drawable/review_take_photo" />
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- gs super 롤링배너 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imageview_1_img"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:visibility="gone" />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/view_pager_beauty_sld"
+        android:layout_width="match_parent"
+        android:layout_height="187dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:labelFor="@+id/text_count">
+
+        <FrameLayout
+            android:id="@+id/btn_preview"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true"
+            android:contentDescription="이전 상품">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/chevron_left_beauty"
+                android:labelFor="@+id/button_prev" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/btn_next"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right|center_vertical"
+            android:clickable="true"
+            android:contentDescription="다음 상품">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/chevron_right_beauty"
+                android:labelFor="@+id/button_next" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/btn_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_rounded"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:id="@+id/text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="1 / 6"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:typeface="sans" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
+

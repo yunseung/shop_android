@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- layout 안쪽으로 약간의 그림자가 생기는 background -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFFFF" />
+
+            <stroke
+                android:width="1dp"
+                android:color="#e5e5e5" />
+
+            <corners android:radius="0px" />
+        </shape>
+    </item>
+    <!-- <item
+        android:top="1px"
+        android:left="1px"
+        android:right="1px"
+        android:bottom="1px">
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFFFF" />
+
+            <stroke
+                android:width="1px"
+                android:color="#E5E5E5" />
+
+            <corners android:radius="0px" />
+        </shape>
+    </item> -->
+
+</layer-list>

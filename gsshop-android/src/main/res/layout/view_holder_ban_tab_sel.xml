@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!--    <com.google.android.material.tabs.TabLayout-->
+<!--        android:id="@+id/tab_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="52dp"-->
+<!--        android:background="@color/black"-->
+<!--        app:tabIndicatorColor="@color/white"-->
+<!--        app:tabIndicator="@drawable/tab_selector_exclusive"-->
+<!--        app:tabSelectedTextColor="@color/white"-->
+<!--        app:tabTextColor="#b3ffffff"-->
+<!--        app:tabTextAppearance="@style/tabStyleExclusive"-->
+<!--        >-->
+
+<!--    </com.google.android.material.tabs.TabLayout>-->
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/btn_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                />
+            <RadioButton
+                android:id="@+id/btn_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="false"
+                />
+        </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:clickable="false"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            >
+            <gsshop.mobile.v2.home.shop.renewal.views.TextViewWithListenerWhenOnDraw
+                android:id="@+id/txt_btn_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/underline_btn_01"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@id/txt_btn_01"
+                android:layout_alignRight="@+id/txt_btn_01"
+                android:background="@color/white"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="5dp"
+            >
+            <gsshop.mobile.v2.home.shop.renewal.views.TextViewWithListenerWhenOnDraw
+                android:id="@+id/txt_btn_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/tab_unselected"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                />
+            <View
+                android:id="@+id/underline_btn_02"
+                android:layout_width="wrap_content"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@id/txt_btn_02"
+                android:layout_alignRight="@+id/txt_btn_02"
+                android:background="@color/white"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation=""-->
+<!--    >-->
+<!--</LinearLayout>-->

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="4dp"
+    android:paddingVertical="1dp"
+    android:background="@drawable/bg_mobilelive_chatlist_msg"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:typeface="sans"
+        android:textSize="14dp"
+        android:textColor="#ffde00"
+        android:textStyle="bold"
+        android:text="나"/>
+
+    <gsshop.mobile.v2.support.ui.CharacterWrapTextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:typeface="sans"
+        android:textSize="14dp"
+        android:textColor="#ffffff"
+        android:text="사고싶어요!"/>
+
+</LinearLayout>

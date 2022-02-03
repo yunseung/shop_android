@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- [1]green [2]pink [3]aqua -->
+    <integer-array name="pms_title_color_map">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>3</item>
+        <item>2</item>
+        <item>2</item>
+        <item>2</item>
+        <item>1</item>
+        <item>2</item>
+    </integer-array>
+    
+    <!-- URL 축약서비스 리스트 -->
+    <string-array name="url_shortcut_list">
+        <item>http://goo.gl</item>
+        <item>http://gsshop.com/jsp/jseis_withLGeshop.jsp</item>
+        <item>http://m.gsshop.com/jsp/jseis_withLGeshop.jsp</item>
+        <item>http://bit.ly</item>
+        <item>http://tinyurl.com</item>
+        <item>http://smtp55.gsshop.com</item>
+        <item>http://smtp56.gsshop.com</item>
+    </string-array>
+
+    <!-- 브레이즈 팝업 안뜨는곳 리스트 -->
+    <string-array name="no_braze_list">
+        <item>https://m.gsshop.com/member/gSShopJoinFormAndConditionAgreeNa.gs</item>
+        <item>https://m.gsshop.com/member/gSShopJoinFormAndConditionAgreeKa.gs</item>
+        <item>https://m.gsshop.com/member/emailMemJoinForm.gs</item>
+    </string-array>
+
+    <!-- SNS 정보 (제목) -->
+    <string-array name="sns_title">
+        <item>카카오톡</item>
+        <item>카카오스토리</item>
+        <item>페이스북</item>
+        <item>트위터</item>
+        <item>SMS</item>
+        <item>핀터레스트</item>
+    </string-array>
+
+    <!-- SNS 정보 (호출할 스크립트명) -->
+    <string-array name="sns_script">
+        <item>shareKakaoTalk</item>
+        <item>shareKakaoStory</item>
+        <item>shareFacebook</item>
+        <item>shareTwitter</item>
+        <item>shareSms</item>
+        <item>sharePinterest</item>
+    </string-array>
+
+    <!-- SNS 정보 (아이콘정보) -->
+    <integer-array name="sns_icon">
+        <item>@drawable/sns_kakaotalk</item>
+        <item>@drawable/sns_kakaostory</item>
+        <item>@drawable/sns_facebook</item>
+        <item>@drawable/sns_twitter</item>
+        <item>@drawable/sns_sms</item>
+        <item>@drawable/sns_pinterest</item>
+    </integer-array>
+
+    <!-- 새로고침 하면 안되는 URL List -->
+    <string-array name="url_nonreload_list">
+        <item>/error/prd/errorByActionType/redirect</item>
+
+        <item>/cert/ocpCert.gs</item>
+        <item>/member/addMem.gs</item>
+
+        <item>/member/snsLoginByCelphn.gs</item>
+        <item>/member/snsLoginByCelphnLoginId.gs</item>
+
+        <item>/member/gsnpntMemLogin.gs</item>
+        <item>/member/gsnpntMemJoinSave.gs</item>
+        <item>/member/gsnpntMemRslt.gs</item>
+        <item>/member/gsnpntMemAgreeSave.gs</item>
+
+        <item>/member/gSShopJoinFormAndConditionAgree.gs</item>
+
+        <item>/member/tvLoginTrmsAgreeSave.gs</item>
+        <item>/member/tvLoginTry.gs</item>
+        <item>/member/tvLogIn.gs.gs</item>
+        <item>/event/tvOutlet.jsp</item>
+        <item>/ordsht/ordSht.gs</item>
+    </string-array>
+
+    <string-array name="email_domain">
+        <item><![CDATA["@"]]>naver.com</item>
+        <item><![CDATA["@"]]>hanmail.net</item>
+        <item><![CDATA["@"]]>gmail.com</item>
+        <item><![CDATA["@"]]>nate.com</item>
+        <item><![CDATA["@"]]>hotmail.com</item>
+        <item><![CDATA["@"]]>korea.com</item>
+        <item><![CDATA["@"]]>dreamwiz.com</item>
+        <item><![CDATA["@"]]>empal.com</item>
+        <item><![CDATA["@"]]>paran.com</item>
+        <item><![CDATA["@"]]>freechal.com</item>
+    </string-array>
+
+
+</resources>

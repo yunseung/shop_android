@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 제품 평점(rating) layout의 background -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#CCCCCC" />
+
+            <stroke
+                android:width="1px"
+                android:color="#F4F4F4" />
+
+            <corners android:radius="1px" />
+        </shape>
+    </item> -->
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#FFFFFF" />
+
+            <stroke
+                android:width="1dp"
+                android:color="#d6d6d6" />
+            
+        </shape>
+    </item>
+
+</layer-list>

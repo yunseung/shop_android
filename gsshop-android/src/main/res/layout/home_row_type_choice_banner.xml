@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lay_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+           <include
+               android:id="@+id/product_01"
+               android:layout_width="0dp"
+               android:layout_height="288dp"
+               android:layout_weight="1"
+               layout="@layout/home_row_type_choice_item"
+               />
+
+            <View
+                style="@style/GSSuperBorderVertical"
+                />
+
+            <include
+                android:id="@+id/product_02"
+                android:layout_width="0dp"
+                android:layout_height="288dp"
+                android:layout_weight="1"
+                layout="@layout/home_row_type_choice_item"
+                />
+
+        </LinearLayout>
+
+        <View
+            style="@style/GSSuperBorder"
+            android:layout_alignParentBottom="true"
+            />
+
+        <include
+            android:id="@+id/view_go_brand_shop"
+            layout="@layout/row_gs_choice_go_brand_shop"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <!-- NO DATA 영역 -->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/lay_no_data"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/preparation_android" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/txt_msg"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:includeFontPadding="false"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/common_no_sale"-->
+            <!--android:textColor="#666666"-->
+            <!--android:textSize="14dp"-->
+            <!--android:typeface="sans"-->
+            <!--/>-->
+
+    <!--</LinearLayout>-->
+
+</FrameLayout>

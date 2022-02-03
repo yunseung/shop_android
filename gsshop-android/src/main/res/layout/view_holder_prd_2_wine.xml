@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#19111111"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/view_add_sub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="@dimen/renewal_bestshop_margin">
+
+<!--        <gsshop.mobile.v2.home.shop.flexible.wine.common.ViewWineItem-->
+<!--            android:id="@+id/content_frame_1st"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1" />-->
+
+<!--        <View-->
+<!--            android:layout_width="10dp"-->
+<!--            android:layout_height="match_parent" />-->
+
+<!--        <gsshop.mobile.v2.home.shop.flexible.wine.common.ViewWineItem-->
+<!--            android:id="@+id/content_frame_2nd"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1" />-->
+
+    </LinearLayout>
+
+
+</LinearLayout>

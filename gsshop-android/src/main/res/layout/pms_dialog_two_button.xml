@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 버튼 두개 가진 커스텀 팝업 다이얼로그 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"    
+    android:gravity="center"
+    android:minHeight="@dimen/dialog_height"
+    android:orientation="vertical" >
+    <!-- android:layout_width="@dimen/dialog_width" -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_push_popup"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/pms_btn_cancel"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_push_popup_close"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/logo_push_popup" />
+        <TextView
+            android:id="@+id/pms_txt_message"
+            android:layout_width="wrap_content"
+            android:minWidth="200dp"
+            android:layout_height="0px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="@string/push_dialog_two_button_txt_message"
+            android:textColor="#676767"
+            android:textSize="17sp" />       
+		<Button
+        	android:id="@+id/pms_btn_ok"
+			android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="16dp"
+			android:layout_marginTop="9dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_push_popup_confirm" 
+		/>
+    </LinearLayout>
+</LinearLayout>

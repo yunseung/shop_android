@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 비디오 플레이어 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--mute, 축소 버튼-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+            <gsshop.mobile.v2.util.TouchAreaExpand
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/check_vod_port_mute"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:background="@drawable/selector_best_deal_player_mute"
+                    android:button="@android:color/transparent" />
+            </gsshop.mobile.v2.util.TouchAreaExpand>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <gsshop.mobile.v2.util.TouchAreaExpand
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <View
+                    android:id="@+id/view_vod_port_zoom"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:background="@drawable/ic_zoom_s_android" />
+            </gsshop.mobile.v2.util.TouchAreaExpand>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_vod_port_remained_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="15dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffff"
+        android:textSize="14dp"
+        android:typeface="sans" />
+
+    <ImageView
+        android:id="@+id/close_vod"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:src="@drawable/delete_file"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:visibility="gone"/>
+
+</FrameLayout>
+

@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\149f78a2f9113ac8095dd2826bdc6d5e\\material-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,177",
+                        "endColumns": "121,133",
+                        "endOffsets": "172,306"
+                    },
+                    "to": {
+                        "startLines": "17,18",
+                        "startColumns": "4,4",
+                        "startOffsets": "1070,1192",
+                        "endColumns": "121,133",
+                        "endOffsets": "1187,1321"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\957b788443faebfd2a49899d369d1918\\appcompat-1.1.0\\res\\values-large-v4\\values-large-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,532,636",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,631,747"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,15,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,185,256,326,396,464,850,954",
+                        "endColumns": "58,70,70,69,69,67,67,103,115",
+                        "endOffsets": "109,180,251,321,391,459,527,949,1065"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-large\\dimens.xml",
+                    "from": {
+                        "startLines": "11,8,4,14,16,19",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "309,217,110,391,467,548",
+                        "endColumns": "52,61,57,47,47,48",
+                        "endOffsets": "357,274,163,434,510,592"
+                    },
+                    "to": {
+                        "startLines": "9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "532,585,647,705,753,801",
+                        "endColumns": "52,61,57,47,47,48",
+                        "endOffsets": "580,642,700,748,796,845"
+                    }
+                }
+            ]
+        }
+    ]
+}

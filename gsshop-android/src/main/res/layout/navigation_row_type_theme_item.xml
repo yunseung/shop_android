@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_theme"
+    android:layout_width="158dp"
+    android:layout_height="170dp"
+    >
+
+    <!-- 카드뷰이기 때문에 카드뷰의 Elevation 만큼 상하 좌우 간격이 존재 한다-->
+    <gsshop.mobile.v2.menu.navigation.Views.CardViewReduceWhenSelected
+        android:id="@+id/cardview_theme"
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:background="@drawable/no_img_550"
+        android:layout_gravity="top|center_horizontal"
+        card:cardCornerRadius="4dp"
+        card:cardElevation="2dp"
+        android:layout_margin="6dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            >
+
+            <ImageView
+                android:id="@+id/imageview_theme"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                card:layout_constraintDimensionRatio="1:1"
+                card:layout_constraintTop_toTopOf="parent"
+                android:scaleType="fitXY"
+                android:clickable="false"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                card:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center_vertical"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:id="@+id/txt_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:textColor="#111111"
+                    android:typeface="sans"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:text="나혼자산다."
+                    />
+
+                <TextView
+                    android:id="@+id/txt_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    android:textColor="#99111111"
+                    android:typeface="sans"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:text="신나고재미있게"
+                    />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </gsshop.mobile.v2.menu.navigation.Views.CardViewReduceWhenSelected>
+
+</FrameLayout>
+
+

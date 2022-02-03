@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_tv_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!--
+        딜 이미지 부분
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#ffffff">
+
+
+            <ImageView
+                android:id="@+id/main_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16.5dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/l_type_image_border" />
+
+            <LinearLayout
+                android:id="@+id/time_deal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#59000000"
+                android:contentDescription="@string/home_sold_out"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/time_title"
+                    android:text="@string/time_deal_time"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/time_text"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <!-- 좌측 상단 뱃지-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 좌측 상단 뱃지-->
+                <ImageView
+                    android:id="@+id/top_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- 우측 하단 뱃지-->
+            <LinearLayout
+                android:id="@+id/right_bottom_brd_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/renewal_bg_broad_remain_time"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="24dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:visibility="gone">
+
+                <gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout
+                    android:id="@+id/cv_remain_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_broad_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:55"
+                        android:gravity="top"
+                        android:includeFontPadding="false"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:typeface="sans"
+                        android:visibility="gone"/>
+
+                </gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout>
+
+                <ImageView
+                    android:id="@+id/btn_hasvod"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/ic_play" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_comment"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#66111111"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_alignLeft="@+id/main_img"
+                android:layout_alignRight="@id/main_img"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                android:typeface="sans" />
+
+        </RelativeLayout>
+
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 공백 표시. -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:background="@color/white"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/transparent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"/>
+
+</LinearLayout>

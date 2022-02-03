@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:textColor="#444444"
+    android:typeface="sans"
+    android:maxLines="1"
+    android:ellipsize="end"
+    android:text="TV로 보는 것보다 재미있네요~~"
+    android:textSize="13sp" />
+

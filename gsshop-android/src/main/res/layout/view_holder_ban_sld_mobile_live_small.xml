@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/imageview_1_img"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="6dp"
+        android:visibility="gone" />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp" />
+
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/bg_66000000_rounded_radius_15"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="9dp"
+        android:paddingVertical="2dp"
+        android:text="1 / 6"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:typeface="sans" />
+</FrameLayout>
+

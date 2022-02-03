@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TV쇼핑 생방송 영역 (젤리빈 미만) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/spe_img"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:visibility="gone"
+        android:scaleType="fitXY" />
+
+    <RelativeLayout
+        android:id="@+id/image_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 동영상 플레이어 영역 -->
+        <fragment
+            android:id="@+id/sch_media_player"
+            android:name="gsshop.mobile.v2.support.media.exoplayer.ExoMediaPlayerControllerFragment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scd_live_height" />
+
+        <!-- 컨텐츠(상품이미지) 영역 -->
+        <include
+            layout="@layout/recycler_item_tv_schedule_main_live_common_contents" />
+
+    </RelativeLayout>
+
+    <!-- 하단 버튼(편성표, 구매하기...) 영역 -->
+    <include
+        layout="@layout/recycler_item_tv_schedule_main_live_common_button" />
+
+</LinearLayout>

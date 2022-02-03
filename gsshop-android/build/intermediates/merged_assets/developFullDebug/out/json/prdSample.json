@@ -1,0 +1,786 @@
+{
+  "DocumentVersion":"1.6",
+  "prdCd": "56324409",
+  "prdTypeCode": "PRD",
+  "adultCertYN": "N",
+  "adultCertRetUrl": "",
+  "isAdultPrdYN": "N",
+  "components":
+  [      
+    {
+        "templateType":"mediaInfo",
+        "imgUrlList": [
+            "http://image.gsshop.com/image/56/32/56324409_L1.jpg",
+            "http://image.gsshop.com/image/56/32/56324409_L2.jpg",
+            "http://image.gsshop.com/image/56/32/56324409_L3.jpg",
+            "http://image.gsshop.com/image/56/32/56324409_L4.jpg",
+            "http://image.gsshop.com/image/56/32/56324409_L6.jpg"
+        ],
+        "testVideoList": [
+          {
+            "videoId가로" : "6124228127001",
+            "videoId세로": "6032037590001",
+            "videoId정사각": "6135325000001",
+            "videoUrl세로" : "http://mobilevod.gsshop.com/shortbroad/201709/1504228134378_1.mp4",
+            "videoUrl가로" : "http://mobilevod.gsshop.com/livedeal/20180111162257786043.mp4"
+          }
+        ],
+        "videoList": [
+            {
+              "videoPreImgUrl": "",
+              "videoUrl": "http://mobilevod.gsshop.com/livedeal/20180111162257786043.mp4",
+              "videoId": "6124228127001",
+              "liveYN" : "N",
+              "startTime": "20200229100000",
+              "endTime": "20200229100000"
+            }
+          ]
+    },
+    {
+        "templateType":"broadInfo",
+        "broadChannelImgUrl": "http://image.gsshop.com/images/img_prd_detail02.png",
+        "broadText" : [
+            {
+                "textValue": "지금 방송중",
+                "textColor": "111111",
+                "boldYN": "N",
+                "size": "12",
+                "linkUrl": ""
+            }
+        ],
+        "applyBroadAlamYN": "Y",
+        "runUrl":"http://방송알림 실행 url"
+    },
+    {
+      "templateType":"saleInfo",
+        "preCalcurateUrl": "미리계산버튼링크 URL",
+        "shareRunUrl": "공유하기 toapp처리 Url",
+        "favoriteYN": "Y",
+        "favoriteRunUrl": "찜 요청 API",
+        "priceInfo": [
+          {
+            "textValue": "월",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "16",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "101,000,123",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "22",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "~",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "20",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "99,999,123,122",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "22",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "원",
+            "textColor": "111111",
+            "boldYN": "N",
+            "size": "16",
+            "linkUrl": ""
+          }
+        ],
+        "discountInfo": {
+          "discountText":[
+            {
+              "textValue": "100",
+              "textColor": "ec2261",
+              "boldYN": "Y",
+              "size": "14",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "%",
+              "textColor": "ec2261",
+              "boldYN": "N",
+              "size": "14",
+              "linkUrl": ""
+            }
+          ],
+          "originPrc": [
+            {
+              "textValue": "10,000,123,343,422원",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            }
+          ],
+          "discountInfoUrl": "툴팁정보 URL"
+        },
+      "additionalList": [
+        [
+          {
+            "textValue": "유류할증료 / 제세공과금 포함(유가/환율에 따라 변경 가능) 인데 내가 어느정도 까지 늘어날꺼 같냐?앙??",
+            "textColor": "a3111111",
+            "boldYN": "N",
+            "size": "14",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "울라랄!!",
+            "textColor": "ec2261",
+            "boldYN": "Y",
+            "size": "18",
+            "linkUrl": ""
+          }
+        ],
+        [
+          {
+            "textValue": "두번째줄 여행사:하나투어?",
+            "textColor": "a3111111",
+            "boldYN": "Y",
+            "size": "20",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "여행사:하나투어",
+            "textColor": "ec2261",
+            "boldYN": "N",
+            "size": "11",
+            "linkUrl": ""
+          }
+        ]
+      ]
+    },
+    {
+      "templateType": "prsnlPmoInfo",
+      "prsnlApiUrl": "개인화 정보 API URL 해당 값이 없으면 비로그인 상태의 정보를 노출한다.",
+      "prsnlName": {
+        "iConUrl": "VVIP아이콘.png",
+        "gradeText": [
+          {
+            "type": "text",
+            "textColor": "9B1CCB",
+            "linkUrl": "",
+            "boldYN": "Y",
+            "textValue": "VVIP ",
+            "size": "17"
+          }
+        ],
+        "useName": "Y",
+        "gradeInfoText": [
+          {
+            "type": "text",
+            "textColor": "111111",
+            "linkUrl": "",
+            "boldYN": "Y",
+            "textValue": "GSSHOP 고객님 만의 ",
+            "size": "17"
+          },
+          {
+            "type": "text",
+            "textColor": "111111",
+            "linkUrl": "",
+            "boldYN": "Y",
+            "textValue": "혜택",
+            "size": "17"
+          }
+        ]
+      },
+      "saleMaxList": [
+        {
+          "leftItem": [
+            {
+              "type": "text",
+              "textColor": "111111",
+              "linkUrl": "",
+              "boldYN": "Y",
+              "textValue": "최대 할인가",
+              "size": "15"
+            },
+            {
+              "type": "info",
+              "textColor": "",
+              "linkUrl": "javascript://웹 레이어 팝업을띄우는 스크립트함수",
+              "boldYN": "",
+              "textValue": "",
+              "size": "0"
+            }
+          ],
+          "rightItem": [
+            {
+              "type": "loading",
+              "textColor": "111111",
+              "linkUrl": "",
+              "boldYN": "",
+              "textValue": "계산중",
+              "size": ""
+            }
+          ]
+        }
+      ],
+      "gradePmoInfo": [],
+      "cardPmo": {},
+      "juklibMaxList": [
+        {
+          "leftItem": [
+            {
+              "type": "text",
+              "textColor": "111111",
+              "linkUrl": "",
+              "boldYN": "Y",
+              "textValue": "최대 적립 포인트",
+              "size": "15"
+            },
+            {
+              "type": "info",
+              "textColor": "",
+              "linkUrl": "javascript://웹 레이어 팝업을띄우는 스크립트함수",
+              "boldYN": "",
+              "textValue": "",
+              "size": "0"
+            }
+          ],
+          "rightItem": [
+            {
+              "type": "text",
+              "textColor": "111111",
+              "linkUrl": "",
+              "boldYN": "Y",
+              "textValue": "99,999",
+              "size": "17"
+            },
+            {
+              "type": "text",
+              "textColor": "111111",
+              "linkUrl": "",
+              "boldYN": "N",
+              "textValue": "원",
+              "size": "15"
+            }
+          ]
+        }
+      ],
+      "moreInfoList": []
+    },
+
+    {
+      "templateType":"prdNmInfo",
+      "brandInfo": {
+        "brandLogoUrl": "http://image.gsshop.com",
+        "brandTitle": [
+          {
+            "textValue": "브이티 코스메틱",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "14",
+            "linkUrl": ""
+          }
+        ],
+        "brandLinkUrl": "http://image.gsshop.com"
+      },
+      "promotionText": [
+        {
+          "textValue": "본품2+ 리필4+ 아이섀도우팔레트+ 마스크팩 2박스(12매)",
+          "textColor": "111111",
+          "boldYN": "N",
+          "size": "12",
+          "linkUrl": ""
+        }
+      ],
+      "expoName" : [
+        {
+          "textValue": "TV상품",
+          "textColor": "00aebd",
+          "boldYN": "Y",
+          "size": "16",
+          "linkUrl": ""
+        },
+        {
+          "textValue": "♥브이티♥ VT 프로그로스 콜라겐 팩트",
+          "textColor": "111111",
+          "boldYN": "Y",
+          "size": "16",
+          "linkUrl": ""
+        }
+      ],
+      "subInfoText" : [
+        {
+          "textValue": "원산지 : 구매정보 참조",
+          "textColor": "111111",
+          "boldYN": "Y",
+          "size": "16",
+          "linkUrl": ""
+        }
+      ],
+      "reviewInfo" : {
+        "reviewPoint": 1.7,
+        "reviewText": [
+          {
+            "textValue": "1.7점",
+            "textColor": "99111111",
+            "boldYN": "Y",
+            "size": "14",
+            "linkUrl": ""
+          },
+          {
+            "textValue": " (9,999+)",
+            "textColor": "7a111111",
+            "boldYN": "N",
+            "size": "14",
+            "linkUrl": ""
+          }
+        ],
+        "linkUrl": "이동할링크"
+      }
+    },
+    {
+        "templateType":"cardPmoInfo",
+        "addInfoUrl": "추가상세정보 URL",
+        "cardImgUrl": "http://image.gsshop.com",
+        "cardList" : [
+            {
+                "templateType":"personalCardPmoInfo",
+                "pmoText": [
+                  {
+                    "textValue": "고객님만의 신한 7% 즉시할인가",
+                    "textColor": "111111",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ],
+                "pmoPrc": [
+                  {
+                    "textValue": "99,000",
+                    "textColor": "111111",
+                    "boldYN": "Y",
+                    "size": "17",
+                    "linkUrl": ""
+                  },
+                  {
+                    "textValue": "원",
+                    "textColor": "111111",
+                    "boldYN": "Y",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ]
+            },
+            {
+                "templateType":"commonCardPmoInfo",
+                "pmoText": [
+                  {
+                    "textValue": "KB국민, 신한, 현대 5% 즉시할인가",
+                    "textColor": "111111",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ],
+                "pmoPrc": [
+                  {
+                    "textValue": "99,000",
+                    "textColor": "111111",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  },
+                  {
+                    "textValue": "원",
+                    "textColor": "00aebd",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ]
+            },
+            {
+                "templateType":"commonCardPmoInfo",
+                "pmoText": [
+                  {
+                    "textValue": "농협 7% 즉시할인가",
+                    "textColor": "00aebd",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ],
+                "pmoPrc": [
+                  {
+                    "textValue": "99,999,999,999,000",
+                    "textColor": "111111",
+                    "boldYN": "Y",
+                    "size": "20",
+                    "linkUrl": ""
+                  },
+                  {
+                    "textValue": "원(VVIP 기준)",
+                    "textColor": "111111",
+                    "boldYN": "N",
+                    "size": "13",
+                    "linkUrl": ""
+                  }
+                ]
+            },
+            {
+              "templateType":"savedMoneyInfo",
+              "pmoText": [
+                {
+                  "textValue": "적립금 10,000원 추가적립",
+                  "textColor": "ec2261",
+                  "boldYN": "Y",
+                  "size": "18",
+                  "linkUrl": ""
+                }
+              ]
+            }
+        ]
+    },
+    {
+      "templateType":"promotionInfo",
+      "gradePmoInfo": [
+        {
+          "gradeImgUrl": "http://image.gsshop.com",
+          "gradeText": [
+            {
+              "textValue": "GOLD",
+              "textColor": "111111",
+              "boldYN": "Y",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "10,900",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "원",
+              "textColor": "00aebd",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "(VVIP 기준)~",
+              "textColor": "111111",
+              "boldYN": "Y",
+              "size": "17",
+              "linkUrl": ""
+            }
+          ]
+        },
+        {
+          "gradeImgUrl": "http://image.gsshop.com",
+          "gradeText": [
+            {
+              "textValue": "VVIP",
+              "textColor": "00aebd",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "10,900",
+              "textColor": "111111",
+              "boldYN": "Y",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "원",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "(VIP 기준)~",
+              "textColor": "111111",
+              "boldYN": "Y",
+              "size": "13",
+              "linkUrl": ""
+            }
+          ]
+        },
+        {
+          "gradeImgUrl": "http://image.gsshop.com",
+          "gradeText": [
+            {
+              "textValue": "VVIP",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "23",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "10,900",
+              "textColor": "111111",
+              "boldYN": "Y",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "원",
+              "textColor": "00aebd",
+              "boldYN": "Y",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "(VIP 기준)~",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "templateType":"addPromotionInfo",
+      "itemList" : [
+        {
+          "templateType":"commonInfo",
+          "iConUrl": "http://image.gsshop.com",
+          "linkUrl" : "2회 적립금 링크",
+          "pmoText": [
+            {
+              "textValue": "2회 적립금 행사 대상",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상222222222222",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상3333333333333",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상4444444444444",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            }
+          ]
+        },
+        {
+          "templateType":"commonInfo333333",
+          "iConUrl": "http://image.gsshop.com",
+          "linkUrl" : "2회 적립금 링크",
+          "pmoText": [
+            {
+              "textValue": "2회 적립금 행사 대상",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "16",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상222222222222",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "16",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상3333333333333",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "16",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상4444444444444",
+              "textColor": "111111",
+              "boldYN": "N",
+              "size": "16",
+              "linkUrl": ""
+            }
+          ]
+        },
+        {
+          "templateType":"commonInfo12321",
+          "iConUrl": "http://image.gsshop.com",
+          "linkUrl" : "2회 적립금 링크",
+          "pmoText": [
+            {
+              "textValue": "2회 적립금 행사 대상",
+              "textColor": "ec2261",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            },
+            {
+              "textValue": "2회 적립금 행사 대상222222222222",
+              "textColor": "ec2261",
+              "boldYN": "N",
+              "size": "13",
+              "linkUrl": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "templateType":"personalCouponPmoInfo",
+        "pmoText": [
+          {
+            "textValue": "고객님께만",
+            "textColor": "111111",
+            "boldYN": "N",
+            "size": "13",
+            "linkUrl": ""
+          },
+          {
+            "textValue": " 89,000",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "13",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "원",
+            "textColor": "111111",
+            "boldYN": "N",
+            "size": "13",
+            "linkUrl": ""
+          }
+        ],
+        "pmoPrc": [
+          {
+            "textValue": "90,000원 쿠폰",
+            "textColor": "#ffffff",
+            "boldYN": "N",
+            "size": "13",
+            "linkUrl": ""
+          }
+        ],
+        "pmoUrl": "http://m.gsshop.com/쿠폰다운로드이동URL"
+    },
+    {
+      "templateType":"noInterestInfo",
+        "interestTxt": [
+          {
+            "textValue": "적립금",
+            "textColor": "111111",
+            "boldYN": "N",
+            "size": "13",
+            "linkUrl": ""
+          },
+          {
+            "textValue": " 10,000",
+            "textColor": "111111",
+            "boldYN": "Y",
+            "size": "13",
+            "linkUrl": ""
+          },
+          {
+            "textValue": "원 추가적립",
+            "textColor": "111111",
+            "boldYN": "N",
+            "size": "13",
+            "linkUrl": ""
+          }
+        ],
+        "addInfoUrl": "추가상세정보 URL"
+    },
+    {
+      "templateType": "deliveryInfo",
+      "deliveryList": [
+        {
+          "changeAddress": [
+            {
+              "textColor": "111111",
+              "linkUrl": "javascript:gsFreshDlvSelect('687474703A2F2F736d31342e677373686f702e636f6d2F70726f647563742F6170692F35373334373233383F6e756c6c)",
+              "boldYN": "N",
+              "textValue": "배송지 선택",
+              "size": "14"
+            }
+          ],
+          "deliveryInfoList": [
+            {
+              "textList": [
+                {
+                  "textColor": "111111",
+                  "linkUrl": "",
+                  "boldYN": "N",
+                  "textValue": "당일배송",
+                  "size": "14"
+                },
+                {
+                  "textColor": "111111",
+                  "linkUrl": "javascript:getDlvTimeListPop()",
+                  "boldYN": "N",
+                  "textValue": "배송시간",
+                  "size": "14"
+                }
+              ],
+              "preImgUrl": "gs프레쉬 아이콘"
+            },
+            {
+              "textList": [
+                {
+                  "textColor": "111111",
+                  "linkUrl": "",
+                  "boldYN": "N",
+                  "textValue": "fresh7호센터에서 배송됩니다.",
+                  "size": "14"
+                }
+              ],
+              "preImgUrl": ""
+            },
+            {
+              "textList": [
+                {
+                  "textColor": "111111",
+                  "linkUrl": "",
+                  "boldYN": "N",
+                  "textValue": "배송비 2,500원 (3만원 이상 구매 시 무료)",
+                  "size": "14"
+                }
+              ],
+              "preImgUrl": ""
+            },
+            {
+              "textList": [
+                {
+                  "textColor": "111111",
+                  "linkUrl": "http://sm21.gsshop.com/section/brandSect/204024?mseq=409288&_=20200326164312",
+                  "boldYN": "N",
+                  "textValue": "배송비 절약하기",
+                  "size": "14"
+                }
+              ],
+              "preImgUrl": ""
+            }
+          ],
+          "addressTooltip": "Y",
+          "detailInfoUrl": "",
+          "mainImgUrl": "배송아이콘"
+        }
+      ]
+    }
+  ]
+
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/list_divider_height" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/flexible_item_border"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/image_title"
+                android:layout_width="match_parent"
+                android:layout_height="50.65dp"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50.65dp"
+                android:layout_gravity="center_vertical|right"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    android:id="@+id/text_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/round"
+                    android:gravity="center"
+                    android:paddingLeft="11dp"
+                    android:paddingRight="11dp"
+                    android:text="1 / 6"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    android:typeface="sans" />
+
+                <View
+                    android:id="@+id/view_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/best_deal_no1_deal_hot_6_top_height" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="241dp" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9" />
+    </LinearLayout>
+
+</FrameLayout>

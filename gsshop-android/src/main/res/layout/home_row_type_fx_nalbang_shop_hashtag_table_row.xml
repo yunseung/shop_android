@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nalbang_shop_divider"
+    android:divider="@drawable/divider_nalbang_shop_hashtag_table_column"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <FrameLayout
+        android:id="@+id/frame_1st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_1st"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_2st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_2nd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_3st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_3rd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_4st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_4th"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_5st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_5th"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_6st"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/nalbang_shop_hashtag_item_height"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_title_6th"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+
+</TableRow>

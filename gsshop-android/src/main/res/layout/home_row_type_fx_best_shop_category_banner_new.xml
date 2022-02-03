@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_best_shop_category"
+        android:orientation="vertical"
+        android:padding="@dimen/vh_blank_space_middle">
+
+
+        <TableLayout
+            android:id="@+id/table_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/divider_best_shop_category_table_row_new"
+            android:showDividers="middle" />
+
+
+        <FrameLayout
+            android:id="@+id/view_filter"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="@dimen/vh_blank_space_middle"
+            android:background="@drawable/bg_best_shop_filter"
+            android:paddingLeft="@dimen/vh_blank_space_middle"
+            android:paddingRight="@dimen/vh_blank_space_middle">
+
+            <TextView
+                android:id="@+id/text_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textColor="#111111"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="14dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_vertical|right"
+                android:background="@drawable/arrow_03"
+                android:clickable="false" />
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

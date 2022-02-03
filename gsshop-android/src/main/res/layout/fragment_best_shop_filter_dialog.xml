@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:orientation="vertical"
+    android:contentDescription="카테고리 선택"
+    android:focusable="true"
+    tools:context="gsshop.mobile.v2.home.shop.bestshop.BestShopFilterDialogFragment">
+
+
+    <View
+        android:id="@+id/view_dim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <FrameLayout
+        android:id="@+id/view_filter"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:layout_gravity="bottom"
+        android:background="#ffffff">
+
+
+        <!-- TODO: Update blank fragment layout -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="227dp"
+            android:layout_marginTop="29dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/best_shop_filter_item"
+                android:layout_marginTop="@dimen/best_shop_filter_top_empty_item"
+                android:background="#a4de00" />
+
+            <ListView
+                android:id="@+id/list_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:listSelector="@android:color/transparent" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#f9f9f9"
+                android:paddingBottom="6dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="6dp">
+
+                <Button
+                    android:id="@+id/button_cancel"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_cancel"
+                    android:text="취소"
+                    android:textColor="#111111"
+                    android:textSize="13sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="카테고리 선택"
+                    android:textColor="#666666"
+                    android:textSize="16sp"
+                    android:typeface="sans" />
+
+                <Button
+                    android:id="@+id/button_ok"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_ok"
+                    android:text="확인"
+                    android:textColor="#111111"
+                    android:textSize="13sp"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d9d9d9" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

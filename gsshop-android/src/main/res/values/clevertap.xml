@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Clevertap Account ID 개발계  677-5K6-645Z -->
+    <string name="CLEVERTAP_ACCOUNT_ID">67K-949-645Z</string>
+
+    <!-- Clevertap Account token 개발계 635-aa6 -->
+    <string name="CLEVERTAP_TOKEN">c4c-3a6</string>
+
+</resources>

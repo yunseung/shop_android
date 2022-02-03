@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 전체 layout을 adapter에서 참조하면 리스트가 반복되는 문제가 있어서 wrapper layout 하나 더 사용 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none" />
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eceef4" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 인트로 화면 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/intro_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/intro" /> <!-- crop 하는 경우 이미지 잘리는 경우 발생 (ex) 하단 copyright -->
+
+    <!--인트로 등급 메시지-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="32dp"
+        android:orientation="vertical">
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+
+        <View
+            android:id="@+id/view_intro_round_line"
+            android:layout_width="20dp"
+            android:layout_height="4dp"
+            android:background="@drawable/intro_rectangle"
+            android:visibility="gone"
+            />
+
+        <androidx.legacy.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_into_grade"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/text_intro_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:text="VVIP"
+                android:textColor="#000"
+                android:layout_gravity="bottom"
+                android:includeFontPadding="false"
+                android:typeface="sans"
+                android:alpha=".9"
+                android:layout_marginRight="4dp"
+                />
+
+            <TextView
+                android:id="@+id/text_intro_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                android:text="홍길동 고객님"
+                android:textColor="#000"
+                android:includeFontPadding="false"
+                android:typeface="sans"
+                android:alpha=".9"/>
+
+        </LinearLayout>
+
+        <gsshop.mobile.v2.support.ui.TwoLineTextView2
+            android:id="@+id/text_intro_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:layout_gravity="top"
+            android:typeface="sans"
+            android:ellipsize="end"
+            android:alpha=".9"/>
+    </LinearLayout>
+
+    <!-- 쿠키생성을 위한 웹뷰 -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <!-- sm21에서만 텍스트 보이도록 -->
+    <TextView
+        android:id="@+id/text_sm21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asm"
+        android:textSize="4dp"
+        android:layout_gravity="bottom|right"
+        android:textColor="#66111111"
+        android:visibility="gone"/>
+
+</FrameLayout>

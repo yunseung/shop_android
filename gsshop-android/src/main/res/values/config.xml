@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 모바일 기기 구분을 위한 에이전트 값: BT(안드로이드), BS(아이폰), ... -->
+    <string name="mc_webview_user_agent_additional">,201,BT,AG001</string>
+    <string name="mc_rest_user_agent_additional">,201,BT,AG001</string>
+
+    <!-- 모바일 기기 구분 값: BT(안드로이드), BS(아이폰), ... -->
+    <string name="mc_webview_device_type">BT</string>
+    
+    <!-- WebView 기본값 사용 -->
+    <integer name="mc_webview_initial_scale">0</integer>
+
+    <!-- WebView에 줌버튼 안보이게 설정 -->
+    <bool name="mc_webview_display_zoom_controls">false</bool>
+
+    <!-- 웹페이지 기본 인코딩 -->
+    <string name="mc_webview_default_text_encoding_name">euc-kr</string>
+
+    <!-- HTML5 API 사용하지 않음 for 카카오 페이 로컬 스토리지 사용을 위해 true -->
+    <bool name="mc_webview_database_enabled">true</bool>
+    <bool name="mc_webview_dom_storage_enabled">true</bool>
+    <bool name="mc_webview_geolocation_enabled">true</bool>
+
+    <!-- REST 통신 URI 인코딩 -->
+    <string name="mc_rest_uri_encoding">euc-kr</string>
+
+    <!-- REST 통신 form 전송 인코딩 -->
+    <string name="mc_rest_form_encoding">euc-kr</string>
+
+    <!-- 앱 최소 로딩 시간 (msec) -->
+
+    <!-- 최근 검색어 최대저장 개수 -->
+
+    <!-- 버전 업데이트 체크 네트워크 속성 -->
+    <integer name="update_check_connection_timeout">5000</integer>
+    <integer name="update_check_read_timeout">5000</integer>
+
+    <!-- RestTemplate 네트워크 연결타임아웃 -->
+    <integer name="mc_connection_timeout">5000</integer>
+
+    <!-- 브랜드샵 목록에서 섹션인덱스를 항상 보여줄건지 -->
+    <bool name="mc_section_index_scroller_always_shown">true</bool>
+
+	<!-- GCM Sender ID -->
+	<string name="mc_push_sender_id">633890543958</string>
+    
+    <!-- T store 마켓 배포용인가? -->
+    <bool name="market_tstore">false</bool>
+
+    <!-- T store 상품 ID. 주의 : Application ID가 아님 -->
+    <string name="tstore_product_id">0000035500</string>
+
+    <!-- 웹 URI 인코딩 -->
+    <string name="web_uri_encoding">euc-kr</string>
+
+    <!-- 웹 URI 인코딩 UTF-8 -->
+    <string name="web_uri_utf_8">utf-8</string>
+
+    <!-- Visual ARS Launcher ID -->
+    <string name="visual_ars_launcher_id">[gsshop]</string>
+
+    <!-- 푸시팝업 배경 DIM 투명도 (투명 0 ~ 1 불투명) -->
+    <string name="push_background_dim_amount">0.6</string>
+
+    <string name="intro_img_filename">intro.png</string>
+
+    <!--tensera-->
+    <bool name="tensera_active_by_host">true</bool>
+</resources>

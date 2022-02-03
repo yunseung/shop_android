@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:background="@drawable/popup_ic_ch_an" />
+
+    <TextView
+        android:id="@+id/txt_tv_schedule_broad_alarm_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:textColor="#999999"
+        android:textSize="12dp"
+        android:typeface="sans" />
+
+
+</TableRow>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 생방송/동영상 재생 화면 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/video_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <!--go product-->
+    <LinearLayout
+        android:id="@+id/view_go_prd"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/bg_go_product"
+        android:contentDescription="@string/view_product_info"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="14dp"
+        android:paddingRight="24dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_video_live_prd"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="#4cffffff"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="14dp"
+            android:text="@string/video_product"
+            android:textColor="#ffffff"
+            android:textSize="21dp"
+            android:typeface="sans" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="18dp"
+            android:background="@drawable/arrow_b_white_android" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

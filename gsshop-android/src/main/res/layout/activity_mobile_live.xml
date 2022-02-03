@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 웹뷰를 포함하는 탭메뉴 화면 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--content -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="top"
+        android:layout_weight="1">
+
+        <!--동영상.-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/view_media"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/container_media"
+                    android:name="gsshop.mobile.v2.support.media.exoplayer.ExoMobileLiveMediaPlayerControllerFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 탭메뉴 -->
+
+        <include layout="@layout/tab_menu" />
+
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">GS SHOP</string>
+
+    <!-- ARS 대표 번호  -->
+    <string name="txt_ars_number">0809004545</string>
+
+    <!-- 그룹매장 -->
+    <string name="txt_on_sale">구매중</string>
+
+    <!-- 탭메뉴 -->
+    <string name="menu_home">홈</string>
+    <string name="menu_category">카테고리</string>
+    <string name="menu_search">검색</string>
+    <string name="menu_cart">스마트카트</string>
+    <string name="menu_order">주문배송</string>
+    <string name="menu_myshop">마이쇼핑</string>
+    <string name="menu_zzim_prd">찜</string>
+    <string name="menu_last_prd">최근본상품</string>
+
+    <!-- 네트워크 -->
+    <string name="network_disconnected">데이터 수신이 원활하지 않습니다.\n잠시 후 다시 시도해주시기 바랍니다.</string>
+    <string name="network_unresponsive">앱 실행이 원활하지 않습니다.\n잠시 후 다시 시도해 주십시오.</string>
+    <string name="network_unstable">네트워크 연결이 원활하지 않습니다.\n잠시 후 다시 실행해 주십시오.</string>
+    <string name="network_billing_confirm">3G/LTE등으로 접속시\n데이터 통화료가 발생할 수 있습니다.</string>
+    <string name="network_unstable_detail_Vew">서비스가 원활하지 않습니다. 잠시 후 다시 시도해 주세요.</string>
+
+    <!-- 앱 업데이트 체크 -->
+    <string name="update_title">업데이트 안내</string>
+    <string name="update_confirm_nomal_message">현재 최신버전이 아닙니다.\n업데이트 하시겠습니까?</string>
+    <string name="update_confirm_pos_message">업데이트된 GS SHOP앱을 다운받고\n기분 좋은 쇼핑을 경험하세요!</string>
+    <string name="update_now">업데이트</string>
+    <string name="update_later">나중에</string>
+
+    <!-- 로그인 -->
+    <string name="login_intro_fail">로그인하지 못했습니다.</string>
+    <string name="login_invalid_id">아이디를 입력해 주세요.</string>
+    <string name="login_invalid_password">비밀번호를 입력해 주세요.</string>
+    <string name="login_invalid_input">아이디 또는 비밀번호를 입력하세요.</string>
+    <string name="login_title">로그인</string>
+    <string name="login_hint_login_id">아이디</string>
+    <string name="login_hint_password">비밀번호(영문+숫자 6~16자)</string>
+    <string name="login_keep_login">자동로그인</string>
+    <string name="login_hint_login_id_email">아이디 또는 이메일주소</string>
+    <string name="login_adult_description">청소년 접근이 제한된 정보로 성인인증이 필요합니다.</string>
+    <string name="login_phone_login">휴대폰 로그인</string>
+    <string name="login_info">로그인이 필요한 서비스 입니다.</string>
+
+    <string name="login_join">회원가입</string>
+    <string name="login_confirm_logout">로그아웃 하시겠습니까?</string>
+    <string name="login_confirm_logout_simple_cancel">로그아웃 하시겠습니까? \n해당 아이디는 간편로그인이 해제되며 로그인 시 재설정이 가능합니다.</string>
+    <string name="login_confirm_logout_simple">로그아웃 하시겠습니까? 설정된 간편 로그인은 유지되며, 마이쇼핑 > 설정 > 로그인 관리 에서 해제하실수 있습니다.</string>
+    <string name="login_nonmember_order_description_link">비회원 주문</string>
+    <string name="login_nonmember_order_description1">시에는 GS SHOP에서 제공하는</string>
+    <string name="login_nonmember_order_description2">다양한 혜택(가격 할인, 이벤트 사은품, 추가 적립 등)을\n받으실 수 없습니다.</string>
+
+    <string name="login_error_msg">서버와의 연결이 원활하지 않습니다.\n잠시 후 다시 시도해주시기 바랍니다.</string>
+
+    <!-- 간편로그인 -->
+    <string name="login_easy">간편 로그인 설정</string>
+
+    <!-- SNS 로그인 -->
+    <string name="sns_login_btn_login">로그인</string>
+    <string name="sns_login_btn_password_find">비밀번호 찾기</string>
+    <string name="sns_login_error">로그인 수행 중 오류가 발생했습니다.</string>
+    <string name="sns_login_version_old">네이버/카카오 로그인 연동은 안드로이드 OS 5.0 버전 이상에서만 사용 가능합니다.</string>
+
+    <string name="sns_kakaotalk_not_installed">카카오톡 앱을 설치한 후에 사용할 수 있습니다.</string>
+    <string name="sns_kakaostory_not_installed">카카오스토리 앱을 설치한 후에 사용할 수 있습니다.</string>
+    <string name="sns_line_not_installed">라인 앱을 설치한 후에 사용할 수 있습니다.</string>
+    <string name="sns_twitter_not_installed">트위터 앱을 설치한 후에 사용할 수 있습니다.</string>
+    <string name="sns_pinterest_not_installed">핀터레스트 앱을 설치한 후에 사용할 수 있습니다.</string>
+
+    <!-- 지문 로그인 -->
+    <!-- <string name="fp_need_login">지문로그인 연동을 위해\nGS SHOP ID 로그인이 필요합니다.</string> -->
+    <string name="fp_need_login">GS SHOP 아이디와 비밀번호로 로그인해주세요. 고객님 휴대폰에 등록된 바이오정보(지문)에 접근하여 GS SHOP 아이디와 연결하겠습니다.</string>
+    <string name="fp_if_agree">지문로그인을 사용하시겠어요?\n고객님 휴대폰에 등록된 바이오정보(지문)에\n접근하여, GS SHOP 아이디와 연결하겠습니다.</string>
+    <string name="fp_agree">동의</string>
+    <string name="fp_dont_see_more">다시안보기</string>
+    <!-- <string name="fp_go_login">로그인 하기</string> -->
+    <!-- <string name="fp_next_login">다음에 하기</string> -->
+    <string name="fp_go_login">동의</string>
+    <string name="fp_next_login">취소</string>
+    <string name="fp_on_sensor">지문센서에 손가락을 올려주세요.</string>
+    <string name="fp_locked">지문인증 잠김</string>
+    <string name="fp_fail_count_over">실패횟수 초과로 지문인증이 잠겼습니다.\n30초 후 재시도 또는 휴대폰 설정에서\n비밀번호를 입력해 주세요.</string>
+
+    <!-- 로그인 탭메뉴 -->
+    <string name="login_tab_member">회원 로그인</string>
+    <string name="login_tab_order">비회원 주문/배송조회</string>
+
+    <!-- 이메일 로그인 -->
+    <string name="login_email_info_description1">이메일로 가입한 회원은 아이디 입력란에 이메일 주소를</string>
+    <string name="login_email_info_description2">입력해 주세요.</string>
+
+    <!-- 아이디, 비밀번호 찾기 -->
+    <string name="login_find_id">아이디 찾기</string>
+    <string name="login_find_password">비밀번호 찾기</string>
+
+
+    <!-- 이메일 인증 -->
+    <string name="login_email_cert_description1">해외거주 고객님! 회원가입 후에 로그인이 안되시면 메일 인증을 해주세요.  인증메일 받기</string>
+    <string name="login_email_cert_description2">비회원 주문시에는 GS SHOP의 다양한 혜택을 받으실 수 없어요.</string>
+    <string name="login_email_cert_description_link">인증메일 받기</string>
+
+    <string name="login_easy_title">로그인 관리</string>
+    <string name="login_easy_keep">간편 로그인 유지</string>
+    <string name="login_easy_logout">로그아웃</string>
+    <string name="login_easy_description1">간편로그인이란?</string>
+    <string name="login_easy_description2">GS SHOP에서 제공하는 앱서비스간 별도 \n아이디/비밀번호 입력 없이 최초 인증된 계정정보로\n간편하게 로그인할 수  있는 기능입니다.</string>
+    <string name="simple_login_alert">간편로그인은 GS SHOP에서 제공하는 앱서비스간 별도 아이디/비밀번호를 입력없이 최초 인증된 계정정보로 간편하게 로그인할 수  있는 기능입니다.</string>
+    <string name="login_nonmember_adult_check_simple">성인인증</string>
+
+    <!-- PUSH 알림 -->
+    <string name="push_approve_title">GS SHOP 알림서비스 안내</string>
+    <string name="push_approve">알림을 보내주세요</string>
+    <string name="push_reject">다음에요</string>
+    <string name="push_setting_title">알림(PUSH) 메시지</string>
+    <string name="push_popup_setting_title">알림팝업 설정</string>
+    <string name="push_popup">메시지 수신시 알림 팝업</string>
+    <string name="push_screen_on">알림 팝업시 화면 켜짐</string>
+    <string name="push_sound_setting_title">알림음 설정</string>
+    <string name="push_sound">알림음</string>
+    <string name="push_vibration">진동</string>
+    <string name="msg_push_on_ad">광고성 PUSH(알림) 수신동의가 \n수신으로 변경되었습니다.\n</string>
+    <string name="msg_push_off_ad">광고성 PUSH(알림) 수신동의가 \n미 수신으로 변경되었습니다.\n</string>
+    <string name="msg_push_on">PUSH(알림) 수신동의가 \n수신으로 변경되었습니다.\n</string>
+    <string name="msg_push_off">PUSH(알림) 수신동의가 \n미 수신으로 변경되었습니다.\n</string>
+    <string name="msg_push_info">설정 -> 애플리케이션 -> GSSHOP APP -> 알림 표시 체크 설정에서도 변경 가능합니다. </string>
+    <string name="push_dialog_two_button_txt_message">쇼핑 알림</string>
+
+    <!-- 접근권한 고지 -->
+    <string name="auth_info_confirm">내용 확인했어요</string>
+
+    <!-- 검색 -->
+    <string name="search_qrcode_title">QR코드검색</string>
+    <string name="search_qrcode_description">QR코드를 화면에 비추면 자동으로 인식합니다.</string>
+    <string name="search_recent_keyword_delete">검색기록 전체삭제</string>
+    <string name="search_recent_keyword_empty">최근 검색어가 없습니다.</string>
+    <string name="search_related_keyword_empty">해당 검색어의 자동완성어가 없습니다.</string>
+    <string name="search_recent_keyword_all_delete">"검색어를 모두 삭제하시겠습니까?"</string>
+
+    <string name="search_description_search_main">검색어를 입력해주세요</string>
+    <string name="search_description_search">검색</string>
+    <string name="search_popular_title">인기 검색어</string>
+    <string name="search_recent_title">최근 검색어</string>
+    <string name="search_popular_update_tail">기준</string>
+    <string name="search_bar_close">닫기</string>
+
+    <!-- 환경설정 -->
+    <!-- 이력 : 취급 -> 처리, 관리 -> 보호 20160802 보안관련 요청  -->
+    <string name="setting_title">설정</string>
+    <string name="setting_login_status">아이디</string>
+    <string name="setting_login_off">로그인 해주세요</string>
+    <string name="setting_login">로그인</string>
+    <string name="setting_logout">로그아웃</string>
+    <string name="setting_push">알림(PUSH) 받기</string>
+    <string name="setting_push_ad">광고성 알림(PUSH) 받기</string>
+    <string name="setting_push_sound">무음으로 알림</string>
+    <string name="setting_video">동영상배너 자동플레이</string>
+    <string name="setting_push_description">본 설정은 해당 기기에서만 유효하며, 수신 거절 시 모바일 상담 답변 등의 정보성 알림도 발송되지 않습니다.</string>
+    <string name="setting_push_benefit_description">광고성 (PUSH) 메시지에 동의하시면, GS SHOP 할인권, 쿠폰, 상품권 등 푸짐한 혜택을 받으실 수 있습니다.</string>
+    <string name="setting_version">버전정보</string>
+    <string name="setting_provision">이용약관 및 개인정보 처리방침</string>
+    <string name="setting_company">(주)GS리테일 회사소개</string>
+    <string name="setting_member_leave">회원탈퇴</string>
+    <string name="auto_login_unlink_message">자동 로그인을 해제하시겠어요?</string>
+    <string name="auto_login_link_message">로그인 상태가 항상 유지됩니다.</string>
+    <string name="naver_unlink_message">네이버 로그인을 해제하시겠어요?</string>
+    <string name="naver_link_message">GS SHOP이 네이버를 사용하여 로그인합니다.</string>
+    <string name="kakao_unlink_message">카카오 로그인을 해제하시겠어요?</string>
+    <string name="kakao_link_message">GS SHOP이 카카오를 사용하여 로그인합니다.</string>
+    <string name="fp_unlink_message">지문 로그인을 해제하시겠어요?</string>
+    <string name="fp_link_message">휴대폰에 등록된 지문정보로 로그인이 됩니다.</string>
+    <!-- <string name="fp_unregistered">지문로그인 서비스는\n지문 등록 가능 휴대폰에서만\n이용하실 수 있습니다.</string> -->
+    <string name="fp_unregistered">바이오정보(지문) 등록이 가능한 휴대폰에서만 사용할 수 있습니다.</string>
+    <string name="fp_unsetting">휴대폰 \'설정\' 메뉴에서 지문등록 및 기능활성화 후 사용할 수 있습니다</string>
+    <string name="sns_login_link">로그인 연동 관리</string>
+
+    <!-- 버전정보 -->
+    <string name="version_setting_title">버전관리</string>
+    <string name="version_current">현재버전</string>
+    <string name="version_last">최신버전</string>
+    <string name="version_update">최신버전 업데이트 v%1$s</string>
+    <string name="version_uptodate">현재버전이 최신버전입니다.</string>
+    <string name="version_update_setting">업데이트</string>
+
+    <!-- 상품평 -->
+    <string name="review_title_write">상품평 작성</string>
+    <string name="review_title_modify">상품평 수정</string>
+    <!-- 상품평 힌트 문구 10/04 보안 정책에 의거 소중한... 전체 변경 어쩌구로 바꾸었습니다  -->
+    <string name="review_hint_contents_sec_normal">상품에 대한 후기를 남겨주세요.\n\n※ 작성시 주의사항\n다음 내용의 글은 관리자에 의해 임의 삭제될 수 있습니다.\n- 전화번호, 주민번호, 이름, 아이디 등 개인정보가 포함된 글\n- 저작권침해/음란/욕설/비방글\n- 판매/광고/홍보성 글을 등록한 경우</string>
+    <string name="review_hint_contents_normal">솔직하고 유용한 상품평을 작성해주세요.\n\n다음과 같은 내용의 글은 관리자에 의해 임의로 삭제될 수 있으니 유의해주세요.\n- 타인의 저작권을 침해한 경우\n- 음란, 욕설 등 공공성을 저해하는 경우\n- 개인정보 유출의 위험이 있는 글\n- 판매/광고/홍보성 글을 등록한 경우</string>
+    <string name="review_hint_contents_restricted">상품평 대신 의견을 들려주시겠습니까?\n\n이 상품은 식품/의료기기 관련 법규에 의거하여 상품평 작성이 불가합니다. 상품평 대신 고객님의 의견이나 바라시는 점을 적어 주세요. 작성하신 내용은 담당MD와 공급업체에 전달되어 더 좋은 상품을 만드는 데 활용됩니다.</string>
+    <string name="review_description_contents">상품평을 작성해 주세요.</string>
+    <string name="review_photo_upload">사진 올리기</string>
+    <string name="review_design">디자인</string>
+    <string name="review_quality">품질</string>
+    <string name="review_shipping">배송</string>
+    <string name="review_satisfaction">사용만족도</string>
+    <string name="review_error_camera_preview">카메라 미리보기 중 오류가 발생하였습니다.</string>
+    <string name="review_food_info">본 상품은 식품 및 의료기기 관련 법규에 의거하여\n주관적인 상품평의 작성이 제한되고 있습니다.\n별점평가만 가능한 점, 양해 부탁 드립니다.</string>
+
+    <integer name="review_min_length">5</integer>
+
+    <string name="review_validation_min_length">내용은 최소 한글 %1$d자 이상 입력해 주세요.</string>
+    <string name="review_validation_rating">별점을 입력하여 주세요.</string>
+    <string name="review_fail_load_image">이미지를 불러오지 못했습니다.</string>
+    <string name="review_save">작성하기</string>
+    <string name="review_update">수정하기</string>
+    <string name="review_cancel">취소</string>
+    <string name="review_success_save">상품평을 작성해 주셔서 감사합니다.</string>
+    <string name="review_success_modify">상품평 수정이 완료되었습니다.</string>
+    <string name="review_description_rating">별점 %1$d점을 주셨습니다.</string>
+
+    <string-array name="review_photo_type">
+        <item>사진 찍기</item>
+        <item>앨범에서 가져오기</item>
+    </string-array>
+
+    <string name="review_rewards">상품평을 작성하시면 연간할인권을 드립니다.</string>
+
+    <!-- 댓글 (파일첨부) -->
+    <integer name="attach_min_length">1</integer>
+
+    <!-- 모바일상담 (파일첨부) -->
+    <string name="mobiletalk_description_contents">타인에게 노출될 수 있는 개인정보(주민번호, 카드정보 등) 입력에 주의해 주세요. 상담과 관련 없는 경우 임의 삭제될 수 있습니다.</string>
+    <string name="mobiletalk_validation_min_length">문의내용 입력해 주세요.</string>
+    <string name="mobiletalk_invalid_param">호출 규격이 일치하지 않습니다.</string>
+    <string name="mobiletalk_exceed_len">최대 %1$dbyte까지 작성하실 수 있습니다.</string>
+    <string name="mobiletalk_confirm_cancel">작성중인 글이 있습니다.\n취소하시겠습니까?</string>
+
+    <!-- TV 생방송/VOD 동영상 -->
+    <string name="tv_play">생방송 보기</string>
+    <string name="order_product">바로주문</string>
+    <string name="view_product_info">지금 상품정보 보기</string>
+    <string name="video_loading">동영상 로딩 중…</string>
+    <string name="video_play_error">동영상을 재생할 수 없습니다.</string>
+    <string name="video_no_param">동영상 재생에 필요한 정보가 없습니다.</string>
+
+    <!-- 기타 -->
+    <string name="badge_new">N</string>
+    <string name="webview_confirm_save_image">이미지를 저장하시겠습니까?</string>
+    <string name="webview_success_save_image">이미지를 저장하였습니다.\n저장경로 : %1$s</string>
+    <string name="app_confirm_restart">사진 저장권한을 적용하기 위해 앱 재시작이 필요합니다.\nGS SHOP 앱을 재시작하시겠습니까?</string>
+    <!-- <string name="error_server">오류가 발생하여 작업을 처리하지 못했습니다. 잠시 후 다시 시도해보십시오.</string> -->
+    <string name="error_server">@string/app_refresh</string>
+    <string name="error_server_title">데이터 연결이 원활하지 않습니다.</string>
+    <string name="error_server_desc">잠시 후 다시 시도해 주시기 바랍니다.</string>
+    <string name="app_confirm_exit">GS SHOP 앱을 종료하시겠습니까?</string>
+    <string name="app_id">940243329375632</string>
+    <string name="app_refresh">데이터 연결이 원활하지 않습니다.\n잠시 후 다시 시도해 주시기 바랍니다.</string>
+    <string name="app_refresh_button">새로고침</string>
+    <string name="go_web">웹으로 보기</string>
+
+    <!-- PMS -->
+    <string name="pms_title">쇼핑알림</string>
+    <string name="pms_notice2">수신일로부터 7일이 지난 메시지는 자동 삭제됩니다.</string>
+    <string name="pms_no_msg">최근에 받은 알림이 없습니다.</string>
+    <string name="pms_notice3">GS25쿠폰알림은 마이쇼핑>설정에서 변경 가능합니다.</string>
+
+    <!-- Home -->
+    <!-- 이력 : 취급 -> 처리, 관리 -> 보호 20160802 보안관련 요청  -->
+    <string name="home_sold_out">SOLD OUT</string>
+    <string name="layout_main_info_header_terms">이용약관</string>
+    <string name="layout_main_info_header_private">개인정보 처리방침</string>
+    <string name="layout_main_info_header_teen">청소년 보호정책</string>
+    <string name="layout_main_info_header_push">앱알림 설정</string>
+    <string name="layout_main_info_ceo">(주)지에스리테일 대표이사 허연수, 김호성</string>
+    <string name="layout_main_info">서울특별시 강남구 논현로 508 (역삼동, GS타워)\n개인정보 보호책임자 : 이종혁 / 호스팅제공자 : (주)지에스리테일\n사업자등록번호 : 116&#8211;81&#8211;18745 / gsshop@gsretail.com\n통신판매업신고번호 : 제2014&#8211;서울강남&#8211;01544호\n<![CDATA[ⓒ]]> GS Retail Co.,Ltd.</string>
+    <string name="layout_main_info_sub1">사업자 정보확인</string>
+    <string name="layout_main_info_sub2">기업은행 채무지급 보증안내</string>
+    <string name="layout_main_info_family">Family Site</string>
+
+    <string name="home_tvlive_prd_rental">상담 전용 상품입니다.</string>
+    <string name="common_rental_title">상담신청상품</string>
+    <string name="commne_rental_unit">월</string>
+    <string name="commne_rental_unit_ex">월 렌탈료</string>
+
+    <!-- 홈배너 -->
+    <string name="won">원</string>
+    <string name="show_tv_guide">TV 편성표</string>
+    <string name="tv_live_remained">남음</string>
+    <string name="percent">%</string>
+    <string name="month">월</string>
+
+    <string name="time_deal_time">남은시간</string>
+
+
+    <!-- 단품/딜 -->
+    <string name="product_description">상품설명</string>
+    <!-- GS 가  GS-->
+    <!-- GS 가 가 -->
+
+    <!-- 120개 판매중 개 -->
+    <string name="product_description_sale_tail_text">개</string>
+
+    <!-- 120개 판매중 판매중 -->
+    <string name="product_description_sale_now_text">판매중</string>
+    <string name="product_description_purchase_now_text">구매중</string>
+
+    <!-- 프로모션 팝업 -->
+    <string name="pm_today_stop_show">오늘은 그만보기</string>
+    <string name="pm_close">닫기</string>
+
+    <string name="keyboard_show">한글자판 보기 </string>
+    <string name="keyboard_hide">한글자판 닫기 </string>
+
+    <!-- gallery -->
+    <string name="gallery_title">갤러리</string>
+    <string name="article_photo_validation">이미지를 선택해 주세요.</string>
+    <string name="article_photo_validation_min_length">더 이상 이미지 선택이 불가능합니다.</string>
+    <string name="article_photo_size_over">10M 이상의 이미지는 첨부하실 수 없습니다.</string>
+    <string name="article_photo_file_format">첨부하신 사진의 형식은 등록될 수 없습니다. JPG, JPEG, PNG 형식의 이미지로 업로드 해주세요.</string>
+    <string name="article_video_size_over">%1$dM 이상의 동영상은 첨부하실 수 없습니다.</string>
+    <string name="article_video_validation">동영상은 1개만 첨부 할 수 있습니다.</string>
+    <string name="article_video_file_format">지원하지않는 파일형식입니다.\n(첨부가능 파일형식: mp4)</string>
+    <string name="gallery_button_add_text">선택</string>
+
+    <!-- 개인화매장 -->
+    <string name="searchBox">searchBox</string>
+    <string name="searchImage">searchImage</string>
+
+
+    <!-- 모바일 고객센터 모바일 톡 관련 -->
+    <string name="btn_take_photo_layout_text">사진첨부</string>
+    <string name="btn_take_save_text">접수하기</string>
+    <string name="btn_cancel">취소</string>
+
+    <!-- callery_category -->
+    <string name="gallery_category_title_text">카메라롤</string>
+
+    <!-- 브랜드 매장 -->
+    <string name="home_brand_list_category_1">의류</string>
+    <string name="home_brand_list_category_2">잡화</string>
+    <string name="home_brand_list_category_3">화장품</string>
+    <string name="home_brand_list_category_4">레포츠</string>
+
+    <!-- 홈 풋터 인포 -->
+
+
+    <!-- 홈 리스트중 필터가 들어간 놈-->
+    <string name="home_list_filter_all_text">전체</string>
+    <string name="home_row_type_fx_title_banner_hot_text">금주의 핫아이템.</string>
+
+    <!-- 생방송 영역 live_layout 20160727 광고중 -> TV HIT으로 변경-->
+    <string name="home_tv_live_text">TV생방송</string>
+    <string name="home_tv_live_btn_tv_pay_text">바로구매</string>
+    <string name="home_tv_live_view_ad_text">TV HIT</string>
+    <string name="home_tv_live_view_close_text">방송종료</string>
+    <string name="home_best_deal_view_close_text">00:00:00</string>
+
+    <string name="home_tv_live_view_no_purchase_text">바로구매</string>
+    <string name="home_tv_live_view_advice_text">상담신청</string>
+
+    <string name="home_tv_live_view_on_the_air">방송중</string>
+    <string name="home_tv_live_view_replay_air">재방송</string>
+    <string name="home_tv_live_view_replay_air_eng">replay</string>
+    <string name="home_tv_live_view_best">베스트</string>
+    <string name="home_tv_live_view_best_en">BEST</string>
+    <string name="home_tv_live_view_on_air">ON-AIR</string>
+
+    <string name="home_tv_live_benefit">TV쇼핑 혜택</string>
+
+    <string name="home_tv_live_recommend">TV쇼핑 추천상품</string>
+
+    <string name="home_tv_live_view_close_da_text">방송이 종료되었습니다.</string>
+    <string name="home_tv_live_next_brd_guide">\'홈버튼\' 터치 시\n 다음방송이 재생됩니다.</string>
+    <string name="home_tv_live_next_brd_guide2">\'홈버튼\' 터치 시 다음방송이\n 재생됩니다.</string>
+
+    <string name="video_replay">다시보기</string>
+    <string name="video_product">상품보기</string>
+
+    <string name="home_sub_more">상품 더보기</string>
+    <string name="home_sub_close">닫기</string>
+
+    <!-- 공유하기 -->
+    <string name="sms_not_support">SMS 공유하기를 지원하지 않는 기기입니다.</string>
+    <string name="shere">공유하기</string>
+
+    <string name="user">님</string>
+    <string name="customer">고객</string>
+
+    <!--exo player-->
+    <string name="drm_error_not_supported">Protected content not supported on API levels below 18</string>
+    <string name="drm_error_unsupported_scheme">This device does not support the required DRM scheme</string>
+    <string name="drm_error_unknown">An unknown DRM error occurred</string>
+
+    <!--nalbang-->
+    <string name="nalbang_live">생방송</string>
+    <string name="nalbang_talk_submit">등록</string>
+    <string name="nalbang_talk_hint">채팅에 참여해보세요.</string>
+    <string name="nalbang_talk_no_login_hint">로그인이 필요합니다.</string>
+    <string name="nalbang_login">로그인이 필요한 서비스입니다.\n로그인 하시겠습니까?</string>
+    <string name="nalbang_network_error">날톡 전송을 실패하였습니다.</string>
+    <string name="nalbang_talk_over">내용은 한글 50자까지 입력 가능합니다.</string>
+    <string name="nalbang_talk_under">내용을 입력 후 등록해주세요.</string>
+    <string name="nalbang_none">동영상 정보를 찾을 수 없습니다.</string>
+    <string name="nalbang_3h_remain_head">다음 생방송까지\u0020</string>
+    <string name="nalbang_3h_remain_tail">\u0020남음</string>
+
+    <!--mobilelive-->
+    <string name="moblielive_login">로그인 후\n이용이 가능합니다.</string>
+    <string name="moblielive_none">영상 정보를 찾을 수 없습니다.</string>
+    <string name="moblielive_product_view">상품보기</string>
+    <string name="moblielive_chat_view">채팅보기</string>
+    <string name="moblielive_chat_unavailable">채팅 서비스가 원활하지 않습니다.</string>
+    <string name="moblielive_chat_hint">궁금하신 점을 물어보세요</string>
+    <string name="moblielive_product_title">라이브 상품</string>
+
+    <!--live talk ("등록" 같은 공통 스트링은 위 nalbang 것을 사용함) -->
+    <string name="livetalk_title">GS라이브톡</string>
+    <string name="livetalk_talk_hint">라이브톡에 참여해보세요.</string>
+    <string name="livetalk_talk_no_login_hint">로그인이 필요합니다.</string>
+    <string name="livetalk_talk_over">최대 글자 수(50자)를 초과하여 작성할 수 없습니다.</string>
+    <string name="livetalk_talk_end">생방송 중에만 입력이 가능합니다.</string>
+    <string name="livetalk_network_error">라이브톡 전송을 실패하였습니다.</string>
+    <string name="livetalk_none">현재 라이브톡이 진행 중이 아닙니다.\n라이브톡 진행 중일 때 참여 부탁 드립니다.</string>
+    <string name="livetalk_end">방송이 종료되었습니다.</string>
+    <string name="livetalk_private">타인에게 노출될 수 있는 개인정보(주민번호, 카드정보 등)입력에 주의해 주세요.</string>
+
+    <string name="layer_flag_air_buy">방송중 구매가능</string>
+    <string name="layer_flag_sold_out">일시품절</string>
+    <string name="layer_flag_sale_end">판매종료</string>
+    <string name="layer_flag_to_sale">판매예정</string>
+    <string name="layer_flag_buy">구매하기</string>
+
+    <!-- short bang -->
+    <string name="shortbang_promotion_prefix">[GS SHOP 숏방] 30초 동영상 쇼핑~</string>
+    <string name="shortbang_first_toast">첫 숏방 영상입니다.</string>
+    <string name="shortbang_last_toast">마지막 숏방 영상입니다.</string>
+    <string name="shortbang_invalid_video_from_internal">선택하신 숏방이 유효하지 않습니다.</string>
+    <string name="shortbang_invalid_video_from_external">선택하신 숏방이 유효하지 않습니다.</string>
+    <string name="shortbang_invalid_os_version">이 단말 안드로이드 OS버전에서는 해당 기능을 사용하지 못합니다.</string>
+    <string name="shortbang_version_old">이 단말 안드로이드 OS버전에서는 해당 기능을 사용하지 못합니다.</string>
+
+    <!-- SNS -->
+    <string name="sns_kakaotalk">카카오톡</string>
+    <string name="sns_kakaostory">카카오스토리</string>
+    <string name="sns_line">라인</string>
+    <string name="sns_sms">SMS</string>
+    <string name="sns_facebook">페이스북</string>
+    <string name="sns_twitter">트위터</string>
+    <string name="sns_pinterest">핀터레스트</string>
+    <string name="sns_url">URL복사</string>
+    <string name="sns_etc">다른 앱 선택하기</string>
+
+    <!-- 브릿지 -->
+    <string name="bridge_clipboard">URL이 복사되었습니다.</string>
+
+    <!-- 공통 -->
+    <string name="common_ok">확인</string>
+    <string name="common_more">더보기</string>
+    <string name="common_more_gs_super">상품 더보기</string>
+    <string name="common_show_all_gs_super">전체보기</string>
+    <string name="common_go_brand_shop_gs_super">상품 전체보기</string>
+    <string name="common_close">닫기</string>
+    <string name="common_cancel">취소</string>
+    <string name="common_good">좋아요</string>
+    <string name="common_no">아니요</string>
+    <string name="common_retry">다시 시도</string>
+    <string name="common_close_nomore">더이상 보지않기</string>
+    <string name="common_close_week">일주일간\n보지않기</string>
+    <string name="common_close_noagain">다시보지않기</string>
+    <string name="warning">경고</string>
+    <string name="common_restart">재시작</string>
+    <string name="common_pay">구매하기</string>
+    <string name="common_livetalk">라이브톡</string>
+    <string name="common_schedule">편성표</string>
+    <string name="common_realtime">실시간</string>
+    <string name="common_all_product">전체상품 보기</string>
+    <string name="best_shop_populate_keyword">실시간 인기 검색어</string>
+    <string name="app_fake_msg">정상적인 GS SHOP 앱이 아닙니다 구글 플레이 스토어에서 재 설치를 하십시오.</string>
+    <string name="undefined_error">알수 없는 에러가 발생했습니다.</string>
+    <string name="common_play">재생</string>
+    <string name="common_pause">일시정지</string>
+    <string name="common_full_screen">전체화면</string>
+    <string name="common_sound_play">소리재생</string>
+    <string name="common_sound_mute">소리정지</string>
+    <string name="common_notice">공지</string>
+    <string name="common_send">보내기</string>
+    <string name="common_save">저장</string>
+    <string name="common_mute">음소거</string>
+    <string name="common_direct_go">바로가기</string>
+    <string name="common_no_data">상품 준비중입니다.</string>
+    <string name="common_no_sale">판매중인 상품이 없습니다.</string>
+
+    <!--tv 편셩표 매장.-->
+    <string name="tv_schedule_description_open_search">open search view</string>
+    <string name="tv_schedule_description_close_search">close search view</string>
+    <string name="tv_schedule_description_type_search_keyword">type keyword</string>
+    <string name="tv_schedule_description_clear_search_keyword">clear keyword</string>
+    <string name="tv_schedule_description_recycler_date">dates list</string>
+    <string name="tv_schedule_description_recycler_date_left">dates left gradation</string>
+    <string name="tv_schedule_description_recycler_date_right">dates right gradation</string>
+    <string name="tv_schedule_description_recycler_time">time line list</string>
+    <string name="tv_schedule_description_refresh">tv schedule refresh</string>
+    <string name="tv_schedule_description_siren">tv schedule siren</string>
+    <string name="tv_schedule_description_search_dim">search dim</string>
+    <string name="tv_schedule_description_onair_label">onair label</string>
+    <string name="tv_schedule_description_onair_label_time">onair time</string>
+    <string name="tv_schedule_main_comment">본 편성표는 방송이 확정된\n프로그램과 상품만 제공하며, GS SHOP의\n내부 사정에 따라 변경될 수 있습니다.</string>
+    <string name="alarm_register">방송알림등록</string>
+    <string name="alarm_register_complete">방송알림 등록완료</string>
+    <string name="btn_submit">등록</string>
+    <string name="tv_schedule_alarm_dialog_info">GS SHOP LIVE / GS MY SHOP 방송 30분 전,\n방송 예정시간을 알려드립니다.\n(PUSH/문자 중 한 가지로 안내)</string>
+    <string name="v_schedule_onair_text">바로가기</string>
+    <string name="related_product">관련상품</string>
+    <string name="related_product_space">관련 상품</string>
+    <string name="related_product_close_space">관련 상품 닫기</string>
+
+    <!-- 비밀번호 변경 -->
+    <string name="update_pass_title_text">비밀번호 변경 안내</string>
+    <string name="update_pass_tv_title_text">TV회원 로그인번호 변경 안내</string>
+    <string name="update_pass_guide_guide1">고객님,\n최근 180일 동안 같은 비밀번호를\n사용하고 계십니다.</string>
+    <string name="update_pass_guide_guide2">비밀번호를 변경하여\n개인정보를 안전하게 보호하시기 바랍니다.</string>
+    <string name="update_pass_tv_button_text">TV회원 로그인번호 변경하기</string>
+    <string name="update_pass_button_text">비밀번호 변경하기</string>
+    <string name="update_pass_not_show">30일간 보지 않기</string>
+
+    <!-- 푸시유도팝업 -->
+    <string name="push_popup_notice">지금 창을 닫으시면 고객님을 위한 쇼핑혜택을 알려드릴 수 없습니다.\n알림을 통해서만 받을 수 있는 풍성한 혜택! 받아보시겠어요?</string>
+
+    <!--accessibility-->
+    <string name="accessibility_auth_img">쇼핑을 즐기시기 전에 더 나은 서비스 제공을 위해 동의가 필요합니다. 필수항목 2017년 3월 23일부터 시행되는 정보통신망법령에 따라 서비스에 꼭 필요한 항목만 접근하고 있습니다. 기기 및 앱기록  GS SHOP 앱 실행시, 서비스최적화 및 오류 확인 선택항목 동의하지 않아도 서비스 이용이 가능합니다. 전화 보이는 ARS 기능, SMS 인증번호 자동 입력, 저장 이미지 직접 저장 글 작성 시 이미지 첨부, 바이오정보 바이오(지문/안면) 인증 로그인 이용</string>
+    <string name="accessibility_push_img">쇼핑의 혜택을 놓치지 않도록 알림을 켤까요? 특가상품, 이벤트, 쿠폰정보를 알려드려요. 알림수신동의는 해당기기에서만 적용돼요. 마이쇼핑>설정에서 언제든지 변경가능해요.</string>
+    <string name="accessibility_tv_schedule_live">생방송 마이샵 전환</string>
+    <string name="accessibility_tv_schedule_on_air">on air</string>
+    <string name="accessibility_push_approve">푸시 알림 서비스 안내</string>
+    <string name="accessibility_category_expand">열기 닫기 선택</string>
+
+    <string name="accessibility_intro">GS SHOP을 방문해주셔서 감사합니다</string>
+    <string name="accessibility_label_login">로그인</string>
+    <string name="accessibility_label_setting">설정</string>
+
+    <string name="fx_dicount_card_lastfix">즉시할인</string>
+
+    <!-- 지금BEST -->
+    <string name="best_now_description">고객님의 선호도 기반 결과입니다.</string>
+    <string name="best_now_view_all">전체로 보기</string>
+
+    <!-- GS Super -->
+    <string name="gs_super_location_txt">배송지를 선택해 주세요.</string>
+    <string name="gs_super_location_btn_select">선택</string>
+    <string name="gs_super_location_btn_change">변경</string>
+    <string name="gs_super_location_btn_description">이용안내</string>
+    <string name="gs_super_location_btn_available_time">배송가능시간</string>
+    <string name="gs_super_toast_main_1">지금 주문하면</string>
+    <string name="gs_super_toast_main_2">배송가능</string>
+    <string name="gs_super_toast_detail">자세히 보기</string>
+
+    <string name="gs_super_title_txt">신선함의 시작 GS fresh Mall</string>
+    <string name="intro_defaul_txt">방문해 주셔서 감사합니다.</string>
+
+    <string name="gs_super_search_hint">GS 프레시몰 상품을 검색하세요.</string>
+
+    <string name="night_delivery_tool_tip_msg">신선함을 담아\n새벽 7시까지\n배송해 드려요</string>
+
+
+    <!-- 개인화 탭 -->
+    <string name="order_help_title">순서를 변경해보세요.</string>
+    <string name="order_help_sub">매장을 끌어서 원하는 순서로 변경해보세요.</string>
+    <string name="order_help_view">사용법 보기</string>
+    <string name="order_default_title">기본 순서로 보기</string>
+    <string name="order_default_sub">고객님은 매장 순서를 변경하셨습니다.</string>
+    <string name="order_default_sub_default">GS SHOP에서 제공하는 매장 순서대로 사용중입니다.</string>
+
+    <string name="order_save_failed">순서 변경이 정상적으로 저장되지 않았습니다. 잠시 후 다시 시도해주세요.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- 공통 채널 ID -->
+    <string name="NOTIFICATION_CHANNEL_ID">123123</string>
+
+    <!-- Navigation -->
+    <string name="navi_default_top_text">로그인 해주세요</string>
+    <string name="navi_title_gs_x_brand">GS X 브랜드</string>
+    <string name="navi_title_partner">파트너스</string>
+
+    <!-- Camera & Crop -->
+    <string name="crop_pick_error">No image sources available</string>
+    <string name="crop_wait">Please wait...</string>
+    <string name="crop_saving">Saving pictures...</string>
+    <string name="camera_preview_top_default">궁금한 상품을 촬영해서\n비슷한 상품을 찾아보세요</string>
+    <string name="crop_top_default">원하는 영역을 선택해 주세요.</string>
+    <string name="crop_done">선택완료</string>
+    <string name="crop_cancel">취소</string>
+    <string name="crop_back_to_camera">다시찍기</string>
+    <string name="camera_failed_size_is_to_big">너무 긴 이미지는 스타일 추천이 어렵습니다.\n다른 이미지를 선택 해 주세요.</string>
+
+    <!-- 인기검색어 배너 -->
+    <string name="popular_keyword_new">NEW</string>
+
+    <!-- 내일 TV -->
+    <string name="card_view_title">내일 방송상품 미리주문 카드혜택</string>
+    <string name="card_view_description">(상품상세 확인 / 일부상품 제외)</string>
+
+    <!-- 카드혜택 팝업 -->
+    <string name="popup_card_sub_title">(상세상품 확인 / 일부상품 제외)</string>
+
+    <!-- 접근성 -->
+    <string name="description_cart">장바구니</string>
+    <string name="description_category_open">카테고리메뉴 열기</string>
+    <string name="description_image">이미지 배너 입니다.</string>
+
+    <string name="upload_max_image_number">더 이상 이미지 선택이 불가능합니다.</string>
+
+    <!-- 단품 네이티브 -->
+    <string name="prd_delivery_tooltip">어디로 배송할까요?</string>
+
+    <!-- 선물하기 -->
+    <string name="gift_error_msg">연락처 불러오기를 실패하였습니다.</string>
+
+    <!-- TV 매장-->
+    <string name="prd_mlt_gba_count_text">%s (%s)개</string>
+
+    <string name="more_close">접기</string>
+    <string name="sale_juklib_more">할인/적립 자세히보기</string>
+
+    <!-- 접근성 -->
+    <string name="content_description_image">이미지 배너입니다.</string>
+
+    <!-- 쇼핑라이브 매장 방송 알림 팝업 -->
+    <string name="shopping_live_alarm_set_night">21시~08시 사이에도 알림을 받겠습니다.</string>
+    <string name="shopping_live_alarm_set_content">샤피라이브 편성은 GS SHOP의 사정에 따라 변경될 수 있습니다.</string>
+    <string name="shopping_live_alarm_cancel_content">방송알림을 취소하시겠습니까?</string>
+    <string name="shopping_live_alarm_success_content">알림 신청이 완료되었습니다!</string>
+    <string name="shopping_live_alarm_success_content_sub">방송이 시작되면 알려드립니다\n(푸시 / 문자 중 한가지로 안내)</string>
+    <string name="shopping_live_alarm_submit">알림 등록</string>
+
+    <string name="shpping_live_alarm_btn_off">샤피라이브 방송알림</string>
+    <string name="shpping_live_alarm_btn_on">알림 받는 중</string>
+
+    <string name="shopping_live_alarm_chk_on_description">체크하시면 21시 부터 08시 사이에 알림을 받습니다.</string>
+    <string name="shopping_live_alarm_chk_off_description">체크 해제 하시면 21시 부터 08시 사이에 알림을 받지 않습니다.</string>
+
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 인트로화면에 노출할 접근권한 안내 팝업 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:focusedByDefault="true"
+        android:contentDescription="@string/accessibility_auth_img"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:background="@drawable/auth_guide_bg"
+        android:id="@+id/auth_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/auth_confirm_padding"
+        android:paddingRight="@dimen/auth_confirm_padding"
+        android:scaleType="fitStart" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#bed730"
+        android:gravity="center"
+        android:contentDescription="@string/auth_info_confirm"
+        android:text="@string/auth_info_confirm"
+        android:textColor="#111111"
+        android:textSize="18sp" />
+
+</RelativeLayout>

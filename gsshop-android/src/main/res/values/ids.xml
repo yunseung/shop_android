@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <item name="bestdeal_live_player_area" type="id"/>
+    <item name="bestdeal_data_player_area" type="id"/>
+
+    <!--vod frame ids-->
+    <item name="vod_land_video_frame_00" type="id"/>
+    <item name="vod_land_video_frame_01" type="id"/>
+    <item name="vod_land_video_frame_02" type="id"/>
+    <item name="vod_land_video_frame_03" type="id"/>
+    <item name="vod_land_video_frame_04" type="id"/>
+    <item name="vod_land_video_frame_05" type="id"/>
+    <item name="vod_land_video_frame_06" type="id"/>
+    <item name="vod_land_video_frame_07" type="id"/>
+    <item name="vod_land_video_frame_08" type="id"/>
+    <item name="vod_land_video_frame_09" type="id"/>
+    <item name="vod_land_video_frame_10" type="id"/>
+    <item name="vod_land_video_frame_11" type="id"/>
+    <item name="vod_land_video_frame_12" type="id"/>
+    <item name="vod_land_video_frame_13" type="id"/>
+    <item name="vod_land_video_frame_14" type="id"/>
+    <item name="vod_land_video_frame_15" type="id"/>
+    <item name="vod_land_video_frame_16" type="id"/>
+    <item name="vod_land_video_frame_17" type="id"/>
+    <item name="vod_land_video_frame_18" type="id"/>
+    <item name="vod_land_video_frame_19" type="id"/>
+    <item name="vod_land_video_frame_20" type="id"/>
+    <item name="vod_land_video_frame_21" type="id"/>
+    <item name="vod_land_video_frame_22" type="id"/>
+    <item name="vod_land_video_frame_23" type="id"/>
+    <item name="vod_land_video_frame_24" type="id"/>
+    <item name="vod_land_video_frame_25" type="id"/>
+    <item name="vod_land_video_frame_26" type="id"/>
+    <item name="vod_land_video_frame_27" type="id"/>
+    <item name="vod_land_video_frame_28" type="id"/>
+    <item name="vod_land_video_frame_29" type="id"/>
+    <item name="vod_land_video_frame_30" type="id"/>
+    <item name="vod_land_video_frame_31" type="id"/>
+    <item name="vod_land_video_frame_32" type="id"/>
+    <item name="vod_land_video_frame_33" type="id"/>
+    <item name="vod_land_video_frame_34" type="id"/>
+    <item name="vod_land_video_frame_35" type="id"/>
+    <item name="vod_land_video_frame_36" type="id"/>
+    <item name="vod_land_video_frame_37" type="id"/>
+    <item name="vod_land_video_frame_38" type="id"/>
+    <item name="vod_land_video_frame_39" type="id"/>
+
+    <item name="vod_port_video_frame_00" type="id"/>
+    <item name="vod_port_video_frame_01" type="id"/>
+    <item name="vod_port_video_frame_02" type="id"/>
+    <item name="vod_port_video_frame_03" type="id"/>
+    <item name="vod_port_video_frame_04" type="id"/>
+    <item name="vod_port_video_frame_05" type="id"/>
+    <item name="vod_port_video_frame_06" type="id"/>
+    <item name="vod_port_video_frame_07" type="id"/>
+    <item name="vod_port_video_frame_08" type="id"/>
+    <item name="vod_port_video_frame_09" type="id"/>
+    <item name="vod_port_video_frame_10" type="id"/>
+
+    <item name="vod_square_video_frame_00" type="id"/>
+    <item name="vod_square_video_frame_01" type="id"/>
+    <item name="vod_square_video_frame_02" type="id"/>
+    <item name="vod_square_video_frame_03" type="id"/>
+    <item name="vod_square_video_frame_04" type="id"/>
+    <item name="vod_square_video_frame_05" type="id"/>
+    <item name="vod_square_video_frame_06" type="id"/>
+    <item name="vod_square_video_frame_07" type="id"/>
+    <item name="vod_square_video_frame_08" type="id"/>
+    <item name="vod_square_video_frame_09" type="id"/>
+    <item name="vod_square_video_frame_10" type="id"/>
+
+</resources>

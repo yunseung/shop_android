@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="com_appboy_card_background_border_bottom">1.0dp</dimen>
+    <dimen name="com_appboy_card_background_border_left">1.0dp</dimen>
+    <dimen name="com_appboy_card_background_border_right">1.0dp</dimen>
+    <dimen name="com_appboy_card_background_border_top">0.5dp</dimen>
+    <dimen name="com_appboy_card_background_shadow_bottom">1.0dp</dimen>
+    <dimen name="horizontal_bar_padding">6dp</dimen>
+    <dimen name="mobiletalk_textbox_height">200dp</dimen>
+    <dimen name="review_reward_left_margin">33.75dip</dimen>
+    <dimen name="review_reward_right_margin">27.75dip</dimen>
+    <dimen name="top_menu_font_size">12dp</dimen>
+    <dimen name="viewpager_child_height">160dp</dimen>
+</resources>

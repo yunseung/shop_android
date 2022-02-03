@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!-- gs super 타이틀 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_tooltip_night_delivery"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:animateLayoutChanges="true"
+        android:background="@color/tooltip_blue_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:background="@drawable/night_delivery_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:textAlignment="center"
+            android:includeFontPadding="false"
+            android:text="신선하고, 여유롭게! 새벽배송을 이용해 보세요"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="15dp"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:id="@+id/img_tab"
+            android:layout_width="107dp"
+            android:layout_height="35dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 개인화 리워드정보 배너 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/vh_blank_space_middle"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/reward_image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/text_reward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="22dp"
+            android:layout_toRightOf="@+id/reward_image"
+            android:ellipsize="none"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#111111"
+            android:textSize="16dp"
+            autofit:minTextSize="10dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-15dp"
+            android:layout_toRightOf="@+id/text_reward">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_s_gray_android" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

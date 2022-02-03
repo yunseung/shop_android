@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        android:layout_margin="8dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+            <ImageView
+                android:id="@+id/img_sumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="2:1"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toBottomOf="@+id/img_sumbnail"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                >
+                <TextView
+                    android:id="@+id/txt_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:text="방송알림 신청 3천원 쿠폰"
+                    android:includeFontPadding="false"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="#111111"
+                    />
+                <TextView
+                    android:id="@+id/txt_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_main"
+                    android:typeface="sans"
+                    android:text="알림 등록하고 구매하면 3천원 쿠폰 100% 증정"
+                    android:includeFontPadding="false"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="#666666"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

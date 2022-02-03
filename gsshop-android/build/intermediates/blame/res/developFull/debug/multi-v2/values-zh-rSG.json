@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-zh-rSG\\values-zh-rSG.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\c472eaf3c2a8a5a44e20c70439a75754\\jetified-android-sdk-ui-3.1.0\\res\\values-zh-rSG\\values-zh-rSG.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,139,211,277,340,404,483,558,635,700,766,827",
+                        "endColumns": "83,71,65,62,63,78,74,76,64,65,60,61",
+                        "endOffsets": "134,206,272,335,399,478,553,630,695,761,822,884"
+                    }
+                }
+            ]
+        }
+    ]
+}

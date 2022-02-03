@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/view_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingTop="15dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_prd"
+                android:layout_width="match_parent"
+                android:layout_height="163.12dp"
+                android:background="#f7f7f7" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_brd_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:background="#e6ffffff"
+                    android:gravity="center"
+                    android:textColor="#111111"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_air_buy"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:background="#99000000"
+                    android:gravity="center"
+                    android:text="@string/layer_flag_air_buy"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/frame_rank"
+                    android:layout_width="33.75dp"
+                    android:layout_height="37.12dp">
+
+                    <ImageView
+                        android:id="@+id/image_rank_rest"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ranking6_100_bg_720" />
+
+                    <ImageView
+                        android:id="@+id/image_rank_best"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ranking1_5_bg_720" />
+
+                    <TextView
+                        android:id="@+id/text_rank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="6dp"
+                        android:text="1"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/image_badge"
+                    android:layout_width="54dp"
+                    android:layout_height="16dp"
+                    android:background="@drawable/deal_badge" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/vh_blank_space_middle"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="none"
+                    android:gravity="left"
+                    android:lines="2"
+                    android:paddingRight="@dimen/vh_blank_space_middle"
+                    android:text="100세까지 100세까지 100세까지 100세까지 100세까지 100세까지 100세까지 100세까지"
+                    android:textColor="#444444"
+                    android:textSize="16dp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="33.5dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="bottom"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_badge_per"
+                            style="@style/FreshDiscountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:includeFontPadding="false"
+                            android:text="6%"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:id="@+id/text_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:textColor="#111111"
+                                android:includeFontPadding="false"
+                                android:textSize="13dp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/text_base"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:includeFontPadding="false"
+                                android:textColor="#888888"
+                                android:textSize="13dp"
+                                android:typeface="sans"
+                                android:text="20,000"/>
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/text_promotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#999999"
+                        android:textSize="11dp"
+                        android:typeface="sans"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="bottom"
+                        android:includeFontPadding="false"
+                        android:text="(봉사료 및 TAX포함)"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/text_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:includeFontPadding="false"
+                        android:text="44,500"
+                        android:textColor="#111111"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/text_notation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:includeFontPadding="false"
+                        android:text="원"
+                        android:textColor="#111111"
+                        android:textSize="15dp"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                >
+
+                <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#f5f5f5" />-->
+
+                <LinearLayout
+                    android:id="@+id/view_rw_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/badge_1"
+                        android:layout_width="40dp"
+                        android:layout_height="17dp"
+                        />
+                    <ImageView
+                        android:id="@+id/badge_2"
+                        android:layout_width="40dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="8dp"
+                        />
+                    <ImageView
+                        android:id="@+id/badge_3"
+                        android:layout_width="36dp"
+                        android:layout_height="17dp"
+                        android:layout_marginLeft="8dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_attach_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="-1dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="invisible"/>
+
+                <TextView
+                    android:id="@+id/text_sales_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_attach_badge"
+                    android:layout_marginTop="7dp"
+                    android:includeFontPadding="false"
+                    android:text="상품평 1,277"
+                    android:textColor="#888888"
+                    android:textSize="13dp"
+                    android:typeface="sans"
+                    />
+
+                <CheckBox
+                    android:id="@+id/check_zzim"
+                    android:layout_width="100dp"
+                    android:layout_height="16dp"
+                    android:button="@android:color/transparent"
+                    android:drawableRight="@drawable/selector_best_shop_prd_zzim"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/text_sales_quantity"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

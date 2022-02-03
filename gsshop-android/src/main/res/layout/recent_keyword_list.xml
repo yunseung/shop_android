@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 최근 검색어 목록 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_recent_keyword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/layout_clear_recent_keywords">
+
+        <ListView
+            android:id="@+id/list_recent_keyword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0px"
+            android:footerDividersEnabled="false"
+            android:orientation="vertical" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.67dip"
+            android:background="@color/list_item_divider" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_clear_recent_keywords"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:clickable="true"
+        android:background="#f9f9f9"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19111111" />
+
+        <Button
+            android:id="@+id/btn_clear_recent_keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:text="@string/search_recent_keyword_delete"
+            android:background="@android:color/transparent"
+            android:textColor="#111111"
+            android:textSize="15dp"
+            android:typeface="sans" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#19111111"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

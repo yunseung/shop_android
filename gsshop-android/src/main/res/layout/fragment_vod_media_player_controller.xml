@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 생방송/동영상 재생 화면 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/tapview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.brightcove.player.view.BrightcoveExoPlayerVideoView
+        android:id="@+id/brightcove_video_view_vod_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--mute, 축소 버튼-->
+    <LinearLayout
+        android:id="@+id/view_vod_player_bottom_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <gsshop.mobile.v2.util.TouchAreaExpand
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            android:padding="5dp">
+
+            <CheckBox
+                android:id="@+id/check_vod_player_mute"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:background="@drawable/selector_best_deal_player_mute"
+                android:contentDescription="@string/common_mute"
+                android:button="@android:color/transparent" />
+        </gsshop.mobile.v2.util.TouchAreaExpand>
+
+        <androidx.legacy.widget.Space
+            android:layout_width="2dp"
+            android:layout_height="match_parent" />
+
+        <gsshop.mobile.v2.util.TouchAreaExpand
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <View
+                android:id="@+id/view_vod_player_zoom"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:contentDescription="@string/common_full_screen"
+                android:background="@drawable/ic_zoom_s_android" />
+        </gsshop.mobile.v2.util.TouchAreaExpand>
+    </LinearLayout>
+
+    <!--3g 과금-->
+    <FrameLayout
+        android:id="@+id/view_vod_player_mobile_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000">
+
+        <include
+            layout="@layout/view_mobile_data_alert_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/image_main"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#f7f7f7"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/noimage_375_188" />
+
+            <TextView
+                android:id="@+id/text_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textColor="#ffffff"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_gs_x_brand_zzim"
+                    android:layout_width="24dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/selector_gs_x_brand_zzim"
+                    android:button="@null"
+                    android:visibility="visible"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/btn_arrow"
+                    android:visibility="gone"/>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="10dp" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_prds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#f4f4f4" />
+
+        <LinearLayout
+            android:id="@+id/view_more"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상품 더보기"
+                android:textColor="#777777"
+                android:textSize="17sp"
+                android:typeface="sans" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="7dp"
+                android:src="@drawable/ico_arrow_01" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_go_brand_shop"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="브랜드샵 바로가기"
+                android:textColor="#777777"
+                android:textSize="17sp"
+                android:typeface="sans" />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="12dp"
+                android:src="@drawable/ico_arrow_02" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9" />
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vh_blank_space_middle" />
+</LinearLayout>

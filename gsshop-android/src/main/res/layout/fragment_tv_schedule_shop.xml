@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <!--dates view-->
+    <LinearLayout
+        android:id="@+id/frame_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="#666666"
+            android:layout_height="60dp">
+
+            <!--dates list-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_tv_schedule_date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/tv_schedule_description_recycler_date"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#33000000" />
+
+        <!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/text_tv_schedule_live_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="#444444"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/text_tv_schedule_live_phrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/text_tv_schedule_live_title"
+                android:textColor="#444444"
+                android:textSize="14dp"
+                android:typeface="sans" />
+
+            <CheckBox
+                android:id="@+id/check_tv_schedule_live"
+                android:layout_width="118dp"
+                android:layout_height="31dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="7dp"
+                android:contentDescription="생방송이 선택됨"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/selector_tv_schedule_live"
+                android:button="@null"
+                android:checked="true" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#999999" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/btn_scheduler"
+            android:layout_width="320dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            android:background="@drawable/renewal_bg_btn_scheduler"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <CheckBox
+                    android:id="@+id/btn_schedule_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/renewal_bg_btn_scheduler_each"
+                    android:button="@null"
+                    android:checked="true"
+                    android:contentDescription="GS SHOP LIVE"
+                    />
+                <ImageView
+                    android:layout_width="88.9dp"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/renewal_gsshop_live"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:background="#d8d8d8"
+                android:layout_gravity="center_vertical"
+                />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <CheckBox
+                    android:id="@+id/btn_schedule_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/renewal_bg_btn_scheduler_each"
+                    android:button="@null"
+                    android:contentDescription="GS MY SHOP"
+                    />
+                <ImageView
+                    android:layout_width="82.5dp"
+                    android:layout_height="11dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/renewal_gsshop_myshop"
+                    />
+            </FrameLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="12dp"
+                android:background="#d8d8d8"
+                android:layout_gravity="center_vertical"
+                />
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                >
+                <View
+                    android:id="@+id/btn_schedule_shoppy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/renewal_bg_btn_scheduler_each"
+                    android:contentDescription="Shoppy Live"
+                    />
+                <ImageView
+                    android:layout_width="76dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/logo_01_gs_shoopy_live"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--time line list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_tv_schedule_timeline"
+        android:layout_width="86dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_date"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/bg_tv_schedule_time_list"
+        android:contentDescription="@string/tv_schedule_description_recycler_time" />
+
+    <!--product list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_tv_schedule_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_date"
+        android:layout_toLeftOf="@+id/recycler_tv_schedule_timeline" />
+
+    <!--dates shadow-->
+    <!--<View-->
+        <!--android:id="@+id/view_shadow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="8dp"-->
+        <!--android:layout_below="@+id/frame_date"-->
+        <!--android:layout_marginTop="21dp"-->
+        <!--android:background="@drawable/date_shadow_an" />-->
+
+    <!--siren-->
+    <RelativeLayout
+        android:id="@+id/view_tv_schedule_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="11.25dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="@dimen/tab_menu_height"
+        android:layout_toLeftOf="@+id/recycler_tv_schedule_timeline">
+
+        <!-- 사이렌 아이콘 노출 (임직원 대상) -->
+        <LinearLayout
+            android:id="@+id/frame_tv_schedule_siren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/tv_schedule_description_siren"
+            android:orientation="vertical"
+            android:paddingBottom="17.25dp">
+
+            <ImageView
+                android:id="@+id/tooltip_siren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mc_siren" />
+
+            <ImageView
+                android:id="@+id/btn_siren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/btn_siren" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_tv_schedule_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/top_720" />
+
+        <LinearLayout
+            android:id="@+id/frame_tv_schedule_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/counting_bg_720"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_current_count"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:paddingBottom="3.62dp"
+                android:textColor="#444444"
+                android:textSize="13.5sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#dcdcdc" />
+
+            <TextView
+                android:id="@+id/txt_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|top"
+                android:textColor="#999999"
+                android:textSize="13.5sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!-- 데이타 연결오류 시 -->
+    <include layout="@layout/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/main_header_height"/>
+
+</RelativeLayout>

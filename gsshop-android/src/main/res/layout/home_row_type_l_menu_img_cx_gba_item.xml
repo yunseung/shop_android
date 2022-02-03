@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="98dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_sumbnail"
+        android:layout_marginTop="12dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:civ_border_color="#ffffffff"
+        app:civ_border_width="1dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:text="출석체크"
+        android:textSize="13dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#111111"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        />
+    
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_plan_shop_big_brand"
+        android:paddingBottom="1dp"
+        android:orientation="vertical">
+
+        <!-- 상품정보 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/vh_blank_space_middle">
+
+            <LinearLayout
+                android:id="@+id/row_tv_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 상품이미지 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/main_img"
+                        android:layout_width="143dp"
+                        android:layout_height="81dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/txt_play_time"
+                        android:layout_gravity="bottom|right"
+                        android:gravity="center"
+                        android:textSize="13sp"
+                        android:textColor="#ffffff"
+                        android:background="#99222222"
+                        android:layout_width="45dp"
+                        android:layout_height="18dp" />
+
+                </FrameLayout>
+
+                <!-- 상품 이름, 가격 등 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_title"
+                        style="@style/NalbangDealTitleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:orientation="horizontal"
+                        android:layout_above="@+id/txt_sales_quantity" >
+
+                        <TextView
+                            android:id="@+id/txt_badge_per"
+                            style="@style/NalbangDealDiscountText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="bottom" />
+
+                        <TextView
+                            android:id="@+id/txt_price"
+                            style="@style/NalbangDealPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:maxLength="23"
+                            android:gravity="bottom"
+                            android:layout_marginBottom="1dp"
+                            android:lineSpacingExtra="0dip"
+                            android:layout_marginLeft="9dp"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/txt_price_unit"
+                            style="@style/NalbangDealPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                            android:paddingBottom="1.8dp"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/txt_base_price"
+                            style="@style/NalbangDealPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="#888888"
+                            android:gravity="bottom"
+                            android:layout_gravity="bottom"
+                            android:lineSpacingExtra="0dip"
+                            android:layout_marginLeft="6dp"
+                            android:paddingBottom="3dp"
+                            android:textSize="11.5dp"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            />
+                        <TextView
+                            android:id="@+id/txt_base_price_unit"
+                            style="@style/NalbangDealPriceText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textColor="#888888"
+                            android:gravity="bottom"
+                            android:layout_gravity="bottom"
+                            android:lineSpacingExtra="0dip"
+                            android:paddingBottom="3dp"
+                            android:textSize="11.5dp"
+                            android:visibility="gone"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/valueInfo"
+                            style="@style/DealValueInfoText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:lineSpacingExtra="0dip"
+                            android:layout_marginLeft="7dp"
+                            android:gravity="bottom"
+                            android:paddingBottom="2dp"
+                            android:layout_toRightOf="@+id/layout_base_price" />
+
+
+                        <ImageView
+                            android:id="@+id/delivery_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="7dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="3.2dp"
+                            />
+                    </LinearLayout>
+
+                    <!-- 구매수량 -->
+                    <TextView
+                        android:id="@+id/txt_sales_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textColor="#666666"
+                        android:textStyle="normal"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/nalbang_shop_divider" />
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:id="@+id/hashtags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/vh_blank_space_small"
+            android:paddingRight="@dimen/vh_blank_space_small"
+            app:rowGravity="left"
+            app:rowMargin="@dimen/vh_blank_space_small"
+            app:rowMode="wrap"
+            app:tagBackground="@drawable/bg_nalbang_shop_hashtab"
+            app:tagMargin="@dimen/vh_blank_space_small"
+            app:tagPaddingBottom="5dp"
+            app:tagPaddingLeft="6dp"
+            app:tagPaddingRight="6dp"
+            app:tagPaddingTop="5dp"
+            app:tagTextColor="#666666"
+            app:tagTextSize="13sp" />
+    </LinearLayout>
+</FrameLayout>

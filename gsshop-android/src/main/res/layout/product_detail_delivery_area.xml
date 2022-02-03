@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 단품하단 배송 영역 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <!-- 첫번째 템플릿 -->
+        <include
+            android:id="@+id/item_1st"
+            layout="@layout/product_detail_delivery_area_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"/>
+
+        <!-- 두번째 템플릿 -->
+        <include
+            android:id="@+id/item_2nd"
+            layout="@layout/product_detail_delivery_area_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"/>
+
+    </LinearLayout>
+
+    <!-- 툴팁 -->
+    <include
+        layout="@layout/tooltip_prd_delivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="right" />
+
+</FrameLayout>

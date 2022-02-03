@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/top_margin"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:visibility="gone"
+        />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="169.67dp"
+        android:layout_marginBottom="6.75dp" />
+
+    <gsshop.mobile.v2.home.util.IconTabBar
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="7.87dp"
+        android:layout_gravity="bottom" />
+
+</LinearLayout>

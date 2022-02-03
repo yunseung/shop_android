@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 버튼 배경 5 : 뒤로가기 버튼 등 -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#14000000" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+        	<solid android:color="#f9f9f9" />
+        </shape>
+    </item>
+
+</selector>

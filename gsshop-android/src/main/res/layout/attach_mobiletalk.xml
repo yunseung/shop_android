@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 파일첨부(쇼미카페,이벤트 등) 화면 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="top"
+    android:layout_marginLeft="15dip"
+    android:layout_marginRight="15dip"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingTop="10dp" >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mobiletalk_background"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/txt_header_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#111111"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/mobile_talk_edittext_background" >
+
+            <!-- 내용입력 영역 -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="177.5dp"
+                android:minHeight="@dimen/mobiletalk_textbox_height"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/edit_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn_take_photo_frame"
+                    android:background="@android:color/transparent"
+                    android:focusable="true"
+                    android:gravity="top|left"
+                    android:isScrollContainer="true"
+                    android:hint="@string/mobiletalk_description_contents"
+                    android:inputType="textMultiLine"
+                    android:maxLines="12"
+                    android:nextFocusDown="@+id/btn_save"
+                    android:padding="17dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#000000"
+                    android:textColorHint="#a3a3a3"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <!-- 이미지 피커 및 입력바이트 표시  영역 -->
+
+                <FrameLayout
+                    android:id="@+id/btn_take_photo_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="#f4f4f4"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:layout_alignParentBottom="true" >
+
+                    <!-- 카메라 이미지 영역 -->
+
+                    <LinearLayout
+                        android:id="@+id/btn_take_photo_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="11.25dip" >
+
+                        <Button
+                            android:id="@+id/btn_take_photo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@android:string/untitled"
+                            android:scaleType="fitXY"
+                            android:background="@drawable/btn_attech_photo" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center_vertical"
+                            android:orientation="vertical"
+                            >
+                            <LinearLayout
+                                android:id="@+id/btn_next"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/btn_take_photo_layout_text"
+                                    android:textColor="#111111"
+                                    android:textSize="15sp"
+                                    android:typeface="sans" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 입력글자 바이트수 표시 영역 -->
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="11.25dip" >
+
+                        <TextView
+                            android:id="@+id/text_len"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="#444444"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/text_len_byte"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/2000"
+                            android:textColor="#C3C3C3"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </FrameLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <!-- 사진선택시 표시할 이미지 및 삭제버튼 -->
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/layout_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="11.25dp"
+                android:paddingTop="11.25dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 접수하기 버튼 영역 -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="11.25dip"
+            android:background="#E5E5E5"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="45dip"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:focusable="true"
+                android:nextFocusUp="@id/edit_comment"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_cancel"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#E5E5E5"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="45dip"
+                android:layout_weight="1"
+                android:layout_gravity="right"
+                android:focusable="true"
+                android:nextFocusUp="@id/edit_comment"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_take_save_text"
+                android:textColor="#111111"
+                android:textSize="15sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <!-- 하단 공백 -->
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="268dp" />
+
+        <TextView
+            android:id="@+id/text_count"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="146dp"
+            android:paddingRight="9.5dp"
+            android:paddingLeft="10dp"
+            android:includeFontPadding="false"
+            android:background="@drawable/bg_66111111_round_14"
+            android:gravity="center"
+            android:text="1/4"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:typeface="sans" />
+    </FrameLayout>
+
+</FrameLayout>

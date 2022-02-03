@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.florent37:camerafragment:1.0.9@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ed95aa1925f2849cdb5593164fb8400/jetified-camerafragment-1.0.9/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/017967962adb75760a1ef87aa84dcd5e/jetified-camerafragment-1.0.9/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ed95aa1925f2849cdb5593164fb8400/jetified-camerafragment-1.0.9/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ed95aa1925f2849cdb5593164fb8400/jetified-camerafragment-1.0.9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2ed95aa1925f2849cdb5593164fb8400/jetified-camerafragment-1.0.9/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/017967962adb75760a1ef87aa84dcd5e/jetified-camerafragment-1.0.9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/017967962adb75760a1ef87aa84dcd5e/jetified-camerafragment-1.0.9/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/017967962adb75760a1ef87aa84dcd5e/jetified-camerafragment-1.0.9/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/camerafragment/1.0.9/c14cd0f004e6931f7a6b79dd1edd236b3d65badb/camerafragment-1.0.9-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/camerafragment/1.0.9/a198738ed76a8f9bc0ca22306ec381e7e5a47a66/camerafragment-1.0.9-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="46dp"
+    android:layout_height="48dp"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_tv_schedule_date_week"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#a3ffffff"
+        android:textSize="13dp"
+        android:typeface="sans"
+        android:includeFontPadding="false"/>
+
+    <TextView
+        android:id="@+id/txt_tv_schedule_date_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:includeFontPadding="false"
+        android:typeface="sans" />
+
+</LinearLayout>

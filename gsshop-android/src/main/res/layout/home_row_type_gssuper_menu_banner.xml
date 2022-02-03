@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_gs_fresh_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" />
+
+    <FrameLayout
+        android:id="@+id/view_gs_supper_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_gs_fresh_search"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="22dp"
+                android:layout_height="21dp"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_search_and" />
+
+                <Button
+                    android:id="@+id/btn_gs_fresh_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+            </FrameLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="10dp" />
+
+            <EditText
+                android:id="@+id/edit_gs_fresh_search_keyword"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:hint="@string/gs_super_search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:textColor="#111111"
+                android:textColorHint="#888888"
+                android:textCursorDrawable="@drawable/search_gs_fresh_cursor"
+                android:textSize="15sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_gs_fresh_clear_keyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:contentDescription="@android:string/cancel"
+            android:src="@drawable/ic_close1_720" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#d9d9d9" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_super_menu_divider_height"
+        android:background="#e5e5e5" />
+</LinearLayout>

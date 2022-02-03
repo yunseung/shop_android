@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- caution :  -->
+	<!-- svn에 커밋할때는 서버 도메인을 m.gsshop.com으로 고정하세요.  -->
+	<!-- 또한 https도 https://m.gsshop.com값으로 지정하세요 (포트번호 제거)  -->
+	<!-- 도메인별 gsshop apk 파일 생성은 zenkins의 job을 실행하세요.  -->
+	
+    <!-- DOMAIN -->
+    <!-- m.gsshop.com 운영 -->
+    <!-- m.gsshop.com 테스트이면서 DB는 운영으로(스테이징) -->
+    <!-- tm14.gsshop.com 서버와 DB가 테스트 -->
+    <!-- dm14.gsshop.com dev테스트(기간계테스트용) -->
+	<!-- ":446"; // SM 버전 -->
+    <!-- ":447"; // SM21 버전 -->
+    <!-- ":445"; // TM 버전 -->
+    <!-- ":444"; // DM 버전 -->
+
+  	<!--<string name="server_host">m.gsshop.com</string>    -->
+    <!--<string name="server_http_root">http://m.gsshop.com</string>-->
+    <!--<string name="server_https_root">https://m.gsshop.com</string>-->
+  	
+
+</resources>

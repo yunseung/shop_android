@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 순수 웹뷰 영역 -->
+
+<gsshop.mobile.v2.home.DirectOrderView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000">
+        <gsshop.mobile.v2.web.CustomWebView
+            android:id="@+id/direct_order_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="@style/MochaThemeDialogTranslucent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/mc_async_dialog_spin" />
+    </FrameLayout>
+</gsshop.mobile.v2.home.DirectOrderView>

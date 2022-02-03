@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 푸시유도 팝업 다이얼로그 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/push_layout"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="bottom"
+	android:background="#80000000">
+
+	<!-- 배경 녹색선 방지용 -->
+	<View
+		android:id="@+id/dummy"
+		android:clickable="true"
+		android:layout_width="1dp"
+		android:layout_height="1dp"
+		android:background="@android:color/transparent"/>
+
+	<RelativeLayout
+		android:id="@+id/push_popup"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/bg_app_push_popup"
+		android:visibility="invisible">
+		<FrameLayout
+			android:id="@+id/lay_img"
+			android:layout_width="68dp"
+			android:layout_height="68dp"
+			android:layout_alignParentTop="true"
+			android:layout_marginTop="20dp"
+			android:layout_centerHorizontal="true">
+
+			<!-- 아이콘 영역 -->
+			<ImageView
+				android:id="@+id/push_img"
+				android:layout_width="68dp"
+				android:layout_height="68dp"
+				android:src="@drawable/app_push_icon" />
+
+			<!-- 애니메이션 적용 -->
+			<com.airbnb.lottie.LottieAnimationView
+				android:id="@+id/img_animation"
+				android:layout_width="68dp"
+				android:layout_height="68dp"
+				app:lottie_rawRes="@raw/push_lottie" />
+
+		</FrameLayout>
+
+		<TextView
+			android:id="@+id/push_turn_on"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/lay_img"
+			android:text="푸시 알림을 켜보세요!"
+			android:layout_marginTop="10dp"
+			android:textStyle="bold"
+			android:gravity="center"
+			android:textSize="20dp"
+			android:textColor="#111111"
+			android:layout_marginLeft="54dp"
+			android:layout_marginRight="53dp"/>
+
+		<TextView
+			android:id="@+id/push_detail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/push_turn_on"
+			android:text="맞춤 추천 상품, 특가 행사, 이벤트 정보를 가장 빠르게 받아보실 수 있어요."
+			android:maxLines="2"
+			android:layout_marginTop="2dp"
+			android:gravity="center"
+			android:layout_marginLeft="54dp"
+			android:layout_marginRight="53dp"
+			android:textColor="#111111"
+			android:textSize="15dp"/>
+
+
+		<Button
+			android:id="@+id/push_ok"
+			android:layout_below="@+id/push_detail"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:focusable="false"
+			android:background="@drawable/bg_push_ok"
+			android:textColor="#000000"
+			android:textSize="17dp"
+			android:layout_marginRight="16dp"
+			android:layout_marginLeft="16dp"
+			android:text="알림 켜기"
+			android:layout_marginTop="20dp"
+			android:textStyle="bold"
+			android:paddingTop="13dp"
+			android:paddingBottom="13dp"/>
+
+		<Button
+			android:id="@+id/push_close"
+			android:layout_below="@+id/push_ok"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:focusable="false"
+			android:background="@drawable/selector_share_item"
+			android:textColor="#7a111111"
+			android:textSize="14dp"
+			android:text="7일간 안보기"
+			android:layout_marginRight="16dp"
+			android:layout_marginLeft="16dp"
+			android:padding="14dp"/>
+
+	</RelativeLayout>
+
+
+</LinearLayout>

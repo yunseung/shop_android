@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">633890543958-2s4qe0ij7gh8ves0193s1vk2qp2nn4up.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://push-gsshop.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">633890543958</string>
+    <string name="google_api_key" translatable="false">AIzaSyDEgDbl_UOsM32Fb1egBfjYa3lXAoB9Xxo</string>
+    <string name="google_app_id" translatable="false">1:633890543958:android:09442aa3385db77d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDEgDbl_UOsM32Fb1egBfjYa3lXAoB9Xxo</string>
+    <string name="google_storage_bucket" translatable="false">push-gsshop.appspot.com</string>
+</resources>

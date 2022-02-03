@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_best_shop_category"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_popular_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11.25dp"
+            android:gravity="center_vertical"
+            android:text="@string/best_shop_populate_keyword"
+            android:textColor="#111111"
+            android:textSize="16dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:textStyle="bold"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:typeface="sans" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/best_shop_populate_keyword_divider" />
+
+        <com.greenfrvr.hashtagview.HashtagView
+            android:id="@+id/hashtags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="6dp"
+            app:rowGravity="left"
+            app:rowMargin="4dp"
+            app:rowMode="wrap"
+            app:tagMargin="4dp"
+            app:tagPaddingBottom="5dp"
+            app:tagPaddingLeft="5dp"
+            app:tagPaddingRight="5dp"
+            app:tagPaddingTop="5dp"
+            app:tagTextColor="#ffffff"
+            app:tagTextSize="16sp" />
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,64 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <gsshop.mobile.v2.home.util.crop.view.CropImageView
+        android:id="@+id/crop_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/text_top"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="@string/crop_top_default"
+        android:textSize="22dp"
+        android:textColor="@color/white"
+        android:lines="1"
+        android:layout_marginTop="80dp"
+        />
+
+    <FrameLayout
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="82dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_crop_cancel"
+                android:text="@string/crop_cancel"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="105dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="11dp"
+                android:background="@drawable/bg_crop_confirm"
+                android:text="@string/crop_done"
+                android:textColor="#000000"
+                android:textSize="15dp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

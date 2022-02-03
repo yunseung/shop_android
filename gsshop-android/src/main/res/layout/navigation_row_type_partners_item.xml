@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_partners"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/white"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_partners"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card:cardCornerRadius="4dp"
+        card:cardElevation="2dp"
+        android:layout_margin="4dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageview_partner"
+            android:layout_width="102dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:clickable="false"
+            />
+
+        <View
+            android:id="@+id/view_click"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_button_navi_category"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+

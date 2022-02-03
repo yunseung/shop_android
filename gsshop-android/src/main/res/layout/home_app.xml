@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 홈 화면 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_root_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gsshop.mobile.v2.home.HomeActivity">
+
+    <!-- 상단탭 영역이 포커싱되어 배경이 회색으로 노출되어 이를 제거하기 위한 뷰 -->
+    <Button
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent"
+        />
+
+    <!-- 웹뷰 -->
+    <WebView
+        android:id="@+id/mainWebView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            app:elevation="0dp" >
+
+            <!-- 해더, 스크롤시 숨김/노출 영역 -->
+            <include
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                layout="@layout/home_top_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- 상단 탭메뉴 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/left_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/tab_indicator_arrow_left"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/right_arrow"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/tab_indicator_arrow_right"
+                    android:visibility="gone" />
+
+                <gsshop.mobile.v2.home.RecyclerTabLayout
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="7dp"
+                    app:rtl_tabIndicatorColor="@color/tab_indicator_bg_selected"
+                    app:rtl_tabSelectedTextColor="@color/tab_indicator_text_selected"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tab_indicator_underline_color"
+                    />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:background="#eeeeee"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!--</LinearLayout>-->
+    <!-- 검색바(고정. 루트 페이지에서만 보임) -->
+
+
+    <!-- 개인화(csp) 아이콘 노출 하단탭 바로 위에 -->
+    <FrameLayout
+        android:id="@+id/layout_csp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="@dimen/cap_bottom_magin"
+        android:layout_marginLeft="6dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <!-- 이미지 버튼의 반에서 시작한다.65/2=27.5  -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="27.5dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <!-- android:paddingLeft="32.5" 내부 텍스트의 시작 위치  좌우 padding은 추가적으로 준다. 32.5 + (이미지의 공백) 텍스트 10-->
+            <TextView
+                android:id="@+id/textview_csp"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:background="@drawable/csp_textview_shape"
+                android:textSize="15dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:paddingLeft="35dp"
+                android:paddingRight="12dp"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_csp"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <include layout="@layout/tab_menu" />
+
+    <include
+        android:id="@+id/direct_order_layout"
+        layout="@layout/web_directbuy"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/view_edit_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        android:id="@+id/toast_gsfresh"
+        layout="@layout/toast_gssuper"
+        android:visibility="gone"
+        />
+</FrameLayout>

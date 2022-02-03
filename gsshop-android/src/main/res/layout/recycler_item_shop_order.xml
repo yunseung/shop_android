@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="#ffffff"
+    android:orientation="horizontal"
+    android:paddingLeft="24dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/text_shop_order"
+        android:layout_width="16dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="left"
+        android:textColor="#00aebd"
+        android:textSize="13dp"
+        android:text="19"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/text_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="left"
+        android:textColor="#111111"
+        android:textSize="17dp"
+        android:typeface="sans" />
+
+    <View
+        android:id="@+id/view_shop_dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_shop_order_dot" />
+
+
+    <androidx.legacy.widget.Space
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_drag" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="@android:color/white"
+    >
+    <RelativeLayout
+        android:id="@+id/read_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/text"
+            android:text="@string/common_go_brand_shop_gs_super"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            style="@style/GSSuperBannerButton"
+            android:textColor="#111111"
+            />
+
+        <ImageView
+            android:layout_toRightOf="@id/text"
+            android:layout_centerVertical="true"
+            android:layout_width="7dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/arrow_go_an"/>
+    </RelativeLayout>
+</RelativeLayout>
+
+

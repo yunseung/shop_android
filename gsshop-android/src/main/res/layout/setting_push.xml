@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_home_bg"
+    android:orientation="vertical" >
+
+    <!-- 상단 타이틀 -->
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.6dip"
+                    android:layout_marginRight="10.6dip"
+                    android:layout_marginTop="10.6dip"
+                    android:background="@drawable/bg_item_group"
+                    android:orientation="vertical"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dip"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_setting_push"
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:nextFocusDown="@+id/txt_push_popup"
+                            android:nextFocusRight="@+id/checkbox_receive"
+                            android:text="@string/setting_push" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_receive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:layout_marginRight="5dp"
+                            android:nextFocusDown="@+id/txt_push_popup"
+                            android:nextFocusRight="@+id/txt_push_popup" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/SubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dip"
+                    android:text="@string/push_popup_setting_title" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.6dip"
+                    android:layout_marginRight="10.6dip"
+                    android:background="@drawable/bg_item_group"
+                    android:orientation="vertical"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dip"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_push_popup"
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:nextFocusDown="@+id/txt_push_screen_on"
+                            android:nextFocusRight="@+id/checkbox_show_popup"
+                            android:text="@string/push_popup" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_show_popup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:nextFocusDown="@+id/txt_push_screen_on"
+                            android:nextFocusRight="@+id/txt_push_screen_on" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#E3E3E3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dip"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_push_screen_on"
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:nextFocusDown="@+id/txt_push_sound"
+                            android:nextFocusRight="@+id/checkbox_screen_on"
+                            android:text="@string/push_screen_on" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_screen_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:nextFocusDown="@+id/txt_push_sound"
+                            android:nextFocusRight="@+id/txt_push_sound" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/SubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dip"
+                    android:text="@string/push_sound_setting_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10.6dip"
+                    android:layout_marginLeft="10.6dip"
+                    android:layout_marginRight="10.6dip"
+                    android:background="@drawable/bg_item_group"
+                    android:orientation="vertical"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dip"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_push_sound"
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:nextFocusDown="@+id/txt_push_vibration"
+                            android:nextFocusRight="@+id/checkbox_sound"
+                            android:text="@string/push_sound" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_sound"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/checkbox"
+                            android:layout_marginRight="5dp"
+                            android:nextFocusDown="@+id/txt_push_vibration"
+                            android:nextFocusRight="@+id/txt_push_vibration" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:background="#E3E3E3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42dip"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/txt_push_vibration"
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:nextFocusRight="@+id/checkbox_vibration"
+                            android:text="@string/push_vibration" />
+
+                        <CheckBox
+                            android:id="@+id/checkbox_vibration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:button="@drawable/checkbox" />
+                    </LinearLayout>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.6dip"
+                    android:layout_marginRight="10.6dip"
+                    android:background="@drawable/bg_item_group"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dip" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_list_item"
+                        android:gravity="center_vertical" >
+ 
+                        <TextView
+                            style="@style/SettingItemMain"
+                            android:layout_width="0dip" 
+                            android:paddingRight="5dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="14sp"
+                            android:layout_weight="1"
+                            android:text="@string/msg_push_info" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+            
+            
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/header_shadow" />
+
+        </FrameLayout>
+    </ScrollView>
+
+    <include layout="@layout/tab_menu" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 인기검색어 뷰페이저 영역-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_gravity="top"
+    >
+
+    <include
+        android:id="@+id/item1"
+        layout="@layout/home_row_type_fx_popular_searching_banner_viewpager_item"/>
+
+    <include
+        android:id="@+id/item2"
+        layout="@layout/home_row_type_fx_popular_searching_banner_viewpager_item"/>
+
+    <include
+        android:id="@+id/item3"
+        layout="@layout/home_row_type_fx_popular_searching_banner_viewpager_item"/>
+
+    <include
+        android:id="@+id/item4"
+        layout="@layout/home_row_type_fx_popular_searching_banner_viewpager_item"/>
+
+    <include
+        android:id="@+id/item5"
+        layout="@layout/home_row_type_fx_popular_searching_banner_viewpager_item"/>
+
+
+</LinearLayout>

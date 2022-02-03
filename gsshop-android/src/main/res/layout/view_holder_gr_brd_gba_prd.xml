@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_prd_1th"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/iv_prd_1th"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <TextView
+                android:id="@+id/txt_brd_time_1th"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#66111111"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info_1th"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_prd_2th"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/iv_prd_2th"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <TextView
+                android:id="@+id/txt_brd_time_2th"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#66111111"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info_2th"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_prd_3th"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/iv_prd_3th"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <TextView
+                android:id="@+id/txt_brd_time_3th"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#66111111"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:typeface="sans" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info_3th"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_prd_4th"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:paddingBottom="16dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/iv_prd_4th"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <TextView
+                android:id="@+id/txt_brd_time_4th"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:layout_alignParentBottom="true"
+                android:background="#66111111"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:visibility="gone"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info_4th"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

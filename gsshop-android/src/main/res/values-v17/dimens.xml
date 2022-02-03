@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 체크박스 왼쪽 패딩값 -->
+    <dimen name="checkbox_left_padding">9dp</dimen>
+</resources>

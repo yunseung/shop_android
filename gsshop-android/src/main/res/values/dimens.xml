@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="row_item_margin">8dp</dimen>
+
+    <!-- SNS POPUP -->
+    <!-- CUSTOM DIALOG -->
+    <!-- Home -->
+
+    <!-- SIDE MENU -->
+
+    <!-- 메인 앱 개편 관련 -->
+    <!-- 메인 상단 섹션 타이틀 영역 -->
+	<!-- 대분류매장 banner -->
+    <dimen name="layout_sold_out_height">42.75dp</dimen>
+    
+    <!-- 하단탭바 뱃지 -->
+
+    <!-- 체크박스 왼쪽 패딩값 -->
+    <dimen name="checkbox_left_padding">30dp</dimen>
+    
+    <!-- 앨범이미지 크기 -->
+    <dimen name="gallery_photo_width">113dp</dimen>
+
+    <dimen name="tv_live_pager_child_height">255dp</dimen>
+    
+    <!-- 모바일상담 텍스트 입력창 높이 -->
+    <dimen name="mobiletalk_textbox_height">80dp</dimen>
+
+    <!-- 모바일상담 텍스트 입력창 높이 -->
+    <dimen name="mobiletalk_type_a_padding_top">30dp</dimen>
+    <dimen name="mobiletalk_type_b_padding_top">10dp</dimen>
+    
+    <dimen name="viewpager_margin">7dp</dimen>
+    <dimen name="viewpager_child_height">166dp</dimen>
+
+    <dimen name="viewpager_dot_padding">4.5dp</dimen>
+    <dimen name="popular_searching_viewpager_dot_padding">2.5dp</dimen>
+
+	<dimen name="brand_category_layout_height">57.37dp</dimen>
+	
+    <!-- FOOTER -->
+    <dimen name="horizontal_bar_padding">6dp</dimen>
+    <!-- FOOTER 이용약관 개인정보 처리방침등의 항목을 폰트 크기 고정-->
+	<dimen name="top_menu_font_size">12dp</dimen>
+
+	<dimen name="search_bar_height">50.62dp</dimen>
+
+	<dimen name="search_list_height">247dp</dimen>
+	
+	<dimen name="search_content_height">292dp</dimen>
+	
+	<!-- 상품평 -->
+    <dimen name="review_reward_left_margin">33.75dip</dimen>
+    <dimen name="review_reward_right_margin">27.75dip</dimen>
+    
+    <!-- flexible shop -->
+    <dimen name="flexible_viewpager_margin">9dp</dimen>
+    <dimen name="flexible_preview_width">27.12dp</dimen>
+    <dimen name="flexible_todays_hot_item_image_height">184.44dp</dimen>	
+    <dimen name="flexible_rollimage_preview_item_image_height">167.67dp</dimen>	
+    <dimen name="flexible_rollimage_item_image_height">247.49dp</dimen>
+    <dimen name="flexible_rollimage_new_item_image_height">180dp</dimen>
+    <dimen name="flexible_brand_rollimage_item_image_height">131dp</dimen>
+
+    <!-- 홈 이미지 통합배너(indicator있는 롤링이미지배너) -->
+    <dimen name="HomeImageBannerHeight">220dp</dimen>
+
+    <dimen name="flexible_image_banner_type_b_ixs_height">39.37dp</dimen>
+    <dimen name="flexible_image_banner_type_i_height">180dp</dimen>
+    <dimen name="flexible_image_banner_type_i_discount_card_hight">132dp</dimen>
+    <dimen name="flexible_image_banner_type_i_discount_card_image_width">85dp</dimen>
+    <dimen name="flexible_image_banner_type_i_discount_card_above_height">66dp</dimen>
+    <dimen name="flexible_image_banner_type_i_discount_card_below_height">66dp</dimen>
+    <dimen name="flexible_image_banner_type_b_is_height">56.25dp</dimen>
+    <dimen name="flexible_image_banner_type_b_iss_wrapper_height">40dp</dimen>
+    <dimen name="flexible_image_banner_type_b_iss_height">20dp</dimen>
+    <dimen name="flexible_image_banner_type_b_il_height">270dp</dimen>
+    <dimen name="flexible_image_banner_type_b_ixl_height">303.75dp</dimen>
+    <dimen name="flexible_image_banner_type_b_im440_height">247.5dp</dimen>
+    <dimen name="flexible_image_banner_type_b_ins_height">30.93dp</dimen>
+    <dimen name="flexible_image_banner_type_b_sic_height">180dp</dimen>
+    <dimen name="flexible_image_banner_type_f80">80dp</dimen>
+    <dimen name="flexible_image_banner_type_f80_margin">20dp</dimen>
+    <dimen name="flexible_image_banner_type_f80_margin_l">10dp</dimen>
+
+    <!-- TV쇼핑혜택 -->
+    <dimen name="flexible_tv_live_benefit_banner_height">43dp</dimen>
+    <dimen name="flexible_tv_live_benefit_banner_line_height">0.5dp</dimen>
+
+    <!-- event menu -->
+    <dimen name="event_tab_height">42dp</dimen>	
+    <dimen name="event_menu_staggered_inner_space">9dp</dimen>	
+    <dimen name="event_menu_staggered_outer_space">11.25dp</dimen>
+    <dimen name="event_menu_staggered_outer_space_boarder">10.25dp</dimen>
+    <dimen name="event_menu_wide_inner_space">10.12dp</dimen>
+    <dimen name="event_menu_wide_outer_space">16.87dp</dimen>	
+    <dimen name="event_item_single_height">144dp</dimen>	
+    <dimen name="event_item_double_height">297dp</dimen>	
+    <dimen name="event_item_wide_height">180dp</dimen>	
+    
+    
+    <!-- best deal -->
+    
+    <dimen name="best_deal_no1_deal_image_height">151.87dp</dimen>
+    <dimen name="best_deal_no1_deal_info_height">90dp</dimen>
+    <dimen name="best_deal_no1_deal_hot_6_top_height">9dp</dimen>
+    <dimen name="best_deal_media_top_margin">210dp</dimen>
+    <dimen name="best_deal_media_bottom_margin">160dp</dimen>
+
+    <dimen name="brand_menu_staggered_outer_space">6.25dp</dimen>
+
+    <dimen name="best_deal_text_title_roll_info_height">58dp</dimen>
+
+    <!-- 가격 폰트 크기 -->
+    <dimen name="best_deal_sale_price_TextSize">19dp</dimen>
+
+
+    <!-- today open-->
+    <dimen name="category_layout">45dp</dimen>
+
+    <dimen name="tv_top_layout_height">43.87dp</dimen>
+
+
+    <!-- 할인율 Text -->
+    <!-- <dimen name="bigTextSize">20sp</dimen> -->
+    <!-- <dimen name="smallTextSize">14sp</dimen> -->
+
+    <dimen name="departmentBigTextSize">27sp</dimen>
+    <dimen name="departmentSmallTextSize">18sp</dimen>
+
+    <!-- GS가 표시부분에 다른 문구가 삽입될때 (월 렌탈료, 단말기가격 등) -->
+    <dimen name="badge_text_padding">2dp</dimen>
+    <!-- GS가 표시부분에 '상담 전용 상품입니다'가 삽입될때-->
+    <dimen name="badge_consult_text_padding">5dp</dimen>
+    <!-- GS가 %가 표시되면서 base가가 없는경우-->
+    <dimen name="badge_text_discount_single_padding">20dp</dimen>
+
+    <!-- GS가 %가 표시되면서 base가가 있는경우-->
+    <dimen name="badge_text_discount_double_padding">20dp</dimen>
+
+    <dimen name="delivery_image_default_padding">1dp</dimen>
+    <dimen name="valueTextSize">14dp</dimen>
+
+    <!-- 배너 % 텍스트-->
+    <dimen name="bigBannerTextSize">18sp</dimen>
+    <dimen name="smallBannerTextSize">13sp</dimen>
+    <dimen name="small_badge_text_discount_single_padding">1.5dp</dimen>
+    <dimen name="price_text_left_padding">5.62dp</dimen>
+
+    <!--best shop-->
+    <dimen name="best_shop_category_item_height">32dp</dimen>
+    <dimen name="best_shop_category_title_view_height">45dp</dimen>
+    <dimen name="best_shop_filter_top_empty_item">88dp</dimen>
+    <dimen name="best_shop_filter_bottom_empty_item">95dp</dimen>
+    <dimen name="best_shop_filter_item">44dp</dimen>
+
+    <dimen name="department_store_title_left_space">9dp</dimen>
+
+    <!--view holder blank size-->
+    <dimen name="vh_blank_space_large">15dp</dimen>
+    <dimen name="vh_blank_space_middle">10dp</dimen>
+    <dimen name="vh_blank_space_small">5dp</dimen>
+
+    <!--SRL view holder blank size-->
+    <dimen name="renewal_vh_blank_space_side">16dp</dimen>
+    <dimen name="renewal_vh_blank_space_between">12dp</dimen>
+    <dimen name="renewal_vh_promotion_blank_space_side">16dp</dimen>
+    <dimen name="renewal_vh_promotion_blank_space_between">8dp</dimen>
+    <dimen name="renewal_vh_promotion_blank_space_right">10dp</dimen>
+
+    <!--SRL view holder blank size-->
+    <dimen name="srl_vh_blank_space_side">16dp</dimen>
+    <dimen name="srl_vh_blank_space_between">22dp</dimen>
+
+
+    <!--nalbang shop-->
+    <dimen name="nalbang_shop_hashtag_item_height">34dp</dimen>
+
+    <!--shortbang shop-->
+    <dimen name="shortbang_video_outer_blank_space">10dp</dimen>
+    <dimen name="shortbang_video_inner_blank_space">11dp</dimen>
+
+    <dimen name="shortbang_category_outer_blank_space">5dp</dimen>
+    <dimen name="shortbang_category_inner_blank_space">10dp</dimen>
+
+    <dimen name="shortbang_banner_image_height">355dp</dimen>
+    <dimen name="shortbang_banner_info_height">65dp</dimen>
+    <dimen name="shortbang_viewpager_margin">10dp</dimen>
+    <dimen name="shortbang_preview_width">70dp</dimen>
+
+    <!--title custom view holder blank size-->
+    <dimen name="title_custom_vh_space_left">16dp</dimen>
+    <dimen name="title_custom_vh_space_right">31dp</dimen>
+    <dimen name="title_custom_vh_space_top_bottom">16dp</dimen>
+
+    <!-- 쇼핑알림 등급영역 중앙정렬을 위한 offset -->
+    <dimen name="inbox_grade_rightmargin_offset">12dp</dimen>
+
+    <dimen name="pranshop_viewpager_height">600dp</dimen>
+    <dimen name="pranshop_main_img_height">245dp</dimen>
+    <dimen name="pranshop_sub_img_size">100dp</dimen>
+
+    <!-- 접근권한 팝업 좌우패딩 -->
+    <dimen name="auth_confirm_padding">45dp</dimen>
+
+    <!-- 할인율Text 할인율 숫자가 영역을 벗어난다 로 변경 -->
+    <!-- <dimen name="tv_live_bigTextSize">28</dimen> -->
+    <!-- <dimen name="tv_live_smallTextSize">18</dimen> -->
+
+    <dimen name="tv_live_price_left_space">10dp</dimen>
+    <dimen name="tv_gs_price_left_space">15dp</dimen>
+    <dimen name="tv_live_price_top_space">6dp</dimen>
+
+    <dimen name="tv_live_gs_live_top_space">3dp</dimen>
+    <dimen name="tv_live_gs_Text_top_space">3dp</dimen>
+    <dimen name="tv_live_gs_TextSize">21sp</dimen>
+    <dimen name="tv_live_dual_gs_TextSize">21dp</dimen>
+    <dimen name="tv_live_dual_gs_live_top_space">2dp</dimen>
+
+    <dimen name="promotion_item_width">106dp</dimen>
+
+    <!-- TV 편성표 -->
+    <dimen name="scd_image_banner_type_w540_height">42dp</dimen>
+    <dimen name="scd_image_banner_type_pro_height">35dp</dimen>
+    <dimen name="tv_scd_gs_TextSize">18sp</dimen>
+
+    <!-- TV 편성표 할인율 숫자가 영역을 벗어난다 sp -> dp로 변경 -->
+    <!-- <dimen name="tv_scd_bigTextSize">27dp</dimen> -->
+    <!-- <dimen name="tv_scd_smallTextSize">16dp</dimen> -->
+
+    <dimen name="tv_scd_rentalTextSize">12sp</dimen>
+    <dimen name="tv_scd_broadPriceTextSize">13sp</dimen>
+    <!-- 패드 라이브영역 높이 -->
+    <dimen name="scd_live_video_height">150dp</dimen>
+    <dimen name="scd_live_height">258dp</dimen>
+    <!-- 패드 메인상품영역 높이 -->
+    <dimen name="scd_main_height">258dp</dimen>
+    <!-- 주상품 가격영역 하단마진 -->
+    <dimen name="tv_scd_price_bottom">8dp</dimen>
+    <!--생방송 영역 화면에서 보여지는 부분-->
+    <dimen name="tv_scd_live_top_margin">160dp</dimen>
+    <dimen name="tv_scd_live_bottm_margin">80dp</dimen>
+    <!--편성상품영역 스크롤시 편성요약상품 싱크를 위한 상하단 기준선-->
+    <dimen name="tv_scd_prd_sync_top_position">0dp</dimen>
+    <dimen name="tv_scd_prd_sync_bottom_position">80dp</dimen>
+
+    <dimen name="tv_scd_time_line_event_default_height">86dp</dimen>
+    <dimen name="tv_scd_time_line_event_empty_space">3dp</dimen>
+    <dimen name="tv_scd_time_line_event_empty_space_a">4dp</dimen>
+    <dimen name="tv_scd_product_default_height">480dp</dimen>
+
+    <!-- 설정 -->
+    <!-- SNS 연결에러 팝업에서 이메일주소 강조를 위해 폰트사이즈 증가용 -->
+    <dimen name="setting_sns_popup_TextSize">18sp</dimen>
+
+    <dimen name = "chatRecyclerMaxHeight">144.5dp</dimen>
+
+
+    <!-- GS Choice -->
+    <dimen name="gschoice_roll_banner_item_height">405dp</dimen>
+    <dimen name="gschoice_roll_banner_height">460dp</dimen>
+    <dimen name="gschoice_banner_mut_image_width_height">264dp</dimen>
+    <dimen name="gschoice_viewpager_margin">5dp</dimen>
+    <dimen name="gschoice_preview_width">30dp</dimen>
+    <dimen name="gschoice_price_left_term">7dp</dimen>
+    <dimen name="gschoice_banner_text_term">5dp</dimen>
+    <dimen name="gschoice_banner_category_text_term">4dp</dimen>
+    <dimen name="gschoice_blank_space_category">4dp</dimen>
+    <dimen name="gschoice_image_banner_type_a_fix_height">80dp</dimen>
+    <dimen name="gschoice_image_selected_background_radius">15dp</dimen>
+
+    <!-- GS SUPER -->
+    <dimen name="gssuper_roll_banner_item_height">187dp</dimen>
+
+    <!-- mobile live -->
+    <!-- 전체플레이어 남은시간 왼쪽 여백 -->
+    <dimen name="mobilelive_live_remain_time_padding_left">55dp</dimen>
+    <dimen name="mobilelive_replay_remain_time_padding_horizontal">9dp</dimen>
+    <dimen name="mobilelive_roll_banner_item_height">114dp</dimen>
+    <dimen name="mobilelive_roll_banner_radius">4dp</dimen>
+
+    <!-- 리플레이 뱃지 이미지 크기-->
+    <dimen name="mobilelive_replay_width">45dp</dimen>
+    <dimen name="mobilelive_replay_height">26dp</dimen>
+
+    <!-- RecyclerTab -->
+    <dimen name="recycler_tab_text_size">16dp</dimen>
+
+    <!-- Renewal bestshop -->
+    <dimen name="renewal_bestshop_margin">16dp</dimen>
+    <dimen name="renewal_bestshop_margin_center">11dp</dimen>
+
+    <!-- 패드 편성표 상품이미지 높이 -->
+    <dimen name="sch_img_height">164dp</dimen>
+
+    <!-- 시그니처매장 -->
+    <dimen name="signature_carousel_pageMargin">18dp</dimen>
+    <dimen name="signature_carousel_offset">18dp</dimen>
+
+    <!-- 모바일라이브 -->
+    <dimen name="mobile_live_board_item_preview_width">120dp</dimen>
+    <dimen name="mobile_live_board_item_margin_pager_margin">-45dp</dimen>
+    <dimen name="mobile_live_right_menu_margin_bottom_key_hide">12dp</dimen>
+    <dimen name="mobile_live_right_menu_margin_bottom_key_show">67dp</dimen>
+
+    <!-- 뷰티매장 -->
+    <dimen name="beauty_weekly_event_preview_width">80dp</dimen>
+    <dimen name="beauty_weekly_event_margin_pager_margin">12dp</dimen>
+
+    <dimen name="today_sel_big_view_width">80dp</dimen>
+    <dimen name="today_sel_big_view_pager_margin">10dp</dimen>
+</resources>

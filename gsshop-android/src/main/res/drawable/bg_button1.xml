@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 버튼 배경 1 : 로그인버튼 등 -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <solid android:color="@color/button_default_background" />
+
+            <stroke android:width="2px" android:color="@color/button_default_stroke" />
+
+            <corners android:radius="10px" />
+        </shape></item>
+    <item android:state_selected="true"><shape android:shape="rectangle">
+            <solid android:color="@color/button_default_background" />
+
+            <stroke android:width="2px" android:color="@color/button_default_stroke" />
+
+            <corners android:radius="10px" />
+        </shape></item>
+    <item><shape android:shape="rectangle">
+            <gradient android:angle="270" android:endColor="#F3F3F3" android:startColor="#FAFAFA" />
+
+            <stroke android:width="1px" android:color="#CECECE" />
+
+            <corners android:radius="10px" />
+        </shape></item>
+
+</selector>

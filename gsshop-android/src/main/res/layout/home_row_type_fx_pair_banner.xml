@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TV쇼핑 2단뷰 프레임 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/vh_blank_space_middle"
+    android:paddingLeft="@dimen/vh_blank_space_middle"
+    android:paddingRight="@dimen/vh_blank_space_middle">
+
+    <include
+        android:id="@+id/content_frame_1st"
+        layout="@layout/home_row_type_fx_pair_banner_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="@dimen/vh_blank_space_middle"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/content_frame_2nd"
+        layout="@layout/home_row_type_fx_pair_banner_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</LinearLayout>

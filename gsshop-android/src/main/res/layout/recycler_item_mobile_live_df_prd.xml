@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    android:orientation="horizontal">
+
+    <!-- 상품이미지 영역 -->
+    <RelativeLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <!-- 상품이미지 -->
+        <ImageView
+            android:id="@+id/iv_prd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- 하단 영역 -->
+        <TextView
+            android:id="@+id/txt_sold_out"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="#66111111"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="13dp"
+            android:visibility="gone"
+            android:typeface="sans" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 구매하기버튼 복제할 뷰-->
+        <LinearLayout
+            android:id="@+id/ll_buy_clone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_marginTop="11dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

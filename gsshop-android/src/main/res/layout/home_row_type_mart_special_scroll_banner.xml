@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_divider_height" >
+
+    <RelativeLayout
+        android:id="@+id/expand_control_layout"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/background_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/group_1"
+                        android:layout_width="120dp"
+                        android:layout_height="90dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/group_2"
+                        android:layout_width="120dp"
+                        android:layout_height="90dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/layout_group_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    >
+                    <ImageView
+                        android:id="@+id/group_3"
+                        android:layout_width="120dp"
+                        android:layout_height="90dp"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/arrow_tab_720"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@android:color/white"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#dddddd" />
+
+</LinearLayout>

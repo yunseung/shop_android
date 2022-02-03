@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "633890543958",
+    "firebase_url": "https://push-gsshop.firebaseio.com",
+    "project_id": "push-gsshop",
+    "storage_bucket": "push-gsshop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633890543958:android:09442aa3385db77d",
+        "android_client_info": {
+          "package_name": "gsshop.mobile.v2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633890543958-2s4qe0ij7gh8ves0193s1vk2qp2nn4up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEgDbl_UOsM32Fb1egBfjYa3lXAoB9Xxo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633890543958-2s4qe0ij7gh8ves0193s1vk2qp2nn4up.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "633890543958-aemkfj3cac77odjeali4sh0ip1l5mftc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gssshop.push"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

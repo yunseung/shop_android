@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 웹뷰를 포함하는 탭메뉴 화면 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 웹뷰 -->
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/webview" />
+
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+        android:id="@+id/btn_naver_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/btn_kakao_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <FrameLayout
+        android:id="@+id/fullscreen_custom_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="gone" >        
+    </FrameLayout>
+
+    <!-- 공사중 페이지 재시작 버튼 -->
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="76dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/bg_login_button"
+        android:visibility="gone"
+        android:textColor="#111111"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="@string/common_restart"/>
+
+    <!-- 탭메뉴 -->
+
+    <include layout="@layout/tab_menu" />
+
+
+    <include
+        android:id="@+id/direct_order_layout"
+        layout="@layout/web_directbuy"
+        android:visibility="gone"/>
+
+</FrameLayout>

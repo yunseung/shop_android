@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_refresh">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 앱바 포함 레이아웃 -->
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/test1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!-- 내일TV 해더 영역 -->
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar_ord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#e5e5e5"
+                app:elevation="0dp" >
+
+                <include
+                    android:id="@+id/lay_ord"
+                    android:visibility="gone"
+                    layout="@layout/recycler_item_vod_ord" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <!-- recycler list -->
+            <gsshop.mobile.v2.home.CustomRecyclerView
+                android:id="@+id/recycle_goods"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:scrollbars="vertical" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <!-- 공통영역 -->
+        <include
+            layout="@layout/fragment_flexible_shop_common" />
+    </FrameLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

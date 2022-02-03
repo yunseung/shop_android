@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 하단 상품정보 영역 V2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lay_price_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 가격 영역 -->
+    <RelativeLayout
+        android:id="@+id/lay_price_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <!-- 렌탈텍스트 (예:월렌탈료) -->
+        <TextView
+            android:id="@+id/txt_rental_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:ellipsize="none"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="#111111"
+            android:textSize="13dp" />
+
+        <!-- 판매가격 -->
+        <LinearLayout
+            android:id="@+id/lay_price"
+            android:layout_toRightOf="@id/txt_rental_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:baselineAligned="true"
+            android:orientation="horizontal"
+            >
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txt_sale_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="none"
+                android:singleLine="true"
+                android:text="9,999,999"
+                android:textColor="#111111"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                autofit:minTextSize="12dp" />
+
+            <me.grantland.widget.AutofitTextView
+                android:id="@+id/txt_sale_price_expose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:layout_marginTop="1dp"
+                android:text="원"
+                android:textColor="#111111"
+                android:textSize="14dp"
+                autofit:minTextSize="12dp"/>
+        </LinearLayout>
+
+        <!-- 할인률 -->
+        <TextView
+            android:text="4%"
+            android:id="@+id/txt_sale_rate"
+            android:layout_toRightOf="@id/lay_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="1.5dp"
+            android:textColor="#ee1f60"
+            android:textStyle="bold"
+            android:textSize="14dp" />
+
+        <!-- 베이스가격 -->
+        <LinearLayout
+            android:layout_toRightOf="@id/txt_sale_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:orientation="horizontal">
+
+            <me.grantland.widget.AutofitTextView
+                android:text="79,000"
+                android:id="@+id/txt_base_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#66111111"
+                android:textSize="14dp"
+                autofit:minTextSize="11dp" />
+
+            <TextView
+                android:id="@+id/txt_base_price_expose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/won"
+                android:textColor="#66111111"
+                android:textSize="14dp" />
+
+            <!-- 렌탈 etc text 가격 영역 -->
+            <TextView
+                android:text="렌탈 etc text"
+                android:id="@+id/txt_rental_etc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#66111111"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <!-- 상품평, 구매수량 -->
+        <TextView
+            android:text="4.5(428)"
+            android:id="@+id/txt_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textColor="#99111111"
+            android:textStyle="bold"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <!-- 상품명 -->
+    <TextView
+        android:text="BALTA 발타 플랫위브 썸머 러그 에센자 카페트세트 러그 에센자 카페트세트 (특대형)"
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#111111"
+        android:textSize="16dp"
+        android:typeface="sans"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"/>
+
+    <!-- 혜택, 버튼 영역 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <!-- 혜택 -->
+        <TextView
+            android:id="@+id/txt_benefit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:layout_marginRight="10dp"
+            android:includeFontPadding="false"
+            android:text="3%적립 · 3회사은품 · 무료배송 · 무이자"
+            android:maxLines="2"
+            android:textColor="#66111111"
+            android:textSize="14dp" />
+
+        <!-- 방송알림 -->
+        <LinearLayout
+            android:id="@+id/lay_alarm"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/renewal_bg_alarm"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/alarm_off"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="방송알림 꺼짐"
+                    android:background="@drawable/notification"/>
+
+                <View
+                    android:id="@+id/alarm_on"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:contentDescription="방송알림 켜짐"
+                    android:background="@drawable/notifications_active"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 라이브톡 -->
+        <LinearLayout
+            android:id="@+id/lay_live_talk"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:background="@drawable/renewal_bg_alarm"
+            android:layout_marginRight="6dp"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="라이브톡"
+                android:src="@drawable/live_talk"
+                />
+
+        </LinearLayout>
+
+        <!-- 구매하기 -->
+        <TextView
+            android:id="@+id/txt_buy"
+            android:layout_width="102dp"
+            android:layout_height="32dp"
+            android:background="@drawable/renewal_bg_buy"
+            android:gravity="center"
+            android:text="@string/common_pay"
+            android:textColor="#ffffff"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

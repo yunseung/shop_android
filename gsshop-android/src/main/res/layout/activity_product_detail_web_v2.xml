@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 웹뷰를 포함하는 탭메뉴 화면 -->
+
+<gsshop.mobile.v2.view.InterceptTouchFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- 데이타 연결오류 시 -->
+    <include
+        layout="@layout/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/main_header_height" />
+
+    <gsshop.mobile.v2.view.ScrollViewWithStopListener
+        android:id="@+id/native_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/native_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/native_layout_showing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/fl_view_pager_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <gsshop.mobile.v2.web.productDetail.views.ProductDetailViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_pre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_gradient_product_navi" />
+
+                    <TextView
+                        android:id="@+id/tv_pager_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom|center_horizontal"
+                        android:layout_marginBottom="12dp"
+                        android:background="@drawable/bg_pager_count_ronded_dimed"
+                        android:gravity="center"
+                        android:paddingLeft="11dp"
+                        android:paddingRight="11dp"
+                        android:text="1 / 6"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp"
+                        android:typeface="sans"
+                        android:visibility="gone"
+                        />
+
+                    <ImageView
+                        android:id="@+id/image_move_to_player"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/play_circle_line_overlay"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_gs_fresh_benefits_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="bottom|left"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_components_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/fl_view_pager_area"></LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 네이티브와 웹뷰 스크롤 연동을 위한 하단 여백 -->
+            <FrameLayout
+                android:id="@+id/bottom_space"
+                android:layout_width="match_parent"
+                android:layout_height="50000dp">
+
+                <!-- 스켈레톤 애니메이션이 들어갈 공간 -->
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/root_skeleton"
+                    android:layout_width="match_parent"
+                    android:layout_height="550dp"
+                    app:shimmer_base_color="@color/skeleton_view_background"
+                    app:shimmer_colored="true"
+                    app:shimmer_duration="2500"
+                    app:shimmer_fixed_width="500dp"
+                    app:shimmer_highlight_color="@color/skeleton_view_highlight"
+                    app:shimmer_tilt="45">
+
+                    <include layout="@layout/layout_product_detail_skeleton" />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </gsshop.mobile.v2.view.ScrollViewWithStopListener>
+
+    <!-- 웹뷰 -->
+    <gsshop.mobile.v2.web.productDetail.views.ProductDetailWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <include
+        layout="@layout/mc_webview_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--상단 컨트롤러 영역-->
+        <FrameLayout
+            android:id="@+id/navigation_area"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <LinearLayout
+                android:id="@+id/layout_navigation_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp">
+
+                <Button
+                    android:id="@+id/btn_back_1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/ic_back" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/btn_search_1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/ic_search" />
+
+                <Button
+                    android:id="@+id/btn_home_1"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="19dp"
+                    android:background="@drawable/ic_home" />
+
+                <FrameLayout
+                    android:id="@+id/btn_cart_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="19dp"
+                    android:clipChildren="false"
+                    android:contentDescription="@string/description_cart">
+
+                    <View
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="18dp"
+                        android:background="@drawable/ic_cart" />
+
+                    <gsshop.mobile.v2.menu.BadgeTextView
+                        android:id="@+id/basketcnt_badge_1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/ic_new_720"
+                        android:clipChildren="false"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_navigation_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0">
+
+                <LinearLayout
+                    android:id="@+id/layout_navigation_over"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="13dp">
+
+                    <Button
+                        android:id="@+id/btn_back_2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/ic_back_black" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btn_search_2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/ic_search_black" />
+
+                    <Button
+                        android:id="@+id/btn_home_2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="19dp"
+                        android:background="@drawable/ic_home_black" />
+
+                    <FrameLayout
+                        android:id="@+id/btn_cart_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="19dp"
+                        android:clipChildren="false"
+                        android:contentDescription="@string/description_cart">
+
+                        <View
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="18dp"
+                            android:background="@drawable/ic_cart_black" />
+
+                        <gsshop.mobile.v2.menu.BadgeTextView
+                            android:id="@+id/basketcnt_badge_2"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="14dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@drawable/ic_new_720"
+                            android:clipChildren="false"
+                            android:gravity="center"
+                            android:textColor="#ffffff"
+                            android:textSize="12dp"
+                            android:textStyle="bold"
+                            android:typeface="sans" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="bottom"
+                    android:background="#19000000" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/view_dim"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:visibility="gone" />
+
+        </FrameLayout>
+        <!--상단 미니 비디오 영역-->
+        <RelativeLayout
+            android:id="@+id/top_video_area"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_below="@id/navigation_area"
+            android:background="#f9f9f9"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/fl_top_video"
+                android:layout_width="114dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/tv_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/fl_top_video"
+                android:text="00:00:00"
+                android:textColor="#111111"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_video_close"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/video_close" />
+
+            <Button
+                android:id="@+id/btn_play_pause"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_video_close"
+                android:background="@drawable/pause" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#d9d9d9" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+        android:id="@+id/btn_naver_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/btn_kakao_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <FrameLayout
+        android:id="@+id/fullscreen_custom_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:visibility="gone"></FrameLayout>
+
+    <!-- 공사중 페이지 재시작 버튼 -->
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/bg_login_button"
+        android:text="@string/common_restart"
+        android:textColor="#111111"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+    <include
+        android:id="@+id/direct_order_layout"
+        layout="@layout/web_directbuy"
+        android:visibility="gone" />
+
+</gsshop.mobile.v2.view.InterceptTouchFrameLayout>

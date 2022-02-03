@@ -1,0 +1,3 @@
+include ':gsshop-library'
+include ':gsshop-android'
+include ':gsshop-mock'

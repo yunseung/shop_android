@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\c472eaf3c2a8a5a44e20c70439a75754\\jetified-android-sdk-ui-3.1.0\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,128,199,271,341",
+                        "endColumns": "72,70,71,69,72",
+                        "endOffsets": "123,194,266,336,409"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "8,3,12,13,9,5",
+                        "startColumns": "4,4,4,4,1,4",
+                        "startOffsets": "232,88,351,413,283,153",
+                        "endColumns": "52,57,60,61,46,54",
+                        "endOffsets": "280,141,407,470,328,203"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "414,467,525,586,648,698",
+                        "endColumns": "52,57,60,61,49,54",
+                        "endOffsets": "462,520,581,643,693,748"
+                    }
+                }
+            ]
+        }
+    ]
+}

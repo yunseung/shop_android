@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider_best_shop_category_table_column_new"
+    android:orientation="horizontal"
+    android:showDividers="middle">
+
+    <include
+        android:id="@+id/content_frame_1st"
+        layout="@layout/home_row_type_fx_best_shop_category_item_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/content_frame_2nd"
+        layout="@layout/home_row_type_fx_best_shop_category_item_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <include
+        android:id="@+id/content_frame_3rd"
+        layout="@layout/home_row_type_fx_best_shop_category_item_new"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+</TableRow>

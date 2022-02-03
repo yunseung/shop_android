@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 타이틀바 -->
+    <include
+        android:id="@+id/view_title"
+        layout="@layout/header_outsite"
+        />
+
+    <!-- 웹뷰 -->
+    <include
+        android:layout_below="@+id/view_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/webview" />
+
+    <!-- 사용도 안하는데... InjectView 때문에 선언되어 있는것인가?..  -->
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+        android:id="@+id/btn_naver_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        />
+
+    <!-- 사용도 안하는데... InjectView 때문에 선언되어 있는것인가?..  -->
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/btn_kakao_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <ImageButton
+        android:id="@+id/btn_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="66.25dp"
+        android:layout_marginRight="11.25dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/top_720"
+        android:visibility="gone"
+        />
+
+    <!-- 탭메뉴(mocha에서 tab처리를 하기 때문에 쓰이지 않더라도 넣음) -->
+    <include
+        layout="@layout/tab_menu"
+        android:visibility="gone" />
+
+</RelativeLayout>

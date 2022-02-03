@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- A Brightcove Edge Account ID -->
+    <string name="account">5819061489001</string>
+
+    <!-- A Brightcove Edge Policy Key -->
+    <string name="policy">BCpkADawqM1-nZroB0DBQvcLk1NDRIiwWXoXx5uwntK19LCTuk1F2Vdf32rfocwf8VOcwPIxEFRrXDFZBLU7W3Nrh-37vE4qlV7y6BAdRiCOPs1LT0Gp-GxeaQd-63WPja-zwwdIFA3J2QB_</string>
+
+    <!-- A Brightcove Video ID -->
+    <string name="videoId">5991846740001</string>
+</resources>

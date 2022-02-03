@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/view_movable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0000"
+        >
+        <LinearLayout
+            android:id="@+id/view_ctrl_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_alignParentTop="true"
+            >
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="28dp" />
+
+            <ImageView
+                android:layout_width="58dp"
+                android:layout_height="8dp"
+                android:background="@drawable/node"
+                android:layout_gravity="center"
+                />
+
+            <androidx.legacy.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_ctrl_dialog"
+            >
+            <RelativeLayout
+                android:id="@+id/view_move_touch"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_edit_tab_rounded"
+                android:clickable="true"
+                >
+
+                <!--<Button-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:alpha="0"/>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginRight="61dp"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="13dp"
+                    android:gravity="top"
+                    android:text="@string/order_help_title"
+                    android:textColor="#111"
+                    android:layout_centerVertical="true"
+                    />
+
+                <FrameLayout
+                    android:id="@+id/btn_order_save"
+                    android:layout_width="61dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    >
+                    <TextView
+                        android:id="@+id/txt_order_save"
+                        android:layout_width="61dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/common_save"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:textColor="#ee1f60"/>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_set_default"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="#fff"
+                android:layout_alignParentBottom="true"
+                android:clickable="false"
+                >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginRight="70dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:textSize="15dp"
+                            android:textColor="#111"
+                            android:textStyle="bold"
+                            android:text="@string/order_default_title"
+                            />
+                        <TextView
+                            android:id="@+id/txt_set_default_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:textSize="12dp"
+                            android:textColor="#666"
+                            android:text="@string/order_default_sub"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+                <CheckBox
+                    android:id="@+id/check_show_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@drawable/bg_setting_checkbox"
+                    android:button="@null" />
+
+            </RelativeLayout>
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="#fff"
+                android:layout_above="@+id/view_set_default"
+                >
+
+                <!--help view-->
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/layout_help"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:background="#fff"
+                    android:layout_alignParentBottom="true"
+                    app:elevation="0dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/view_show_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp"
+                        android:orientation="horizontal"
+                        android:clickable="true">
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/txt_order_view_help"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:text="@string/order_help_sub"-->
+                            <!--android:textColor="#666"-->
+                            <!--android:textSize="13dp"-->
+                            <!--android:gravity="top"-->
+                            <!--/>-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/order_help_view"
+                            android:textColor="#111"
+                            android:textSize="13dp"
+                            android:gravity="top"/>
+                        <ImageView
+                            android:layout_width="7.8dp"
+                            android:layout_height="13dp"
+                            android:background="@drawable/ic_arrow_right"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_gravity="top"/>
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.appbar.AppBarLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/shop_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:layout_marginTop="8dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/view_help"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80000000"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:id="@+id/view_pre_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_tab_ex2"
+                android:scaleType="fitCenter"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/view_pre_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/main_tab_ex1"
+                android:scaleType="fitCenter"
+                android:visibility="visible"/>
+
+            <Button
+                android:id="@+id/btn_help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0"/>
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

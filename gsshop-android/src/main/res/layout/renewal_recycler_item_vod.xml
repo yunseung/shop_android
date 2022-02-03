@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 내일TV VOD 뷰홀더 V2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lay_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="13dp">
+
+        <!-- 상단 영역 -->
+
+        <!-- 상품이미지, 가격 영역 -->
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/renewal_bg_broad_tomm_time"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="2dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="2dp"
+                android:gravity="center_vertical">
+
+                <!-- 방송시간 -->
+                <TextView
+                    android:id="@+id/txt_broad_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="내일 11:00 방송"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:typeface="sans"
+                    android:gravity="center_vertical"/>
+
+                <LinearLayout
+                    android:id="@+id/lay_pgm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- 구분자 -->
+                    <TextView
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="|"
+                        android:textColor="#33ffffff"
+                        android:textSize="14dp"
+                        android:typeface="sans" />
+
+                    <!-- pgm 텍스트 -->
+                    <TextView
+                        android:id="@+id/txt_pgm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="최은경의W"
+                        android:textColor="#ffffff"
+                        android:textSize="14sp"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- 방송종류 -->
+            <ImageView
+                android:id="@+id/img_brd_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/tit_live_android" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/renewal_bg_broad_img_border"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <!-- 상품이미지 -->
+                <ImageView
+                    android:id="@+id/img_main_sumnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="164dp"
+                    android:adjustViewBounds="true"
+                    android:background="#f4f4f4"
+                    android:scaleType="fitCenter" />
+
+                <!-- 방송남은시간 -->
+                <LinearLayout
+                    android:id="@+id/lay_cv_remain_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/renewal_bg_broad_remain_time"
+                    android:layout_gravity="right|bottom"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginRight="8dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout
+                        android:id="@+id/cv_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_remain_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="05:55"
+                            android:textColor="#ffffff"
+                            android:textSize="14sp"
+                            android:typeface="sans"
+                            android:gravity="center_vertical"/>
+
+                    </gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="4dp"
+                        android:src="@drawable/ic_play" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <!-- 가격정보 -->
+            <include
+                layout="@layout/renewal_product_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/transparent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"/>
+
+</LinearLayout>

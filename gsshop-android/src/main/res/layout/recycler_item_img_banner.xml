@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 이미지 배너 V2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:contentDescription="@string/description_image"
+    >
+
+    <!-- 배너 이미지 -->
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_image_banner_type_i_height"
+        android:background="#f7f7f7"
+        android:scaleType="fitXY" />
+
+    <!-- 하단여백 -->
+    <View
+        android:id="@+id/bottom_margin"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+</LinearLayout>

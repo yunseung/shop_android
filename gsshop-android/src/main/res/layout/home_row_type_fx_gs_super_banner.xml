@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 상단 카테고리 영역 -->
+    <include layout="@layout/home_row_type_fx_sticky_type_fresh_tab" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@android:color/white">
+
+        <gsshop.mobile.v2.home.shop.renewal.views.CommonTitleLayout
+            android:id="@+id/common_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <View
+            style="@style/GSSuperBorder"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_gssuper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:nestedScrollingEnabled="false"/>
+
+        <include
+            android:id="@+id/view_read_more"
+            layout="@layout/row_gs_super_read_more" />
+
+        <include
+            android:id="@+id/view_go_brand_shop"
+            layout="@layout/row_gs_super_go_brand_shop" />
+    </LinearLayout>
+
+    <!-- NO DATA 영역 -->
+    <LinearLayout
+        android:id="@+id/lay_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/preparation_android" />
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/common_no_sale"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:typeface="sans" />
+
+    </LinearLayout>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vh_blank_space_middle" />
+</LinearLayout>

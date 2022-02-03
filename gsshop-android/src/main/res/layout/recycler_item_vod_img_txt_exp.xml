@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 내일TV 이미지+텍스트 배너 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lay_top_root">
+
+    <View
+        android:id="@+id/line_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:layout_marginRight="14.3dp"
+        android:layout_marginLeft="15dp"
+        />
+
+
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom_corner"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="7dp">
+
+
+        <!-- 왼쪽 이미지 -->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_top_sumbnail"
+            android:layout_width="31dp"
+            android:layout_height="31dp"
+            app:civ_border_color="#0d000000"
+            app:civ_border_width="1dp" />
+
+        <!-- 타이틀 -->
+        <TextView
+            android:id="@+id/txt_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:text="쇼미더트렌드"
+            android:textColor="#111111"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+
+        <!-- 오른쪽 화살표 -->
+        <ImageView
+            android:id="@+id/img_top_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@drawable/chevron_right"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

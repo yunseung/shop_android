@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <item
+        android:drawable="@drawable/mov_roading01"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading02"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading03"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading04"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading05"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading06"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading07"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading08"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading09"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading10"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading11"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading12"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading13"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading14"
+        android:duration="50" />
+    <item
+        android:drawable="@drawable/mov_roading15"
+        android:duration="50" />
+
+
+
+</animation-list>

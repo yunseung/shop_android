@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_01"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_02"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_03"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_04"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_05"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_06"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_07"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_01"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_09"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_10"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_11"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_12"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_13"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_14"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_15"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_16"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_17"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_18"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_19"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_20"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_21"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_22"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_23"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_24"/>
+    <item android:duration="100" android:drawable="@drawable/live_loadaniimg_25"/>
+
+
+</animation-list>

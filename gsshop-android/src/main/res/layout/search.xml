@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 검색/카테고리의 검색 화면 -->
+<!-- TODO 파일명 변경 고민... -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="gsshop.mobile.v2.home.HomeActivity" >
+
+    <!-- 검색어 입력영역 -->
+    <include
+        android:id="@+id/layout_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/search_bar" />
+
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_search_bar"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 공통 탭메뉴 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/search_tab_menu" />
+
+            <!-- 인기 검색어 목록 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/popular_keyword_list"
+                android:visibility="gone" />
+
+            <!-- 최근 검색어 목록 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/recent_keyword_list"
+                android:visibility="gone" />
+
+            <!-- 연관검색어 목록 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/related_keyword_list"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- 검색바 -->
+
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/layout_content"
+        android:background="@color/benefit_red"/>-->
+
+
+    <!-- 최근검색어 데이타 없는 경우 -->
+    <LinearLayout
+        android:id="@+id/layout_recent_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_content"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/no_data_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/search_recent_keyword_empty"
+            android:textColor="#444444"
+            android:textSize="17dp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <!-- 연관검색어 데이타 없는 경우 -->
+    <LinearLayout
+        android:id="@+id/layout_related_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/search_tab_height"
+        android:background="@drawable/search_round_bottom_corner_c1"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/search_related_keyword_empty"
+            android:textColor="#444444"
+            android:textSize="17dp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+</RelativeLayout>

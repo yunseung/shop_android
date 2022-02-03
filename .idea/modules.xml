@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gsshop-android-gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/gsshop-android-gradle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gsshop-android/gsshop-android-gradle.gsshop-android.iml" filepath="$PROJECT_DIR$/.idea/modules/gsshop-android/gsshop-android-gradle.gsshop-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gsshop-library/gsshop-android-gradle.gsshop-library.iml" filepath="$PROJECT_DIR$/.idea/modules/gsshop-library/gsshop-android-gradle.gsshop-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gsshop-mock/gsshop-android-gradle.gsshop-mock.iml" filepath="$PROJECT_DIR$/.idea/modules/gsshop-mock/gsshop-android-gradle.gsshop-mock.iml" />
+    </modules>
+  </component>
+</project>

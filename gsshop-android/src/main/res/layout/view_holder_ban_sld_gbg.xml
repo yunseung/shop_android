@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="@color/white"/>
+
+        <gsshop.mobile.v2.home.shop.renewal.views.CommonTitleLayout
+            android:id="@+id/common_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"/>
+
+        <!-- 카드뷰 마진 4가 존재하여, 가이드보다 4씩 작게 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="12dp"
+            android:scrollbars="none" />
+
+        <View
+            android:id="@+id/view_bottom_divider_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/best_shop_category_divider"
+            android:visibility="gone"/>
+
+        <View
+            android:id="@+id/view_bottom_divider_1dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/transparent"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

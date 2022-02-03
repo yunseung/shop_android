@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="bulgarian_blue">#4771BC</color>
+    <color name="cornflower_blue">#598deb</color>
+    <color name="dark_slate_blue">#3c5896</color>
+    <color name="fire_brick">#b93221</color>
+    <color name="indigo">#386DC1</color>
+    <color name="old_brick">#94281A</color>
+    <color name="san_juan">#304678</color>
+    <color name="steel_blue">#4688f1</color>
+    <color name="tooltip_blue_color">#404BAE</color>
+    <color name="transparent_dark_slate_blue_ninty">#E63c5896</color>
+    <color name="transparent_san_juan_ninty">#E6304678</color>
+    <color name="whitesmoke">#f5f5f5</color>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">6dp</dimen>
+    <dimen name="header_pull_to_refresh_image_padding">10px</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="list_layout_gap">45dp</dimen>
+    <dimen name="login_footer_height">120dp</dimen>
+    <dimen name="main_footer_height">50dp</dimen>
+    <dimen name="main_header_height">84dp</dimen>
+    <dimen name="personalized_header_height">55dp</dimen>
+    <dimen name="personalized_list_layout_gap">40dp</dimen>
+    <item name="gridview" type="id"/>
+    <item name="scroll_threshold_key" type="id"/>
+    <item name="scrollview" type="id"/>
+    <item name="webview" type="id"/>
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_pull_label">당겨서 새로 고침…</string>
+    <string name="pull_to_refresh_refreshing_label">로드 중…</string>
+    <string name="pull_to_refresh_release_label">놓아서 새로 고침…</string>
+    <style name="ActionBar.Solid.Facebook" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_facebook</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_facebook</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_facebook</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Facebook</item>
+    </style>
+    <style name="ActionBar.Solid.Google_plus" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_google_plus</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_google_plus</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_google_plus</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Google_plus</item>
+    </style>
+    <style name="ActionBar.Solid.Steelblue" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_steelblue</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_steelblue</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_steelblue</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Steelblue</item>
+    </style>
+    <style name="ActionBar.Solid.Twitter" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_twitter</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_twitter</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_twitter</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Twitter</item>
+    </style>
+    <style name="ActionBar.Transparent.Facebook" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_facebook</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Facebook</item>
+    </style>
+    <style name="ActionBar.Transparent.Google_plus" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_google_plus</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Google_plus</item>
+    </style>
+    <style name="ActionBar.Transparent.Steelblue" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_steelblue</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Steelblue</item>
+    </style>
+    <style name="ActionBar.Transparent.Twitter" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_twitter</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Twitter</item>
+    </style>
+    <style name="ActionBarTabStyle.Facebook" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_facebook</item>
+    </style>
+    <style name="ActionBarTabStyle.Google_plus" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_google_plus</item>
+    </style>
+    <style name="ActionBarTabStyle.Steelblue" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_steelblue</item>
+    </style>
+    <style name="ActionBarTabStyle.Twitter" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_twitter</item>
+    </style>
+    <style name="ActionButton.CloseMode.Facebook" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_facebook</item>
+    </style>
+    <style name="ActionButton.CloseMode.Google_plus" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_google_plus</item>
+    </style>
+    <style name="ActionButton.CloseMode.Steelblue" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_steelblue</item>
+    </style>
+    <style name="ActionButton.CloseMode.Twitter" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_twitter</item>
+    </style>
+    <style name="DropDownListView.Facebook" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_facebook</item>
+    </style>
+    <style name="DropDownListView.Google_plus" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_google_plus</item>
+    </style>
+    <style name="DropDownListView.Steelblue" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_steelblue</item>
+    </style>
+    <style name="DropDownListView.Twitter" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_twitter</item>
+    </style>
+    <style name="DropDownNav.Facebook" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_facebook</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_facebook</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_facebook</item>
+    </style>
+    <style name="DropDownNav.Google_plus" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_google_plus</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_google_plus</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_google_plus</item>
+    </style>
+    <style name="DropDownNav.Steelblue" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_steelblue</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_steelblue</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_steelblue</item>
+    </style>
+    <style name="DropDownNav.Twitter" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_twitter</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_twitter</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_twitter</item>
+    </style>
+    <style name="PopupMenu.Facebook" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_facebook</item>	
+    </style>
+    <style name="PopupMenu.Google_plus" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_google_plus</item>	
+    </style>
+    <style name="PopupMenu.Steelblue" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_steelblue</item>	
+    </style>
+    <style name="PopupMenu.Twitter" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_twitter</item>	
+    </style>
+    <style name="ProgressBar.Facebook" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_facebook</item>
+    </style>
+    <style name="ProgressBar.Google_plus" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_google_plus</item>
+    </style>
+    <style name="ProgressBar.Steelblue" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_steelblue</item>
+    </style>
+    <style name="ProgressBar.Twitter" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_twitter</item>
+    </style>
+    <style name="Theme.Facebook" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_facebook</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Facebook</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Facebook</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Facebook</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Facebook</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Facebook</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_facebook</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_facebook</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Facebook</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Facebook.Widget</item>
+
+    </style>
+    <style name="Theme.Facebook.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Facebook</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Facebook</item>
+    </style>
+    <style name="Theme.Google_plus" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_google_plus</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Google_plus</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Google_plus</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Google_plus</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Google_plus</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Google_plus</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_google_plus</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_google_plus</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Google_plus</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Google_plus.Widget</item>
+
+    </style>
+    <style name="Theme.Google_plus.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Google_plus</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Google_plus</item>
+    </style>
+    <style name="Theme.Steelblue" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_steelblue</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Steelblue</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Steelblue</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Steelblue</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Steelblue</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Steelblue</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_steelblue</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_steelblue</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Steelblue</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Steelblue.Widget</item>
+
+    </style>
+    <style name="Theme.Steelblue.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Steelblue</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Steelblue</item>
+    </style>
+    <style name="Theme.Twitter" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_twitter</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Twitter</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Twitter</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Twitter</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Twitter</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Twitter</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_twitter</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_twitter</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Twitter</item>
+        
+                <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Twitter.Widget</item>
+
+    </style>
+    <style name="Theme.Twitter.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Twitter</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Twitter</item>
+    </style>
+    <declare-styleable name="CustomFontTextView">
+        <attr format="enum" name="textFont">
+            <enum name="Roboto_Black" value="0"/>
+            <enum name="Roboto_BlackItalic" value="1"/>
+            <enum name="Roboto_Bold" value="2"/>
+            <enum name="Roboto_BoldCondensed" value="3"/>
+            <enum name="Roboto_BoldCondensedItalic" value="4"/>
+            <enum name="Roboto_BoldItalic" value="5"/>
+            <enum name="Roboto_Condensed" value="6"/>
+            <enum name="Roboto_CondensedItalic" value="7"/>
+            <enum name="Roboto_Italic" value="8"/>
+            <enum name="Roboto_Light" value="9"/>
+            <enum name="Roboto_LightItalic" value="0"/>
+            <enum name="Roboto_Medium" value="11"/>
+            <enum name="Roboto_MediumItalic" value="12"/>
+            <enum name="Roboto_Regular" value="13"/>
+            <enum name="Roboto_Thin" value="14"/>
+            <enum name="Roboto_ThinItalic" value="15"/>
+            <enum name="GothamNarrow_Light" value="16"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="ImageMap">
+        <attr format="string" name="map"/>
+        <attr format="boolean" name="fitImageToScreen"/>
+        <attr format="boolean" name="scaleFromOriginal"/>
+        <attr format="float" name="maxSizeFactor"/>
+    </declare-styleable>
+    <declare-styleable name="MultiSwipeRefreshLayout">
+        <attr format="reference" name="foreground"/>
+    </declare-styleable>
+    <declare-styleable name="PullToRefresh">
+
+        <!-- A drawable to use as the background of the Refreshable View -->
+        <attr format="reference|color" name="ptrRefreshableViewBackground"/>
+
+        <!-- A drawable to use as the background of the Header and Footer Loading Views -->
+        <attr format="reference|color" name="ptrHeaderBackground"/>
+
+        <!-- Text Color of the Header and Footer Loading Views -->
+        <attr format="reference|color" name="ptrHeaderTextColor"/>
+
+        <!-- Text Color of the Header and Footer Loading Views Sub Header -->
+        <attr format="reference|color" name="ptrHeaderSubTextColor"/>
+
+        <!-- Mode of Pull-to-Refresh that should be used -->
+        <attr name="ptrMode">
+            <flag name="disabled" value="0x0"/>
+            <flag name="pullFromStart" value="0x1"/>
+            <flag name="pullFromEnd" value="0x2"/>
+            <flag name="both" value="0x3"/>
+            <flag name="manualOnly" value="0x4"/>
+            <flag name="google" value="0x5"/>
+
+            <!-- These last two are depreacted -->
+            <flag name="pullDownFromTop" value="0x1"/>
+            <flag name="pullUpFromBottom" value="0x2"/>
+        </attr>
+
+        <!-- Whether the Indicator overlay(s) should be used -->
+        <attr format="reference|boolean" name="ptrShowIndicator"/>
+
+        <!-- Drawable to use as Loading Indicator. Changes both Header and Footer. -->
+        <attr format="reference" name="ptrDrawable"/>
+
+        <!-- Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. -->
+        <attr format="reference" name="ptrDrawableStart"/>
+
+        <!-- Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. -->
+        <attr format="reference" name="ptrDrawableEnd"/>
+
+        <!-- Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. -->
+        <attr format="reference|boolean" name="ptrOverScroll"/>
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views -->
+        <attr format="reference" name="ptrHeaderTextAppearance"/>
+
+        <!-- Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header -->
+        <attr format="reference" name="ptrSubHeaderTextAppearance"/>
+
+        <!-- Style of Animation should be used displayed when pulling. -->
+        <attr format="string" name="ptrAnimationStyle"/>
+        <!--  -->
+        <attr format="string" name="ptrIndicatorStyle"/>
+
+        <!-- Styles of Animation for google style pull to refresh -->
+        <attr format="string" name="ptrGoogleViewStyle"/>
+        <!-- Styles of Progress Bar Layout for google style pull to refresh -->
+        <attr format="string" name="ptrGoogleProgressStyle"/>
+
+        <!-- Label attributes of Loading layout -->
+        <attr format="string" name="ptrPullLabel"/>
+        <attr format="string" name="ptrRefreshLabel"/>
+        <attr format="string" name="ptrReleaseLabel"/>
+        <attr format="float" name="ptrFriction" value="2.0"/>
+        <attr format="integer" name="ptrSmoothScrollDuration" value="200"/>
+        <attr format="integer" name="ptrSmoothScrollLongDuration" value="325"/>
+
+        <!-- Whether the user can scroll while the View is Refreshing -->
+        <attr format="reference|boolean" name="ptrScrollingWhileRefreshingEnabled"/>
+
+        <!--
+        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
+        	able to scroll while refreshing, and behaves better. It acheives this by adding
+        	Header and/or Footer Views to the ListView.
+        -->
+        <attr format="reference|boolean" name="ptrListViewExtrasEnabled"/>
+        
+        <attr format="reference|boolean" name="ptrListViewExtrasSection"/>
+        
+		<attr format="reference|boolean" name="shadowview"/>
+        <!--
+        	Whether the Drawable should be continually rotated as you pull. This only
+        	takes effect when using the 'Rotate' Animation Style.
+        -->
+        <attr format="reference|boolean" name="ptrRotateDrawableWhilePulling"/>
+
+        <!--
+             Whether Google style view layout's size is set to ActionBar's size 
+        	 (Don't set to false as possible, it's hard to control height if this flag is false)
+        -->
+        <attr format="reference|boolean" name="ptrSetGoogleViewLayoutSizeToActionbarHeight"/>
+        <!-- Animation Options only for google Style mode -->
+        <!-- Whether Google style view layout's fade-in animation is shown when pulling -->
+        <attr format="reference|boolean" name="ptrShowGoogleStyleViewAnimationEnabled"/>
+        <!-- Whether Refreshable view is hidden when refreshing -->
+        <attr format="reference|boolean" name="ptrHideRefeshableViewWhileRefreshingEnabled"/>
+        <!-- Whether Rotating progress bar is shown when refreshing -->
+        <attr format="reference|boolean" name="ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingEnabled"/>
+        <!-- Duration of Google style view layout's fade-in/out animation -->
+        <attr format="integer" name="ptrShowGoogleStyleViewAnimationDuration" value="100"/>
+        <!-- Duration of  Refreshable view's fade-in/out animation -->
+        <attr format="integer" name="ptrHideRefeshableViewWhileRefreshingDuration" value="500"/>
+        <!-- Duration of rotating progress bar's fade-in/out animation -->
+        <attr format="integer" name="ptrViewRefeshableViewProgressBarOnCenterWhileRefreshingDuration" value="200"/>
+
+        <!-- These attrs are enabled to set width or height of Rotating progress bar on center -->
+        <attr format="integer" name="ptrRefeshableViewProgressBarOnCenterWidth" value="200"/>
+        <attr format="integer" name="ptrRefeshableViewProgressBarOnCenterHeight" value="200"/>
+
+        <!-- BELOW HERE ARE DEPRECEATED. DO NOT USE. -->
+        <attr format="reference|color" name="ptrAdapterViewBackground"/>
+        <attr format="reference" name="ptrDrawableTop"/>
+        <attr format="reference" name="ptrDrawableBottom"/>
+    </declare-styleable>
+    <declare-styleable name="RoundedImageView">
+        <attr format="dimension" name="corner_radius"/>
+        <attr format="dimension" name="border_width"/>
+        <attr format="color" name="border_color"/>
+        <attr format="boolean" name="mutate_background"/>
+        <attr format="boolean" name="oval"/>
+        <attr name="android:scaleType"/>
+    </declare-styleable>
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr format="dimension" name="panelHeight"/>
+        <attr format="dimension" name="shadowHeight"/>
+        <attr format="dimension" name="paralaxOffset"/>
+        <attr format="color" name="fadeColor"/>
+        <attr format="integer" name="flingVelocity"/>
+        <attr format="reference" name="dragView"/>
+        <attr format="boolean" name="overlay"/>
+        <attr format="float" name="anchorPoint"/>
+        <attr format="enum" name="initialState">
+            <enum name="expanded" value="0"/>
+            <enum name="collapsed" value="1"/>
+            <enum name="anchored" value="2"/>
+            <enum name="hidden" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="StickyListHeadersListView">
+        <!-- View attributes -->
+        <attr name="android:clipToPadding"/>
+        <attr name="android:scrollbars"/>
+        <attr name="android:overScrollMode"/>
+        <attr name="android:padding"/>
+        <attr name="android:paddingLeft"/>
+        <attr name="android:paddingTop"/>
+        <attr name="android:paddingRight"/>
+        <attr name="android:paddingBottom"/>
+
+        <!-- ListView attributes -->
+        <attr name="android:fadingEdgeLength"/>
+        <attr name="android:requiresFadingEdge"/>
+        <attr name="android:cacheColorHint"/>
+        <attr name="android:choiceMode"/>
+        <attr name="android:drawSelectorOnTop"/>
+        <attr name="android:fastScrollEnabled"/>
+        <attr name="android:fastScrollAlwaysVisible"/>
+        <attr name="android:listSelector"/>
+        <attr name="android:scrollingCache"/>
+        <attr name="android:scrollbarStyle"/>
+        <attr name="android:divider"/>
+        <attr name="android:dividerHeight"/>
+        <attr name="android:transcriptMode"/>
+
+        <!-- StickyListHeaders attributes -->
+        <attr format="boolean" name="hasStickyHeaders"/>
+        <attr format="boolean" name="isDrawingListUnderStickyHeader"/>
+    </declare-styleable>
+</resources>

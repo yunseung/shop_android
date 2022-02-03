@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingTop="15dp"
+    >
+
+    <gsshop.mobile.v2.home.shop.flexible.wine.common.RecyclerViewRollingMenu
+        android:id="@+id/recycler_rolling_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="false" />
+
+    <FrameLayout
+        android:id="@+id/view_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#f9ecef"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="13dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="fitXY"
+                android:src="@drawable/wine_search"
+                android:background="@drawable/wine_search" />
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:ellipsize="end"
+                android:hint="원하는 와인을 찾아보세요."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1"
+                android:textColor="#444444"
+                android:textColorHint="#444444"
+                android:textCursorDrawable="@drawable/search_gs_fresh_cursor"
+                android:textSize="15sp"
+                android:typeface="sans"
+                android:layout_marginLeft="6dp"
+                />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_search_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:background="@android:color/transparent"
+            android:contentDescription="@android:string/cancel"
+            android:src="@drawable/ic_close1_720"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/best_shop_category_divider"
+        android:visibility="visible"/>
+
+</LinearLayout>

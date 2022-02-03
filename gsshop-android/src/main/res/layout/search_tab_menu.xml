@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 인기검색어/최근검색어 공통 탭메뉴 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_search_tab_menu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_recommend_list_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_recommend_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:text="추천 검색어"
+                android:textColor="#111111"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_recommend_guide"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="1dp"
+                android:background="@drawable/info_solid" />
+
+        </LinearLayout>
+
+        <!-- 최근검색어 기반으로한 연관검색어 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_recommend_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_recommend_guide"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_tooltip_recommend_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_recommend_guide"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="-9dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/combined_shape_copy_2"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="고객님의 최근 검색어 기반으로 추천합니다."
+                android:textColor="#ffffff"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_guide_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/guide_close" />
+            ㅣ
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <!-- 하단라인 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="bottom"
+            android:background="#d2d2d2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_recent_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="@string/search_recent_title"
+                    android:textColor="@drawable/search_tab_text"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <View
+                    android:id="@+id/line_recent"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#111111" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="-1px"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_popular_keyword"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:text="@string/search_popular_title"
+                    android:textColor="@drawable/search_tab_text"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <View
+                    android:id="@+id/line_popular"
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#111111" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

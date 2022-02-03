@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 여러개의 아이템을 하나로 묶은 모양의 배경 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <solid android:color="#ecedef" />
+    <corners android:radius="22dp"/>
+
+
+</shape>

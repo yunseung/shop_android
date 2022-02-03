@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_toast"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <!--팝업 폭이 fill_parent이므로 양옆 여백을 위해 한번 더 감쌌음-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="14dp"
+            android:paddingTop="14dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_livetalk_popup">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="14dp"
+                    android:src="@drawable/livetalk_warning"/>
+
+
+                <gsshop.mobile.v2.support.ui.CharacterWrapTextView
+                    android:id="@+id/txt_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_marginRight="14dp"
+                    android:textSize="14sp"
+                    android:typeface="sans"
+                    android:maxLines="2"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="true" />
+        </LinearLayout>
+
+
+
+</LinearLayout>

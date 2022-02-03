@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="1.7">
+      <module name="gsshop-android-gradle.gsshop-android" target="1.8" />
+      <module name="gsshop-android-gradle.gsshop-library" target="1.8" />
+      <module name="gsshop-mock" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

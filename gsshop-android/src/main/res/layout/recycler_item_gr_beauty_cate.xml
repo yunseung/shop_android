@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 상품평 작성/수정 화면에서 하단 첨부이미지 리스트 영역 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="112dp"
+    android:gravity="center_horizontal"
+    android:background="@color/white"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        >
+        <ImageView
+            android:id="@+id/product_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            />
+        <View
+            android:id="@+id/view_hot"
+            android:layout_width="34dp"
+            android:layout_height="16dp"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/badge_hot"
+            />
+    </FrameLayout>
+
+    <gsshop.mobile.v2.support.ui.TwoLineTextView
+        android:id="@+id/info_text"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:paddingTop="-3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:ellipsize="none"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:lines="2"
+        android:textColor="#444444"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="-3dp"
+        android:textSize="13dp"
+        android:text="테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"/>
+
+</LinearLayout>

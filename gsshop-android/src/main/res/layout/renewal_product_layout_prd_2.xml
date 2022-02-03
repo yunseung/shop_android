@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/product_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="12dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/badge_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="0dp">
+
+            <LinearLayout
+                android:id="@+id/layout_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_rental_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#111111"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:includeFontPadding="false"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    style="@style/DealPriceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:maxLength="23"
+                    android:singleLine="true"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/txt_price_unit"
+                    style="@style/DealPriceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:singleLine="true"
+                    android:textSize="14dp"
+                    android:textStyle="normal"
+                    android:includeFontPadding="false"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/badge_layout_base_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/badge_layout"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                android:id="@+id/txt_discount_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#ec2261"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                />
+
+            <TextView
+                android:id="@+id/txt_base_price"
+                style="@style/DealPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="0dip"
+                android:singleLine="true"
+                android:textColor="#888888"
+                android:textSize="12dp"
+                android:layout_marginLeft="3dp"
+                android:visibility="gone"
+                android:includeFontPadding="false"/>
+
+            <TextView
+                android:id="@+id/txt_base_price_unit"
+                style="@style/DealPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="0dip"
+                android:singleLine="true"
+                android:textColor="#888888"
+                android:textSize="12dp"
+                android:includeFontPadding="false"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/badge_layout_base_price"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_brand_name"
+                style="@style/DealTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="3dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="브렌드명"
+                android:textColor="#111111"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <gsshop.mobile.v2.home.shop.renewal.views.TwoLineTextViewSetEllipsizePossibly
+                    android:id="@+id/txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="상품명"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textColor="#111111"
+                    android:textSize="16dp"
+                    android:includeFontPadding="false"/>
+
+                <!-- 크기 유지 위해 해당 뷰를 놓는다.-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\n"
+                    android:textSize="16dp"
+                    android:visibility="invisible"
+                    android:includeFontPadding="false"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include
+        layout="@layout/renewal_product_benefit_layout_gs_fresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/txt_review_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:id="@+id/txt_review_avr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5점"
+                android:textStyle="bold"
+                android:layout_marginRight="3dp"
+                android:textSize="14dp"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/txt_review_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(999+)"
+                android:textSize="14dp"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/renewal_gsfresh_cart"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:src="@drawable/renewal_gsfresh_cart"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone">
+        </ImageView>
+    </FrameLayout>
+
+</LinearLayout>

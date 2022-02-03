@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 인기검색어 배너 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/view_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/list_divider_height">
+
+        <!-- 상단 타이틀 영역 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="11dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/txt_vp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:textSize="18sp"
+                android:textColor="#111"
+                android:text="@string/best_shop_populate_keyword"
+                />
+
+            <gsshop.mobile.v2.util.TouchAreaExpand
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:padding="5dp">
+                <CheckBox
+                    android:id="@+id/btn_expand"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/selector_popular_expend"
+                    android:button="@null"
+                    />
+            </gsshop.mobile.v2.util.TouchAreaExpand>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4" />
+
+        <FrameLayout
+            android:id="@+id/layout_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@color/white"
+            >
+            <ViewSwitcher
+                android:id="@+id/viewSwitcher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                />
+        </FrameLayout>
+
+        <!-- 펼침상태 노출될 뷰 -->
+        <LinearLayout
+            android:id="@+id/lay_expand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/flexible_item_border"
+            android:visibility="gone"
+            android:paddingBottom="1dp" >
+
+            <!-- 뷰페이저 -->
+            <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="240dp" />
+
+            <!-- 인디케이터 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:paddingLeft="12.5dp"
+                android:paddingRight="10dp"
+                android:background="#f9f9f9"
+                android:gravity="center_vertical">
+
+                <gsshop.mobile.v2.home.util.IconTabBar
+                    android:id="@+id/indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/txt_vp_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:typeface="sans"
+                    android:textSize="12sp"
+                    android:textColor="#888"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

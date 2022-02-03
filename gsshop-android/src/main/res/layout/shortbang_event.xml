@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 숏방 동영상 플레이 화면 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- 동영상 스틸이미지 -->
+    <gsshop.mobile.v2.home.CustomVerticalViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/preload_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+    <!-- 더미포지션 세팅관련 이미지 깜박임 제거용 -->
+    <ImageView
+        android:id="@+id/fake_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+    <!--pause, replay, loading icons-->
+    <include
+        layout="@layout/mc_webview_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!-- 상단 그라데이션 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/gradation_sb_top" />
+
+    <!-- 하단 그라데이션 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradation_sb_bottom" />
+
+    <!-- 상단 타이틀 영역 -->
+    <RelativeLayout
+        android:id="@+id/lay_header"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="15dp"
+            android:src="@drawable/ic_nb_back_720" />
+
+        <ImageView
+            android:id="@+id/img_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <!-- 사운드 ON/OFF -->
+    <LinearLayout
+        android:id="@+id/lay_mute"
+        android:layout_width="55dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/chk_mute"
+            android:layout_width="25dp"
+            android:layout_height="22dp"
+            android:button="@android:color/transparent"
+            android:background="@drawable/selector_shortbang_mute" />
+
+    </LinearLayout>
+
+    <!-- 바로구매, 공유 영역 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:id="@+id/lay_direct_order"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_detail_sb_event">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="13sp"
+                    android:typeface="sans"/>
+
+                <TextView
+                    android:id="@+id/txt_price_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:typeface="sans"/>
+
+                <TextView
+                    android:id="@+id/txt_direct_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:typeface="sans"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_sb_detail"/>
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/chk_zzim"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center"
+            android:button="@android:color/transparent"
+            android:background="@drawable/selector_shortbang_zzim" />
+
+        <ImageView
+            android:id="@+id/img_sns"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:paddingTop="9dp"
+            android:paddingBottom="9dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_sb_share" />
+
+    </LinearLayout>
+
+    <!-- 중앙 재생버튼 -->
+
+    <!-- 토스트 가이드 이미지 -->
+    <ImageView
+        android:id="@+id/toast_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/guide_sb_toast"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:layout_gravity="center" />
+
+    <!-- 탭메뉴 -->
+    <include
+        android:visibility="gone"
+        layout="@layout/tab_menu" />
+
+    <LinearLayout
+        android:id="@+id/lay_play"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#4C000000"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sb_play" />
+
+    </LinearLayout>
+
+</FrameLayout>

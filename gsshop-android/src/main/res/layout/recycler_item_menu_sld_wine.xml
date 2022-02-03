@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Deco 주기 번거로워서 안의 값을 추가로 5dp 씩 더 주었다.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:layout_marginBottom="11dp"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/image_circle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/brand_no_android" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/cate_img_crop_an" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_main"
+        android:layout_width="match_parent"
+        android:layout_height="18dp"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:letterSpacing="-0.05"
+        android:typeface="sans"
+        android:textColor="#111111"
+        android:ellipsize="end"
+        android:textSize="13dp" />
+</LinearLayout>
+
+

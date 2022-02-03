@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘의 라이브"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        android:includeFontPadding="false"
+        />
+
+    <TextView
+        android:id="@+id/txt_title_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="과거 방송 중 혜택은 적용되지 않을 수 있습니다."
+        android:textSize="14sp"
+        android:textColor="#a3111111"
+        android:includeFontPadding="false"
+        android:layout_marginTop="6dp"
+        />
+
+</LinearLayout>

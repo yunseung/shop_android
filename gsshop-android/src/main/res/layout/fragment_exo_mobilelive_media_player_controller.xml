@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipChildren="false"
+    android:background="#000000">
+
+    <!-- tapview 오렌지색 변경현상 방지용 -->
+    <View
+        android:id="@+id/dummy"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
+    <!-- 탭이벤트 처리를 위한 뷰 -->
+    <View
+        android:id="@+id/tapview"
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- 동영상뷰 -->
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoplayer_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" >
+
+        <!-- 상단 딤 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_gravity="top"
+            android:background="@drawable/an_dim_top" />
+        <!-- 하단 딤 -->
+        <View
+            android:id="@+id/dimBottom"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/mobilelive_bottom_dim_gradation" />
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+
+
+    <!-- 헤더 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="12dp">
+
+        <LinearLayout
+            android:id="@+id/ll_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="left|center_vertical"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp">
+
+            <ImageView
+                android:layout_width="68dp"
+                android:layout_height="20dp"
+                android:src="@drawable/shoppy"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lay_onair_info"
+            android:layout_toRightOf="@id/ll_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp">
+
+            <gsshop.mobile.v2.mobilelive.MobileLiveTimeLayout
+                android:id="@+id/onair_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txt_remain_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:background="@drawable/bg_33111111_round_13"
+                    android:gravity="center"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="9dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:typeface="sans" />
+            </gsshop.mobile.v2.mobilelive.MobileLiveTimeLayout>
+
+            <ImageView
+                android:id="@+id/mobilelive_onair_badge"
+                android:layout_width="45dp"
+                android:layout_height="24dp"
+                android:src="@drawable/mobilelive_live_badge">
+
+            </ImageView>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:orientation="horizontal"
+            android:layout_toRightOf="@id/lay_onair_info"
+            android:layout_marginLeft="4dp"
+            android:gravity="center"
+            android:background="@drawable/bg_66111111_round_12"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp">
+
+            <LinearLayout
+                android:id="@+id/peolpe_info"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="8dp">
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="11dp"
+                    android:background="@drawable/ic_people"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/peolpe_info"
+                android:layout_marginRight="8dp">
+                <TextView
+                    android:id="@+id/people_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 음소거 버튼 -->
+        <LinearLayout
+            android:id="@+id/lay_check_mute"
+            android:layout_toLeftOf="@+id/right_back_layout"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            >
+
+            <CheckBox
+                android:id="@+id/check_mute"
+                android:layout_width="28dp"
+                android:layout_gravity="center"
+                android:layout_height="28dp"
+                android:background="@drawable/selector_mobile_live_mute"
+                android:button="@android:color/transparent"
+                android:contentDescription="음소거 버튼"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/right_back_layout"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:gravity="right|center_vertical"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            >
+            <Button
+                android:id="@+id/right_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mobilelive_close_button"
+                android:contentDescription="닫기"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 플로팅영역 -->
+    <LinearLayout
+        android:id="@+id/chatLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <!-- top 방송알림-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:background="@drawable/bg_mobilelive_alarm"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/mobilelive_notification"
+                android:layout_marginRight="2dp">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방송알림"
+                android:textSize="14dp"
+                android:textColor="#ffffff">
+
+            </TextView>
+        </LinearLayout>
+
+        <!-- 웰컴 메시지 -->
+        <TextView
+            android:id="@+id/txtWelcomeMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="5dp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:background="@drawable/bg_mobilelive_chatlist_msg"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:shadowColor="#3d000000"
+            android:shadowDx="0"
+            android:shadowDy="1"
+            android:shadowRadius="1"
+            android:text="fms***님, 샤피라이브 또 찾아주셨네요! 반갑습니다."
+            android:textSize="14dp"
+            android:gravity="left"
+            android:textColor="#ffde00"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!-- 채팅리스트 -->
+        <FrameLayout
+            android:id="@+id/chatList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="17dp"
+            android:visibility="visible">
+
+
+            <!-- 새로운 채팅글 있는 경우 -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="144.5dp"
+                android:layout_marginBottom="4.5dp" />
+
+            <LinearLayout
+                android:id="@+id/chatListNewLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:visibility="gone"
+                android:background="@drawable/bg_mobilelive_chatlist_new_msg"
+                android:layout_gravity="bottom|center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="10.5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_arrow_bottom" />
+
+                <gsshop.mobile.v2.support.ui.CharacterWrapTextView
+                    android:id="@+id/chatListNewText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="80dp"
+                    android:layout_marginLeft="5.6dp"
+                    android:layout_marginRight="10.9dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:typeface="sans"
+                    android:textSize="13dp"
+                    android:textColor="#111111"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/chatNotiTopMargin"
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:background="@drawable/transparent"
+            android:visibility="gone"/>
+
+        <!-- 공지사항 -->
+        <FrameLayout
+            android:id="@+id/chatNoti"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="83dp"
+            android:layout_marginBottom="16dp"
+            android:paddingLeft="12dp"
+            android:clickable="true"
+            android:background="@drawable/bg_mobilelive_notice_gradation"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <gsshop.mobile.v2.support.ui.CharacterWrapTextSwitcher
+                android:id="@+id/notiSwitcher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingTop="3dp"
+                android:layout_marginRight="12dp"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                android:typeface="sans"
+                android:measureAllChildren="true"/>
+            <!-- measureAllChildren=true: 자식 view 가 gone 이여도 무시되지 않고 invisible 처리  -->
+
+            <LinearLayout
+                android:id="@+id/chatNotiMore"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="2dp"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:text="@string/common_more"
+                    android:textSize="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/chevron_right_mola"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!--상품 리스트-->
+        <LinearLayout
+            android:id="@+id/chatProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="83dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <gsshop.mobile.v2.support.ui.PreviewRecyclerViewPager
+                    android:id="@+id/recycler_view_pager"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <gsshop.mobile.v2.support.ui.IndicatorRecyclerView
+                    android:id="@+id/recycler_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/lay_more"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_marginLeft="2dp"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_mobilelive_prd"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_more_count"
+                        android:text="+12"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#111111"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/common_more"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="#111111"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!-- 노출용(키패드 히든시) -->
+            <FrameLayout
+                android:id="@+id/chatMsg"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="83dp"
+                android:layout_marginBottom="12dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txtShowKeyboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="8dp"
+                    android:longClickable="false"
+                    android:inputType="text"
+                    android:background="@drawable/bg_mobilelive_message"
+                    android:contentDescription="@string/moblielive_chat_hint"
+                    android:hint="@string/moblielive_chat_hint"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textSize="16dp"
+                    android:typeface="sans" />
+
+                <!-- 채팅서비스 unavailable -->
+                <TextView
+                    android:id="@+id/txtChatUnavailable"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:background="@drawable/bg_mobilelive_chat_unavailable"
+                    android:maxLines="1"
+                    android:text="@string/moblielive_chat_unavailable"
+                    android:contentDescription="@string/moblielive_chat_unavailable"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+            </FrameLayout>
+
+            <!-- bottom 방송알림-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="12dp"
+                android:paddingLeft="11dp"
+                android:paddingRight="12dp"
+                android:gravity="center"
+                android:background="@drawable/bg_mobilelive_alarm"
+                android:visibility="gone">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/mobilelive_notification"
+                    android:layout_marginRight="2dp">
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="방송알림"
+                    android:textSize="14dp"
+                    android:textColor="#ffffff">
+
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 채팅입력창 -->
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/chatMsgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#ffffff"
+        android:paddingLeft="12dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtChatMsg"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="@drawable/bg_mobilelive_message2"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:hint="@string/moblielive_chat_hint"
+            android:maxLines="1"
+            android:textColor="#444444"
+            android:textColorHint="#888888"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/lay_chat_send"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/chatSend"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_gravity="center_vertical"
+                android:button="@android:color/transparent"
+                android:background="@drawable/ic_send_default"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--pause, replay, loading icons-->
+    <include
+        layout="@layout/mc_webview_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <!-- 우하단 메뉴 -->
+    <LinearLayout
+        android:id="@+id/lay_alarm_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:animateLayoutChanges="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="@dimen/mobile_live_right_menu_margin_bottom_key_hide"
+        android:layout_gravity="right|bottom"
+        android:clipChildren="false"
+        android:gravity="right">
+
+        <!-- 출석체크 버튼 -->
+        <FrameLayout
+            android:id="@+id/lay_attend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:gravity="center"
+            android:background="@drawable/bg_66111111_round_22"
+            android:clipChildren="false"
+            >
+
+            <Button
+                android:id="@+id/attend_button"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:background="@drawable/mobilelive_attend"
+                android:clickable="false" />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="23dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="-2dp"
+                android:layout_marginTop="-6dp"
+                android:background="@drawable/attend_comment"/>
+        </FrameLayout>
+
+        <!--방송알림-->
+        <FrameLayout
+            android:id="@+id/lay_alarm"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_66111111_round_22"
+            android:layout_marginLeft="12dp">
+
+            <ImageView
+                android:id="@+id/alarm_button_off"
+                android:layout_width="23dp"
+                android:layout_gravity="center"
+                android:layout_height="26dp"
+                android:background="@drawable/mobilelive_alarm_off"
+                android:contentDescription="@string/shpping_live_alarm_btn_off"
+                android:visibility="visible"/>
+
+            <ImageView
+                android:id="@+id/alarm_button_on"
+                android:layout_width="23dp"
+                android:layout_gravity="center"
+                android:layout_height="26dp"
+                android:background="@drawable/mobilelive_alarm_on"
+                android:contentDescription="@string/shpping_live_alarm_btn_off"
+                android:visibility="gone"/>
+        </FrameLayout>
+
+        <!-- 공유하기 버튼 -->
+        <LinearLayout
+            android:id="@+id/lay_share"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="@drawable/bg_66111111_round_22"
+            >
+            <Button
+                android:id="@+id/share_button"
+                android:layout_width="21dp"
+                android:layout_height="26dp"
+                android:background="@drawable/mobilelive_share"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

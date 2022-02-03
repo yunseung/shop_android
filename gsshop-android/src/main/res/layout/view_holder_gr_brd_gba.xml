@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- GR_BRD_GBA 레이아웃-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_root"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_brand"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|left"
+        android:paddingLeft="24dp">
+
+        <TextView
+            android:id="@+id/tv_brand_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="에이지 투웨이스"
+            android:textColor="#111111"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_vod_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 비디오 플레이어 -->
+        <FrameLayout
+            android:id="@+id/video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1.78:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <!-- 로딩중 -->
+        <include
+            layout="@layout/mc_webview_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_vod_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black_semi_trans"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="1.78:1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iv_play_img"
+            android:layout_width="75dp"
+            android:layout_height="74dp"
+            android:background="@drawable/play_circle_line_overlay_big"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/common_play"/>
+
+        <!-- 데이타 과금안내 팝업 -->
+        <FrameLayout
+            android:id="@+id/fl_mobile_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <include
+                layout="@layout/view_mobile_data_alert_detail_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_square_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.viewpager2.widget.ViewPager2
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/viewPagerImg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black_semi_trans"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="parent"
+            android:importantForAccessibility="no"/>
+
+        <TextView
+            android:id="@+id/tv_page_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="66dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/bg_66111111_round_14"
+            android:text="1/6"
+            android:textColor="#ffffff"
+            android:textSize="12dp"
+            android:typeface="sans"
+            android:importantForAccessibility="no"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-54dp"
+        android:background="@drawable/bg_radius_left_top_40"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <ImageView
+            android:id="@+id/iv_brand_img"
+            android:layout_width="148dp"
+            android:layout_height="67dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:id="@+id/tv_title_1th"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="로멘틱 끝짱판!"
+            android:textColor="#111111"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_title_2th"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="로멘틱 끝짱판! 라삐아프 어쩌구"
+            android:textColor="#111111"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+
+    <gsshop.mobile.v2.support.ui.CharacterWrapTextViewV2
+        android:id="@+id/tv_sub_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:text="라삐아프는 시즌별로 가장 트렌디한 아이템을 빠르게.."
+        android:textColor="#99111111"
+        android:textSize="15dp"
+        android:maxLines="5"
+        android:ellipsize="end"/>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="18dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- tabMaxWidth : 좌우 여백포함한 원 하나의 가로크기 -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="9dp"
+        android:layout_marginBottom="10dp"
+        app:tabBackground="@drawable/selector_indicator_dot_2"
+        app:tabMaxWidth="16dp"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_tv_more"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="9dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_gray_rect_round_4_d9d9d9" >
+        <TextView
+            android:id="@+id/tv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="로멘틱 끝짱판 로멘틱 브랜드샵 바로가기"
+            android:textColor="#111111"
+            android:includeFontPadding="false"
+            android:textSize="16dp"/>
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/arrow_sn_more" />
+    </LinearLayout>
+
+    <!-- 하단 라인 -->
+    <View
+        android:id="@+id/vw_bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="30dp"
+        android:background="#eeeeee"/>
+
+    <!-- 다음 아이템과 여백 -->
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/transparent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"/>
+
+</LinearLayout>

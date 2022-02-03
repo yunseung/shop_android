@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.brightcove.player.mediacontroller.BrightcoveControlBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/brightcove_control_bar"
+    style="@style/BrightcoveControlBar.Custom.FullScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="Overdraw, InconsistentLayout">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha=".30"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <!-- 하단 컨트롤영역 -->
+
+
+            <!-- vod (brightcove control)-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="8dp"
+                    >
+
+                    <TextView
+                        android:id="@id/current_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="00:00"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:typeface="sans" />
+
+                    <com.brightcove.player.mediacontroller.BrightcoveSeekBar
+                        android:id="@id/seek_bar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:maxHeight="2dp"
+                        android:minHeight="2dp"
+                        android:progressDrawable="@drawable/media_player_seekbar_progress"
+                        android:thumb="@drawable/bg_bright_cove_seekbar_thumb"
+                        android:thumbOffset="0dp" />
+
+                    <TextView
+                        android:id="@id/end_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="00:00"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+                <!--mute, 축소 버튼-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+
+                    <gsshop.mobile.v2.util.TouchAreaExpand
+                        android:layout_width="38dp"
+                        android:layout_height="28dp">
+
+                        <CheckBox
+                            android:id="@+id/chk_mute"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="bottom|right"
+                            android:background="@drawable/selector_live_player_mute"
+                            android:button="@android:color/transparent"
+                            android:contentDescription="@string/common_sound_mute" />
+
+
+                    </gsshop.mobile.v2.util.TouchAreaExpand>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="bottom|right"
+                            android:background="@drawable/ic_out_android" />
+
+                        <Button
+                            android:id="@+id/view_controller_out"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@android:color/transparent" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- 재생버튼 -->
+            <CheckBox
+                android:id="@+id/chk_play"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_player_play"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:contentDescription="@string/common_pause"
+                android:visibility="gone"
+                />
+
+            <FrameLayout
+                android:id="@+id/view_player_controller"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                >
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_play_android" />
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_pause"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_pause_android" />
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_replay_android" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <!-- 닫기버튼 -->
+        <LinearLayout
+            android:id="@+id/lay_btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <!-- 닫기버튼 -->
+            <View
+                android:id="@+id/btn_close"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:background="@drawable/close_detail"
+                android:contentDescription="@string/common_close" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</com.brightcove.player.mediacontroller.BrightcoveControlBar>

@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 매장 공통 레이아웃 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 사이렌 아이콘 노출 (임직원 대상) -->
+    <LinearLayout
+        android:id="@+id/layout_siren"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="66.25dp"
+        android:layout_marginLeft="11.25dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/tooltip_siren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mc_siren"></ImageView>
+
+        <ImageView
+            android:id="@+id/btn_siren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/btn_siren" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/btn_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="62.25dp"
+        android:layout_marginRight="11.25dp"
+        android:contentDescription="상단으로 이동"
+        android:src="@drawable/top_720" />
+
+    <LinearLayout
+        android:id="@+id/list_count_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="62.25dp"
+        android:layout_marginRight="11.25dp"
+        android:background="@drawable/counting_bg_720"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_current_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="3.62dp"
+            android:textColor="#444444"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#dcdcdc" />
+
+        <TextView
+            android:id="@+id/txt_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:textColor="#999999"
+            android:textSize="13.5sp" />
+    </LinearLayout>
+
+    <!-- 데이타 연결오류 시 -->
+    <include layout="@layout/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/main_header_height"/>
+
+    <View
+        android:id="@+id/list_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/category_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/category_layout"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:visibility="gone"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/category_layout"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/all_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/currentCategoryTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="11.25dp"
+                android:gravity="center_vertical"
+                android:text="@string/home_list_filter_all_text"
+                android:textColor="@color/group_filter_text_color_default"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/currentCategorysize"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/currentCategoryTextView"
+                android:gravity="center_vertical"
+                android:textColor="@color/group_filter_text_color_default"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/all_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toRightOf="@+id/currentCategorysize"
+                android:background="@drawable/arrow" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="#ebebeb" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tv_menu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tv_top_layout_height"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/top_menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/button_live"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/logo_live"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <RelativeLayout
+                android:id="@+id/button_data"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/logo_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#e5e5e5" />
+    </RelativeLayout>
+
+    <!--best shop top fixed category-->
+    <FrameLayout
+        android:id="@+id/view_best_shop_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/view_dim_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white" />
+
+            <FrameLayout
+                android:id="@+id/view_dim_click_area"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#99000000"
+                android:clickable="true">
+
+                <FrameLayout
+                    android:id="@+id/view_category_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tab_bg_720"
+            android:clickable="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/best_shop_category_title_view_height"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/text_category_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/vh_blank_space_middle"
+                    android:src="@drawable/icon_on_720" />
+
+                <TextView
+                    android:id="@+id/text_category_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColor="#111111"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/best_shop_product_divider" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/best_shop_category_title_view_height"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/check_category_expand"
+                        android:contentDescription="@string/accessibility_category_expand"
+                        android:layout_width="18dp"
+                        android:layout_height="10dp"
+                        android:layout_centerInParent="true"
+                        android:focusable="true"
+                        android:button="@drawable/selector_best_shop_category_expand"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/best_shop_product_divider" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--gs x brand category-->
+    <FrameLayout
+        android:id="@+id/frame_gs_x_brand_category"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/view_gs_x_brand_category"
+            layout="@layout/recycler_item_gs_x_brand_category" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/popup_gs_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <include
+            android:id="@+id/popup_gs_super"
+            android:layout_width="@dimen/popup_gs_super_main_width_height"
+            android:layout_height="@dimen/popup_gs_super_main_width_height"
+            android:layout_gravity="center"
+            layout="@layout/layout_popup_cart"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/popup_card_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/bg_popup_card_notice"
+        android:layout_marginBottom="@dimen/tab_menu_height"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/popup_card_notice_add_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            >
+            <TextView
+                android:id="@+id/txt_card_notice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15dp"
+                android:typeface="sans"
+                android:text="내일 방송상품 미리주문 카드혜택"
+                android:includeFontPadding="false"
+            />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/txt_card_notice_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:typeface="sans"
+                    android:text="(8/27화)"
+                    android:includeFontPadding="true"
+                    />
+                <TextView
+                    android:id="@+id/txt_card_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    android:typeface="sans"
+                    android:layout_marginLeft="9.5dp"
+                    android:text="삼성카드 7%"
+                    android:includeFontPadding="true"
+                    android:lines="1"
+                    />
+                <LinearLayout
+                    android:id="@+id/view_card_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    >
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="14dp"
+                        android:layout_marginLeft="10.5dp"
+                        android:layout_marginRight="10.5dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#80ffffff"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_card_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:typeface="sans"
+                        android:text="국민카드 7%"
+                        android:includeFontPadding="true"
+                        android:lines="1"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#b9b9b9"
+                android:layout_gravity="center_horizontal"
+                android:textSize="13dp"
+                android:typeface="sans"
+                android:text="@string/popup_card_sub_title"
+                android:includeFontPadding="true"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_popup_close"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|right"
+            android:background="@drawable/close_popup_card_notice"
+            />
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_mobilelive_alarm_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="샤피라이브 방송알림"
+            android:textColor="#111111"
+            android:textSize="17dp"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:visibility="gone"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#19111111" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="vertical">
+
+            <!--쇼핑라이브 아이콘 -->
+            <ImageView
+                android:id="@+id/img_mobile_live"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="13dp" />
+
+
+            <!--휴대폰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_mobilelive_alarm_phone_number"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰번호 :"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/txt_mobile_live_broad_alarm_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="000 - 0000 - 0000"
+                    android:textColor="#86cf00"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/default_txt_color"
+                android:text="샤피라이브 방송 시마다\n알림이 발송됩니다."
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:textSize="18sp"
+                />
+
+
+            <!-- 기간, 횟수 삭제, Text 하드 코딩
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/popup_ic_dt_an" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="17dp"
+                    android:text="기간"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RadioGroup
+                    android:id="@+id/rg_mobile_live_broad_alarm_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_month_one"
+                        style="@style/mobile_live_broad_alarm_text_selected"
+                        android:layout_width="54dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="1개월"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_month_two"
+                        style="@style/mobile_live_broad_alarm_text_unselected"
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="2개월"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_month_tree"
+                        style="@style/mobile_live_broad_alarm_text_unselected"
+                        android:layout_width="56dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="3개월"
+                        android:typeface="sans" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/popup_ic_ch_an" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="17dp"
+                    android:text="횟수"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RadioGroup
+                    android:id="@+id/rg_mobile_live_broad_alarm_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_time_one"
+                        style="@style/mobile_live_broad_alarm_text_selected"
+                        android:layout_width="42dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="1회"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_time_two"
+                        style="@style/mobile_live_broad_alarm_text_unselected"
+                        android:layout_width="45dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="3회"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_mobile_live_broad_alarm_time_tree"
+                        style="@style/mobile_live_broad_alarm_text_unselected"
+                        android:layout_width="83dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_mobile_live_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="방송시마다"
+                        android:typeface="sans" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15.5dp"
+                android:background="#eeeeee"
+                android:visibility="gone"
+                />
+
+            <TableLayout
+                android:id="@+id/table_mobile_live_broad_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23.5dp"
+                android:divider="@drawable/divider_tv_schedule_broad_alarm"
+                android:showDividers="middle"
+                android:visibility="gone"
+                />
+
+                -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/view_chk_night_alarm"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:contentDescription="@string/shopping_live_alarm_chk_on_description"
+            >
+
+            <CheckBox
+                android:id="@+id/chk_night_alarm"
+                android:layout_width="21dp"
+                android:layout_height="20dp"
+                android:checked="false"
+                android:background="@drawable/bg_chk_ml_dialog"
+                android:button="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center"
+                android:contentDescription="@string/shopping_live_alarm_chk_on_description"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/default_txt_color"
+                android:layout_marginLeft="6dp"
+                android:gravity="center_horizontal"
+                android:includeFontPadding="false"
+                android:textSize="16dp"
+                android:ellipsize="none"
+                android:text="@string/shopping_live_alarm_set_night"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#666"
+            android:text="@string/shopping_live_alarm_set_content"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:textSize="15sp"
+            android:maxLines="2"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efeff4" />
+
+        <!--버튼-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <!--취소 버튼-->
+            <Button
+                android:id="@+id/btn_mobile_live_broad_alarm_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/mc_cancel"
+                android:textColor="#111111"
+                android:textSize="16dp"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#efeff4" />
+
+            <!--등록 버튼-->
+            <Button
+                android:id="@+id/btn_mobile_live_broad_alarm_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/shopping_live_alarm_submit"
+                android:textColor="#111111"
+                android:textSize="16dp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

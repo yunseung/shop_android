@@ -1,0 +1,396 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+#
+# 주의 : 한글 코멘트 때문에 코멘트 바로 아래 라인이 인식이 안되는 경우도 있으니 주의할 것.
+#
+
+#------------- 공통 설정 ---------
+-target 1.6
+
+# Keep All Attributes
+-keepattributes **
+
+# 패키지 변경 금지(주석해제시 런타임에 java.lang.NoSuchMethodError 에러 발생)
+#-repackageclasses ''
+#-allowaccessmodification
+
+#------------- Mocha Framework 관련 설정 ----------
+# - 패키지변경 금지 옵션과 함께 사용
+# - 모든 어노테이션 이름 보존
+# - 모든 인터페이스 이름 보존
+# - 모든 문자열을 통해 참조되는(특히 포인트컷 및 XML파일) 클래스 이름 보존
+# - 모든 런타임에 동적으로 invoke되는 메소드 삭제 방지
+# - 모든 Model 어노테이션 적용 클래스(와 그 멤버) 보존
+# - 모든 Rest 어노테이션 적용 클래스 이름 보존
+
+-keep interface * extends java.lang.annotation.Annotation
+-keepnames interface com.gsshop.mocha.**
+-keepnames class com.gsshop.mocha.core.activity.*
+-keepnames class * extends java.lang.Throwable
+-keep @com.gsshop.mocha.pattern.mvc.Model class * { *; }
+-keepnames @com.gsshop.mocha.network.rest.Rest class *
+
+# 컴파일타임에 참조되는 메소드는 이름변경 허용
+
+-keepclassmembers,allowobfuscation class * {
+    @com.gsshop.mocha.ui.event.Click <methods>;
+    @com.gsshop.mocha.ui.event.ItemClick <methods>;
+    @com.gsshop.mocha.ui.event.ItemSelected <methods>;
+}
+
+# 런타임에 참조되는 메소드(Around어드바이스)는 이름변경하면 안됨
+
+-keepclassmembers class * {
+    @com.gsshop.mocha.core.async.Background <methods>;
+    @com.gsshop.mocha.core.async.UiThread <methods>;
+}
+
+# around 어드바이스가 적용되는 target 클래스에서 around 어드바이스 메소드를
+# 참조할 수 없다는 경고 제거(can't find referenced method) : aspect 클래스를 지정.
+-dontwarn com.gsshop.**.*Aspect
+#-dontwarn com.gsshop.**.*Activity*
+
+
+#------------- Simple XML 관련 설정 ----------------
+#-dontwarn org.simpleframework.xml.**
+-dontwarn javax.xml.stream.**
+
+#------------- Spring-Android 관련 설정 -----------------
+# spring-android가 참조하는 제3의 라이브러리가 없다는 경고 제거.
+# (can't find referenced class)
+-dontwarn org.springframework.**
+
+#------------ RoboGuice 관련 설정 ---------------
+# 참조할 수 없다는 경고 제거(can't find referenced method)
+-dontwarn roboguice.**
+
+# RoboGuice 및 Guice 클래스 보존.
+# java.lang.NoSuchFieldError : CURRENT
+-keep class roboguice.event.EventThread { *; }
+
+# Class not found error
+-keep class roboguice.inject.NullProvider
+
+# No such method error : startFinalizer
+-keepclassmembers class * {
+    *** startFinalizer(...);
+}
+
+# 명시적인 생성자 호출코드가 없어도 RG에 의해 런타임에 사용될 수 있으므로
+# @Inject 붙은 생성자/메소드/필드 및 public 기본생성자 보존.
+-keepclassmembers class * {
+    @com.google.inject.Inject <init>(...);
+    @com.google.inject.Inject *;
+    public <init>();
+}
+
+# res/values/roboguice.xml 파일에 풀네임이 지정되는
+# 클래스 보존(패키지변경 금지 옵션과 함께 사용).
+-keep class * extends com.google.inject.AbstractModule
+
+# There's no way to keep all @Observes methods,
+# so use the On*Event convention to identify event handlers
+-keepclassmembers class * {
+    void *(**On*Event);
+}
+
+#----------- Jackson JSON 관련 설정 -------------
+# Jackson이 참조하는 다른 라이브러리(joda-time 등) 없다는 경고 제거.
+-dontwarn org.codehaus.jackson.**
+
+# java.lang.NoSuchFieldError: PUBLIC_ONLY 에러 제거.
+-keepnames class org.codehaus.jackson.** { *; }
+
+#----------- ZBar 관련 설정 ------------
+-keep class net.sourceforge.zbar.** { *; }
+
+#----------- EventBus 관련 설정 -----------
+-keepclassmembers class ** {
+    public void onEvent*(**);
+    @org.greenrobot.eventbus.Subscribe <methods>;
+}
+-keep enum org.greenrobot.eventbus.ThreadMode { *; }
+
+#----------- Cashslide 관련 --------------
+#-keep class kr.co.cashslide.** { *; }
+
+#----------- Tapjoy 관련 --------------
+#-keep class com.tapjoy.** { *; }
+#-dontwarn com.tapjoy.*
+-keepattributes JavascriptInterface
+
+#----------- Sucomm 관련 --------------
+#-keep class net.flexplatform.flex.** { *; }
+
+#----------- 미사용 라이브러리 관련 설정 ------------
+-dontwarn com.gorillalogic.**
+-dontwarn com.google.android.**
+-dontwarn com.nostra13.universalimageloader.**
+-dontwarn android.support.multidex.**
+-dontwarn com.gsshop.mocha.**
+
+#----------- TNK 적용 관련 설정 ------------
+#-keep class com.tnkfactory.**
+
+#----------- PMS SDK 적용 관련 설정 ------------
+-keep class com.tms.sdk.push.** {*;}
+-keep class com.tms.sdk.**
+-keep class org.eclipse.paho.client.mqttv3.**
+-dontwarn org.eclipse.paho.client.mqttv3.**
+-dontwarn com.tms.sdk.push.**
+-dontwarn gsshop.mobile.v2.tms.**
+
+#----------- LoginActivity 관련 설정 ------------
+-dontwarn gsshop.mobile.v2.user.**
+
+#----------- PMS SDK 적용 관련 설정 ------------
+-keep class com.thoughtworks.xstream.**
+-dontwarn com.thoughtworks.xstream.**
+
+#----------- facebook SDK 적용 관련 설정 ------------
+-keep class com.facebook.** { *; }
+-dontwarn com.facebook.**
+-keepattributes Signature
+
+#----------- Adbrix 적용 관련 설정 ------------
+#-dontwarn com.igaworks.**
+#-keep class com.igaworks.** { *; }
+#-keepclasseswithmember class com.igaworks.** { *; }
+-keep class sun.misc.Unsafe { *; }
+-keep class * implements android.os.Parcelable {
+	public static final android.os.Parcelable$Creator *;
+}
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+-keepattributes Signature
+-keepattributes *Annotation*
+
+
+#----------- 구글 Play 서비스 적용 관련 설정 ------------
+-keep class * extends java.util.ListResourceBundle {
+    protected Object[][] getContents();
+}
+
+-keep public class com.google.android.gms.common.internal.safeparcel.SafeParcelable {
+    public static final *** NULL;
+}
+
+-keepnames @com.google.android.gms.common.annotation.KeepName class *
+-keepclassmembernames class * {
+    @com.google.android.gms.common.annotation.KeepName *;
+}
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keep class com.google.android.gms.ads.identifier.** { *; }
+-keep public class * extends android.content.BroadcastReceiver
+
+#----------- Visual ARS 적용 관련 설정 ------------
+-dontwarn com.callgate.launcher.**
+-dontwarn com.google.gson.**
+-dontwarn com.google.android.gms.**
+-dontwarn android.provider.**
+
+#----------- 웹뷰 파일업로드 관련 설정 ------------
+-keep class gsshop.mobile.v2.web.** {*;}
+
+#----------- GoogleConversionTrackingSDK 적용 관련 설정 ------------
+-keep class com.google.ads.conversiontracking.** { *; }
+-dontwarn com.google.ads.conversiontracking.**
+
+
+#----------- glide 적용 관련 설정 ------------
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+    **[] $VALUES;
+    public *;
+}
+
+#------------캐쉬관련 설정
+-keepclassmembers class gsshop.mobile.v2.** {
+    <fields>;
+}
+
+
+# Configuration for Guava 18.0
+#
+# disagrees with instructions provided by Guava project: https://code.google.com/p/guava-libraries/wiki/UsingProGuardWithGuava
+
+-keep class com.google.common.io.Resources {
+    public static <methods>;
+}
+-keep class com.google.common.collect.Lists {
+    public static ** reverse(**);
+}
+-keep class com.google.common.base.Charsets {
+    public static <fields>;
+}
+
+-keep class com.google.common.base.Joiner {
+    public static com.google.common.base.Joiner on(java.lang.String);
+    public ** join(...);
+}
+
+-keep class com.google.common.collect.MapMakerInternalMap$ReferenceEntry
+-keep class com.google.common.cache.LocalCache$ReferenceEntry
+
+
+# http://stackoverflow.com/questions/9120338/proguard-configuration-for-guava-with-obfuscation-and-optimization
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+-dontwarn sun.misc.Unsafe
+
+# Guava 19.0
+-dontwarn java.lang.ClassValue
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+
+# Guava 20.0
+-dontwarn com.google.j2objc.annotations.**
+-dontwarn com.google.errorprone.annotations.**
+
+# kakao login
+-keep class com.kakao.** { *; }
+-keepattributes Signature
+-keepclassmembers class * {
+  public static <fields>;
+  public *;
+}
+-dontwarn android.support.v4.**,org.slf4j.**,com.google.android.gms.**
+-dontwarn android.webkit.WebViewClient,android.webkit.WebResourceError
+
+#appboy
+-keep class bo.app.** { *; }
+-keep class com.appboy.** { *; }
+-dontwarn com.appboy.**
+
+#airbridge
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient {public *;}
+-keep class com.google.android.gms.ads.identifier.AdvertisingIdClient$Info { public *;}
+-keep class com.android.installreferrer.api.InstallReferrerClient {public *;}
+-keep class com.android.installreferrer.api.InstallReferrerClient$newBuilder { public *;}
+-keep class com.android.installreferrer.api.InstallReferrerClient$Builder { public *;}
+-keep class com.android.installreferrer.api.ReferrerDetails {public *;}
+-keep class com.android.installreferrer.api.InstallReferrerStateListener {public *;}
+################### Air bridge proguard 변경 (20.07.28) #####################
+#-keep class io.airbridge.deviceinfo.** { *; }
+#-keepclassmembers class io.airbridge.** { public *; }
+#-keep public class io.airbridge.**
+#-dontwarn io.airbridge.**
+-keep class co.ab180.airbridge.** { *; }
+-dontwarn co.ab180.airbridge.**
+
+#amp(앰플리튜드)
+-keep class com.google.android.gms.ads.** { *; }
+-dontwarn okio.**
+
+#지문인식
+-dontwarn com.github.ajalt.reprint.**
+
+#AndroidUtilCode
+#-keep class com.blankj.utilcode.** { *; }
+#-keepclassmembers class com.blankj.utilcode.** { *; }
+-dontwarn com.blankj.utilcode.**
+
+#tensera
+#TENSERA
+-keep class net.tensera.** {public protected private *;}
+-keep class com.baidu.android.** { *;}
+
+#TENSERA-END
+-dontwarn org.tukaani.**
+-dontwarn net.tensera.sdk.gcm.**
+
+-dontnote com.android.volley.**
+-dontnote com.google.inject.**
+-dontnote org.springframework.**
+-dontnote org.zakariya.stickyheaders.**
+-dontnote roboguice.**
+-dontnote android.support.v7.**
+-dontnote com.bumptech.glide.**
+-dontnote com.google.android.exoplayer.**
+
+# io.socket 라이브리리 포함에 다른 HomeActivity warning 제거
+-dontwarn gsshop.mobile.v2.home.**
+
+#AceCounter
+-keepnames class **Activity
+
+#----------- BaseWebActivity 관련 설정 ------------
+-dontwarn gsshop.mobile.v2.web.**
+
+
+#----------- Bright Cove ------------
+-dontwarn com.google.**
+-dontwarn android.media.**
+-keep class android.media.** { *; }
+-keep class com.google.** { *; }
+-keep interface com.google.** { *; }
+-keep class com.google.ads.interactivemedia.** { *; }
+-keep interface com.google.ads.interactivemedia.** { *; }
+
+#----------- CleverTap ------------
+#-dontwarn com.clevertap.android.sdk.**
+
+
+#----------- okhttp3 ------------
+# JSR 305 annotations are for embedding nullability information.
+-dontwarn javax.annotation.**
+
+# A resource is loaded with a relative path so the package of this class must be preserved.
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
+
+# Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
+-dontwarn org.codehaus.mojo.animal_sniffer.*
+
+# OkHttp platform used only on JVM and when Conscrypt dependency is available.
+-dontwarn okhttp3.internal.platform.ConscryptPlatform
+
+#----------- apptimize ------------
+-keep class com.apptimize.** { *; }
+-keepclassmembers class * extends com.apptimize.ApptimizeTest {
+  <methods>;
+}
+
+-keep class android.support.v4.view.ViewPager
+-keep class android.support.v4.view.ViewPager$LayoutParams { *; }
+-keep class android.support.v4.app.Fragment { *; }
+-keep class android.support.v7.widget.** { *; }
+
+-keep class com.crashlytics.** { *; }
+-keep class com.mixpanel.android.mpmetrics.MixpanelAPI { *; }
+-keep class com.google.android.gms.analytics.Tracker { *; }
+-keep class com.google.analytics.tracking.android.Tracker { *; }
+-keep class com.flurry.android.FlurryAgent { *; }
+-keep class com.omniture.AppMeasurementBase { *; }
+-keep class com.adobe.adms.measurement.ADMS_Measurement { *; }
+-keep class com.adobe.mobile.Analytics { *; }
+-keep class com.adobe.mobile.Config { *; }
+-keep class com.localytics.android.Localytics { *; }
+-keep class com.amplitude.api.AmplitudeClient { *; }
+-keep class com.amplitude.api.Revenue { *; }

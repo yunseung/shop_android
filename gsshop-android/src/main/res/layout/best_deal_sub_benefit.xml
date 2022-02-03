@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="horizontal"
+    android:id="@+id/tag_container">
+
+    <gsshop.mobile.v2.home.shop.renewal.views.TextViewWithListenerWhenOnDraw
+        android:id="@+id/txt_benefit_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:layout_marginLeft="16dp"
+        android:maxLines="2"
+        android:visibility="gone"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:id="@+id/lay_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp">
+
+        <!-- 라이브톡 -->
+        <LinearLayout
+            android:id="@+id/lay_live_talk"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:background="@drawable/renewal_bg_alarm"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="라이브톡"
+                android:src="@drawable/live_talk" />
+
+        </LinearLayout>
+
+        <!-- 방송알림 -->
+        <LinearLayout
+            android:id="@+id/lay_alarm"
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:orientation="horizontal"
+            android:background="@drawable/renewal_bg_alarm"
+            android:gravity="center"
+            android:layout_marginLeft="6dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/alarm_off"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/notification"
+                    android:contentDescription="방송알림 꺼짐" />
+
+                <View
+                    android:id="@+id/alarm_on"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:visibility="gone"
+                    android:contentDescription="방송알림 켜짐"
+                    android:background="@drawable/notifications_active"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 구매하기 -->
+        <TextView
+            android:id="@+id/txt_buy"
+            android:layout_width="102dp"
+            android:layout_height="32dp"
+            android:background="@drawable/renewal_bg_buy"
+            android:gravity="center"
+            android:layout_marginLeft="6dp"
+            android:text="@string/common_pay"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+

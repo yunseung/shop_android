@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/list_divider_height" >
+
+    <ImageView
+        android:id="@+id/image_bg"
+        android:layout_width="match_parent"
+        android:layout_height="348.25dp"
+        android:background="#f7f7f7"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/count_layout"
+        android:layout_width="match_parent"
+        android:layout_height="83.25dp"
+        android:orientation="vertical"
+        android:weightSum="10"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            />
+        <TextView
+            android:id="@+id/text_count"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_gravity="top|right"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:text="1 / 6"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            android:typeface="sans" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="236dp" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d9d9d9" />
+    </LinearLayout>
+
+</FrameLayout>

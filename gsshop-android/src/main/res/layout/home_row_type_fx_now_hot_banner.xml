@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="11.25dp"
+    android:paddingLeft="11.25dp"
+    android:paddingRight="11.25dp" >
+
+    <ImageView
+        android:layout_width="150.75dp"
+        android:layout_height="25.02dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/tit_hot1_an" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/main_img_01"
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:background="#f7f7f7"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="9dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/main_img_02"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:adjustViewBounds="true"
+                android:background="#f7f7f7"
+                android:scaleType="fitXY" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/main_img_03"
+                android:layout_width="match_parent"
+                android:layout_height="116dp"
+                android:adjustViewBounds="true"
+                android:background="#f7f7f7"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

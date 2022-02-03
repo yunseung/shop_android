@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 하단탭바 뱃지 -->
+    <!-- 모바일상담 텍스트 입력창 높이 -->
+    <dimen name="mobiletalk_textbox_height">200dp</dimen>
+    
+
+    <!-- 쇼핑알림 등급영역 중앙정렬을 위한 offset -->
+    <dimen name="inbox_grade_rightmargin_offset">18dp</dimen>
+
+    <!-- 접근권한 팝업 좌우패딩 -->
+    <dimen name="auth_confirm_padding">100dp</dimen>
+
+    <!-- 패드 라이브영역 높이 -->
+    <dimen name="scd_live_height">300dp</dimen>
+    <!-- 패드 메인상품영역 높이 -->
+    <dimen name="scd_main_height">300dp</dimen>
+
+    <!-- 패드 편성표 상품이미지 높이 -->
+    <dimen name="sch_img_height">170.5dp</dimen>
+</resources>

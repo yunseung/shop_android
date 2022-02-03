@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/vh_blank_space_large"
+        android:paddingRight="@dimen/vh_blank_space_large">
+
+        <include
+            android:id="@+id/content_frame_1st"
+            layout="@layout/home_row_type_fx_gs_super_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="@dimen/vh_blank_space_large"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/content_frame_2nd"
+            layout="@layout/home_row_type_fx_gs_super_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</FrameLayout>

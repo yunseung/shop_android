@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- LOCAL -->
+    <!--<string name="com_appboy_api_key">2a3bc9a8-20fa-49f6-98ec-a687f79ef6a9</string>-->
+    <!-- GS -->
+    <string name="com_appboy_api_key">881a8105-b145-4169-b7db-07e0812e27b6 </string>
+
+    <!-- Whether or not Appboy should handle registering the device to receive push notifications. Default is false. -->
+    <bool name="com_appboy_push_gcm_messaging_registration_enabled">false</bool>
+
+    <!-- Whether or not Braze should handle registering the device to receive push notifications. Default is false. -->
+    <!-- PushMessage migration 가이드가 Unitity - Android - Push Notification 아래의 있어, 내용 추가. -->
+    <bool name="com_appboy_firebase_cloud_messaging_registration_enabled">false</bool>
+
+    <!-- Replace with your Google API project number -->
+    <string name="com_appboy_push_gcm_sender_id">633890543958</string>
+
+    <!-- Replace with your Firebase Sender ID -->
+    <string name="com_appboy_firebase_cloud_messaging_sender_id">633890543958</string>
+
+    <!-- To enable Appboy to automatically open your app and any deep links when a push notification is clicked -->
+    <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
+
+    <!-- Notification bar icon -->
+    <drawable name="com_appboy_push_small_notification_icon">@drawable/ic_noti_an</drawable>
+    <drawable name="com_appboy_push_large_notification_icon">@drawable/app_icon</drawable>
+
+    <!-- large_notification_icon 설정 안한 경우 동그라미안에 small icon 표시됨 -->
+    <!-- large_notification_icon 설정한 경우 large icon 표시되고 우측하단에 조그맣게 small icon 표시됨 -->
+    <!-- The notification icon background color -->
+    <!--<integer name="com_appboy_default_notification_accent_color">0xff137E94</integer>-->
+
+    <!-- To disable automatic location tracking -->
+    <bool name="com_appboy_disable_automatic_location_collection">true</bool>
+
+</resources>

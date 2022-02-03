@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Store : TSTORE(T스토어), NSTORE(네이버스토어), GSTORE(구글스토어), SSTORE(삼성스토어), ASTORE(애플스토어) -->
+    <!-- 아래 names, values 배열은 반드시 매칭되도록 쌍으로 맞추어 주어야 함 -->
+    <string-array name="custom_header_names">
+        <item>store</item>
+    </string-array>
+
+    <string-array name="custom_header_values">
+        <item>GSTORE</item>
+    </string-array>
+    
+</resources>

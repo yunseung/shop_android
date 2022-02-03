@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 정사각 상품 배너 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/row_goods"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:orientation="vertical" >
+
+    <!-- 상품이미지 영역-->
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp">
+
+        <!-- 상품이미지-->
+        <ImageView
+            android:id="@+id/main_img"
+            android:layout_width="match_parent"
+            android:layout_height="264dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@drawable/no_img_550"
+            android:scaleType="fitXY" />
+
+        <!-- 좌측 상단 뱃지-->
+        <ImageView
+            android:id="@+id/top_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="-33dp"
+            android:visibility="gone" />
+
+        <!-- sold out -->
+        <LinearLayout
+            android:id="@+id/sold_out"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#33000000"
+            android:contentDescription="@string/home_sold_out"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/sold_out_720"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- 상품명, 가격 영역-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/recycler_item_square_prd_bottom" />
+
+    <!-- 하단 라인-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#eeeeee" />
+
+</LinearLayout>

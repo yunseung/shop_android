@@ -1,0 +1,635 @@
+[
+  {
+    "title": "TV쇼핑",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075175_01.png",
+    "linkUrl": "",
+    "gb": "900",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "GS SHOP LIVE",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/TvSectL?mseq=404547&fromApp=Y",
+        "gb": "",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "GS MY SHOP",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/gsmyshopL?mseq=406206&fromApp=Y",
+        "gb": "",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "의류/잡화/슈즈",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075176_01.png",
+    "linkUrl": "",
+    "gb": "101",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "여성 브랜드 의류",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079897?fromApp=Y",
+        "gb": "1079897",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "여성 트렌드의류",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079899?fromApp=Y",
+        "gb": "1079899",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유니섹스 캐주얼",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079900?fromApp=Y",
+        "gb": "1079900",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "남성의류",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1320483?fromApp=Y",
+        "gb": "1320483",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "언더웨어",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079902?fromApp=Y",
+        "gb": "1079902",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "가방/패션잡화",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079903?fromApp=Y",
+        "gb": "1079903",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "패션슈즈/스니커즈",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079904?fromApp=Y",
+        "gb": "1079904",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "수입명품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079905?fromApp=Y",
+        "gb": "1079905",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "스포츠/레저",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075179_01.png",
+    "linkUrl": "",
+    "gb": "104",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "스포츠의류/신발/가방",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079931?fromApp=Y",
+        "gb": "1079931",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "캠핑/등산/낚시",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079932?fromApp=Y",
+        "gb": "1079932",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "헬스/요가/자전거",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079933?fromApp=Y",
+        "gb": "1079933",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "수영/골프/스키/구기",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079934?fromApp=Y",
+        "gb": "1079934",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "블랙박스/자동차용품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079935?fromApp=Y",
+        "gb": "1079935",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "뷰티/보석",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075180_01.png",
+    "linkUrl": "",
+    "gb": "103",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "화장품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079907?fromApp=Y",
+        "gb": "1079907",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "헤어/바디/기기/향수",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079908?fromApp=Y",
+        "gb": "1079908",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "백화점 명품화장품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/566337?fromApp=Y",
+        "gb": "566337",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "보석/시계/액세서리",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079906?fromApp=Y",
+        "gb": "1079906",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "출산/유아동",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075181_01.png",
+    "linkUrl": "",
+    "gb": "102",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "출산육아용품/기저귀/분유",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079909?fromApp=Y",
+        "gb": "1079909",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유모차/카시트/아기띠/매트",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079910?fromApp=Y",
+        "gb": "1079910",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유아동 스킨케어",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079911?fromApp=Y",
+        "gb": "1079911",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유아동 의류·잡화",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079912?fromApp=Y",
+        "gb": "1079912",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유아동 도서·전집",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079913?fromApp=Y",
+        "gb": "1079913",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "유아동 완구·교구",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079914?fromApp=Y",
+        "gb": "1079914",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "가구/침구",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075183_01.png",
+    "linkUrl": "",
+    "gb": "105",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "거실·침실가구",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079922?fromApp=Y",
+        "gb": "1079922",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "학생·아동·주방·수납가구",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079923?fromApp=Y",
+        "gb": "1079923",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "침구/커튼/카페트",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079924?fromApp=Y",
+        "gb": "1079924",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "홈데코/인테리어",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079925?fromApp=Y",
+        "gb": "1079925",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "식품/생활/주방",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075185_01.png",
+    "linkUrl": "",
+    "gb": "106",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "신선식품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1270523?fromApp=Y",
+        "gb": "1270523",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "가공식품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1270525?fromApp=Y",
+        "gb": "1270525",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "건강·다이어트식품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079916?fromApp=Y",
+        "gb": "1079916",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "주방용품/식기",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079918?fromApp=Y",
+        "gb": "1079918",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "세제/제지/위생",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1270515?fromApp=Y",
+        "gb": "1270515",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "생활/수납/청소",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1270519?fromApp=Y",
+        "gb": "1270519",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "건강관리/공구용품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1288480?fromApp=Y",
+        "gb": "1288480",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "가전/디지털",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075186_01.png",
+    "linkUrl": "",
+    "gb": "107",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "주방가전/생활가전",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079921?fromApp=Y",
+        "gb": "1079921",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "공기청정/계절가전",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079930?fromApp=Y",
+        "gb": "1079930",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "TV/냉장고/세탁기/음향",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079929?fromApp=Y",
+        "gb": "1079929",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "컴퓨터/태블릿/주변기기",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/3317?fromApp=Y",
+        "gb": "3317",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "휴대폰/이어폰/스피커",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/593507?fromApp=Y",
+        "gb": "593507",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "카메라/게임/스마트기기",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079928?fromApp=Y",
+        "gb": "1079928",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "반려동물/도서",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/31556044_01.png",
+    "linkUrl": "",
+    "gb": "108",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "반려동물용품",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1288481?fromApp=Y",
+        "gb": "1288481",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "사무용품/꽃/케익",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079936?fromApp=Y",
+        "gb": "1079936",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "10x10",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1216230?fromApp=Y",
+        "gb": "1216230",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "1300K",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1056320?fromApp=Y",
+        "gb": "1056320",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "아트박스 poom",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1298634?fromApp=Y",
+        "gb": "1298634",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "인터파크 도서몰",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1284106?fromApp=Y",
+        "gb": "1284106",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "반디앤루니스",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/200817?fromApp=Y",
+        "gb": "200817",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "여행/티켓",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075190_01.png",
+    "linkUrl": "",
+    "gb": "109",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "해외여행",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1325927?fromApp=Y",
+        "gb": "1325927",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "제주여행",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1325928?fromApp=Y",
+        "gb": "1325928",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "국내/레저 여행",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1325930?fromApp=Y",
+        "gb": "1325930",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "e티켓",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1325931?fromApp=Y",
+        "gb": "1325931",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "렌탈/보험",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075193_01.png",
+    "linkUrl": "",
+    "gb": "110",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "GS렌탈샵",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1178474?fromApp=Y",
+        "gb": "1178474",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "GS보험샵",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://minsu.gsshop.com/m2/index.jsp?media=Zq&mseq=404563&fromApp=Y",
+        "gb": "",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  },
+  {
+    "title": "백화점",
+    "wiseLogUrl": "",
+    "imageUrl": "http://image.gsshop.com/planprd/banner_MOBILE/29075194_01.png",
+    "linkUrl": "",
+    "gb": "111",
+    "viewType": "LCSV",
+    "subContentList": [
+      {
+        "title": "롯데백화점",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1079896?fromApp=Y",
+        "gb": "1079896",
+        "viewType": "LCV",
+        "subContentList": []
+      },
+      {
+        "title": "현대백화점",
+        "wiseLogUrl": "",
+        "imageUrl": "",
+        "linkUrl": "http://10.52.38.223:8080/section/groupSectL/1246040?fromApp=Y",
+        "gb": "1246040",
+        "viewType": "LCV",
+        "subContentList": []
+      }
+    ]
+  }
+]

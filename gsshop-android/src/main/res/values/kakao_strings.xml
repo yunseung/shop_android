@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--신 테스트 키 : 296dee58dc76203f807ade52e981aff0-->
+    <!--신 운영 키 : c4cac3d2f71f88a02b45651f32383b5a-->
+    <!--구 운영 키 : 891cea206a1ce9af85341bb32ca1e37f-->
+
+    <string name="kakao_scheme_new">kakaoc4cac3d2f71f88a02b45651f32383b5a</string>
+    <string name="kakao_scheme">kakao891cea206a1ce9af85341bb32ca1e37f</string>
+    <string name="kakaolink_host">kakaolink</string>
+
+
+</resources>

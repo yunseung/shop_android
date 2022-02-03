@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 컨텐츠(상품이미지) 영역 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/root_view"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/main_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scd_live_height"
+            android:adjustViewBounds="true"
+            android:background="#f7f7f7"
+            android:src="@drawable/noimg_tv" />
+
+        <View
+            android:id="@+id/dim"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scd_live_height"
+            android:background="@drawable/bg_tv_schedule_main_live_thumb" />
+
+        <!-- 뱃지 -->
+        <LinearLayout
+            android:id="@+id/badge_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/badge_1"
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                />
+            <ImageView
+                android:id="@+id/badge_2"
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                />
+            <ImageView
+                android:id="@+id/badge_3"
+                android:layout_width="31dp"
+                android:layout_height="35dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingTop="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/play"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:background="@drawable/mc_ic_play_an"
+                android:contentDescription="@string/common_play"/>
+
+            <gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout
+                android:id="@+id/tv_live_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/txt_remain_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:typeface="sans"
+                    android:textSize="20dp" />
+            </gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_comment"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_alignParentBottom="true"
+            android:lines="1"
+            android:gravity="center"
+            android:layout_gravity="bottom"
+            android:background="#99111111"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:typeface="sans"/>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scd_live_height"
+            android:layout_centerInParent="true"
+            layout="@layout/count_layout" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/info_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/scd_live_height"
+        android:background="#33000000"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/mc_ic_pause_an"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/common_pause"
+            />
+
+        <LinearLayout
+            android:id="@+id/info_view_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            >
+
+            <!-- 이미지 변경시 TLineLiveViewHolder 파일에 전체보기 버튼 높이 값도 변경 필요 -->
+            <ImageView
+                android:id="@+id/full_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mc_ic_full_an"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:contentDescription="@string/common_full_screen"
+                />
+
+            <ImageView
+                android:id="@+id/go_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mc_ic_product_an"
+                android:layout_marginLeft="15dp"
+                android:contentDescription="@string/view_product_info"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

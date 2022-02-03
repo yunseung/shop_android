@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <FrameLayout
+        android:id="@+id/layout_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/popup_gs_super_main_width_height"
+        android:layout_height="@dimen/popup_gs_super_main_width_height"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:id="@+id/img_cart_main_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/cart_ok_an"
+            />
+        <ImageView
+            android:id="@+id/img_cart_main_already_exist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="@drawable/cart_already_an"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/img_cart_main_close"
+            android:layout_width="@dimen/popup_gs_super_close_width_height"
+            android:layout_height="@dimen/popup_gs_super_close_width_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:background="@drawable/close_cart_an"/>
+    </RelativeLayout>
+</RelativeLayout>

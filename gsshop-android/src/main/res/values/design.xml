@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <color name="black">#000000</color>
+
+    <color name="common_text_color">#111111</color>
+
+    <!-- event menu -->
+    <color name="event_tab_on">#86d001</color>
+
+    <!-- flexible shop -->
+    <color name="flexible_no1_best_deal_count">#FFFFFF</color>
+    <color name="flexible_no1_best_deal_base">#999999</color>
+    <color name="flexible_no1_best_deal_hot6_count">#FFFFFF</color>
+
+
+    <color name="list_item_normal">@android:color/white</color>
+    <color name="list_item_pressed">#FBFBFB</color>
+    <color name="text_item_normal">@android:color/transparent</color>
+
+    <color name="gray">#d3d3d3</color>
+
+    <!-- <color name="list_item_divider">#E3E3E3</color> -->
+    <color name="list_item_divider">#E5E5E5</color>
+    <color name="login_txt_color">#777777</color>
+    <color name="login_keep_txt_color">#111111</color>
+    <color name="login_keep_txt_color_description">#aaaaaa</color>
+    <color name="bg_qrcode_translucent">#35000000</color>
+    <color name="button_default_background">#AAAAAA</color>
+    <color name="button_default_stroke">#C8C8C8</color>
+    <color name="button_adult_background">#FFFFFF</color>
+    <color name="button_adult_stroke">#E5E5E5</color>
+    <color name="button_logout_stroke">#6D6D6D</color>
+    <color name="button_login_stroke">#F4F4F4</color>
+    <color name="button_footer_default">#F4F4F4</color>
+    <color name="default_txt_color">#111111</color>
+
+    <!-- '설정'화면에서, 설정이 on/off되었을 경우의 text색깔 -->
+    <color name="setting_status_on_text">#6b9002</color>
+    <color name="setting_status_off_text">#777777</color>
+
+    <color name="setting_id_status_on_text">#00a4b3</color>
+
+    <color name="skeleton_view_background">#eeeeee</color>
+    <color name="skeleton_view_highlight">#ebebeb</color>
+    <color name="color_ebebeb">#ebebeb</color>
+
+    <!-- push popup bg -->
+
+    <!-- 로그인화면 -->
+    <color name="login_tab_on_bg">#86cf00</color>
+    <color name="login_btn_press_bg">#86af00</color>
+
+    <!-- 검색화면에서 인기/최근 검색어 탭메뉴 배경색 -->
+    <color name="search_tab_on_text">#111111</color>
+    <color name="search_tab_off_text">#7a111111</color>
+
+    <!-- 검색 UI 높이 -->
+    <dimen name="search_tab_height">56dp</dimen>
+
+    <!-- 인기 검색어 업데이트 일시 폰트색 -->
+
+
+    <!-- 인기 검색어 랭킹 폰트색 -->
+
+    <!-- activity header -->
+    <dimen name="header_height">44dp</dimen>
+
+    <!-- 다이얼로그(팝업) -->
+    <dimen name="dialog_height">197dp</dimen>
+    <dimen name="dialog_width">271dp</dimen>
+
+    <color name="dialog_btn_normal">#ffffff</color>
+    <color name="dialog_btn_pressed">#f1f1f1</color>
+
+    <!-- 초록색 다이얼로그(팝업) -->
+
+    <!-- 모바일상담 -->
+    <color name="mobiletalk_submit_btn_bg">#86cf00</color>
+
+    <!-- <dimen name="list_item_height">39dip</dimen> -->
+    <!-- 64 -->
+
+    <!--tv schedudle date color-->
+    <color name="tv_schedule_date_today_bg">#eeeeee</color>
+    <color name="tv_schedule_date_selected_bg">#bed730</color>
+
+    <style name="CustomDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <!-- 환경설정 항목명 -->
+    <style name="SettingItemMain" parent="android:Widget.TextView">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 환경설정 항목 설명 -->
+    <style name="SettingItemSub" parent="android:Widget.TextView">
+        <item name="android:textColor">#00a4b3</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 환경설정 버전 -->
+    <style name="SettingItemVersion" parent="android:Widget.TextView">
+        <item name="android:layout_marginLeft">11.3dip</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 상단 제목 -->
+    <style name="HeaderTitle" parent="android:Widget.TextView">
+        <item name="android:gravity">center_horizontal|center_vertical</item>
+        <item name="android:textColor">#473E36</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 내용의 부제목 -->
+    <style name="SubTitle" parent="android:Widget.TextView">
+        <item name="android:layout_marginBottom">5dip</item>
+        <item name="android:layout_marginLeft">5.3dip</item>
+        <item name="android:layout_marginTop">20dip</item>
+        <item name="android:shadowColor">#FFFFFF</item>
+        <item name="android:shadowDx">1.0</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+        <item name="android:textColor">#777777</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 상품평 작성 화면의 별점 모양 -->
+    <!-- 별 이미지 자체가 좌우 여백을 가지고 있으므로  디자인 가이드의 marginRight값에서 여백만큼을 빼준다 (22.25dip-5.62dp=16.88dip)-->
+    <style name="ReviewRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:layout_marginLeft">16.88dip</item>
+        <item name="android:progressDrawable">@drawable/custom_ratingbar_full</item>
+        <item name="android:minHeight">24.75dip</item>
+        <item name="android:maxHeight">24.75dip</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- 단품 상품 이름 영역의 별점 모양 -->
+    <!-- 별 이미지 자체가 좌 여백을 가지고 있으므로 여백만큼을 빼준다 (-5.62dp)-->
+    <style name="ReviewRatingBarForProduct" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_star_product_detail_full</item>
+        <item name="android:layout_marginLeft">-0.5dip</item>
+        <item name="android:minHeight">14dip</item>
+        <item name="android:maxHeight">14dip</item>
+        <item name="android:numStars">5</item>
+        <item name="android:rating">0</item>
+        <item name="android:stepSize">0.1</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- 상품평 작성 화면의 별점 항목 이름 -->
+    <!-- 별 이미지 자체의 오른쪽 여백만큼 marginLeft주어야 정확히 중앙정령이 된다.-->
+    <style name="ReviewRatingName" parent="android:Widget.TextView">
+        <item name="android:layout_marginLeft">5.62dip</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:gravity">right</item>
+        <item name="android:minWidth">65dp</item>
+    </style>
+
+    <!-- 로그인 아이디/비밀번호 입력 -->
+    <style name="LoginEditText" parent="android:Widget.EditText">
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textColorHint">#aaaaaa</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- sns 로그인 버튼 -->
+    <style name="SNSLoginText" parent="android:Widget.TextView">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:lines">1</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- sns 로그인 버튼 -->
+    <style name="InfoLoginText" parent="android:Widget.TextView">
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <!-- 검색어 입력 -->
+    <style name="KeywordText" parent="android:Widget.TextView">
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:paddingLeft">7dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textColorHint">#C3C3C3</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 카테고리/브랜드샵 목록 아이템 이름 -->
+    <!-- <item name="android:layout_marginLeft">20dip</item> -->
+    <!-- <item name="android:layout_marginRight">20dip</item> -->
+    <style name="ListItemTitle" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">13.3dip</item>
+        <item name="android:layout_marginRight">13.3dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#373E40</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 카테고리 아이템의 하위 Depth 이름 -->
+    <style name="ChildListItemTitle" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">13.3dip</item>
+        <item name="android:layout_marginRight">13.3dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#787B7C</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- 간편 로그인 아이디 -->
+    <style name="LoginIdText" parent="android:Widget.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#373e40</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 간편 로그인 아이디 -->
+    <style name="SimpleLoginId" parent="android:Widget.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#6b9002</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 간편 로그인 Descript -->
+    <style name="SimpleLoginDescription" parent="android:Widget.TextView">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- Home List -->
+    <color name="color_14ffffff">#14ffffff</color>
+    <color name="background_home_bg">#e8e8e8</color>
+    <color name="background_shop">#e5e5e5</color>
+
+
+    <!-- Home Text Style -->
+    <style name="TVText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">13.33sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="BroadcastText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">11.33sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="RemainTimeText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="RemainText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="DealBtnText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsTitleText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="tvBannerTitleText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="GoodsDetailText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailSale" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ee1f60</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailSaleGS" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ee1f60</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailSalePercent" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ee1f60</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailPrice" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GoodsDetailPriceWon" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">12.5sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailOriginalPrice" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailOriginalPriceWon" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailComment" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsDetailQuantity" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#636363</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GroupFooterText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="GoodsDetailQuantityState" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#636363</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="MoreProductTitle" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="MoreProductButtonText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#c8cbd1</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsMuText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#939393</item>
+        <item name="android:textSize">10.67sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsPriceText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GoodsSales" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#636363</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LiveSales" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BadgeType01Text" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:shadowColor">#080808</item>
+        <!-- 그림자색 -->
+        <item name="android:shadowRadius">1.6</item>
+        <!-- 그림자 크기 -->
+        <item name="android:shadowDx">0.67</item>
+        <!-- 수평으로 떨어진 거리 -->
+        <item name="android:shadowDy">0</item>
+        <!-- 수직 방향으로 떨어진 거리 -->
+    </style>
+
+    <style name="BadgeType02Text" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:shadowColor">#080808</item>
+        <!-- 그림자색 -->
+        <item name="android:shadowRadius">1.6</item>
+        <!-- 그림자 크기 -->
+        <item name="android:shadowDx">0.67</item>
+        <!-- 수평으로 떨어진 거리 -->
+        <item name="android:shadowDy">0</item>
+        <!-- 수직 방향으로 떨어진 거리 -->
+    </style>
+
+    <style name="HomeBtnText" parent="android:Widget.TextView">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="font_main_info" parent="android:Widget.TextView">
+        <item name="android:textSize">11dp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#666666</item>
+    </style>
+
+    <style name="font_main_info_button" parent="android:Widget.TextView">
+        <item name="android:textSize">11sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#444444</item>
+    </style>
+
+    <style name="font_main_info_terms">
+        <item name="android:textSize">12dp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+
+    <style name="font_main_info_private">
+        <item name="android:textSize">12dp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#111111</item>
+    </style>
+
+    <style name="font_main_info_logo" parent="android:Widget.TextView">
+        <item name="android:textSize">11sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#959899</item>
+    </style>
+
+    <style name="font_home_btn" parent="android:Widget.TextView">
+        <item name="android:textSize">12.67sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#737373</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="font_home_remain_time" parent="android:Widget.TextView">
+        <item name="android:textSize">13.33sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#989e9e</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="font_home_live_title" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">13.33sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#393c3c</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="font_home_live_subtitle" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#b1b1b1</item>
+    </style>
+
+    <style name="font_home_live_price" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#444444</item>
+    </style>
+
+    <style name="font_home_live_mu" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">11.33sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#939393</item>
+    </style>
+
+    <style name="font_home_sold_sout" parent="android:Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="font_home_event" parent="android:Widget.TextView">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">13.02sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="font_home_subtab_on" parent="android:Widget.TextView">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">12.64sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="font_home_subtab_off" parent="android:Widget.TextView">
+        <item name="android:textColor">#444448</item>
+        <item name="android:textSize">12.64sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 그룹매장 -->
+    <dimen name="top_title_indicator_height">44dp</dimen>
+    <!-- top_menu_height + top_title_indicator_height -->
+    <!-- top_home_menu_height + top_menu_title_bar_height -->
+
+
+    <style name="font_menu_top" parent="android:Widget.TextView">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="home_top_title_bar" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 메인 개편 -->
+
+    <dimen name="bg_border_line_width">1px</dimen>
+    <dimen name="renewal_recommand_list_padding_top">8dp</dimen>
+    <dimen name="list_divider_height">9dp</dimen>
+
+    <dimen name="renewal_background_img_list_marginf_top">26dp</dimen>
+    <dimen name="renewal_background_img_list_margin_bottom">25dp</dimen>
+    <dimen name="renewal_background_img_list_item_width">124dp</dimen>
+    <dimen name="renewal_background_img_list_item_height">208dp</dimen>
+
+    <color name="search_category_bg_color">#ffffff</color>
+    <color name="tab_indicator_text_selected">#111111</color>
+    <color name="tab_indicator_text_unselected">#111</color>
+    <color name="tab_indicator_bg_selected">#bed730</color>
+    <color name="tab_indicator_underline_color">#33000000</color>
+    <color name="tab_selected_text_color">#9cd200</color>
+
+    <!-- main banner -->
+    <style name="CListDiscountText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ee1f60</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="CListDiscountSubText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ee1f60</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 그룹필터 -->
+    <color name="group_filter_text_color_nor">#888888</color>
+    <color name="group_filter_text_color_sel">#86cf00</color>
+    <color name="group_filter_text_color_default">#222222</color>
+
+    <!-- 하단탭메뉴 -->
+    <dimen name="tab_menu_height">50dp</dimen>
+    <!-- 개인화 메뉴 위치 하단탭메뉴+5 -->
+    <dimen name="cap_bottom_magin">54dp</dimen>
+
+    <color name="tab_menu_text_color_nor">#666666</color>
+    <color name="tab_menu_text_color_sel">#111111</color>
+
+    <style name="TabMenuLayout" parent="android:Widget">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">#f9f9f9</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="TabMenuImageView" parent="android:Widget">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TabMenuImageViewNew" parent="android:Widget">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">29dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="TabMenuTextView" parent="android:Widget.TextView">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@drawable/btn_menu_item_text_color</item>
+        <item name="android:textSize">10dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 베스트딜 핫링크관련 -->
+
+
+    <style name="HotLinkTextView" parent="android:Widget.TextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="HomeReflashText" parent="android:Widget.TextView">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- pms -->
+    <color name="pms_text_active_msg_color">#444444</color>
+    <color name="pms_text_common_color">#acacac</color>
+
+    <color name="brand_deal_btn_default">#999999</color>
+    <color name="brand_deal_btn_press">#111111</color>
+
+    <color name="mart_deal_btn_default">#ffffff</color>
+    <color name="mart_deal_btn_selected">#222222</color>
+    <color name="mart_deal_text_default">#666666</color>
+    <color name="mart_deal_text_selected">#ffffff</color>
+
+    <color name="login_button_text_default">#666666</color>
+    <color name="login_button_text_color">#111111</color>
+    <color name="login_button_text_focus">#111111</color>
+
+    <color name="login_text_focus">#bed730</color>
+    <color name="login_text_default">#111111</color>
+
+    <!-- 쇼핑알림 상단 가이드 텍스트 -->
+    <style name="InboxGuideText" parent="android:Widget.TextView">
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">11dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <color name="update_btn">#111111</color>
+    <color name="lastver_btn">#c3c3c3</color>
+
+    <color name="benefit_red">#ed1f60</color>
+    <color name="benefit_blue">#00aebd</color>
+
+
+    <!-- event menu -->
+    <!-- 환경설정 항목명 -->
+    <style name="EventTabOn" parent="android:Widget.TextView">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="EventTabOff" parent="android:Widget.TextView">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="BrandTabOn" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/brand_deal_btn_press</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <!-- 딜 리스트 -->
+    <style name="DealTitleText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="DealDiscountText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ec2261</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!-- 지금베스트도 같이 사용 -->
+    <style name="FreshDiscountText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ed1f60</item>
+    </style>
+
+
+
+    <style name="DealPriceText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="DealValueInfoText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">12.5dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!--best shop-->
+    <color name="best_shop_category_boarder">#dddddd</color>
+    <color name="best_shop_category_divider">#eeeeee</color>
+    <color name="best_shop_populate_keyword_divider">#f4f4f4</color>
+    <color name="best_shop_product_divider">#d9d9d9</color>
+    <color name="best_shop_selected_bg">#a4dd00</color>
+    <color name="best_shop_category_item_text_selected">#111111</color>
+    <color name="best_shop_category_item_text_unselected">#666666</color>
+    <color name="best_shop_category_item_border_selected">#86CF00</color>
+
+    <!-- 날방매장 -->
+    <style name="NalbangLiveTitleText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="NalbangLiveDiscountText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ed1f60</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NalbangLivePriceText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="NalbangDealTitleText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="NalbangDealDiscountText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ed1f60</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NalbangDealPriceText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- 날방매장 -->
+    <color name="nalbang_shop_hashtab_table_boarder">#dddddd</color>
+    <color name="nalbang_shop_divider">#f4f4f4</color>
+    <color name="nalbang_shop_bottom_boarder">#d9d9d9</color>
+    <color name="nalbang_shop_hashtab_item_border_selected">#fa626c</color>
+
+    <!--plan shop-->
+    <color name="plan_shop_prd_image_bg">#f7f7f7</color>
+
+    <!--숏방-->
+    <color name="shortbang_shop_tab_item_border_selected">#f26630</color>
+
+    <!--내비게이션-->
+    <color name="left_navigation_background_color">#f26d9ee0</color>
+    <color name="left_navigation_line">#33ffffff</color>
+    <color name="left_navigation_round">#4dffffff</color>
+
+    <!--편성표-->
+    <!-- 동영상배경색 -->
+    <color name="sch_player_bg">#b2b2b2</color>
+    <color name="tv_schedule_time_list_bg" >#444444</color>
+
+    <!-- gs choice -->
+    <color name="gschoice_category_default">#eee7e0</color>
+    <color name="gschoice_category_selected">#8d6231</color>
+
+    <color name="menu_border_color_normal">#666666</color>CircleImageView
+    <color name="menu_border_color_selected">#bed730</color>
+
+    <!--방송알림등록-->
+    <style name="tv_schedule_broad_alarm_text_unselected" >
+        <item name="android:textColor">#666666</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="tv_schedule_broad_alarm_text_selected" >
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--모바일라이브 방송알림등록-->
+    <style name="mobile_live_broad_alarm_text_unselected" >
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="mobile_live_broad_alarm_text_selected" >
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextDescrptionDefault" parent="android:Widget.TextView">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextDiscountCardRate" parent="android:Widget.TextView">
+        <item name="android:textSize">26dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextDiscountCardContent" parent="android:Widget.TextView">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextDiscountCardRow1" parent="android:Widget.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextDiscountCardRow2" parent="android:Widget.TextView">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">#777777</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <style name="TextDiscountCardRow3" parent="android:Widget.TextView">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:textColor">#777777</item>
+        <item name="android:textSize">19dp</item>
+        <item name="android:typeface">normal</item>
+    </style>
+
+    <!--GS Super Title-->
+    <color name="color_super_title_bg">#74bd3b</color>
+    <dimen name="list_super_title_height">50dp</dimen>
+
+    <!--GS Super Location-->
+    <color name="color_super_location_bg">#e9f7de</color>
+    <color name="color_super_location_txt">#444444</color>
+    <dimen name="list_super_location_height">40dp</dimen>
+    <dimen name="list_super_location_btn_size">13sp</dimen>
+
+    <!--GS Super Menu-->
+    <dimen name="list_super_menu_divider_height">10dp</dimen>
+    <dimen name="list_super_menu_height_1">281dp</dimen> <!-- divider 구역 포함 크기 -->
+    <dimen name="list_super_menu_height_2">271dp</dimen> <!-- divider 구역 제외 크기 -->
+    <dimen name="list_super_viewpager_height">248dp</dimen>
+    <dimen name="list_super_paging_layout_height">32dp</dimen>
+
+    <dimen name="list_super_item_width">70dp</dimen>
+    <dimen name="list_super_item_height">100dp</dimen>
+    <dimen name="list_super_item_img_width_height">70dp</dimen>
+
+    <!--GS Super Popup-->
+    <dimen name="popup_gs_super_main_width_height">150dp</dimen>
+    <dimen name="popup_gs_super_close_width_height">26dp</dimen>
+
+    <!--GS Super Toast-->
+    <dimen name="dimen_toast_gs_super_height">63dp</dimen>
+    <color name="color_toast_gs_super_time">#ff6600</color>
+
+    <style name="GSSuperBorder">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>\
+        <item name="android:background">#eeeeee</item>
+    </style>
+
+    <style name="GSSuperBorderVertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">1dp</item>\
+        <item name="android:background">#eeeeee</item>
+    </style>
+
+    <style name="GSSuperBannerButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <!-- GS Super Rolling banner -->
+    <dimen name="GSSuperRollingBtnWidthHeight">23dp</dimen>
+
+    <style name="GSChoiceDiscountText" parent="android:Widget.TextView">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#ed1f60</item>
+        <item name="android:textSize">19dp</item>
+    </style>
+
+    <style name="GSChoiceDiscountValueText" parent="android:Widget.TextView">
+        <item name="android:ellipsize">none</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GSChoiceStatText" parent="android:Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <style name="GSChoiceStatSeparateImage" parent="android:Widget">
+        <item name="android:layout_width">3dp</item>
+        <item name="android:layout_height">3dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/dot_grey</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+    <style name="GSChoiceSalesQuantityText" parent="android:Widget.TextView">
+        <item name="android:textColor">#888888</item>
+        <item name="android:textSize">13dp</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+    <dimen name="gs_choice_small_banner_height">207dp</dimen>
+    <dimen name="gs_choice_category_item_height">288dp</dimen>
+    <dimen name="gs_choice_category_item_margin">10dp</dimen>
+    <dimen name="gs_choice_category_item_img_height">160dp</dimen>
+
+    <color name="gschoice_gray">#f6f3ef</color>
+
+    <color name="gs_super_tab_selected">#fff</color>
+    <color name="gs_super_tab_default">#666</color>
+
+    <dimen name="prd_delivery_r_margin">10dp</dimen>
+
+    <color name="color_wine">#985463</color>
+
+    <color name="color_divider_sel_today">#efeff4</color>
+    <color name="color_sel_today_gr_tab_back">#efeff4</color>
+    <color name="color_sel_today_gr_tab_text">#666666</color>
+    <color name="color_text_sel_today_default">#1b1b23</color>
+    <color name="color_text_sel_today_big_main">#e1191923</color>
+    <color name="color_text_sel_today_big_sub">#a3191923</color>
+</resources>

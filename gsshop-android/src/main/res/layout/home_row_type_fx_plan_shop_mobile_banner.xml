@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_plan_shop_big_brand"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="13dp">
+
+        <LinearLayout
+            android:id="@+id/view_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/vh_blank_space_middle"
+            android:layout_marginRight="@dimen/vh_blank_space_middle"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="1"
+                    android:text="[리바트] 우리아이방 아동가구 특가전"
+                    android:textColor="#111111"
+                    android:textSize="19sp"
+                    android:typeface="sans" />
+
+
+                <TextView
+                    android:id="@+id/text_title_sub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:lines="1"
+                    android:text="수납장서랍장 외 최대"
+                    android:textColor="#777777"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/image_arrow"
+                android:layout_width="9dp"
+                android:layout_height="16dp"
+                android:src="@drawable/arrow02" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/vh_blank_space_middle"
+            android:layout_marginTop="13dp"
+            android:background="#f4f4f4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginBottom="@dimen/vh_blank_space_large"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+</FrameLayout>

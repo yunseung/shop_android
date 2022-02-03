@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingBottom="16dp"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:paddingLeft="16dp"
+        android:text="GS와 함께하는 특별한 서비스"
+        android:textColor="#1b1b23"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/title_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#efeff4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_first_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="16dp">
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_1_1"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_1_2"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_1_1"
+            app:layout_constraintRight_toLeftOf="@id/item_1_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_1_3"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_1_2"
+            app:layout_constraintRight_toLeftOf="@id/item_1_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_1_4"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_1_3"
+            app:layout_constraintRight_toLeftOf="@id/item_1_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_1_5"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_second_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="12dp">
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_2_1"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_2_2"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_2_1"
+            app:layout_constraintRight_toLeftOf="@id/item_2_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_2_3"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_2_2"
+            app:layout_constraintRight_toLeftOf="@id/item_2_4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_2_4"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintLeft_toRightOf="@id/item_2_3"
+            app:layout_constraintRight_toLeftOf="@id/item_2_5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <gsshop.mobile.v2.home.shop.bestshop.MenuGiftRecommendFixItem
+            android:id="@+id/item_2_5"
+            android:layout_width="68dp"
+            android:layout_height="88dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

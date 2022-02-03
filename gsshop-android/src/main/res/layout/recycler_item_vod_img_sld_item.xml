@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 내일TV 슬라이드 배너 내부 아이템 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 라운드, 쉐도우 처리위해 사용 -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp"
+        android:elevation="0dp"
+        android:padding="0dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 섬네일 이미지 -->
+            <ImageView
+                android:id="@+id/img_popular_schedule"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:background="@drawable/noimage_78_78"
+                android:clipChildren="false"
+                android:scaleType="fitCenter" />
+
+            <!-- 하단 타이틀, 시간 영역 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dp"
+                android:background="#ffffff"
+                android:clipChildren="false">
+
+                <!-- 타이틀 -->
+                <TextView
+                    android:id="@+id/txt_popular_schedule_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="12dp"
+                    android:maxLines="1"
+                    android:text="모바일라이브"
+                    android:textColor="#111111"
+                    android:textSize="14sp"
+                    android:typeface="sans" />
+
+                <!-- 시간 -->
+                <TextView
+                    android:id="@+id/txt_popular_schedule_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_popular_schedule_title"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="11dp"
+                    android:maxLines="1"
+                    android:text="화요일 20:00"
+                    android:textColor="#666666"
+                    android:textSize="12sp"
+                    android:typeface="sans" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

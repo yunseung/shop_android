@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="188dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <View
+        android:id="@+id/view_left_margin"
+        android:layout_width="18dp"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        />
+
+    <gsshop.mobile.v2.menu.navigation.Views.CardViewReduceWhenSelected
+        android:id="@+id/cardview_gs_x_brand"
+        android:layout_width="140dp"
+        android:layout_height="172dp"
+        card:cardCornerRadius="10dp"
+        card:cardElevation="4dp"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f4f4f4"
+            />
+
+        <ImageView
+            android:id="@+id/imageview_gs_x_brand"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            />
+
+    </gsshop.mobile.v2.menu.navigation.Views.CardViewReduceWhenSelected>
+</LinearLayout>
+
+

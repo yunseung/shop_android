@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_mobilelive_alarm_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!--
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="쇼핑라이브 방송알림"
+            android:textColor="#111111"
+            android:textSize="17dp"
+            android:typeface="sans"
+            android:textStyle="bold"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#19111111"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_mobile_live"
+                android:layout_width="78dp"
+                android:layout_height="31dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:background="@drawable/bg_mobilelive_alarm_phone_number"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="고객님의 쇼핑라이브 방송알림내역"
+                    android:textColor="#111111"
+                    android:textSize="14dp"
+                    android:typeface="sans"
+                    android:layout_marginBottom="4dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="17dp">
+
+                    <ImageView
+                        android:layout_width="7dp"
+                        android:layout_height="7dp"
+                        android:src="@drawable/dot_mobile_live_cancel_dialog"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"/>
+
+                    <TextView
+                        android:id="@+id/txt_alarm_period"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#99111111"
+                        android:textSize="14dp"
+                        android:includeFontPadding="true" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="방송알림을 취소하시겠습니까?"
+                android:textSize="16dp"
+                android:textColor="#1b1b23"
+                android:textStyle="bold"
+                android:layout_marginTop="17dp"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efeff4" />
+        -->
+
+        <!--쇼핑라이브 아이콘 -->
+        <ImageView
+            android:id="@+id/img_mobile_live"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shopping_live_alarm_cancel_content"
+            android:textSize="16dp"
+            android:textColor="@color/default_txt_color"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#efeff4" />
+
+        <!--버튼-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <!--취소 버튼-->
+            <Button
+                android:id="@+id/btn_mobile_live_broad_alarm_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/mc_cancel"
+                android:textColor="#111111"
+                android:textSize="16dp"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#efeff4" />
+
+            <!--등록 버튼-->
+            <Button
+                android:id="@+id/btn_mobile_live_broad_alarm_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/common_ok"
+                android:textColor="#111111"
+                android:textSize="16dp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

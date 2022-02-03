@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="mart_deal_text_size_selected">14</integer>
+    <integer name="mart_deal_text_size_default">14</integer>
+</resources>

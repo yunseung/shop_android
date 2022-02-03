@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/gschoice_gray"
+    android:focusableInTouchMode="true"
+    android:paddingBottom="15dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layout_inner"
+        android:layout_width="match_parent"
+        android:layout_height="397dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layout_img_main"
+            android:layout_width="match_parent"
+            android:layout_height="321dp"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/image_main"
+                android:layout_width="match_parent"
+                android:layout_height="321dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentTop="true"
+                />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/view_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            >
+
+            <TextView
+                android:id="@+id/text_sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/view_info"
+                android:layout_marginTop="@dimen/gschoice_banner_text_term"
+                android:ellipsize="none"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="#444444"
+                android:textSize="16dp"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/gschoice_banner_text_term">
+
+                <TextView
+                    android:id="@+id/txt_badge_per"
+                    style="@style/GSChoiceDiscountText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15%"
+                    android:typeface="sans"
+                    android:layout_gravity="bottom"
+                    android:includeFontPadding="false"
+                    android:layout_marginRight="8dp"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#111111"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:ellipsize="none"
+                    android:singleLine="true"
+                    android:text="100,000"
+                    android:layout_gravity="bottom"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/txt_price_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/won"
+                    android:textColor="#111111"
+                    android:textSize="15dp"
+                    android:typeface="sans"
+                    android:layout_gravity="bottom"
+                    android:includeFontPadding="false"/>
+
+                <TextView
+                    android:id="@+id/txt_price_base"
+                    style="@style/GSChoiceDiscountValueText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_toRightOf="@+id/txt_price_won"
+                    android:layout_gravity="center_vertical"
+                    android:lineSpacingExtra="0dip"
+                    android:includeFontPadding="false"
+                    android:ellipsize="none"
+                    android:singleLine="true"
+                    android:text="90,000"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_text_badge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp">
+
+                <LinearLayout
+                    android:id="@+id/layout_attach_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_sales_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="bottom">
+
+                    <TextView
+                        android:id="@+id/txt_sales_quantity"
+                        style="@style/GSChoiceSalesQuantityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="1455"
+                        android:includeFontPadding="false" />
+
+                    <TextView
+                        android:id="@+id/txt_sales_quantity_str"
+                        style="@style/GSChoiceSalesQuantityText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/product_description_sale_tail_text"
+                        />
+
+                    <TextView
+                        android:id="@+id/txt_sales_quantity_sub_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/GSChoiceSalesQuantityText"
+                        android:layout_marginLeft="2dp"
+                        android:includeFontPadding="false"
+                        android:text="@string/product_description_purchase_now_text"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_sales_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#111111"
+                    android:textSize="13dp"
+                    android:typeface="sans"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:singleLine="true"
+            android:textColor="#111111"
+            android:textSize="19dp"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:layout_above="@+id/view_info"
+            android:layout_alignLeft="@+id/view_info"
+            android:background="@color/white"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginBottom="-15dp"
+            />
+
+    </RelativeLayout>
+    <!-- 좌측 상단 뱃지-->
+    <ImageView
+        android:id="@+id/top_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

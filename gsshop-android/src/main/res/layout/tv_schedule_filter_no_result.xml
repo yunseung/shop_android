@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_no_result"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="#f9f9f9"
+    android:orientation="vertical"
+    android:paddingTop="37dp"
+    android:paddingBottom="47dp">
+
+    <LinearLayout
+        android:id="@+id/lay_no_result_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="14dp"
+        android:paddingLeft="14dp"
+        android:background="@drawable/bg_schedule_date_no_result">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/front_wave"
+            android:textSize="15sp"
+            android:textColor="#444444"
+            android:text="~ "
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_date_no_result"
+            android:textSize="16sp"
+            android:textColor="#444444"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_day_no_result"
+            android:textSize="15sp"
+            android:textColor="#444444"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_wave"
+            android:textSize="15sp"
+            android:textColor="#444444"
+            android:text=" ~"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_no_result"
+        android:textSize="16sp"
+        android:textColor="#444444"
+        android:layout_marginTop="10dp"
+        android:text="조건에 맞는 상품이 없습니다."
+        android:gravity="center"/>
+
+
+
+
+
+</LinearLayout>
+
+

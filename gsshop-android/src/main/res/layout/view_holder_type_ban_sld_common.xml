@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <View
+        android:id="@+id/button_prev"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="left|center_vertical"
+        android:clickable="true"
+        android:background="@drawable/sld_big_chevron_left"
+        />
+
+    <View
+        android:id="@+id/button_next"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="right|center_vertical"
+        android:clickable="true"
+        android:background="@drawable/sld_big_chevron_right"
+        />
+
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_gravity="bottom|right"
+
+        android:background="@drawable/bg_66000000_rounded_radius_15"
+        android:gravity="center"
+
+        android:text="1/6"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:typeface="sans"
+
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+
+        android:includeFontPadding="false"
+
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        />
+
+</FrameLayout>

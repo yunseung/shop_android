@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        >
+
+        <gsshop.mobile.v2.home.shop.flexible.vip.common.VipCommonPrd2Item
+            android:id="@+id/view_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="@dimen/renewal_bestshop_margin_center"
+            android:layout_height="match_parent" />
+
+        <gsshop.mobile.v2.home.shop.flexible.vip.common.VipCommonPrd2Item
+            android:id="@+id/view_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        android:visibility="visible"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        >
+
+        <gsshop.mobile.v2.home.shop.flexible.vip.common.VipCommonPrd2Item
+            android:id="@+id/view_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <View
+            android:layout_width="@dimen/renewal_bestshop_margin_center"
+            android:layout_height="match_parent" />
+
+        <gsshop.mobile.v2.home.shop.flexible.vip.common.VipCommonPrd2Item
+            android:id="@+id/view_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+</LinearLayout>

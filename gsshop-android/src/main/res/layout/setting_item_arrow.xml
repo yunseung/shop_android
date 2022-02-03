@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="9.3dip"
+  android:layout_height="14dip"
+  android:layout_gravity="right|center_vertical"
+  android:layout_marginRight="11.3dip"
+  android:src="@drawable/icon_arrow_right_thick" />

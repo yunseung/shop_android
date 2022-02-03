@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/gschoice_roll_banner_height"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@color/gschoice_gray">
+
+            <gsshop.mobile.v2.home.shop.renewal.views.CommonTitleLayout
+                android:id="@+id/common_title_layout"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/text_choice_roll_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1 / 6"
+                android:textColor="#111111"
+                android:textSize="13dp"
+                android:typeface="sans"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"/>
+
+        </LinearLayout>
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/pager_choice_roll"
+            android:layout_width="match_parent"
+            android:layout_height="397dp"
+            android:background="@color/gschoice_gray"
+            />
+    </LinearLayout>
+</LinearLayout>

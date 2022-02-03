@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 서버 설정 변경 팝업 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_sns_dialog"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/rg_server"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_m"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운영" />
+        <RadioButton
+            android:id="@+id/rb_sm21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASM" />
+        <RadioButton
+            android:id="@+id/rb_tm14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TM14" />
+
+        <RadioButton
+            android:id="@+id/rb_atm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ATM" />
+
+        <RadioButton
+            android:id="@+id/rb_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AM" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+    </RadioGroup>
+
+    <!-- NAVIGATION VERSION EDIT TEXT -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="11dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Navigation version : "
+            android:textColor="#111111"
+            android:textSize="15dp" />
+
+        <EditText
+            android:id="@+id/et_navigation_ver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:text="0.0"
+            android:textColor="#111111"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="6dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_pcid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set wa_pcid"
+            android:textColor="#111111"
+            android:textSize="15dp" />
+        <CheckBox
+            android:id="@+id/chk_pcid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/checkbox"
+            />
+        <EditText
+            android:id="@+id/et_pcid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_pcid"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0.0"
+            android:textColor="#111111"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e5e5e5" />
+
+    <!-- 하단 버튼 영역 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_round_bottom_left"
+            android:gravity="center"
+            android:text="@string/cancel_label"
+            android:textColor="#666666"
+            android:textSize="16dp" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#e5e5e5" />
+
+        <!-- 닫기 -->
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_dialog_round_bottom_right"
+            android:gravity="center"
+            android:text="@string/ok_label"
+            android:textColor="#666666"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

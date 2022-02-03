@@ -1,0 +1,44 @@
+<component name="libraryTable">
+  <library name="Gradle: :mocha-android-debug:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/google-response-cache.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/guice-3.0-no_aop.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/jackson-core-asl-1.9.12.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/jackson-mapper-asl-1.9.12.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/javax.inject-1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/roboguice-2.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/simple-xml-2.6.2.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-android-auth-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-android-core-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-android-rest-template-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-security-crypto-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-social-core-1.0.2.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-social-facebook-1.0.2.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/spring-social-twitter-1.0.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3fa26c6e6a9715ae7c9caf7d527f0bb5/jetified-mocha-android-debug/jars/libs/universal-image-loader-1.6.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/google-response-cache.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-android-rest-template-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-social-twitter-1.0.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-social-facebook-1.0.2.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/roboguice-2.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/jackson-mapper-asl-1.9.12.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/guice-3.0-no_aop.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-android-core-1.0.1.RELEASE.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-social-core-1.0.2.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/simple-xml-2.6.2.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/javax.inject-1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-security-crypto-3.1.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/spring-android-auth-1.0.1.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/jackson-core-asl-1.9.12.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e7038ee2837068a2941f1e96e925602/jetified-mocha-android-debug/jars/libs/universal-image-loader-1.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

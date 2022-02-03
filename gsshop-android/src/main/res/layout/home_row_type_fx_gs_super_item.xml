@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="326dp">
+
+    <LinearLayout
+        android:id="@+id/view_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:orientation="vertical"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="163.12dp">
+
+            <ImageView
+                android:id="@+id/image_prd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff" />
+
+
+            <!-- 좌측 상단 뱃지-->
+            <ImageView
+                android:id="@+id/top_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|left"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:includeFontPadding="false"
+                        android:text="44,500"
+                        android:textColor="#111111"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/text_notation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-1dp"
+                        android:includeFontPadding="false"
+                        android:text="원"
+                        android:textColor="#111111"
+                        android:textSize="15dp"
+                        android:typeface="sans" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/txt_badge_per"
+                        style="@style/FreshDiscountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:includeFontPadding="false"
+                        android:text="6%"
+                        android:textSize="13dp"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="text_value"
+                            android:textColor="#111111"
+                            android:textSize="13dp"
+                            android:typeface="sans" />
+
+
+                        <TextView
+                            android:id="@+id/text_base"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="text_base"
+                            android:textColor="#888888"
+                            android:textSize="13dp"
+                            android:typeface="sans" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:gravity="left"
+                android:lines="2"
+                android:text="100세까지 100세까지 100세까지 100세까지 100세까지 100세까지 100세까지 100세까지"
+                android:textColor="#444444"
+                android:textSize="15sp"
+                android:typeface="sans" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:clickable="true"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/btn_cart"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="bottom|right"
+        android:background="@drawable/cart_an"
+        />
+
+</FrameLayout>

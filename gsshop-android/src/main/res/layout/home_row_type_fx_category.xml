@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_divider_height" >
+
+    <!-- 플렉서블 매장 중카테고리. -->
+
+    <gsshop.mobile.v2.home.util.IconTabBar
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="67.5dp"
+        android:background="#ffffff" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D9D9D9" />
+
+</LinearLayout>

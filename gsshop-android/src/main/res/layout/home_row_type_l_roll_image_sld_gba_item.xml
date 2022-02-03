@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:paddingTop="8dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        >
+
+        <ImageView
+            android:id="@+id/image_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxHeight="252dp"
+            android:minHeight="172dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/noimage_375_188"
+            android:scaleType="fitXY" />
+
+
+        <LinearLayout
+            android:id="@+id/layout_txt"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+
+            <TextView
+                android:id="@+id/txt_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:textColor="#111111"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:singleLine="true"
+                android:ellipsize="none"
+                />
+
+            <TextView
+                android:id="@+id/txt_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#666666"
+                android:includeFontPadding="false"
+                android:typeface="sans"
+                android:singleLine="true"
+                android:ellipsize="none"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <CheckBox
+        android:id="@+id/chk_preview_flash"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:button="@android:color/transparent"
+        android:background="@drawable/bg_camera_preview_flash"
+        />
+
+    <TextView
+        android:id="@+id/text_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="@string/camera_preview_top_default"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        />
+
+    <FrameLayout
+        android:id="@+id/view_frame_center"
+        android:layout_width="285dp"
+        android:layout_height="285dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="37dp"
+        android:layout_centerInParent="true"
+        >
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="left|top"
+            android:background="@drawable/frame_lt"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|top"
+            android:background="@drawable/frame_rt"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="left|bottom"
+            android:background="@drawable/frame_lb"/>
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|bottom"
+            android:background="@drawable/frame_rb"/>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_preview_close"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_camera_close"
+        />
+
+    <Button
+        android:id="@+id/btn_preview_shutter"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_shutter"
+        />
+    
+    <FrameLayout
+        android:id="@+id/view_preview_to_gallery"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/bg_camera_preview_to_gallery">
+        <ImageView
+            android:id="@+id/img_preview_to_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TV쇼핑 생방송 영역 (젤리빈 이상) -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:autofit="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/list_divider_height" >
+
+    <!-- 백그라운드(동영상재생) 뷰 -->
+    <LinearLayout
+        android:id="@+id/lay_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <!-- 동영상 플레이어 영역 -->
+            <fragment
+                android:id="@+id/media_player"
+                android:name="gsshop.mobile.v2.support.media.exoplayer.ExoMediaPlayerControllerFragment"
+                android:layout_width="match_parent"
+                android:layout_height="203dp" />
+
+            <!-- 컨텐츠(상품이미지, 남은시간, 상품명, 가격등) 영역 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/root_view"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/main_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="203dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#f7f7f7"
+                    android:src="@drawable/noimg_tv" />
+
+                <View
+                    android:id="@+id/dim"
+                    android:layout_width="match_parent"
+                    android:layout_height="203dp"
+                    android:background="#33000000" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:layout_alignParentBottom="true"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="5.62dp"
+                    android:paddingBottom="5.62dp"
+                    android:background="@drawable/tv_gradation"
+                    android:orientation="horizontal" >
+                    <TextView
+                        android:id="@+id/txt_title"
+                        style="@style/GoodsTitleText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:textSize="16dp"
+                        android:textColor="@android:color/white"
+                        android:ellipsize="none"
+                        android:layout_toLeftOf="@+id/txt_price"
+                        android:paddingRight="16.87dp"/>
+
+                </RelativeLayout>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="203dp"
+                    android:layout_centerInParent="true"
+                    layout="@layout/count_layout" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/info_view"
+                android:layout_width="match_parent"
+                android:layout_height="203dp"
+                android:background="#33000000"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_pause_android"
+                    android:layout_marginRight="15dp"
+                    android:contentDescription="@string/common_pause"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/full_screen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mc_ic_full_an"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:contentDescription="@string/common_full_screen"
+                        />
+
+                    <ImageView
+                        android:id="@+id/go_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/mc_ic_product_an"
+                        android:layout_marginLeft="15dp"
+                        android:contentDescription="@string/view_product_info"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/close_android"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/common_close"
+                    />
+            </RelativeLayout>
+
+            <!-- 일시정지 클릭시 노출되는 뷰 -->
+            <RelativeLayout
+                android:id="@+id/info_view_play"
+                android:layout_width="match_parent"
+                android:layout_height="203dp"
+                android:background="#33000000"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/play"
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_play_android"
+                        android:contentDescription="@string/common_play"/>
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/close_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/close_android"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/common_close"
+                    />
+            </RelativeLayout>
+
+            <!-- 방송종료 -->
+            <LinearLayout
+                android:id="@+id/info_view_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:text="@string/home_tv_live_view_close_da_text"
+                    android:includeFontPadding="false"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:text="@string/home_tv_live_next_brd_guide"
+                    android:includeFontPadding="false"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 하단 버튼(편성표, 구매하기...) 영역 -->
+        <include
+            layout="@layout/home_fx_tv_live_common_button" />
+
+    </LinearLayout>
+
+    <!-- 프론트(live + data) 뷰 -->
+    <LinearLayout
+        android:id="@+id/lay_front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <!-- 좌측 생방송 영역 -->
+        <LinearLayout
+            android:id="@+id/front_lay_live"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical" >
+
+            <!-- 상품이미지 영역 -->
+            <RelativeLayout
+                android:id="@+id/front_lay_live_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/front_live_main_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#f7f7f7"
+                    android:src="@drawable/noimg_list" />
+
+                <View
+                    android:id="@+id/front_live_dim"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#4D000000" />
+
+
+                <!-- 뱃지 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:padding="6dp">
+                    <ImageView
+                        android:id="@+id/front_live_badge_1"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                    <ImageView
+                        android:id="@+id/front_live_badge_2"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                    <ImageView
+                        android:id="@+id/front_live_badge_3"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/front_live_play"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_play_android"
+                    android:contentDescription="@string/common_play"/>
+
+                <LinearLayout
+                    android:id="@+id/front_live_time_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="80dp"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/front_live_brd_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/home_tv_live_view_on_air"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="11dp" />
+
+                    <gsshop.mobile.v2.home.shop.tvshoping.TvShopTimeLayout
+                        android:id="@+id/front_tv_live_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/front_live_txt_remain_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:includeFontPadding="false"
+                            android:textColor="#ffffff"
+                            android:typeface="sans"
+                            android:textSize="21dp" />
+                    </gsshop.mobile.v2.home.shop.tvshoping.TvShopTimeLayout>
+
+                </LinearLayout>
+
+                <!-- 방송종료 -->
+                <LinearLayout
+                    android:id="@+id/front_live_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:text="@string/home_tv_live_view_close_text"
+                        android:includeFontPadding="false"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:text="@string/home_tv_live_next_brd_guide"
+                        android:includeFontPadding="false"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="vertical"
+                android:background="#f4f4f4"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/live_logo_android"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:gravity="center">
+
+                <gsshop.mobile.v2.support.ui.TwoLineTextView
+                    android:id="@+id/front_live_txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="11dp"
+                    android:ellipsize="none"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:textColor="#444444"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <!-- 상품명/가격 등 -->
+                    <LinearLayout
+                        android:id="@+id/front_live_price_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/front_live_price_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tag_bg_an"
+                            android:textColor="#ffffff"
+                            android:textSize="11dp"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/front_live_price_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:gravity="center_vertical"
+                            >
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="-2dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:baselineAligned="true"
+                                >
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_live_txt_base_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:ellipsize="none"
+                                    android:textColor="#666666"
+                                    android:textSize="13dp"
+                                    android:includeFontPadding="false"
+                                    autofit:minTextSize="11dp"
+                                    />
+                                <TextView
+                                    android:id="@+id/front_live_txt_base_price_expose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#666666"
+                                    android:textSize="13dp"
+                                    android:text="원"
+                                    android:includeFontPadding="false"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/front_live_price_text_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:baselineAligned="true"
+                                >
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_live_txt_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:ellipsize="none"
+                                    android:textColor="#111111"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:text="9,999,999"
+                                    autofit:minTextSize="12dp"
+                                    />
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_live_txt_price_expose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:paddingBottom="3dp"
+                                    android:textColor="#111111"
+                                    android:textSize="16dp"
+                                    android:text="원"
+                                    android:includeFontPadding="false"
+                                    autofit:minTextSize="12dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/front_live_card_rental_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:textColor="#999999"
+                    android:textSize="11dp"
+                    android:includeFontPadding="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/front_live_btn_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bt_buy1_an"
+                    android:text="@string/common_pay"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/front_live_btn_live_talk"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_join_button"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:text="@string/common_livetalk"
+                        android:textColor="#444444"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:id="@+id/front_live_btn_schedule"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/common_schedule"
+                        android:background="@drawable/bg_join_button"
+                        android:textColor="#444444"
+                        android:textSize="13dp"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/front_live_product_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/common_all_product"
+                        android:textColor="#666666"
+                        android:typeface="sans"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/arrow_android" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 좌우 여백 -->
+        <View android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:background="#e5e5e5"/>
+
+        <!-- 우측 데이타방송 영역 -->
+        <LinearLayout
+            android:id="@+id/front_lay_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical" >
+
+            <!-- 상품이미지 영역 -->
+            <RelativeLayout
+                android:id="@+id/front_lay_data_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/front_data_main_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:background="#f7f7f7"
+                    android:src="@drawable/noimg_list" />
+
+                <View
+                    android:id="@+id/front_data_dim"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#4D000000" />
+
+                <!-- 뱃지 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentLeft="true"
+                    android:padding="6dp">
+                    <ImageView
+                        android:id="@+id/front_data_badge_1"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                    <ImageView
+                        android:id="@+id/front_data_badge_2"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                    <ImageView
+                        android:id="@+id/front_data_badge_3"
+                        android:layout_width="31dp"
+                        android:layout_height="35dp"
+                        />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/front_data_play"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_play_android"
+                    android:contentDescription="@string/common_play"/>
+
+                <LinearLayout
+                    android:id="@+id/front_data_time_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="80dp"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/front_data_brd_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="11dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/home_tv_live_view_on_air"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="11dp" />
+
+                    <gsshop.mobile.v2.home.shop.tvshoping.TvShopTimeLayout
+                        android:id="@+id/front_tv_data_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/front_data_txt_remain_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="top"
+                            android:includeFontPadding="false"
+                            android:textColor="#ffffff"
+                            android:typeface="sans"
+                            android:textSize="21dp" />
+                    </gsshop.mobile.v2.home.shop.tvshoping.TvShopTimeLayout>
+
+                </LinearLayout>
+
+                <!-- 방송종료 -->
+                <LinearLayout
+                    android:id="@+id/front_data_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:text="@string/home_tv_live_view_close_text"
+                        android:includeFontPadding="false"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="#ffffff"
+                        android:textSize="15dp"
+                        android:text="@string/home_tv_live_next_brd_guide"
+                        android:includeFontPadding="false"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:orientation="vertical"
+                android:background="#f4f4f4"
+                android:clickable="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/myshop_logo_android"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:gravity="center">
+
+                <gsshop.mobile.v2.support.ui.TwoLineTextView
+                    android:id="@+id/front_data_txt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="11dp"
+                    android:layout_alignParentBottom="true"
+                    android:maxLines="2"
+                    android:minLines="2"
+                    android:typeface="sans"
+                    android:textSize="15dp"
+                    android:textColor="#444444"
+                    android:ellipsize="none" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="7dp">
+
+                    <!-- 상품명/가격 등 -->
+                    <LinearLayout
+                        android:id="@+id/front_data_price_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:id="@+id/front_data_price_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/tag_bg_an"
+                            android:textColor="#ffffff"
+                            android:textSize="11dp"
+                            android:gravity="center"
+                            android:layout_gravity="center_vertical"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/front_data_price_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:gravity="center_vertical"
+                            >
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="-2dp"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:baselineAligned="true"
+                                >
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_data_txt_base_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:ellipsize="none"
+                                    android:textColor="#666666"
+                                    android:textSize="13dp"
+                                    android:includeFontPadding="false"
+                                    autofit:minTextSize="11dp"
+                                    />
+                                <TextView
+                                    android:id="@+id/front_data_txt_base_price_expose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="#666666"
+                                    android:textSize="13dp"
+                                    android:text="원"
+                                    android:includeFontPadding="false"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/front_data_price_text_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:baselineAligned="true"
+                                >
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_data_txt_price"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:singleLine="true"
+                                    android:ellipsize="none"
+                                    android:textColor="#111111"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold"
+                                    android:text="9,999,999"
+                                    autofit:minTextSize="12dp"
+                                    />
+                                <me.grantland.widget.AutofitTextView
+                                    android:id="@+id/front_data_txt_price_expose"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:paddingBottom="3dp"
+                                    android:textColor="#111111"
+                                    android:textSize="16dp"
+                                    android:text="원"
+                                    android:includeFontPadding="false"
+                                    autofit:minTextSize="12dp"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/front_data_card_rental_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:singleLine="true"
+                    android:ellipsize="none"
+                    android:textColor="#999999"
+                    android:textSize="11dp"
+                    android:includeFontPadding="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:id="@+id/front_data_btn_pay"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/bt_buy1_an"
+                    android:text="@string/common_pay"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    android:orientation="horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/front_data_btn_live_talk"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/common_livetalk"
+                        android:background="@drawable/bg_join_button"
+                        android:textColor="#444444"
+                        android:textSize="13dp"
+                        android:orientation="horizontal" />
+
+                    <TextView
+                        android:id="@+id/front_data_btn_schedule"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/common_schedule"
+                        android:background="@drawable/bg_join_button"
+                        android:textColor="#444444"
+                        android:textSize="13dp"
+                        android:orientation="horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/front_data_product_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/common_all_product"
+                        android:textColor="#666666"
+                        android:typeface="sans"
+                        android:textSize="13dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0.5dp"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/arrow_android" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 하단라인 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#d8d8d8" />
+
+        <View android:layout_width="6dp"
+            android:layout_height="match_parent"
+            android:background="#e5e5e5"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="#d8d8d8" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/navigation_corners_background"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/jjim_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/jjim_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/no_zzim_and"
+                        />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/jjim_cnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#b3ffffff"
+                    android:maxLines="1"
+                    android:text="찜한상품"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/recent_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    >
+                    <ImageView
+                        android:id="@+id/recent"
+                        android:layout_width="28dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/no_recent_android"
+                        />
+                    <ImageView
+                        android:id="@+id/recent_image"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="14sp"
+                    android:textColor="#b3ffffff"
+                    android:maxLines="1"
+                    android:text="최근본상품"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/message_card_photo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/photo_off"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="메세지카드"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/interest_category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        >
+
+        <TextView
+            android:id="@+id/interest_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/text_category_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:maxLines="1"
+            android:text="설정하기"
+            android:drawableRight="@drawable/arrow_more_android"
+            android:drawablePadding="5dp"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Interest_categories"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/Interest_brand_shop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp"
+        >
+
+        <TextView
+            android:id="@+id/Interest_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/Interest_brand_read_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:textSize="14sp"
+            android:textColor="#ffffff"
+            android:maxLines="1"
+            android:text="더보기"
+            android:drawableRight="@drawable/arrow_more_android"
+            android:drawablePadding="5dp"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Interest_brand_shop"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:layout_marginTop="20dp"
+        android:scrollbars="none" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Interest_generalBrand"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="35dp"
+        android:scrollbars="none" />
+    
+    <View
+        android:id="@+id/bottom_margin"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <View
+        android:id="@+id/bottom_margin_brand_shop"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

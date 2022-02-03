@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 여러개의 아이템을 하나로 묶은 모양의 배경 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <shape android:shape="rectangle" >
+            <solid android:color="#cc000000" />
+
+            <corners android:topLeftRadius="4dp"
+                android:topRightRadius="4dp"/>
+        </shape>
+    </item>
+</layer-list>

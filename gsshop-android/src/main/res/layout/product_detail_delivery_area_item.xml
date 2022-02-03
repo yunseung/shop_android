@@ -1,0 +1,1075 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 단품하단 배송 영역 아이템 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+        <!-- marginBottom : 텍스트가 하단 4dp 마진을 보유하므로 (16-4) -->
+
+        <!-- 상단 라인 -->
+        <View
+            android:id="@+id/view_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="16dp"
+            android:background="#f4f4f4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <!-- 좌측 이미지 영역 -->
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <!-- 메인 섬네일 -->
+                <ImageView
+                    android:id="@+id/iv_main_thumbnail"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+            </FrameLayout>
+
+            <!-- 컨텐츠 영역 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false" >
+
+                <!-- 중앙 텍스트 영역 -->
+                <LinearLayout
+                    android:id="@+id/ll_txt_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="40dp"
+                    android:orientation="vertical">
+
+                    <!-- first line -->
+                    <LinearLayout
+                        android:id="@+id/li_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_first1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_marginBottom="1dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_first1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="2"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_first1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_first2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <!-- 화살표 -->
+                                <ImageView
+                                    android:id="@+id/iv_first2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_first3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <!-- 화살표 -->
+                                <ImageView
+                                    android:id="@+id/iv_first3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                        <!-- 배송지변경 영역 침범 막을 우측여백 -->
+                        <View
+                            android:id="@+id/vw_r_margin"
+                            android:layout_width="84dp"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"/>
+
+                    </LinearLayout>
+
+                    <!-- second line -->
+                    <LinearLayout
+                        android:id="@+id/li_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_second1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <gsshop.mobile.v2.home.shop.renewal.views.TwoLineTextViewSetEllipsizePossibly
+                                    android:id="@+id/tv_second1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_second1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_second2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_second2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                     android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_second3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_second3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- third line -->
+                    <LinearLayout
+                        android:id="@+id/li_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_third1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_third1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_third1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_third2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_third2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_third3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="0dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_third3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginBottom="0dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- fourth line -->
+                    <LinearLayout
+                        android:id="@+id/li_fourth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_fourth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_fourth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fourth1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_fourth2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fourth2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_fourth3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fourth3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- fifth line -->
+                    <LinearLayout
+                        android:id="@+id/li_fifth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_fifth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_fifth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fifth1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_fifth2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fifth2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_fifth3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_fifth3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- sixth line -->
+                    <LinearLayout
+                        android:id="@+id/li_sixth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_sixth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_sixth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_sixth1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_sixth2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_sixth2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_sixth3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_sixth3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- seventh line -->
+                    <LinearLayout
+                        android:id="@+id/li_seventh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_seventh1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_seventh1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_seventh1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_seventh2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_seventh2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_seventh3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_seventh3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- eighth line -->
+                    <LinearLayout
+                        android:id="@+id/li_eighth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_eighth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_eighth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_eighth1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_eighth2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_eighth2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_eighth3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_eighth3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                    <!-- ninth line -->
+                    <LinearLayout
+                        android:id="@+id/li_ninth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.flexbox.FlexboxLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:visibility="visible"
+                            app:flexWrap="wrap">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <!-- 텍스트 앞 아이콘 -->
+                                <ImageView
+                                    android:id="@+id/iv_pre_ninth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="4dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/tv_ninth1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="6dp"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:lineSpacingExtra="3dp"
+                                    android:text="1솔로이스트 브랜드 샵"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_ninth1"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_ninth2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_ninth2"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tv_ninth3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="2솔로이스트"
+                                    android:textColor="#111111"
+                                    android:textSize="14dp" />
+
+                                <ImageView
+                                    android:id="@+id/iv_ninth3"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_marginRight="6dp"
+                                    android:background="@drawable/chevron_right_3"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.flexbox.FlexboxLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- 우측 더보기/배송지변경 영역 -->
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clipChildren="false"
+                    android:layout_gravity="right">
+
+                    <!-- 우측 배송지 변경 -->
+                    <LinearLayout
+                        android:id="@+id/ll_change_addr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:layout_marginTop="-6dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/bg_sns_login">
+
+                        <TextView
+                            android:id="@+id/tv_change_addr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:ellipsize="none"
+                            android:singleLine="true"
+                            android:textColor="#111111"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <!-- 우측 더보기 영역 -->
+                    <LinearLayout
+                        android:id="@+id/ll_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="8dp"
+                        android:orientation="horizontal">
+
+                        <!-- 더보기 아이콘 -->
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/chevron_right_4" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="0dp"
+    android:background="@color/white"
+    >
+
+    <!-- 방송시간, 구매중 영역 -->
+    <include layout="@layout/recycler_item_vod_item_title"
+        android:id="@+id/view_vod_title"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"/>
+
+    <!-- 위치 조정을 위한 더미 뷰 -->
+    <FrameLayout
+        android:id="@+id/lay_vod_video_dummy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_vod_title">
+
+        <View
+            android:id="@+id/lay_vod_video_dummy_thumb"
+            android:layout_width="match_parent"
+            android:layout_height="172.5dp"
+            android:background="@drawable/vod_v_bg_android"/>
+
+        <View
+            android:id="@+id/lay_vod_video_dummy_player"
+            android:layout_width="match_parent"
+            android:layout_height="252dp"
+            android:background="@drawable/vod_v_bg_android"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- 비디오 플레이어 -->
+    <FrameLayout
+        android:id="@+id/vod_video_frame"
+        android:layout_width="match_parent"
+        android:layout_height="252dp"
+        android:visibility="invisible"
+        android:layout_below="@+id/view_vod_title"/>
+
+    <!-- 비디오 플레이어를 가려주는 컨트롤러 영역 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_vod_title"
+        >
+
+        <FrameLayout
+            android:id="@+id/view_vod_controller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top">
+
+            <FrameLayout
+                android:id="@+id/layout_vod_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image_vod_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="172.5dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_horizontal"/>
+                <View
+                    android:id="@+id/dim_vod_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="172.5dp"
+                    android:background="#33000000"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_vod_video_to_height"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/image_vod_video_fit_to_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="252dp"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <View
+                    android:id="@+id/dim_vod_video_to_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="252dp"
+                    android:background="#33000000"/>
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/image_vod_play"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/common_play"
+                android:src="@drawable/ic_play_android" />
+
+            <ImageView
+                android:id="@+id/image_vod_controller_replay"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/common_restart"
+                android:src="@drawable/ic_replay_android"
+                android:visibility="gone"/>
+
+            <!--프로그레스바-->
+            <ProgressBar
+                android:id="@+id/mc_vod_progress_bar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:indeterminateDrawable="@drawable/vod_play_animation" />
+
+            <LinearLayout
+                android:id="@+id/goPrdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:background="@drawable/gradation_goprdlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/transparent"
+                    android:includeFontPadding="false"
+                    android:text="상품보기"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/tv_arrow_circle"
+                    android:tint="@color/white" />
+            </LinearLayout>
+
+            <!--mute, 축소 버튼-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <gsshop.mobile.v2.util.TouchAreaExpand
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+                    android:padding="5dp">
+
+                    <CheckBox
+                        android:id="@+id/check_vod_mute"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:contentDescription="@string/common_mute"
+                        android:background="@drawable/selector_best_deal_player_mute"
+                        android:button="@android:color/transparent" />
+                </gsshop.mobile.v2.util.TouchAreaExpand>
+
+                <androidx.legacy.widget.Space
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent" />
+
+                <gsshop.mobile.v2.util.TouchAreaExpand
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <View
+                        android:id="@+id/view_vod_zoom"
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:contentDescription="@string/common_full_screen"
+                        android:background="@drawable/ic_zoom_s_android" />
+                </gsshop.mobile.v2.util.TouchAreaExpand>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_vod_remained_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:padding="15dp"
+                android:textColor="#ffff"
+                android:textSize="20dp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/close_vod"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/delete_file"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <!--3g 과금-->
+        <FrameLayout
+            android:id="@+id/view_vod_mobile_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#99000000">
+
+            <include
+                layout="@layout/view_mobile_data_alert_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <!-- 상품 정보 영역 -->
+    <FrameLayout
+        android:id="@+id/lay_recycler_item_prd_info_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_vod_video_dummy"
+        android:background="@color/white">
+        <!-- 하단 상품정보 영역 -->
+        <include
+            layout="@layout/recycler_item_vod_prd_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <!-- 선택 시 상품이동 영역 -->
+    <include layout="@layout/recycler_item_vod_img_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_recycler_item_prd_info_frame"/>
+
+    <!-- 뱃지 영역 -->
+    <LinearLayout
+        android:id="@+id/tag_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lay_price"
+        android:layout_alignTop="@+id/lay_recycler_item_prd_info_frame"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="-20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/tag_save"
+            android:layout_width="28.8dp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:id="@+id/tag_cash"
+            android:layout_width="28.8dp"
+            android:layout_height="30dp" />
+
+        <ImageView
+            android:id="@+id/tag_gift"
+            android:layout_width="28.8dp"
+            android:layout_height="30dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
+
+

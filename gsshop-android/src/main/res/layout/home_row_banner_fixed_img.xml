@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/flexible_image_banner_type_f80"
+    android:background="@color/white"
+    android:contentDescription="@string/description_image"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/flexible_image_banner_type_f80_margin"
+        android:paddingTop="@dimen/flexible_image_banner_type_f80_margin"
+        android:paddingLeft="@dimen/flexible_image_banner_type_f80_margin_l"
+        >
+        <ImageView
+            android:id="@+id/main_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/best_shop_product_divider"
+        android:layout_gravity="bottom"
+        />
+
+</FrameLayout>

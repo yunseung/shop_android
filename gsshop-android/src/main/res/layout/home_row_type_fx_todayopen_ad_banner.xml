@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/text_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#A4111111"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        />
+
+    <FrameLayout
+        android:id="@+id/view_click"
+        android:layout_width="54dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true">
+        <ImageView
+            android:id="@+id/ad_image"
+            android:layout_width="28dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="right"
+            android:contentDescription="광고"
+            android:scaleType="fitXY"
+            android:src="@drawable/ad_light" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#A4111111"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:typeface="sans"
+        android:layout_toRightOf="@+id/text_count"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        />
+
+</RelativeLayout>

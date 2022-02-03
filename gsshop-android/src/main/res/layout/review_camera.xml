@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 상품평 사진찍기 화면 -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_preview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <!-- 이 자리에 SurfaceView가 끼어들어감. -->
+
+    <Button
+        android:id="@+id/btn_take_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="15dip"
+        android:background="@drawable/btn_picture_on_selector" />
+
+</FrameLayout>

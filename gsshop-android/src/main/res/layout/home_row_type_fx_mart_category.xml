@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/event_menu_staggered_outer_space"
+    android:paddingLeft="@dimen/event_menu_staggered_outer_space_boarder"
+    android:paddingRight="@dimen/event_menu_staggered_outer_space_boarder"
+    android:paddingTop="@dimen/event_menu_staggered_outer_space">
+
+    <!-- 플렉서블 매장 중카테고리. -->
+    <LinearLayout
+        android:id="@+id/view_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/event_tab_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/category_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_first_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans" />
+
+
+        <TextView
+            android:id="@+id/category_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_last_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/category_3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_last_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/category_4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_last_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/category_5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_last_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/category_6"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_mart_category_last_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/mart_deal_text_default"
+            android:textSize="16sp"
+            android:typeface="sans"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

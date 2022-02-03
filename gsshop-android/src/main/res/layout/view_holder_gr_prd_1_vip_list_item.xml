@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 홈 하단 개인화구좌 (편성표 부상품 형태)-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_brd_time_top"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/bg_ebf9fa_round8"
+        android:textColor="#03919d"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:textStyle="bold"
+        />
+
+    <!-- 상품이미지, 가격 영역 -->
+    <LinearLayout
+        android:id="@+id/view_prd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="18dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="127dp"
+            android:layout_height="127dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/image_prd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+                <!-- 방송중구매가능, 일시품절 영역 -->
+                <TextView
+                    android:id="@+id/txt_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#66111111"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="13dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/text_brd_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:background="#66111111"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="13dp"
+                    android:visibility="gone"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/txt_purchase_cnt"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginBottom="6dp"
+                android:textSize="12dp"
+                android:textColor="#111111"
+                android:text="5회"
+                android:background="@drawable/bg_111111_line_round_2dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="16dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:visibility="gone"
+                />
+            <!-- 가격정보 -->
+            <include
+                layout="@layout/view_holder_gr_prd_1_vip_list_item_sub"
+                android:layout_marginLeft="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/transparent"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/transparent"
+        android:visibility="visible"/>
+
+</LinearLayout>

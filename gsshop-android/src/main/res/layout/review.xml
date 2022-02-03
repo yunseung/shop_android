@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 상품평 작성/수정 화면 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <!-- 상단 타이틀 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+		android:background="#FFFFFF"
+        android:layout_height="match_parent" >
+
+        <ScrollView
+            android:id="@+id/scroll_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#F4F4F4"
+            android:fillViewport="true" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|top"
+                    android:background="#FFFFFF"
+                    android:orientation="vertical" >
+
+                    <!-- 상단 이미지 아이콘 및 타이틀 영역 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="92.25dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:background="#e9e9e9"
+                        android:padding="16.87dip" >
+
+		                <LinearLayout
+		                    android:layout_width="match_parent"
+		                    android:layout_height="58.5dp"
+		                    android:background="@drawable/bg_review_title_box"
+		                    android:gravity="center_vertical"
+		                    android:orientation="horizontal" >
+                            
+		                    <!-- 상품 아이콘 -->
+	                        <ImageView
+	                            android:id="@+id/img_product"
+	                            android:layout_width="38.26dip"
+	                            android:layout_height="38.26dip"
+	                            android:layout_marginLeft="10.12dip"
+	                            android:layout_marginRight="10.12dip"
+	                            android:layout_marginTop="10.12dip"
+	                            android:layout_marginBottom="10.12dip"
+	                            android:contentDescription="@android:string/untitled"
+	                            android:src="@drawable/app_icon" />
+
+	                        <View
+	                            android:layout_width="1dp"
+	                            android:layout_height="56.5dp"
+	                            android:background="#ededed" />
+	                        	                       
+	                        <!-- 상품 타이틀 -->	
+	                        <TextView
+	                            android:id="@+id/txt_product"
+	                            android:layout_width="0dp"
+	                            android:layout_height="wrap_content"
+	                            android:layout_marginLeft="10.12dip"
+	                            android:layout_marginRight="10.12dip"
+	                            android:layout_weight="1"
+	                            android:focusable="true"
+	                            android:singleLine="true"
+            					android:ellipsize="end"
+	                            android:nextFocusDown="@+id/txt_rating1"
+	                            android:nextFocusUp="@+id/review_info_msg"
+	                            android:textColor="#444444"
+	                            android:textSize="13sp"
+	                            android:typeface="sans" />
+	                        
+	                    </LinearLayout>
+	                    
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="185.62dp"
+                        android:layout_marginLeft="16.87dip"
+                        android:layout_marginRight="16.87dip"
+                        android:layout_marginTop="22.5dip"
+                        android:background="@drawable/bg_review_rating_box"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="45.31dip" >
+
+                            <TextView
+                                android:id="@+id/txt_rating1"
+                                style="@style/ReviewRatingName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating2"
+                                android:nextFocusRight="@+id/rating_bar1"
+                                android:nextFocusUp="@+id/txt_product"
+                                android:text="@string/review_design" />
+
+                            <RatingBar
+                                android:id="@+id/rating_bar1"
+                                style="@style/ReviewRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating2"
+                                android:nextFocusLeft="@+id/txt_rating1"
+                                android:nextFocusRight="@+id/txt_rating2"
+                                android:nextFocusUp="@+id/txt_product" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/bg_review_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="45.31dip" >
+
+                            <TextView
+                                android:id="@+id/txt_rating2"
+                                style="@style/ReviewRatingName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating3"
+                                android:nextFocusRight="@+id/rating_bar2"
+                                android:nextFocusUp="@+id/txt_rating1"
+                                android:text="@string/review_quality" />
+
+                            <RatingBar
+                                android:id="@+id/rating_bar2"
+                                style="@style/ReviewRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating3"
+                                android:nextFocusLeft="@+id/txt_rating2"
+                                android:nextFocusRight="@+id/txt_rating3"
+                                android:nextFocusUp="@+id/txt_rating1" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/bg_review_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="45.31dip" >
+
+                            <TextView
+                                android:id="@+id/txt_rating3"
+                                style="@style/ReviewRatingName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating4"
+                                android:nextFocusRight="@+id/rating_bar3"
+                                android:nextFocusUp="@+id/txt_rating2"
+                                android:text="@string/review_shipping" />
+
+                            <RatingBar
+                                android:id="@+id/rating_bar3"
+                                style="@style/ReviewRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/txt_rating4"
+                                android:nextFocusLeft="@+id/txt_rating3"
+                                android:nextFocusRight="@+id/txt_rating4"
+                                android:nextFocusUp="@+id/txt_rating2" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@drawable/bg_review_divider" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="45.31dip" >
+
+                            <TextView
+                                android:id="@+id/txt_rating4"
+                                style="@style/ReviewRatingName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/edit_review_contents"
+                                android:nextFocusRight="@+id/rating_bar4"
+                                android:nextFocusUp="@+id/txt_rating3"
+                                android:text="@string/review_satisfaction" />
+
+                            <RatingBar
+                                android:id="@+id/rating_bar4"
+                                style="@style/ReviewRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:focusable="true"
+                                android:nextFocusDown="@+id/edit_review_contents"
+                                android:nextFocusLeft="@+id/txt_rating4"
+                                android:nextFocusRight="@+id/edit_review_contents"
+                                android:nextFocusUp="@+id/txt_rating3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+						android:id="@+id/edit_review_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16.87dip"
+                        android:layout_marginLeft="16.87dip"
+                        android:layout_marginRight="16.87dip"
+                        android:layout_marginTop="16.87dip"
+                        android:background="@drawable/bg_inner_shadow"
+                        android:minHeight="185.62dp"
+                        android:orientation="vertical" >
+
+                        <!-- 상품평 내용작성 영역 -->
+                        <EditText
+                            android:id="@+id/edit_review_contents"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="6.87dip"
+                            android:layout_marginLeft="16.87dip"
+                            android:layout_marginRight="16.87dip"
+                            android:layout_marginTop="16.87dip"
+                            android:layout_weight="1"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/review_description_contents"
+                            android:focusable="true"
+                            android:gravity="top|left"
+                            android:hint="@string/review_description_contents"
+                            android:inputType="textMultiLine"
+                            android:nextFocusDown="@+id/btn_save"
+                            android:textColor="#222222"
+                            android:textColorHint="#aaaaaa"
+                            android:textSize="13sp"
+                            android:typeface="sans"
+                            android:lineSpacingExtra="6.75dip" />
+                        
+	                    <!-- 입력글자 바이트수 표시 영역 -->
+	                    <LinearLayout
+							android:visibility="gone"
+	                        android:layout_width="wrap_content"
+	                        android:layout_height="wrap_content"
+	                        android:layout_gravity="right|center_vertical"
+	                        android:layout_marginRight="6.75dip"
+	                        android:layout_marginBottom="6.75dip" >
+	
+	                        <TextView
+	                            android:id="@+id/text_len"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="0"
+	                            android:textColor="#777777"
+	                            android:textSize="12sp"
+	                            android:typeface="sans" />
+	
+	                        <TextView
+	                            android:id="@+id/text_len_byte"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:text="/1000"
+	                            android:textColor="#aaaaaa"
+	                            android:textSize="12sp"
+	                            android:typeface="sans" />
+	                    </LinearLayout>
+                                            
+                    </LinearLayout>
+
+                    <!-- 첨부이미지 리스트 영역 -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginLeft="16.87dip"
+                        android:layout_marginRight="16.87dip"
+                        android:layout_marginBottom="22.5dip"
+                        android:scrollbars="horizontal" />
+
+				<LinearLayout
+					android:id="@+id/medical_device_and_food_info"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="16.87dip"
+					android:layout_marginLeft="16.87dip"
+					android:layout_marginRight="16.87dip"
+					android:layout_marginTop="16.87dip"
+					android:visibility="gone"
+					android:padding="15dp"
+					android:background="@drawable/bg_food_review_shadow"
+					android:orientation="horizontal" >
+
+					<ImageView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:background="@drawable/mc_icon_28"
+						android:layout_marginTop="2.5dp"
+						/>
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="5dp"
+						android:textSize="14sp"
+						android:textColor="#444444"
+						android:text="@string/review_food_info"
+						/>
+
+					</LinearLayout>
+
+					<View
+						android:layout_width="match_parent"
+						android:layout_height="1dp"
+						android:background="@drawable/bg_review_divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="22.5dp"
+                        android:layout_marginLeft="16.87dip"
+                        android:layout_marginRight="16.87dip"
+                        android:layout_marginTop="22.5dp" >
+
+                        <!-- 취소하기 버튼 -->
+                        <Button
+                            android:id="@+id/btn_cancel"
+                            android:layout_width="0dp"
+                            android:layout_height="36dip"
+                            android:layout_weight="1"
+                            android:layout_marginRight="15.75dip"
+                            android:background="@drawable/bg_button9"
+                            android:focusable="true"
+                            android:nextFocusUp="@id/edit_review_contents"
+                            android:text="@string/review_cancel"
+                            android:textStyle="bold"
+                            android:textColor="#888888"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+
+                        <!-- 작성/수정하기 버튼 -->
+                        <Button
+                            android:id="@+id/btn_save"
+                            android:layout_width="0dip"
+                            android:layout_height="36dip"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_button10"
+                            android:focusable="true"
+                            android:nextFocusUp="@+id/edit_review_contents"
+                            android:text="@string/review_save"
+                            android:textStyle="bold"
+                            android:textColor="#ffffff"
+                            android:textSize="14sp"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <!-- 리워드 영역 -->
+                    <LinearLayout
+                        android:id="@+id/lay_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+	                    <LinearLayout
+	                        android:id="@+id/lay_reward_detail"
+	                        android:layout_width="match_parent"
+	                        android:layout_height="wrap_content"
+	                        android:layout_marginBottom="22.5dp"
+	                        android:layout_marginTop="22.5dp"
+	                        android:orientation="horizontal" >
+					                            
+		                    <gsshop.mobile.v2.home.util.ScaleLocalImageView
+		                        android:layout_width="match_parent"
+		                        android:layout_height="wrap_content"
+		                        android:layout_marginLeft="16.87dip"
+		                        android:layout_marginRight="16.87dip"
+		                        android:background="@drawable/review_rewards"
+		                        android:scaleType="fitXY" />
+	                    	                    
+		                </LinearLayout>
+	                    
+	                </LinearLayout>
+	                
+                </LinearLayout>
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/header_shadow" />
+            </FrameLayout>
+            
+        </ScrollView>
+
+        <!-- 하단 탭메뉴 -->
+        <include layout="@layout/tab_menu" />
+        
+    </LinearLayout>
+
+</LinearLayout>

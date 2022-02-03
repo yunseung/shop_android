@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+`
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/pager_ad_roll"
+        android:layout_width="match_parent"
+        android:layout_height="241dp" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="6dp" />
+
+    <TextView
+        android:id="@+id/text_ad_roll_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1 / 6"
+        android:textColor="#111111"
+        android:textSize="15sp"
+        android:typeface="sans" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9" />
+
+</LinearLayout>

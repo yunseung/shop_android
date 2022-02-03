@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<gsshop.mobile.v2.menu.navigation.CategoryGroupLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/category"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="250dp"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/all_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        />
+
+    <View
+        android:id="@+id/category_bottom_margin"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        />
+</gsshop.mobile.v2.menu.navigation.CategoryGroupLayout>

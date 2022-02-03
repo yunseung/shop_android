@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 푸시동의 팝업 다이얼로그 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/auth_guide_bg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:focusedByDefault="true"
+        android:contentDescription="@string/accessibility_push_img"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/auth_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/auth_confirm_padding"
+        android:paddingRight="@dimen/auth_confirm_padding"
+        android:scaleType="fitStart"
+        android:src="@drawable/push_guide" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_push_reject"
+            android:gravity="center"
+            android:text="@string/push_reject"
+            android:textColor="#111111"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="#BED730"
+            android:gravity="center"
+            android:text="@string/push_approve"
+            android:textColor="#111111"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</FrameLayout>

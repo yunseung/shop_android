@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:id="@+id/layout_over_3"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        android:background="@color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/layout_under_2"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/view_item_left"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_under_2_1st"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:civ_border_color="#ffffffff"
+                app:civ_border_width="1dp"
+                />
+            <TextView
+                android:id="@+id/txt_under_2_1st"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:includeFontPadding="false"
+                android:gravity="center_vertical"
+                android:text="출석체크"
+                android:textSize="16dp"
+                android:textColor="#111111"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="23dp"
+            android:background="#f4f4f4"
+            />
+
+        <LinearLayout
+            android:id="@+id/view_item_right"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_under_2_2nd"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                app:civ_border_color="#ffffffff"
+                app:civ_border_width="1dp"
+                />
+            <TextView
+                android:id="@+id/txt_under_2_2nd"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:includeFontPadding="false"
+                android:gravity="center_vertical"
+                android:text="출석체크"
+                android:textSize="16dp"
+                android:textColor="#111111"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    
+</FrameLayout>

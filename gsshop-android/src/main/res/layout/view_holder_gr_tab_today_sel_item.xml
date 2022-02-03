@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gs super 탭메뉴 아이템 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_title_sel"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="16dp"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        >
+        <TextView
+            android:id="@+id/card_txt_title_sel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="쇼미더트렌드"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_title"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:elevation="0dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="16dp"
+        android:layout_centerVertical="true"
+        >
+        <TextView
+            android:id="@+id/card_txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="쇼미더트렌드"
+            android:singleLine="true"
+            android:ellipsize="none"
+            android:typeface="sans"
+            android:background="@color/color_sel_today_gr_tab_back"
+            android:textColor="@color/color_sel_today_gr_tab_text"
+            android:textSize="15dp" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

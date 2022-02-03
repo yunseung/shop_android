@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- gs super 롤링배너 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageview_1_img"
+        android:layout_width="match_parent"
+        android:layout_height="187dp"
+        android:visibility="gone"
+        />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="187dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:labelFor="@+id/text_count">
+
+        <FrameLayout
+            android:id="@+id/button_prev"
+            android:layout_width="34dp"
+            android:layout_height="45dp"
+            android:layout_gravity="left|center_vertical"
+            android:clickable="true"
+            android:contentDescription="이전 상품"
+            android:padding="10dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/arrow_banner_l_an"
+                android:labelFor="@+id/button_prev" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/button_next"
+            android:layout_width="34dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right|center_vertical"
+            android:clickable="true"
+            android:contentDescription="다음 상품"
+            android:padding="10dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/arrow_banner_r_an"
+                android:labelFor="@+id/button_next" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/layout_btn_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/btn_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_rounded"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/text_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="8dp"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="1 / 6"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp"
+                        android:typeface="sans" />
+
+                    <ImageView
+                        android:layout_width="@dimen/GSSuperRollingBtnWidthHeight"
+                        android:layout_height="@dimen/GSSuperRollingBtnWidthHeight"
+                        android:background="@drawable/all_an" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/layout_btn_auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ToggleButton
+                    android:id="@+id/btn_auto"
+                    android:layout_width="@dimen/GSSuperRollingBtnWidthHeight"
+                    android:layout_height="@dimen/GSSuperRollingBtnWidthHeight"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_button_roll_banner_autoplay"
+                    android:textOff=""
+                    android:textOn="" />
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>
+

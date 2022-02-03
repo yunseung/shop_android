@@ -1,0 +1,1944 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!-- 서명값 : 2riARVqySzbfYzYtr7mWBPDJyLI= -->
+3<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="gsshop.mobile.v2"
+5    android:versionCode="321"
+6    android:versionName="7.0.10" >
+7    <!--
+8      마켓 등록 완료/공개 후에 서버단 /apis/AndroidLatestVersion 값을
+9      위 versionName 값으로 변경해줄 것.
+10    -->
+11    <!-- 지원버전 : Gingerbread(2.3.3)부터, Facebook SDK의 경우 minSdkVersion=15 이기때문에 overrideLibrary 사용 -->
+12    <uses-sdk
+12-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:15:5-16:370
+13        android:minSdkVersion="21"
+13-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:15:5-16:370
+14        android:targetSdkVersion="29" />
+14-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:15:5-16:370
+15
+16    <supports-screens
+16-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:18:5-22:40
+17        android:largeScreens="true"
+17-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:19:9-36
+18        android:normalScreens="true"
+18-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:20:9-37
+19        android:smallScreens="true"
+19-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:21:9-36
+20        android:xlargeScreens="true" />
+20-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:22:9-37
+21
+22    <uses-permission android:name="android.permission.INTERNET" />
+22-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:24:5-67
+22-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:24:22-64
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:25:5-81
+23-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:25:22-78
+24    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+24-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:26:5-79
+24-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:26:22-76
+25    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+25-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:27:5-76
+25-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:27:22-73
+26    <uses-permission android:name="android.permission.REORDER_TASKS" />
+26-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:28:5-72
+26-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:28:22-69
+27    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+27-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:29:5-80
+27-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:29:22-77
+28    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+28-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:30:5-78
+28-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:30:22-75
+29
+30    <!-- SMS 자동입력 미사용으로 인한 권한 삭제 20190213 -->
+31    <!-- pickup service -->
+32    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+33    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+34
+35
+36    <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+37    <!-- <uses-feature android:name="android.hardware.location.gps" /> -->
+38
+39
+40    <!-- 전화기능 없는 폰도 지원 -->
+41    <uses-feature
+41-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:42:5-44:36
+42        android:name="android.hardware.telephony"
+42-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:43:9-50
+43        android:required="false" />
+43-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:44:9-33
+44
+45    <!-- 전화번호 정보조회, 상담 센터 전화번호 연결시 필요 -->
+46    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+46-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:47:5-75
+46-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:47:22-72
+47    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+48
+49
+50    <!--
+51     Creates a custom permission so only this app can receive its messages.
+52     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+53           where PACKAGE is the application's package name.
+54    -->
+55    <!-- GS SHOP GCM -->
+56    <permission
+56-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:56:5-58:47
+57        android:name="gsshop.mobile.v2.permission.C2D_MESSAGE"
+57-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:57:9-63
+58        android:protectionLevel="signature" />
+58-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:58:9-44
+59    <!-- Mocha GCM -->
+60    <uses-permission android:name="gsshop.mobile.v2.permission.C2D_MESSAGE" />
+60-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:60:5-79
+60-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:60:22-76
+61    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+61-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:61:5-82
+61-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:61:22-79
+62    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+62-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:62:5-81
+62-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:62:22-78
+63    <uses-permission android:name="android.permission.WAKE_LOCK" />
+63-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:63:5-68
+63-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:63:22-65
+64    <uses-permission android:name="android.permission.GET_TASKS" />
+64-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:64:5-68
+64-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:64:22-65
+65    <!-- <uses-permission android:name="android.permission.DEVICE_POWER"/> -->
+66    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+66-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:66:5-75
+66-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:66:22-72
+67    <uses-permission android:name="android.permission.VIBRATE" />
+67-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:67:5-66
+67-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:67:22-63
+68    <!-- QR코드 검색 및 상품평 사진찍기 화면에서 카메라 사용 카메라 사용부분 추가됨. -->
+69    <uses-permission android:name="android.permission.CAMERA" />
+69-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:69:5-65
+69-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:69:22-62
+70
+71    <!--
+72    후면 카메라 없는 폰도 지원(ex. 넥서스7)
+73    <uses-feature
+74        android:name="android.hardware.camera"
+75        android:required="false"/>
+76    <uses-feature
+77        android:name="android.hardware.camera.autofocus"
+78        android:required="false"/>
+79    -->
+80
+81
+82    <!-- 앱종료를 위한 퍼미션 추가 -->
+83    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+83-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:80:5-84
+83-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:80:22-81
+84
+85    <!-- 지문인식 permission -->
+86    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+86-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:83:5-73
+86-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:83:22-71
+87    <!-- 삼성 지문인식 모듈 -->
+88    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+88-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:85:5-116
+88-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:85:22-114
+89
+90    <queries>
+90-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:11:5-20:15
+91        <package android:name="com.android.vending" />
+91-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:12:9-55
+91-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:12:18-52
+92        <package android:name="com.google.android.gms" />
+92-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:13:9-58
+92-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:13:18-55
+93        <package android:name="com.huawei.hwid" />
+93-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:14:9-51
+93-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:14:18-48
+94        <package android:name="com.skt.skaf.A000Z00040" />
+94-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:15:9-59
+94-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:15:18-56
+95        <package android:name="com.kt.olleh.storefront" />
+95-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:16:9-59
+95-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:16:18-56
+96        <package android:name="com.kt.olleh.istore" />
+96-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:17:9-55
+96-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:17:18-52
+97        <package android:name="com.lguplus.appstore" />
+97-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:18:9-56
+97-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:18:18-53
+98        <package android:name="android.lgt.appstore" />
+98-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:19:9-56
+98-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:19:18-53
+99    </queries>
+100
+101    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- 메인웹페이지 원활한 스크롤링을 위해 하드웨어 가속 켬. -->
+101-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:25:5-110
+101-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:25:22-107
+102    <application
+102-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:88:5-958:19
+103        android:name="gsshop.mobile.v2.MainApplication"
+103-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:89:9-56
+104        android:allowBackup="false"
+104-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:90:9-36
+105        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+105-->[androidx.core:core:1.6.0-rc01] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\9ddb5dfa41faf9000144925207688f54\core-1.6.0-rc01\AndroidManifest.xml:24:18-86
+106        android:debuggable="true"
+107        android:fullBackupContent="false"
+107-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:91:9-42
+108        android:hardwareAccelerated="true"
+108-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:92:9-43
+109        android:icon="@drawable/app_icon"
+109-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:93:9-42
+110        android:label="@string/app_name"
+110-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:94:9-41
+111        android:largeHeap="true"
+111-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:96:9-33
+112        android:requestLegacyExternalStorage="true"
+112-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:98:9-52
+113        android:supportsRtl="false"
+113-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:95:9-36
+114        android:testOnly="true"
+115        android:theme="@style/AppTheme"
+115-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:99:9-40
+116        android:usesCleartextTraffic="true" >
+116-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:97:9-44
+117        <uses-library
+117-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:101:9-88
+118            android:name="org.apache.http.legacy"
+118-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:101:23-60
+119            android:required="false" />
+119-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:101:61-85
+120
+121        <!--
+122          인트로 화면.
+123          인트로 실행 중 PUSH 알림 수신시 액티비티 재활용하기 위해 singleTop으로 설정.
+124          TODO android:noHistory="true" 추가후 테스트.
+125        -->
+126        <activity
+126-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:108:9-120:20
+127            android:name="gsshop.mobile.v2.intro.IntroActivity"
+127-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:109:13-48
+128            android:configChanges="keyboardHidden|orientation"
+128-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:110:13-63
+129            android:label="@string/app_name"
+129-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:111:13-45
+130            android:launchMode="singleTop"
+130-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:112:13-43
+131            android:screenOrientation="portrait"
+131-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:113:13-49
+132            android:theme="@style/NoTitleBlackBackgroundTheme" >
+132-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:114:13-63
+133            <intent-filter>
+133-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:115:13-119:29
+134                <action android:name="android.intent.action.MAIN" />
+134-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:116:17-69
+134-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:116:25-66
+135
+136                <category android:name="android.intent.category.LAUNCHER" />
+136-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:118:17-77
+136-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:118:27-74
+137            </intent-filter>
+138        </activity>
+139
+140        <!-- APP Home -->
+141        <activity
+141-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:123:9-134:20
+142            android:name="gsshop.mobile.v2.home.HomeActivity"
+142-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:124:13-46
+143            android:exported="false"
+143-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:126:13-37
+144            android:label=""
+144-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:125:13-29
+145            android:screenOrientation="portrait"
+145-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:127:13-49
+146            android:windowSoftInputMode="adjustNothing" >
+146-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:128:13-56
+147            <intent-filter>
+147-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:129:13-133:29
+148                <action android:name="gsshop.intent.action.APP_HOME" />
+148-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:130:17-72
+148-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:130:25-69
+149
+150                <category android:name="android.intent.category.DEFAULT" />
+150-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+150-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+151            </intent-filter>
+152        </activity>
+153
+154        <!-- 웹 화면 -->
+155        <activity
+155-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:137:9-149:20
+156            android:name="gsshop.mobile.v2.web.WebActivity"
+156-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:138:13-44
+157            android:configChanges="orientation|screenSize"
+157-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:139:13-59
+158            android:exported="false"
+158-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:140:13-37
+159            android:launchMode="singleTop"
+159-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:141:13-43
+160            android:screenOrientation="portrait"
+160-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:142:13-49
+161            android:windowSoftInputMode="adjustResize" >
+161-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:143:13-55
+162            <intent-filter>
+162-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:144:13-148:29
+163                <action android:name="gsshop.intent.action.WEB" />
+163-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:145:17-67
+163-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:145:25-64
+164
+165                <category android:name="android.intent.category.DEFAULT" />
+165-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+165-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+166            </intent-filter>
+167        </activity>
+168        <activity
+168-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:151:9-162:20
+169            android:name="gsshop.mobile.v2.web.NalbangWebActivity"
+169-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:152:13-51
+170            android:configChanges="orientation|screenSize"
+170-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:153:13-59
+171            android:exported="false"
+171-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:154:13-37
+172            android:launchMode="singleTask"
+172-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:155:13-44
+173            android:screenOrientation="portrait"
+173-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:156:13-49
+174            android:windowSoftInputMode="adjustResize" >
+174-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:157:13-55
+175            <intent-filter>
+175-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:158:13-161:29
+176                <action android:name="gsshop.intent.action.WEB_NALBANG" />
+176-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:159:17-75
+176-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:159:25-72
+177
+178                <category android:name="android.intent.category.DEFAULT" />
+178-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+178-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+179            </intent-filter>
+180        </activity>
+181        <activity
+181-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:164:9-176:20
+182            android:name="gsshop.mobile.v2.support.tv.MobileLiveChatPlayActivity"
+182-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:165:13-66
+183            android:configChanges="orientation|screenSize"
+183-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:167:13-59
+184            android:exported="false"
+184-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:168:13-37
+185            android:launchMode="singleTop"
+185-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:169:13-43
+186            android:screenOrientation="portrait"
+186-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:170:13-49
+187            android:theme="@android:style/Theme.NoTitleBar"
+187-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:166:13-60
+188            android:windowSoftInputMode="adjustResize" >
+188-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:171:13-55
+189            <intent-filter>
+189-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:172:13-175:29
+190                <action android:name="gsshop.intent.action.MOBILELIVE_FULL_VIDEO_PLAYER" />
+190-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:173:17-92
+190-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:173:25-89
+191
+192                <category android:name="android.intent.category.DEFAULT" />
+192-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+192-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+193            </intent-filter>
+194        </activity>
+195
+196        <!-- Live Talk -->
+197        <activity
+197-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:179:9-190:20
+198            android:name="gsshop.mobile.v2.web.LiveTalkWebActivity"
+198-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:180:13-52
+199            android:configChanges="orientation|screenSize"
+199-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:181:13-59
+200            android:exported="false"
+200-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:182:13-37
+201            android:launchMode="singleTask"
+201-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:183:13-44
+202            android:screenOrientation="portrait"
+202-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:184:13-49
+203            android:windowSoftInputMode="adjustResize" >
+203-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:185:13-55
+204            <intent-filter>
+204-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:186:13-189:29
+205                <action android:name="gsshop.intent.action.WEB_LIVETALK" />
+205-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:187:17-76
+205-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:187:25-73
+206
+207                <category android:name="android.intent.category.DEFAULT" />
+207-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+207-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+208            </intent-filter>
+209        </activity>
+210
+211        <!-- 모달웹 화면 -->
+212        <activity
+212-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:193:9-197:55
+213            android:name="gsshop.mobile.v2.web.ModalWebActivity"
+213-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:194:13-49
+214            android:launchMode="singleTop"
+214-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:195:13-43
+215            android:screenOrientation="portrait"
+215-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:196:13-49
+216            android:windowSoftInputMode="adjustPan" />
+216-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:197:13-52
+217
+218        <!-- 상단 Titlebar 모달웹 화면 (Backbtn 존재) -->
+219        <!--
+220             기존에 모달웹을 사용하려 했지만 전달받는 UI 및 위치등이 달라서 새로 선언
+221            굳이 기존 모달웹을 상속받아 사용할 필요성을 느끼지 못해 BaseWebActivity만 상속
+222        -->
+223        <activity
+223-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:202:9-206:55
+224            android:name="gsshop.mobile.v2.web.OutsiteModalWebActivity"
+224-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:203:13-56
+225            android:launchMode="singleTop"
+225-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:204:13-43
+226            android:screenOrientation="portrait"
+226-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:205:13-49
+227            android:windowSoftInputMode="adjustPan" />
+227-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:206:13-52
+228
+229        <!-- 모달웹 화면(상단 타이틀영역 없음) -->
+230        <activity
+230-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:209:9-212:58
+231            android:name="gsshop.mobile.v2.web.FullModalWebActivity"
+231-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:210:13-53
+232            android:screenOrientation="portrait"
+232-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:211:13-49
+233            android:windowSoftInputMode="adjustResize" />
+233-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:212:13-55
+234
+235        <!-- 배경이 투명한 모달 웹 화면 -->
+236        <activity
+236-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:215:9-223:20
+237            android:name="gsshop.mobile.v2.web.TransparentModalWebActivity"
+237-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:216:13-60
+238            android:theme="@style/DirectOrder"
+238-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:217:13-47
+239            android:windowSoftInputMode="adjustPan" >
+239-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:218:13-52
+240            <intent-filter>
+240-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:219:13-222:29
+241                <action android:name="gsshop.intent.action.TRANSPARENT_MODAL_WEB" />
+241-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:220:17-85
+241-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:220:25-82
+242
+243                <category android:name="android.intent.category.DEFAULT" />
+243-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+243-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+244            </intent-filter>
+245        </activity>
+246
+247        <!-- 탭 메뉴가 없는 웹 화면 -->
+248        <!-- 날방 호출시 맨위에 NoTabWebActivity가 하나만 존재, singleTop 지정 -->
+249        <activity
+249-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:227:9-238:20
+250            android:name="gsshop.mobile.v2.web.NoTabWebActivity"
+250-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:228:13-49
+251            android:configChanges="screenSize|orientation"
+251-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:231:13-59
+252            android:launchMode="singleTop"
+252-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:229:13-43
+253            android:screenOrientation="portrait"
+253-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:230:13-49
+254            android:windowSoftInputMode="adjustResize" >
+254-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:232:13-55
+255            <intent-filter>
+255-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:233:13-237:29
+256                <action android:name="gsshop.intent.action.NO_TAB_WEB" />
+256-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:234:17-74
+256-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:234:25-71
+257
+258                <category android:name="android.intent.category.DEFAULT" />
+258-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+258-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+259            </intent-filter>
+260        </activity>
+261
+262        <!-- 탭 메뉴가 없는 웹 화면 -->
+263        <!-- 날방 호출시 맨위에 NoTabWebActivity가 하나만 존재, singleTop 지정 -->
+264        <activity
+264-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:242:9-252:20
+265            android:name="gsshop.mobile.v2.web.productDetail.ProductDetailWebActivityV2"
+265-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:243:13-73
+266            android:configChanges="screenSize|orientation"
+266-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:244:13-59
+267            android:screenOrientation="portrait"
+267-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:245:13-49
+268            android:windowSoftInputMode="adjustResize" >
+268-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:246:13-55
+269            <intent-filter>
+269-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:247:13-251:29
+270                <action android:name="gsshop.intent.action.PRODUCT_DETAIL_NATIVE_WEB" />
+270-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:248:17-89
+270-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:248:25-86
+271
+272                <category android:name="android.intent.category.DEFAULT" />
+272-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+272-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+273            </intent-filter>
+274        </activity>
+275
+276        <!-- 기존에 NoTabWebActivity와 별개로 새로 액티비티 생성 -->
+277        <!-- 기존에 사용하던 NoTabWebActivity에 간섭 우려로 인해 -->
+278        <activity
+278-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:256:9-266:20
+279            android:name="gsshop.mobile.v2.web.TvMembersActivity"
+279-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:257:13-50
+280            android:launchMode="singleTop"
+280-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:258:13-43
+281            android:screenOrientation="portrait"
+281-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:259:13-49
+282            android:windowSoftInputMode="adjustResize" >
+282-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:260:13-55
+283            <intent-filter>
+283-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:261:13-265:29
+284                <action android:name="gsshop.intent.action.TV_MEMBERS_WEB" />
+284-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:262:17-78
+284-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:262:25-75
+285
+286                <category android:name="android.intent.category.DEFAULT" />
+286-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+286-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+287            </intent-filter>
+288        </activity>
+289
+290        <!-- 마이쇼핑 웹 화면 singleTop 탭기능으로 -->
+291        <activity
+291-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:269:9-278:20
+292            android:name="gsshop.mobile.v2.web.MyShopWebActivity"
+292-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:270:13-50
+293            android:screenOrientation="portrait"
+293-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:271:13-49
+294            android:windowSoftInputMode="adjustPan" >
+294-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:272:13-52
+295            <intent-filter>
+295-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:273:13-277:29
+296                <action android:name="gsshop.intent.action.MY_SHOP_WEB" />
+296-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:274:17-75
+296-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:274:25-72
+297
+298                <category android:name="android.intent.category.DEFAULT" />
+298-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+298-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+299            </intent-filter>
+300        </activity>
+301
+302        <!-- 주문서 웹 화면 -->
+303        <activity
+303-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:281:9-290:20
+304            android:name="gsshop.mobile.v2.web.OrderWebActivity"
+304-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:282:13-49
+305            android:screenOrientation="portrait"
+305-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:283:13-49
+306            android:windowSoftInputMode="adjustResize" >
+306-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:284:13-55
+307            <intent-filter>
+307-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:285:13-289:29
+308                <action android:name="gsshop.intent.action.ORDER_WEB" />
+308-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:286:17-73
+308-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:286:25-70
+309
+310                <category android:name="android.intent.category.DEFAULT" />
+310-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+310-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+311            </intent-filter>
+312        </activity>
+313
+314        <!-- 하단탭 없는 주문서 웹 화면 -->
+315        <activity
+315-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:293:9-302:20
+316            android:name="gsshop.mobile.v2.web.OrderNoTabWebActivity"
+316-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:294:13-54
+317            android:screenOrientation="portrait"
+317-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:295:13-49
+318            android:windowSoftInputMode="adjustResize" >
+318-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:296:13-55
+319            <intent-filter>
+319-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:297:13-301:29
+320                <action android:name="gsshop.intent.action.ORDER_NOTAB_WEB" />
+320-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:298:17-79
+320-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:298:25-76
+321
+322                <category android:name="android.intent.category.DEFAULT" />
+322-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+322-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+323            </intent-filter>
+324        </activity>
+325        <activity
+325-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:304:9-313:20
+326            android:name="gsshop.mobile.v2.web.MobileLiveNoTabWebActivity"
+326-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:305:13-59
+327            android:screenOrientation="portrait"
+327-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:306:13-49
+328            android:windowSoftInputMode="adjustResize" >
+328-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:307:13-55
+329            <intent-filter>
+329-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:308:13-312:29
+330                <action android:name="gsshop.intent.action.MOBILELIVE_NOTAB_WEB" />
+330-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:309:17-84
+330-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:309:25-81
+331
+332                <category android:name="android.intent.category.DEFAULT" />
+332-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+332-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+333            </intent-filter>
+334        </activity>
+335
+336        <!-- 바로구매 웹 화면 -->
+337        <activity
+337-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:316:9-325:20
+338            android:name="gsshop.mobile.v2.web.DirectOrderWebActivity"
+338-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:317:13-55
+339            android:theme="@style/DirectOrder"
+339-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:318:13-47
+340            android:windowSoftInputMode="adjustPan" >
+340-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:319:13-52
+341            <intent-filter>
+341-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:320:13-324:29
+342                <action android:name="gsshop.intent.action.DIRECT_ORDER_WEB" />
+342-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:321:17-80
+342-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:321:25-77
+343
+344                <category android:name="android.intent.category.DEFAULT" />
+344-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+344-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+345            </intent-filter>
+346        </activity>
+347
+348        <!--
+349          커스텀 URI 스키마를 통해 우리앱을 실행하고자 하는 경우 관문 역할을 하는 액티비티.
+350          data 스키마는 반드시 'gsshopmobile'로 설정해야하며, 외부앱(브라우저, ISP앱 등)에서
+351          호출할 수 있어야하므로 exported=false로 설정하면 안된다.
+352        -->
+353        <activity
+353-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:332:9-390:20
+354            android:name="gsshop.mobile.v2.support.scheme.SchemeGatewayActivity"
+354-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:333:13-65
+355            android:excludeFromRecents="false"
+355-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:334:13-47
+356            android:exported="true"
+356-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:335:13-36
+357            android:launchMode="singleTask"
+357-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:336:13-44
+358            android:noHistory="false" >
+358-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:337:13-38
+359            <intent-filter android:autoVerify="true" >
+359-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:338:13-346:29
+359-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:338:28-53
+360                <action android:name="android.intent.action.VIEW" />
+360-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+360-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+361
+362                <category android:name="android.intent.category.DEFAULT" />
+362-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+362-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+363                <category android:name="android.intent.category.BROWSABLE" />
+363-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+363-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+364
+365                <data
+365-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+366                    android:host="gsshop.deeplink.page"
+366-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+367                    android:scheme="@string/airbridge_app_scheme_http" />
+367-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+368                <data
+368-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+369                    android:host="gsshop.deeplink.page"
+369-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+370                    android:scheme="@string/airbridge_app_scheme_https" />
+370-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+371            </intent-filter>
+372            <intent-filter>
+372-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:348:13-355:29
+373                <action android:name="android.intent.action.VIEW" />
+373-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+373-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+374
+375                <category android:name="android.intent.category.DEFAULT" />
+375-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+375-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+376                <category android:name="android.intent.category.BROWSABLE" />
+376-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+376-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+377
+378                <data android:scheme="gsshopmobile" />
+378-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+378-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+379            </intent-filter>
+380            <!-- kakao link v3.0 적용 -->
+381            <intent-filter>
+381-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:357:13-366:29
+382                <action android:name="android.intent.action.VIEW" />
+382-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+382-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+383
+384                <category android:name="android.intent.category.DEFAULT" />
+384-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+384-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+385                <category android:name="android.intent.category.BROWSABLE" />
+385-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+385-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+386
+387                <data
+387-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+388                    android:host="@string/kakaolink_host"
+388-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+389                    android:scheme="@string/kakao_scheme" />
+389-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+390            </intent-filter>
+391
+392            <!-- kakao link v3.0 적용 신키 수신 -->
+393            <intent-filter>
+393-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:369:13-378:29
+394                <action android:name="android.intent.action.VIEW" />
+394-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+394-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+395
+396                <category android:name="android.intent.category.DEFAULT" />
+396-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+396-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+397                <category android:name="android.intent.category.BROWSABLE" />
+397-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+397-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+398
+399                <data
+399-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+400                    android:host="@string/kakaolink_host"
+400-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+401                    android:scheme="@string/kakao_scheme_new" />
+401-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+402            </intent-filter>
+403
+404            <!-- airbridge -->
+405            <intent-filter android:autoVerify="true" >
+405-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:381:13-389:29
+405-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:381:28-53
+406                <action android:name="android.intent.action.VIEW" />
+406-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+406-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+407
+408                <category android:name="android.intent.category.DEFAULT" />
+408-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+408-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+409                <category android:name="android.intent.category.BROWSABLE" />
+409-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+409-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+410
+411                <data
+411-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+412                    android:host="@string/airbridge_app_host"
+412-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+413                    android:scheme="@string/airbridge_app_scheme_http" />
+413-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+414                <data
+414-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+415                    android:host="@string/airbridge_app_host"
+415-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+416                    android:scheme="@string/airbridge_app_scheme_https" />
+416-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+417            </intent-filter>
+418        </activity>
+419
+420        <!-- 홈 검색 화면. 액티비티 히스토리에서 제외 -->
+421        <activity
+421-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:393:9-403:20
+422            android:name="gsshop.mobile.v2.search.HomeSearchActivity"
+422-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:394:13-54
+423            android:noHistory="true"
+423-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:395:13-37
+424            android:theme="@android:style/Theme.NoTitleBar"
+424-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:396:13-60
+425            android:windowSoftInputMode="adjustResize|stateVisible" > <!-- asis는 adjustResize였으나 디자인 요청사항으로 바뀜(20.04.23배포) -->
+425-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:397:13-68
+426
+427            <intent-filter>
+427-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:399:13-402:29
+428                <action android:name="gsshop.intent.action.SEARCH" />
+428-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:400:17-70
+428-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:400:25-67
+429
+430                <category android:name="android.intent.category.DEFAULT" />
+430-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+430-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+431            </intent-filter>
+432        </activity>
+433
+434        <!-- 로그인 화면 -->
+435        <activity
+435-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:406:9-416:20
+436            android:name="gsshop.mobile.v2.user.LoginActivity"
+436-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:407:13-63
+437            android:exported="false"
+437-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:408:13-37
+438            android:screenOrientation="portrait"
+438-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:409:13-49
+439            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+439-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:410:13-73
+440            <intent-filter>
+440-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:411:13-415:29
+441                <action android:name="gsshop.intent.action.LOGIN" />
+441-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:412:17-69
+441-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:412:25-66
+442
+443                <category android:name="android.intent.category.DEFAULT" />
+443-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+443-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+444            </intent-filter>
+445        </activity>
+446        <!-- sns 로그인 더미 화면. -->
+447        <activity android:name="gsshop.mobile.v2.user.DummyAppBrowserActivity" />
+447-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:418:9-82
+447-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:418:19-79
+448
+449        <!-- PUSH알림 팝업 화면. 액티비티 히스토리에서 제외. pms 도입으로 삭제 -->
+450        <!-- <activity -->
+451        <!-- android:name=".push.PushPopupActivity" -->
+452        <!-- android:excludeFromRecents="true" -->
+453        <!-- android:exported="false" -->
+454        <!-- android:noHistory="true" -->
+455        <!-- android:screenOrientation="portrait" -->
+456        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" > -->
+457        <!-- <intent-filter> -->
+458        <!-- <action android:name="gsshop.intent.action.PUSH_POPUP" /> -->
+459
+460
+461        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+462        <!-- </intent-filter> -->
+463        <!-- </activity> -->
+464
+465
+466        <!-- 설정 화면 -->
+467        <activity
+467-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:436:9-439:55
+468            android:name="gsshop.mobile.v2.setting.SettingActivity"
+468-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:437:13-52
+469            android:screenOrientation="portrait"
+469-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:438:13-49
+470            android:windowSoftInputMode="adjustPan" />
+470-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:439:13-52
+471
+472        <!-- PUSH알림 설정 화면 -->
+473        <activity
+473-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:442:9-444:52
+474            android:name="gsshop.mobile.v2.setting.PushSettingActivity"
+474-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:443:13-56
+475            android:screenOrientation="portrait" />
+475-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:444:13-49
+476
+477        <!-- 앱 버전정보 화면 -->
+478        <activity
+478-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:447:9-450:55
+479            android:name="gsshop.mobile.v2.setting.VersionActivity"
+479-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:448:13-52
+480            android:screenOrientation="portrait"
+480-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:449:13-49
+481            android:windowSoftInputMode="adjustPan" />
+481-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:450:13-52
+482
+483        <!-- 상품평 작성 화면 -->
+484        <activity
+484-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:453:9-457:58
+485            android:name="gsshop.mobile.v2.review.ReviewActivity"
+485-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:454:13-50
+486            android:configChanges="orientation|keyboardHidden|screenSize"
+486-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:455:13-74
+487            android:screenOrientation="portrait"
+487-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:456:13-49
+488            android:windowSoftInputMode="adjustResize" />
+488-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:457:13-55
+489
+490        <!--
+491        파일첨부(쇼미카페,이벤트 등) 화면, 파일업로드 후 링크만 웹뷰에 전달
+492        <activity
+493            android:name=".attach.FileAttachV2Activity"
+494            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+495            android:screenOrientation="portrait"
+496            android:windowSoftInputMode="adjustPan" />
+497        -->
+498        <!-- 파일첨부(쇼미카페,이벤트 등)에서 사진찍기 화면 -->
+499        <activity
+499-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:467:9-471:52
+500            android:name="gsshop.mobile.v2.attach.FileAttachTakePictureActivity"
+500-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:468:13-65
+501            android:excludeFromRecents="true"
+501-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:469:13-46
+502            android:noHistory="true"
+502-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:470:13-37
+503            android:screenOrientation="portrait" />
+503-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:471:13-49
+504
+505        <!-- 파일첨부(모바일상담) 화면 -->
+506        <activity
+506-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:474:9-479:55
+507            android:name="gsshop.mobile.v2.attach.MobileTalkActivity"
+507-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:475:13-54
+508            android:configChanges="orientation|keyboardHidden|screenSize"
+508-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:476:13-74
+509            android:launchMode="singleTop"
+509-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:477:13-43
+510            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+510-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:478:13-72
+511            android:windowSoftInputMode="adjustPan" />
+511-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:479:13-52
+512
+513        <!-- gallery -->
+514        <activity
+514-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:482:9-493:20
+515            android:name="gsshop.mobile.v2.attach.GalleryActivity"
+515-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:483:13-51
+516            android:configChanges="keyboardHidden|orientation"
+516-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:484:13-63
+517            android:launchMode="singleTop"
+517-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:485:13-43
+518            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+518-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:486:13-72
+519            android:windowSoftInputMode="adjustPan" >
+519-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:487:13-52
+520            <intent-filter>
+520-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:488:13-492:29
+521                <action android:name="gsshop.intent.action.GALLERY" />
+521-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:489:17-71
+521-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:489:25-68
+522
+523                <category android:name="android.intent.category.DEFAULT" />
+523-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+523-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+524            </intent-filter>
+525        </activity>
+526
+527        <!-- short bang -->
+528        <activity
+528-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:496:9-508:20
+529            android:name="gsshop.mobile.v2.home.shop.nalbang.ShortbangActivity"
+529-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:497:13-64
+530            android:configChanges="orientation|screenSize"
+530-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:498:13-59
+531            android:exported="false"
+531-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:499:13-37
+532            android:launchMode="singleTask"
+532-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:500:13-44
+533            android:screenOrientation="portrait"
+533-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:501:13-49
+534            android:theme="@style/Shortbang"
+534-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:502:13-45
+535            android:windowSoftInputMode="adjustResize" >
+535-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:503:13-55
+536            <intent-filter>
+536-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:504:13-507:29
+537                <action android:name="gsshop.intent.action.SHORT_BANG" />
+537-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:505:17-74
+537-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:505:25-71
+538
+539                <category android:name="android.intent.category.DEFAULT" />
+539-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+539-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+540            </intent-filter>
+541        </activity>
+542
+543        <!-- short bang event -->
+544        <activity
+544-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:511:9-523:20
+545            android:name="gsshop.mobile.v2.home.shop.nalbang.ShortbangEventActivity"
+545-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:512:13-69
+546            android:configChanges="orientation|screenSize"
+546-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:513:13-59
+547            android:exported="false"
+547-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:514:13-37
+548            android:launchMode="singleTask"
+548-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:515:13-44
+549            android:screenOrientation="portrait"
+549-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:516:13-49
+550            android:theme="@style/Shortbang"
+550-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:517:13-45
+551            android:windowSoftInputMode="adjustResize" >
+551-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:518:13-55
+552            <intent-filter>
+552-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:519:13-522:29
+553                <action android:name="gsshop.intent.action.SHORT_BANG_EVENT" />
+553-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:520:17-80
+553-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:520:25-77
+554
+555                <category android:name="android.intent.category.DEFAULT" />
+555-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+555-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+556            </intent-filter>
+557        </activity>
+558        <activity
+558-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:525:9-527:56
+559            android:name="gsshop.mobile.v2.home.shop.nalbang.ListViewActivity"
+559-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:526:13-63
+560            android:theme="@style/AppTheme" />
+560-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:527:13-44
+561        <activity
+561-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:529:9-531:56
+562            android:name="gsshop.mobile.v2.home.shop.nalbang.SubActivity"
+562-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:530:13-58
+563            android:theme="@style/AppTheme" />
+563-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:531:13-44
+564
+565        <!-- push activity PMS 페이지 -->
+566        <activity
+566-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:535:9-544:20
+567            android:name="gsshop.mobile.v2.tms.InboxActivity"
+567-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:536:13-46
+568            android:exported="false"
+568-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:537:13-37
+569            android:screenOrientation="portrait" >
+569-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:538:13-49
+570            <intent-filter>
+570-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:539:13-543:29
+571                <action android:name="gsshop.intent.action.MESSAGE" />
+571-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:540:17-71
+571-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:540:25-68
+572
+573                <category android:name="android.intent.category.DEFAULT" />
+573-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+573-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+574            </intent-filter>
+575        </activity>
+576
+577        <!--
+578          Application-specific subclass of GCMBaseIntentService that will
+579          handle received messages.
+580          By default, it must be named .GCMIntentService, unless the
+581          application uses a custom BroadcastReceiver that redefines its name.
+582        -->
+583        <!--
+584        google-cloud-messaging-client-1.0.jar 파일이 libs에 존재함에도 불구하고
+585        NoSuchMethodError 발생(com.google.android.gcm.GCMBaseIntentService)하여 주석처리.
+586         pms 푸시발송에는 영향도 없음
+587        -->
+588        <!-- <service android:name=".GCMIntentService" /> -->
+589
+590
+591        <!-- 메인 앱위젯 -->
+592        <receiver android:name="gsshop.mobile.v2.support.appwidget.MainAppWidgetProvider" >
+592-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:558:9-566:20
+592-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:558:19-74
+593            <intent-filter>
+593-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:559:13-561:29
+594                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+594-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:560:17-84
+594-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:560:25-81
+595            </intent-filter>
+596
+597            <meta-data
+597-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:563:13-565:58
+598                android:name="android.appwidget.provider"
+598-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:564:17-58
+599                android:resource="@xml/appwidget_info" />
+599-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:565:17-55
+600        </receiver>
+601
+602        <!--
+603          앱위젯에서 생방송 바로보기할 경우 과금안내 팝업화면.
+604          launcheMode="singleInstance" 와 taskAffinity=""를 사용하여
+605          앱 실행상태에서도 홈 스크린 위에 팝업이 뜨도록 함.
+606        -->
+607        <activity
+607-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:573:9-578:84
+608            android:name="gsshop.mobile.v2.support.appwidget.LiveTVPopupActivity"
+608-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:574:13-66
+609            android:excludeFromRecents="true"
+609-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:576:13-46
+610            android:noHistory="true"
+610-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:575:13-37
+611            android:taskAffinity=".appwidget.LiveTVPopupActivity"
+611-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:577:13-66
+612            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+612-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:578:13-72
+613
+614        <!-- 생방송/동영상 재생. 가로모드. 히스토리에서 제외. -->
+615        <activity
+615-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:581:9-593:20
+616            android:name="gsshop.mobile.v2.support.tv.LiveVideoMediaPlayerActivity"
+616-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:582:13-68
+617            android:configChanges="orientation|screenSize"
+617-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:586:13-59
+618            android:excludeFromRecents="true"
+618-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:583:13-46
+619            android:exported="false"
+619-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:584:13-37
+620            android:noHistory="true"
+620-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:585:13-37
+621            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+621-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:587:13-77
+622            <intent-filter>
+622-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:588:13-592:29
+623                <action android:name="gsshop.intent.action.LIVE_VIDEO_PLAYER" />
+623-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:589:17-81
+623-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:589:25-78
+624
+625                <category android:name="android.intent.category.DEFAULT" />
+625-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+625-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+626            </intent-filter>
+627        </activity>
+628        <!-- 딜 단품 페이지의 가로모드 activity 어떻게 바뀔 지 몰라 LiveVideoMediaPlayerActivity를 상속 받지만 따로 선언. -->
+629        <activity
+629-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:595:9-602:15
+630            android:name="gsshop.mobile.v2.web.productDetail.ActivityDetailViewLiveVideoMediaPlayer"
+630-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:596:13-85
+631            android:configChanges="orientation|screenSize"
+631-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:600:13-59
+632            android:excludeFromRecents="true"
+632-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:597:13-46
+633            android:exported="false"
+633-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:598:13-37
+634            android:noHistory="true"
+634-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:599:13-37
+635            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+635-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:601:13-77
+636        <activity
+636-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:604:9-616:20
+637            android:name="gsshop.mobile.v2.support.tv.NalbangFullMediaPlayerActivity"
+637-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:605:13-70
+638            android:excludeFromRecents="true"
+638-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:606:13-46
+639            android:exported="false"
+639-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:607:13-37
+640            android:noHistory="true"
+640-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:608:13-37
+641            android:screenOrientation="landscape"
+641-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:609:13-50
+642            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+642-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:610:13-77
+643            <intent-filter>
+643-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:611:13-615:29
+644                <action android:name="gsshop.intent.action.NALBANG_FULL_VIDEO_PLAYER" />
+644-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:612:17-89
+644-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:612:25-86
+645
+646                <category android:name="android.intent.category.DEFAULT" />
+646-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+646-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+647            </intent-filter>
+648        </activity>
+649        <activity
+649-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:618:9-630:20
+650            android:name="gsshop.mobile.v2.support.tv.LiveTalkFullMediaPlayerActivity"
+650-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:619:13-71
+651            android:excludeFromRecents="true"
+651-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:620:13-46
+652            android:exported="false"
+652-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:621:13-37
+653            android:noHistory="true"
+653-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:622:13-37
+654            android:screenOrientation="landscape"
+654-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:623:13-50
+655            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+655-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:624:13-77
+656            <intent-filter>
+656-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:625:13-629:29
+657                <action android:name="gsshop.intent.action.LIVETALK_FULL_VIDEO_PLAYER" />
+657-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:626:17-90
+657-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:626:25-87
+658
+659                <category android:name="android.intent.category.DEFAULT" />
+659-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+659-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+660            </intent-filter>
+661        </activity>
+662
+663        <!-- 일반 가로모드 플레이어로(원본 크기로 재생됨). 히스토리에서 제외. -->
+664
+665
+666        <!-- 처음 접속시 도움말 유형 1 -->
+667
+668
+669        <!-- 프로모션 Small Type 화면 -->
+670        <activity
+670-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:637:9-645:20
+671            android:name="gsshop.mobile.v2.support.promotion.PromotionSmallActivity"
+671-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:638:13-69
+672            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+672-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:639:13-72
+673            <intent-filter>
+673-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+674                <action android:name="android.intent.action.VIEW" />
+674-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+674-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+675
+676                <category android:name="android.intent.category.DEFAULT" />
+676-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+676-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+677            </intent-filter>
+678        </activity>
+679
+680        <!-- 프로모션 Medium Type 화면 -->
+681        <activity
+681-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:648:9-656:20
+682            android:name="gsshop.mobile.v2.support.promotion.PromotionMediumActivity"
+682-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:649:13-70
+683            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+683-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:650:13-72
+684            <intent-filter>
+684-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+685                <action android:name="android.intent.action.VIEW" />
+685-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+685-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+686
+687                <category android:name="android.intent.category.DEFAULT" />
+687-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+687-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+688            </intent-filter>
+689        </activity>
+690
+691        <!-- 프로모션 Large Type 화면 -->
+692        <activity
+692-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:659:9-667:20
+693            android:name="gsshop.mobile.v2.support.promotion.PromotionLargeActivity"
+693-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:660:13-69
+694            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+694-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:661:13-83
+695            <intent-filter>
+695-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+696                <action android:name="android.intent.action.VIEW" />
+696-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+696-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+697
+698                <category android:name="android.intent.category.DEFAULT" />
+698-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+698-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+699            </intent-filter>
+700        </activity>
+701
+702        <!-- 매장팝업 화면 -->
+703        <activity
+703-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:670:9-678:20
+704            android:name="gsshop.mobile.v2.support.pmopopup.PmoPopupuActivity"
+704-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:671:13-63
+705            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+705-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:672:13-72
+706            <intent-filter>
+706-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+707                <action android:name="android.intent.action.VIEW" />
+707-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+707-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+708
+709                <category android:name="android.intent.category.DEFAULT" />
+709-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+709-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+710            </intent-filter>
+711        </activity>
+712
+713        <!-- 푸시동의팝업 화면 -->
+714        <activity
+714-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:681:9-689:20
+715            android:name="gsshop.mobile.v2.tms.PushApproveActivity"
+715-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:682:13-52
+716            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+716-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:683:13-72
+717            <intent-filter>
+717-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+718                <action android:name="android.intent.action.VIEW" />
+718-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+718-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+719
+720                <category android:name="android.intent.category.DEFAULT" />
+720-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+720-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+721            </intent-filter>
+722        </activity>
+723
+724        <!-- 비밀번호 변경 화면 -->
+725        <activity
+725-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:692:9-700:20
+726            android:name="gsshop.mobile.v2.support.permission.UpdatePassActivity"
+726-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:693:13-66
+727            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+727-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:694:13-72
+728            <intent-filter>
+728-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:695:13-699:29
+729                <action android:name="gsshop.intent.action.UPDATE_PASS" />
+729-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:696:17-75
+729-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:696:25-72
+730
+731                <category android:name="android.intent.category.DEFAULT" />
+731-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+731-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+732            </intent-filter>
+733        </activity>
+734
+735        <!-- 지문인식 연동 확인 화면 -->
+736        <activity
+736-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:703:9-711:20
+737            android:name="gsshop.mobile.v2.user.CheckFPActivity"
+737-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:704:13-65
+738            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+738-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:705:13-72
+739            <intent-filter>
+739-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:706:13-710:29
+740                <action android:name="gsshop.intent.action.CHECK_FP" />
+740-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:707:17-72
+740-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:707:25-69
+741
+742                <category android:name="android.intent.category.DEFAULT" />
+742-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+742-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+743            </intent-filter>
+744        </activity>
+745        <activity
+745-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:713:9-721:20
+746            android:name="gsshop.mobile.v2.user.PopupBasicActivity"
+746-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:714:13-52
+747            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+747-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:715:13-72
+748            <intent-filter>
+748-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:716:13-720:29
+749                <action android:name="gsshop.intent.action.POPUP_BASIC" />
+749-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:717:17-75
+749-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:717:25-72
+750
+751                <category android:name="android.intent.category.DEFAULT" />
+751-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+751-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+752            </intent-filter>
+753        </activity>
+754
+755        <!-- GS Super 전체 화면 Product List -->
+756        <activity
+756-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:724:9-732:20
+757            android:name="gsshop.mobile.v2.home.shop.gssuper.GSSuperFullScreenBannerPopup"
+757-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:725:13-75
+758            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+758-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:726:13-71
+759            <intent-filter>
+759-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:640:13-644:29
+760                <action android:name="android.intent.action.VIEW" />
+760-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+760-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+761
+762                <category android:name="android.intent.category.DEFAULT" />
+762-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+762-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+763            </intent-filter>
+764        </activity>
+765
+766        <!-- 왼쪽 네비게이션 화면 -->
+767
+768
+769        <!-- Google Analytics : Used for install referral measurement -->
+770        <!-- libGoogleAnalyticsV3.jar 사용시 코드 -->
+771        <!-- <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" /> -->
+772        <!-- google-play-services_lib 사용시 코드 (메소드 초과 문제로 libGoogleAnalyticsV3.jar 제거 후 아래 코드 사용) -->
+773        <!-- <service android:name="com.google.android.gms.analytics.CampaignTrackingService" /> 해당 부분도 Firebase Analytics 로 바뀌면서 사용하지 않음. -->
+774
+775
+776        <!--
+777        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true" >
+778            <intent-filter>
+779                <action android:name="com.android.vending.INSTALL_REFERRER" />
+780            </intent-filter>
+781        </receiver>
+782        -->
+783
+784
+785        <!-- 앱업데이트 리시버 -->
+786        <receiver
+786-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:752:9-758:20
+787            android:name="gsshop.mobile.v2.support.receiver.PackageReplacedReceiver"
+787-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:753:13-69
+788            android:exported="true" >
+788-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:754:13-36
+789            <intent-filter>
+789-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:755:13-757:29
+790                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+790-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:756:17-84
+790-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:756:25-81
+791            </intent-filter>
+792        </receiver>
+793
+794        <!-- INSTALL_REFERRER 공통함수 -->
+795        <receiver
+795-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:761:9-767:20
+796            android:name="gsshop.mobile.v2.support.advertise.ReferrerReceiver"
+796-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:762:13-63
+797            android:exported="true" >
+797-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:763:13-36
+798            <intent-filter>
+798-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:764:13-766:29
+799                <action android:name="com.android.vending.INSTALL_REFERRER" />
+799-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:765:17-79
+799-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:765:25-76
+800            </intent-filter>
+801        </receiver>
+802
+803        <!-- FCM 적용 하면서 다음 버전 선언도 삭제, 해당 버전 선언이 있으면 버전 선언 먼저 읽기 때문. -->
+804        <!-- <meta-data -->
+805        <!-- android:name="com.google.android.gms.version" -->
+806        <!-- android:value="@integer/google_play_services_version" /> -->
+807
+808
+809        <!-- kakao link v3.0 적용 -->
+810        <meta-data
+810-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:775:9-777:53
+811            android:name="com.kakao.sdk.AppKey"
+811-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:776:13-48
+812            android:value="@string/kakao_app_key" />
+812-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:777:13-50
+813
+814        <receiver android:name="gsshop.mobile.v2.tms.PushNotiReceiver" >
+814-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:779:9-783:20
+814-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:779:19-55
+815            <intent-filter>
+815-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:780:13-782:29
+816                <action android:name="gsshop.intent.action.NOTIFICATION" />
+816-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:781:17-76
+816-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:781:25-73
+817            </intent-filter>
+818        </receiver>
+819
+820        <!-- pms FCM Receiver -->
+821        <receiver
+821-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:786:9-792:20
+822            android:name="com.tms.sdk.push.PushReceiver"
+822-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:786:19-63
+823            android:exported="true" >
+823-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:787:13-36
+824            <intent-filter>
+824-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:788:13-791:29
+825                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+825-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:789:17-80
+825-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:789:25-78
+826
+827                <category android:name="gsshop.mobile.v2" />
+827-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:790:27-58
+828            </intent-filter>
+829        </receiver>
+830
+831        <service
+831-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:794:9-800:19
+832            android:name="gsshop.mobile.v2.push.PushFcmService"
+832-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:795:13-48
+833            android:exported="false" >
+833-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:796:13-37
+834            <intent-filter>
+834-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:797:13-799:29
+835                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+835-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:798:17-77
+835-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:798:25-75
+836            </intent-filter>
+837        </service>
+838
+839        <!-- <service -->
+840        <!-- android:name=".support.callgate.CallgateRegistrationIntentService" -->
+841        <!-- android:exported="false"></service> -->
+842
+843
+844        <!-- Visual ARS Launcher Receiver 설정 -->
+845        <!-- <receiver android:name="com.callgate.launcher.NotificationReceiver"></receiver> -->
+846
+847
+848        <!-- <service android:name="com.callgate.launcher.FCCIntentService" /> -->
+849        <!-- <service android:name="com.callgate.launcher.fcc.FCCLockService" /> -->
+850
+851
+852        <!-- Visual ARS 서비스용 Activity 설정 -->
+853        <!-- <activity -->
+854        <!-- android:name="com.callgate.launcher.view.LauncherWebView" -->
+855        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+856        <!-- <activity -->
+857        <!-- android:name="com.callgate.launcher.view.LauncherView" -->
+858        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+859        <!-- <activity -->
+860        <!-- android:name="com.callgate.launcher.fcc.FCCServicePopUp" -->
+861        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+862        <!-- <activity -->
+863        <!-- android:name="com.callgate.launcher.fcc.FCCEmptyActivity" -->
+864        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+865        <!-- <activity -->
+866        <!-- android:name="com.callgate.launcher.jsg.PSActivity" -->
+867        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+868
+869
+870        <!-- 카카오 간편로그인을 사용하기 위해서 넣어줘야하는 부분 -->
+871        <!-- 20190315 KakaoWebViewActivity 삭제 구글 플레이 스토어에서 외부 사기 광고로 인식하는 문제로 인해. -->
+872
+873
+874        <!-- [naveroauthlogin][start] 네이버아이디로로그인을 사용하기 위해서 넣어줘야하는 부분 -->
+875        <activity
+875-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:833:9-835:75
+876            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+876-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:834:13-76
+877            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+877-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:835:13-72
+878        <activity
+878-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:836:9-838:47
+879            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+879-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:837:13-88
+880            android:label="OAuth2.0 In-app" />
+880-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:838:13-44
+881        <!-- [naveroauthlogin][end] -->
+882
+883        <meta-data
+883-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:841:9-843:33
+884            android:name="PMS_NOTI_O_BADGE"
+884-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:842:13-44
+885            android:value="N" />
+885-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:843:13-30
+886
+887        <!-- facebook sdk -->
+888        <meta-data
+888-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:846:9-848:46
+889            android:name="com.facebook.sdk.ApplicationId"
+889-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:847:13-58
+890            android:value="@string/app_id" />
+890-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:848:13-43
+891
+892        <activity
+892-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:849:9-852:47
+893            android:name="com.facebook.FacebookActivity"
+893-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:850:13-57
+894            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+894-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:851:13-96
+895            android:label="@string/app_name"
+895-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:852:13-45
+896            android:theme="@style/com_facebook_activity_theme" />
+896-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:33:13-63
+897        <!-- SDK 업데이트를 하니 테마가 기존에 선언해 놓았던 테마가 겹쳐서 에러 발생, 5.+ 로 업데이트 하면서 테마 삭제. -->
+898        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+899
+900        <activity
+900-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:856:9-863:20
+901            android:name="gsshop.mobile.v2.home.util.crop.CropActivity"
+901-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:857:13-56
+902            android:screenOrientation="portrait"
+902-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:858:13-49
+903            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+903-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:859:13-71
+904
+905            <!-- <intent-filter> -->
+906            <!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
+907            <!-- </intent-filter> -->
+908        </activity>
+909
+910        <!--
+911        Private PUSH Receiver
+912        <receiver android:name="com.pms.sdk.push.PushReceiver" >
+913            <intent-filter>
+914                <action android:name="org.mosquitto.android.mqtt.MSGRECVD" />
+915
+916                <category android:name="gsshop.mobile.v2" />
+917            </intent-filter>
+918        </receiver>
+919        -->
+920
+921        <meta-data
+921-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:875:9-877:52
+922            android:name="PMS_NOTI_CONTENT"
+922-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:876:13-44
+923            android:value="두손가락을 이용해 아래로 당겨주세요." />
+923-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:877:13-49
+924
+925        <!-- Notification Bar Icon -->
+926        <meta-data
+926-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:880:9-882:55
+927            android:name="TMS_SET_ICON"
+927-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:881:13-40
+928            android:resource="@drawable/ic_noti_an" />
+928-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:882:13-52
+929
+930        <!-- GS SHOP GCM -->
+931        <!--
+932        <receiver
+933            android:name="com.google.android.gms.gcm.GcmReceiver"
+934            android:exported="true"
+935            android:permission="com.google.android.c2dm.permission.SEND">
+936            <intent-filter>
+937                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+938                <category android:name="gsshop.mobile.v2" />
+939            </intent-filter>
+940            <intent-filter>
+941                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+942                <category android:name="gsshop.mobile.v2" />
+943            </intent-filter>
+944        </receiver>
+945        -->
+946
+947        <provider
+947-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:901:9-904:39
+948            android:name="com.facebook.FacebookContentProvider"
+948-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:902:13-64
+949            android:authorities="com.facebook.app.FacebookContentProvider940243329375632"
+949-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:903:13-90
+950            android:exported="true" />
+950-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:904:13-36
+951        <provider
+951-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:906:9-914:20
+952            android:name="androidx.core.content.FileProvider"
+952-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:907:13-62
+953            android:authorities="gsshop.mobile.fileprovider"
+953-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:908:13-61
+954            android:exported="false"
+954-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:909:13-37
+955            android:grantUriPermissions="true" >
+955-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:910:13-47
+956            <meta-data
+956-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:911:13-913:54
+957                android:name="android.support.FILE_PROVIDER_PATHS"
+957-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:912:17-67
+958                android:resource="@xml/file_paths" />
+958-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:913:17-51
+959        </provider>
+960
+961        <!-- GS SSO Provider -->
+962        <provider
+963            android:name="gsshop.mobile.v2.sso.SSOProvider"
+963-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:917:19-50
+964            android:authorities="gsshop.mobile.v2.SSOProvider"
+964-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:919:13-63
+965            android:exported="true" />
+965-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:918:13-36
+966
+967        <!-- glide configuration 설정. -->
+968        <meta-data
+968-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:922:9-924:43
+969            android:name="gsshop.mobile.v2.util.GlideConfiguration"
+969-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:923:13-68
+970            android:value="GlideModule" />
+970-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:924:13-40
+971
+972        <!-- appboy -->
+973
+974        <activity android:name="com.appboy.ui.AppboyWebViewActivity" />
+974-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:929:9-72
+974-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:929:19-69
+975        <!-- Appboy FCM 변경 작업 -->
+976        <receiver android:name="com.appboy.AppboyFcmReceiver" >
+976-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:931:9-935:20
+976-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:931:19-62
+977            <intent-filter>
+977-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:932:13-934:29
+978                <category android:name="gsshop.mobile.v2" />
+978-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:790:27-58
+979            </intent-filter>
+980        </receiver>
+981
+982        <!-- 카메라 커스텀 프리뷰 -->
+983        <activity
+983-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:938:9-941:11
+984            android:name="gsshop.mobile.v2.attach.customcamera.CameraCustomPreviewActivity"
+984-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:938:19-98
+985            android:screenOrientation="portrait"
+985-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:939:13-49
+986            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+986-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:940:13-71
+987        <!-- SMS Receiver 삭제 (구글 정책) 20190304 hklim -->
+988
+989
+990        <!-- clevertap -->
+991        <meta-data
+991-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:945:9-947:59
+992            android:name="CLEVERTAP_ACCOUNT_ID"
+992-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:946:13-48
+993            android:value="@string/CLEVERTAP_ACCOUNT_ID" />
+993-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:947:13-57
+994        <meta-data
+994-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:948:9-950:54
+995            android:name="CLEVERTAP_TOKEN"
+995-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:949:13-43
+996            android:value="@string/CLEVERTAP_TOKEN" />
+996-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:950:13-52
+997        <meta-data
+997-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:951:9-953:32
+998            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+998-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:952:13-54
+999            android:value="1" />
+999-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:953:13-30
+1000        <meta-data
+1000-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:954:9-956:34
+1001            android:name="CLEVERTAP_REGION"
+1001-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:955:13-44
+1002            android:value="sk1" />
+1002-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:956:13-32
+1003
+1004        <provider
+1004-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:28:9-31:40
+1005            android:name="co.ab180.airbridge.internal.LifecycleProvider"
+1005-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:29:13-73
+1006            android:authorities="gsshop.mobile.v2.AirbridgeContentProvider"
+1006-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:30:13-76
+1007            android:exported="false" />
+1007-->[io.airbridge:sdk-android:2.10.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\55dcdeb9e82e5a4f95c2c4a1c6139060\jetified-sdk-android-2.10.0\AndroidManifest.xml:31:13-37
+1008        <!--
+1009             FirebaseMessagingService performs security checks at runtime,
+1010             but set to not exported to explicitly avoid allowing another app to call it.
+1011        -->
+1012        <service
+1012-->[com.google.firebase:firebase-messaging:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\0864c607af4e835e3f02799b898ba91a\jetified-firebase-messaging-18.0.0\AndroidManifest.xml:28:9-34:19
+1013            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+1013-->[com.google.firebase:firebase-messaging:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\0864c607af4e835e3f02799b898ba91a\jetified-firebase-messaging-18.0.0\AndroidManifest.xml:29:13-82
+1014            android:exported="false" >
+1014-->[com.google.firebase:firebase-messaging:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\0864c607af4e835e3f02799b898ba91a\jetified-firebase-messaging-18.0.0\AndroidManifest.xml:30:13-37
+1015            <intent-filter android:priority="-500" >
+1015-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:797:13-799:29
+1016                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+1016-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:798:17-77
+1016-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:798:25-75
+1017            </intent-filter>
+1018        </service>
+1019
+1020        <receiver
+1020-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:29:9-33:20
+1021            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+1021-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:30:13-85
+1022            android:enabled="true"
+1022-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:31:13-35
+1023            android:exported="false" >
+1023-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:32:13-37
+1024        </receiver>
+1025        <receiver
+1025-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:34:9-42:20
+1026            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+1026-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:35:13-100
+1027            android:enabled="true"
+1027-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:36:13-35
+1028            android:exported="true"
+1028-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:37:13-36
+1029            android:permission="android.permission.INSTALL_PACKAGES" >
+1029-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:38:13-69
+1030            <intent-filter>
+1030-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:764:13-766:29
+1031                <action android:name="com.android.vending.INSTALL_REFERRER" />
+1031-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:765:17-79
+1031-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:765:25-76
+1032            </intent-filter>
+1033        </receiver>
+1034
+1035        <service
+1035-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:44:9-47:40
+1036            android:name="com.google.android.gms.measurement.AppMeasurementService"
+1036-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:45:13-84
+1037            android:enabled="true"
+1037-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:46:13-35
+1038            android:exported="false" />
+1038-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:47:13-37
+1039        <service
+1039-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:48:9-52:72
+1040            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+1040-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:49:13-87
+1041            android:enabled="true"
+1041-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:50:13-35
+1042            android:exported="false"
+1042-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:51:13-37
+1043            android:permission="android.permission.BIND_JOB_SERVICE" />
+1043-->[com.google.firebase:firebase-analytics:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\5d7f2fe46d7ef3045dee1c5f49cca5bb\jetified-firebase-analytics-15.0.0\AndroidManifest.xml:52:13-69
+1044        <service
+1044-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:29:9-35:19
+1045            android:name="com.google.firebase.components.ComponentDiscoveryService"
+1045-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:30:13-84
+1046            android:exported="false" >
+1046-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:31:13-37
+1047            <meta-data
+1047-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:32:13-34:85
+1048                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+1048-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:33:17-96
+1049                android:value="com.google.firebase.components.ComponentRegistrar" />
+1049-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:34:17-82
+1050        </service>
+1051
+1052        <receiver
+1052-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:37:9-44:20
+1053            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+1053-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:38:13-78
+1054            android:exported="true"
+1054-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:39:13-36
+1055            android:permission="com.google.android.c2dm.permission.SEND" >
+1055-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:40:13-73
+1056            <intent-filter>
+1056-->[com.google.firebase:firebase-iid:18.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\28fbb08f034e04816c13adfd77821964\jetified-firebase-iid-18.0.0\AndroidManifest.xml:41:13-43:29
+1057                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+1057-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:789:17-80
+1057-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:789:25-78
+1058            </intent-filter>
+1059        </receiver>
+1060
+1061        <activity android:name="com.facebook.CustomTabMainActivity" />
+1061-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:34:9-71
+1061-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:34:19-68
+1062        <activity
+1062-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:35:9-49:20
+1063            android:name="com.facebook.CustomTabActivity"
+1063-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:36:13-58
+1064            android:exported="true" >
+1064-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:37:13-36
+1065            <intent-filter>
+1065-->[com.facebook.android:facebook-common:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\fa5714194f97f5a57d5b8c655b13f7a5\jetified-facebook-common-8.0.0\AndroidManifest.xml:39:13-48:29
+1066                <action android:name="android.intent.action.VIEW" />
+1066-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:17-69
+1066-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:339:25-66
+1067
+1068                <category android:name="android.intent.category.DEFAULT" />
+1068-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:17-76
+1068-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:132:27-73
+1069                <category android:name="android.intent.category.BROWSABLE" />
+1069-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:17-78
+1069-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:342:27-75
+1070
+1071                <data
+1071-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:17-112
+1072                    android:host="cct.gsshop.mobile.v2"
+1072-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:74-109
+1073                    android:scheme="fbconnect" />
+1073-->C:\Users\yun\AndroidStudioProject\gsshop-android-gradle\gsshop-android\src\main\AndroidManifest.xml:344:23-73
+1074            </intent-filter>
+1075        </activity>
+1076        <!--
+1077         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+1078         with the application context. This config is merged in with the host app's manifest,
+1079         but there can only be one provider with the same authority activated at any given
+1080         point; so if the end user has two or more different apps that use Facebook SDK, only the
+1081         first one will be able to use the provider. To work around this problem, we use the
+1082         following placeholder in the authority to identify each host application as if it was
+1083         a completely different provider.
+1084        -->
+1085        <provider
+1085-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:39:9-42:40
+1086            android:name="com.facebook.internal.FacebookInitProvider"
+1086-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:40:13-70
+1087            android:authorities="gsshop.mobile.v2.FacebookInitProvider"
+1087-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:41:13-72
+1088            android:exported="false" />
+1088-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:42:13-37
+1089
+1090        <receiver
+1090-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:44:9-50:20
+1091            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+1091-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:45:13-86
+1092            android:exported="false" >
+1092-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:46:13-37
+1093            <intent-filter>
+1093-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:47:13-49:29
+1094                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+1094-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:48:17-95
+1094-->[com.facebook.android:facebook-core:8.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\15ba692c4c8e2e34cd95a75863f59333\jetified-facebook-core-8.0.0\AndroidManifest.xml:48:25-92
+1095            </intent-filter>
+1096        </receiver>
+1097
+1098        <activity android:name="com.appboy.ui.activities.AppboyFeedActivity" />
+1098-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:11:9-80
+1098-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:11:19-77
+1099        <activity android:name="com.appboy.ui.activities.AppboyContentCardsActivity" />
+1099-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:12:9-88
+1099-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:12:19-85
+1100        <activity android:name="com.appboy.push.AppboyNotificationRoutingActivity" />
+1100-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:13:9-86
+1100-->[com.appboy:android-sdk-ui:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c472eaf3c2a8a5a44e20c70439a75754\jetified-android-sdk-ui-3.1.0\AndroidManifest.xml:13:19-83
+1101
+1102        <provider
+1102-->[com.google.firebase:firebase-common:17.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\823eacf9f8e12f653a8651bc056d6e8a\jetified-firebase-common-17.0.0\AndroidManifest.xml:12:9-16:39
+1103            android:name="com.google.firebase.provider.FirebaseInitProvider"
+1103-->[com.google.firebase:firebase-common:17.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\823eacf9f8e12f653a8651bc056d6e8a\jetified-firebase-common-17.0.0\AndroidManifest.xml:13:13-77
+1104            android:authorities="gsshop.mobile.v2.firebaseinitprovider"
+1104-->[com.google.firebase:firebase-common:17.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\823eacf9f8e12f653a8651bc056d6e8a\jetified-firebase-common-17.0.0\AndroidManifest.xml:14:13-72
+1105            android:exported="false"
+1105-->[com.google.firebase:firebase-common:17.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\823eacf9f8e12f653a8651bc056d6e8a\jetified-firebase-common-17.0.0\AndroidManifest.xml:15:13-37
+1106            android:initOrder="100" />
+1106-->[com.google.firebase:firebase-common:17.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\823eacf9f8e12f653a8651bc056d6e8a\jetified-firebase-common-17.0.0\AndroidManifest.xml:16:13-36
+1107
+1108        <activity
+1108-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\eca791b36e0f0a546ef7264294c0c2f7\jetified-play-services-base-16.0.1\AndroidManifest.xml:23:9-26:75
+1109            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+1109-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\eca791b36e0f0a546ef7264294c0c2f7\jetified-play-services-base-16.0.1\AndroidManifest.xml:24:13-79
+1110            android:exported="false"
+1110-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\eca791b36e0f0a546ef7264294c0c2f7\jetified-play-services-base-16.0.1\AndroidManifest.xml:25:13-37
+1111            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+1111-->[com.google.android.gms:play-services-base:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\eca791b36e0f0a546ef7264294c0c2f7\jetified-play-services-base-16.0.1\AndroidManifest.xml:26:13-72
+1112        <activity
+1112-->[com.google.android.gms:play-services-ads-lite:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\03c80b6c1b51f4e874b9c098e68e9989\jetified-play-services-ads-lite-15.0.0\AndroidManifest.xml:29:9-33:64
+1113            android:name="com.google.android.gms.ads.AdActivity"
+1113-->[com.google.android.gms:play-services-ads-lite:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\03c80b6c1b51f4e874b9c098e68e9989\jetified-play-services-ads-lite-15.0.0\AndroidManifest.xml:30:13-65
+1114            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+1114-->[com.google.android.gms:play-services-ads-lite:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\03c80b6c1b51f4e874b9c098e68e9989\jetified-play-services-ads-lite-15.0.0\AndroidManifest.xml:31:13-122
+1115            android:exported="false"
+1115-->[com.google.android.gms:play-services-ads-lite:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\03c80b6c1b51f4e874b9c098e68e9989\jetified-play-services-ads-lite-15.0.0\AndroidManifest.xml:32:13-37
+1116            android:theme="@android:style/Theme.Translucent" />
+1116-->[com.google.android.gms:play-services-ads-lite:15.0.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\03c80b6c1b51f4e874b9c098e68e9989\jetified-play-services-ads-lite-15.0.0\AndroidManifest.xml:33:13-61
+1117
+1118        <meta-data
+1118-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\9bf681992089f6cd1887c26937ef56bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:23:9-25:69
+1119            android:name="com.google.android.gms.version"
+1119-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\9bf681992089f6cd1887c26937ef56bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:24:13-58
+1120            android:value="@integer/google_play_services_version" />
+1120-->[com.google.android.gms:play-services-basement:16.0.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\9bf681992089f6cd1887c26937ef56bc\jetified-play-services-basement-16.0.1\AndroidManifest.xml:25:13-66
+1121
+1122        <activity
+1122-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:12:9-19:20
+1123            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+1123-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:13:13-86
+1124            android:configChanges="orientation|screenSize"
+1124-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:14:13-59
+1125            android:exported="false"
+1125-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:15:13-37
+1126            android:label="@string/com_kakao_login_button"
+1126-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:16:13-59
+1127            android:launchMode="singleTop"
+1127-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:17:13-43
+1128            android:windowSoftInputMode="adjustResize" >
+1128-->[com.kakao.sdk:auth:1.15.1] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2e2161e04076682a5107f7b3d2bb5954\jetified-auth-1.15.1\AndroidManifest.xml:18:13-55
+1129        </activity>
+1130
+1131        <service
+1131-->[com.brightcove.player:exoplayer2:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\374f7afbc288ba831ae4acc143ead166\jetified-exoplayer2-6.4.0\AndroidManifest.xml:13:9-15:40
+1132            android:name="com.brightcove.player.network.DownloadMonitorService"
+1132-->[com.brightcove.player:exoplayer2:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\374f7afbc288ba831ae4acc143ead166\jetified-exoplayer2-6.4.0\AndroidManifest.xml:14:13-80
+1133            android:exported="false" />
+1133-->[com.brightcove.player:exoplayer2:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\374f7afbc288ba831ae4acc143ead166\jetified-exoplayer2-6.4.0\AndroidManifest.xml:15:13-37
+1134
+1135        <activity
+1135-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:12:9-21:66
+1136            android:name="com.tms.sdk.DefaultDialog"
+1136-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:13:13-53
+1137            android:alwaysRetainTaskState="false"
+1137-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:14:13-50
+1138            android:excludeFromRecents="true"
+1138-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:15:13-46
+1139            android:exported="false"
+1139-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:16:13-37
+1140            android:hardwareAccelerated="false"
+1140-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:17:13-48
+1141            android:launchMode="singleTask"
+1141-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:18:13-44
+1142            android:noHistory="true"
+1142-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:19:13-37
+1143            android:taskAffinity=".DefaultDialog"
+1143-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:20:13-50
+1144            android:theme="@style/Theme.AppCompat.Translucent" /> <!-- If we don't register this Activity in the Manifest, apps using the SDK will crash when they try to access it. -->
+1144-->[:tms_ffff4f4:] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\c6ca8e25c1b2413959a5225b4814f47a\jetified-tms_ffff4f4\AndroidManifest.xml:21:13-63
+1145        <!-- During the app's build process, this manifest will be merged with the app-level one. -->
+1146        <activity android:name="com.brightcove.player.captioning.BrightcoveCaptionPropertiesActivity" />
+1146-->[com.brightcove.player:android-sdk:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\8590888d46a968324baf749a6c4106ab\jetified-android-sdk-6.4.0\AndroidManifest.xml:18:9-105
+1146-->[com.brightcove.player:android-sdk:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\8590888d46a968324baf749a6c4106ab\jetified-android-sdk-6.4.0\AndroidManifest.xml:18:19-102
+1147
+1148        <service
+1148-->[com.brightcove.player:android-sdk:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\8590888d46a968324baf749a6c4106ab\jetified-android-sdk-6.4.0\AndroidManifest.xml:20:9-22:38
+1149            android:name="com.brightcove.player.services.BrightcoveMediaPlayerService"
+1149-->[com.brightcove.player:android-sdk:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\8590888d46a968324baf749a6c4106ab\jetified-android-sdk-6.4.0\AndroidManifest.xml:21:13-87
+1150            android:enabled="true" />
+1150-->[com.brightcove.player:android-sdk:6.4.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\8590888d46a968324baf749a6c4106ab\jetified-android-sdk-6.4.0\AndroidManifest.xml:22:13-35
+1151        <!--
+1152    Broadcast receiver to handle background tasks such as requesting data flush and geofence actions. Note that this
+1153    receiver needs to be exported in order for the system to properly route geofence intents to it.
+1154        -->
+1155        <receiver
+1155-->[com.appboy:android-sdk-base:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\183b23c3c2cdb16de2cc3c5dcd9d2534\jetified-android-sdk-base-3.1.0\AndroidManifest.xml:19:9-23:20
+1156            android:name="com.appboy.receivers.AppboyActionReceiver"
+1156-->[com.appboy:android-sdk-base:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\183b23c3c2cdb16de2cc3c5dcd9d2534\jetified-android-sdk-base-3.1.0\AndroidManifest.xml:20:13-69
+1157            android:enabled="true"
+1157-->[com.appboy:android-sdk-base:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\183b23c3c2cdb16de2cc3c5dcd9d2534\jetified-android-sdk-base-3.1.0\AndroidManifest.xml:21:13-35
+1158            android:exported="true" >
+1158-->[com.appboy:android-sdk-base:3.1.0] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\183b23c3c2cdb16de2cc3c5dcd9d2534\jetified-android-sdk-base-3.1.0\AndroidManifest.xml:22:13-36
+1159        </receiver>
+1160
+1161        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+1161-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2bcc3f5052bee6edd1ca428c8c6416e1\jetified-library-1.7.4\AndroidManifest.xml:12:9-118
+1161-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2bcc3f5052bee6edd1ca428c8c6416e1\jetified-library-1.7.4\AndroidManifest.xml:12:18-115
+1162        <service
+1162-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2bcc3f5052bee6edd1ca428c8c6416e1\jetified-library-1.7.4\AndroidManifest.xml:13:9-15:49
+1163            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
+1163-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2bcc3f5052bee6edd1ca428c8c6416e1\jetified-library-1.7.4\AndroidManifest.xml:14:13-108
+1164            android:process=":filedownloader" />
+1164-->[com.liulishuo.filedownloader:library:1.7.4] C:\Users\yun\.gradle\caches\transforms-2\files-2.1\2bcc3f5052bee6edd1ca428c8c6416e1\jetified-library-1.7.4\AndroidManifest.xml:15:13-46
+1165    </application>
+1166
+1167</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 내일TV 슬라이드 배너 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+        <gsshop.mobile.v2.home.shop.renewal.views.CommonTitleLayout
+            android:id="@+id/common_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!--핑퐁 슬라이드-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <!-- 하단여백 -->
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+</LinearLayout>

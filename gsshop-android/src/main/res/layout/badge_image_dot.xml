@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gschoice 뱃지 텍스트사이 점 -->
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/img_badge_corner"
+    android:layout_width="4dp"
+    android:layout_height="4dp"
+    android:src="@drawable/dot_gray_android"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp" />

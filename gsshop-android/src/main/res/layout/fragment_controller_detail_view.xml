@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#000000"
+    android:layout_height="match_parent"
+    android:id="@+id/root_view">
+
+    <View
+        android:id="@+id/tapview"
+        android:visibility="visible"
+        android:background="#00ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.brightcove.player.view.BrightcoveExoPlayerVideoView
+        android:id="@+id/brightcove_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"/>
+
+    <RelativeLayout
+        android:id="@+id/view_player_controller_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_dim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha=".3"
+            />
+
+        <FrameLayout
+            android:id="@+id/view_player_controller"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/image_vod_controller_play"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_play_android" />
+
+            <ImageView
+                android:id="@+id/image_vod_controller_pause"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_pause_android" />
+
+            <ImageView
+                android:id="@+id/image_vod_controller_replay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_replay_android" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_vod_controller_remained_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:text="00:00:00"
+            android:layout_below="@+id/view_player_controller"
+            />
+
+
+        <!--play controller-->
+        <LinearLayout
+            android:id="@+id/view_vod_player_bottom_controller"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="36dp"
+            >
+
+            <gsshop.mobile.v2.util.TouchAreaExpand
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/check_vod_player_mute"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/selector_best_deal_player_mute"
+                    android:contentDescription="@string/common_mute"
+                    android:button="@android:color/transparent" />
+            </gsshop.mobile.v2.util.TouchAreaExpand>
+
+            <androidx.legacy.widget.Space
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
+
+            <gsshop.mobile.v2.util.TouchAreaExpand
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <View
+                    android:id="@+id/view_vod_player_zoom"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:contentDescription="@string/common_full_screen"
+                    android:background="@drawable/ic_zoom_s_android" />
+            </gsshop.mobile.v2.util.TouchAreaExpand>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

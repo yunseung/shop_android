@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gschoice 매장 -->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_refresh"
+    >
+
+    <!-- 상품리스트 영역 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <gsshop.mobile.v2.home.CustomRecyclerView
+            android:id="@+id/recycler_gschoice_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:descendantFocusability="blocksDescendants" />
+
+        <!-- for sticky header -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/header_b"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/header_b_old"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- 탑버튼 -->
+        <ImageView
+            android:id="@+id/btn_gschoice_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="62.25dp"
+            android:layout_marginRight="11.25dp"
+            android:contentDescription="상단으로 이동"
+            android:src="@drawable/top_720" />
+
+    </FrameLayout>
+
+    <!-- 상품위치표시 영역 -->
+    <LinearLayout
+        android:id="@+id/frame_gschoice_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="62.25dp"
+        android:layout_marginRight="11.25dp"
+        android:background="@drawable/counting_bg_720"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_current_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:paddingBottom="3.62dp"
+            android:textColor="#444444"
+            android:textSize="13.5sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#dcdcdc" />
+
+        <TextView
+            android:id="@+id/txt_total_count"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:textColor="#999999"
+            android:textSize="13.5sp" />
+    </LinearLayout>
+
+    <!-- 데이타 연결오류 시 -->
+    <include layout="@layout/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/main_header_height"/>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

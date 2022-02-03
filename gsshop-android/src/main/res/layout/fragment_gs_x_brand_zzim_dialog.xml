@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+
+    <!--unzzim-->
+    <ImageView
+        android:id="@+id/image_gs_x_brand_unzzim"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/zzim_layer_02_and" />
+
+    <!--zzim-->
+    <RelativeLayout
+        android:id="@+id/view_gs_x_brand_zzim"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/image_gs_x_brand_zzim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:cropToPadding="false"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:src="@drawable/zzim_layer_01_and" />
+
+        <ImageView
+            android:id="@+id/image_gs_x_brand_zzim_close"
+            android:layout_width="@dimen/popup_gs_super_close_width_height"
+            android:layout_height="@dimen/popup_gs_super_close_width_height"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/close_cart_an" />
+    </RelativeLayout>
+
+</FrameLayout>

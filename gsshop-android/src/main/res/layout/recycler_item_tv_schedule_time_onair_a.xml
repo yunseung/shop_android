@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/view_tv_schedule_time_onair_selection"
+    android:layout_height="68dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_tv_schedule_time_selection_a"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_schedule_not_onair_label"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_schedule_live"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/tv_shedule_time_onair_label"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_schedule_live"
+            android:contentDescription="@string/accessibility_tv_schedule_on_air"
+            android:text="LIVE"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:gravity="center"/>
+
+        <gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout
+            android:id="@+id/tv_live_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="#666666"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+        </gsshop.mobile.v2.home.shop.tvshoping.TvLiveTimeLayout>
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/txt_tv_schedule_time_onair_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="#666666"
+        android:textSize="11dp"
+        android:typeface="sans"
+        android:gravity="center" />
+
+</LinearLayout>

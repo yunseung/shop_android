@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 편성표 부상품 V2-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!-- 상품이미지, 가격 영역 -->
+    <LinearLayout
+        android:id="@+id/view_prd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/image_prd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+
+                <!-- 방송중구매가능, 일시품절 영역 -->
+                <TextView
+                    android:id="@+id/txt_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#73000000"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:typeface="sans"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/text_brd_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:gravity="center"
+                    android:background="#66111111"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <include
+            layout="@layout/best_deal_sub"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

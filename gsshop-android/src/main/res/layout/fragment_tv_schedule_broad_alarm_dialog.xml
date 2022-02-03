@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_sns_dialog"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:text="@string/alarm_register"
+            android:textColor="#444444"
+            android:textSize="14dp"
+            android:typeface="sans" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4" />
+
+        <LinearLayout
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:paddingRight="1dp">
+
+            <!--방송 타이틀 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/bg_tv_schedule_broad_alarm_boarder"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/img_tv_schedule_broad_alarm_thumb"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/txt_tv_schedule_broad_alarm_title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="로보 미니멀"
+                    android:textColor="#111111"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+            <!--휴대폰-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="12dp"
+                android:background="#f4f4f4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="휴대폰번호 :"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/txt_tv_schedule_broad_alarm_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="000 - 0000 - 0000"
+                    android:textColor="#86cf00"
+                    android:textSize="16dp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <!--기간-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/popup_ic_dt_an" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="12dp"
+                    android:text="기간"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RadioGroup
+                    android:id="@+id/rg_tv_schedule_broad_alarm_month"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_month_one"
+                        style="@style/tv_schedule_broad_alarm_text_selected"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="1개월"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_month_two"
+                        style="@style/tv_schedule_broad_alarm_text_unselected"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="2개월"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_month_tree"
+                        style="@style/tv_schedule_broad_alarm_text_unselected"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="3개월"
+                        android:typeface="sans" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!--횟수-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@drawable/popup_ic_ch_an" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="12dp"
+                    android:text="횟수"
+                    android:textColor="#999999"
+                    android:textSize="15dp"
+                    android:typeface="sans" />
+
+                <RadioGroup
+                    android:id="@+id/rg_tv_schedule_broad_alarm_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_time_one"
+                        style="@style/tv_schedule_broad_alarm_text_selected"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="1회"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_time_two"
+                        style="@style/tv_schedule_broad_alarm_text_unselected"
+                        android:layout_width="55dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="3회"
+                        android:typeface="sans" />
+
+                    <RadioButton
+                        android:id="@+id/rb_tv_schedule_broad_alarm_time_tree"
+                        style="@style/tv_schedule_broad_alarm_text_unselected"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_tv_schedule_broad_alarm_month_boarder"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="방송시 마다"
+                        android:typeface="sans" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4" />
+
+            <!--메시지-->
+            <TableLayout
+                android:id="@+id/table_tv_schedule_broad_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:divider="@drawable/divider_tv_schedule_broad_alarm"
+                android:showDividers="middle" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e5e5e5" />
+
+        <!--버튼-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal">
+
+            <!--취소 버튼-->
+            <Button
+                android:id="@+id/btn_tv_schedule_broad_alarm_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/mc_cancel"
+                android:textColor="#999999"
+                android:textSize="15dp"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#e5e5e5" />
+
+            <!--등록 버튼-->
+            <Button
+                android:id="@+id/btn_tv_schedule_broad_alarm_submit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/btn_submit"
+                android:textColor="#111111"
+                android:textSize="15dp"
+                android:typeface="sans" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

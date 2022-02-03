@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/vip_common_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp">
+
+            <TextView
+                android:id="@+id/txt_sub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="쇼핑 혜택"
+                android:textColor="#111111"
+                android:lines="1"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_sub"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                android:text="VVIP 혜택이 지급되었어요"
+                android:textColor="#111111"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                />
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/layout_txt_main"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:visibility="gone"-->
+    <!--            android:layout_below="@+id/txt_sub"-->
+    <!--            />-->
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

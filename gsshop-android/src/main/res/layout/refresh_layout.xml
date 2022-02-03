@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 데이터 연결오류시 노출하는 공통 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flexible_refresh_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/network_error_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/error_server_title"
+        android:textColor="#a3111111"
+        android:layout_marginTop="19dp"
+        android:textSize="17dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14dp"
+        android:textColor="#7a111111"
+        android:text="@string/error_server_desc"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/btn_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_white_gray_border"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_refresh_button"
+                android:textSize="14dp"
+                android:textColor="#111111"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/btn_go_web"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_white_gray_border"
+            android:paddingLeft="12dp"
+            android:layout_marginLeft="8dp"
+            android:paddingRight="12dp"
+            android:paddingTop="7dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/go_web"
+                android:textSize="14dp"
+                android:textColor="#111111"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

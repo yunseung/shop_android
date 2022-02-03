@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 내일TV 여백 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 여백 -->
+    <!-- 디자이너 요청으로 여백 노출 안되게 10에서 0으로 변경 -->
+    <androidx.legacy.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+</LinearLayout>

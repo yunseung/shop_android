@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- gschoice 뱃지 텍스트 -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/txt_badge_corner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:includeFontPadding="false"
+    android:ellipsize="none"
+    android:singleLine="true"
+    android:textColor="#111"
+    android:textSize="13sp"
+    android:typeface="sans" />

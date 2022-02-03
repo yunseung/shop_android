@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 배경이 투명한 모달웹뷰 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <gsshop.mobile.v2.web.CustomWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <com.nhn.android.naverlogin.ui.view.OAuthLoginButton
+        android:id="@+id/btn_naver_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/btn_kakao_sdk_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/MochaThemeDialogTranslucent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/mc_async_dialog_spin" />
+
+    <!-- 데이타 연결오류 시 -->
+    <include layout="@layout/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <!-- 탭메뉴 -->
+    <include
+        android:visibility="gone"
+        layout="@layout/tab_menu" />
+
+</FrameLayout>

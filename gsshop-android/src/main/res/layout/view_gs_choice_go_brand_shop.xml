@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/read_more_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/text_name"
+            android:gravity="center"
+            style="@style/GSSuperBannerButton"
+            android:textColor="#111111"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:id="@+id/text_sub"
+            android:text="@string/common_more"
+            android:gravity="center"
+            style="@style/GSSuperBannerButton"
+            android:textColor="#111111"
+            />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/chevron_gschoice_right"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/transparent"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
+
+

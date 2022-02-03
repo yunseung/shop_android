@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gsshop.mobile.v2.menu.navigation.PartnerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <TextView
+        android:id="@+id/txt_navi_partner_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="40dp"
+        android:gravity="left|bottom"
+        android:paddingBottom="8dp"
+        android:text="@string/navi_title_partner"
+        android:lines="1"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#111111"
+        />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager_partner"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_height="288dp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_page_img"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+</gsshop.mobile.v2.menu.navigation.PartnerLayout>

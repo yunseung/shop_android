@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:paddingLeft="@dimen/vh_blank_space_middle"
+        android:paddingRight="@dimen/vh_blank_space_middle"
+        >
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50.62dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/saletitle_720"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_gap"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vh_blank_space_middle"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            >
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.12dp"
+            android:background="#433d2d"
+            />
+
+        <LinearLayout
+            android:id="@+id/special_banner_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vh_blank_space_middle"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

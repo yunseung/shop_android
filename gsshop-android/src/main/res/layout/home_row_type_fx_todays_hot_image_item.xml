@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 전체 layout을 adapter에서 참조하면 리스트가 반복되는 문제가 있어서 wrapper layout 하나 더 사용 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/personalized_tab_border"
+    android:padding="1dp" >
+
+    <ImageView
+        android:id="@+id/image_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_todays_hot_item_image_height"
+        android:scaleType="fitXY"
+        android:background="#f7f7f7" />
+
+</FrameLayout>

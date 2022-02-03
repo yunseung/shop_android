@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-xxhdpi-v4\\values-xxhdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-xxhdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "9,3,13,14,10,6",
+                        "startColumns": "4,4,4,4,1,4",
+                        "startOffsets": "243,88,362,424,294,160",
+                        "endColumns": "52,57,60,61,46,54",
+                        "endOffsets": "291,141,418,481,339,210"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,108,166,227,289,339",
+                        "endColumns": "52,57,60,61,49,54",
+                        "endOffsets": "103,161,222,284,334,389"
+                    }
+                }
+            ]
+        }
+    ]
+}

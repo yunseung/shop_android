@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 전체 layout을 adapter에서 참조하면 리스트가 반복되는 문제가 있어서 wrapper layout 하나 더 사용 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/shortbang_video_outer_blank_space"
+    android:paddingLeft="@dimen/shortbang_video_outer_blank_space"
+    android:paddingRight="@dimen/shortbang_video_outer_blank_space"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <include
+            android:id="@+id/product_item_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/recycler_item_shortbang_shop" />
+
+        <View
+            android:layout_width="@dimen/shortbang_video_inner_blank_space"
+            android:layout_height="wrap_content"/>
+        <include
+            android:id="@+id/product_item_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/recycler_item_shortbang_shop" />
+
+        <View
+            android:layout_width="@dimen/shortbang_video_inner_blank_space"
+            android:layout_height="wrap_content"/>
+
+        <include
+            android:id="@+id/product_item_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            layout="@layout/recycler_item_shortbang_shop" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

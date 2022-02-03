@@ -1,0 +1,405 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
+
+    defaultConfig {
+        versionName = '7.0.10'
+        versionCode = 321
+        applicationId 'gsshop.mobile.v2'
+
+        minSdkVersion 21
+        targetSdkVersion TARGET_SDK_VERSION as int
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        useLibrary 'org.apache.http.legacy'
+    }
+
+    project.ext.set("defaultDeployPhase", "${project.hasProperty('deploy_phase') ? deploy_phase.toString() : "$DEFAULT_PHASE"}")
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file(DEBUG_STORE_FILE)
+            storePassword DEBUG_STORE_PASSWORD
+            keyAlias DEBUG_KEY_ALIAS
+            keyPassword DEBUG_KEY_PASSWORD
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            // flavor 따라 signing 변경 되게 수정. (디버그 용으로 빌드 된 apk가 올라가 버리는 상황을 막기 위함)
+//            applicationVariants.all { variant ->
+//                if ( variant.productFlavors[0].name != 'm' ) {
+//                    signingConfig signingConfigs.debug
+//                }
+//                else {
+//                    signingConfig signingConfigs.release
+//                }
+//            }
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+
+        }
+
+        applicationVariants.all { variant ->
+            def date = new Date()
+            def formattedDate = date.format('yyyyMMdd')
+            def formattedTime = date.format('HHmm')
+            def flavorName0 = variant.productFlavors[0].name
+            def flavorName1 = variant.productFlavors[1].name
+            def buildTypeName = variant.buildType.name
+            variant.outputs.all {
+                if (buildTypeName == "release") {
+                    outputFileName = outputFileName.replace(flavorName0 + '-' + flavorName1 + "-" + buildTypeName, defaultConfig.versionName + "-" + buildTypeName + "-" + flavorName0 + "-" + formattedDate + "-" + formattedTime)
+                }
+            }
+        }
+    }
+
+    buildTypes.each {
+        it.buildConfigField 'String', 'KAKAO_EMAIL', KAKAO_EMAIL
+        it.buildConfigField 'String', 'KAKAO_PASSWORD', KAKAO_PASSWORD
+        it.buildConfigField 'String', 'NAVER_ID', NAVER_ID
+        it.buildConfigField 'String', 'NAVER_PW', NAVER_PW
+        it.buildConfigField 'String', 'GS_ID', GS_ID
+        it.buildConfigField 'String', 'GS_PW', GS_PW
+    }
+
+    // Remove mockRelease as it's not needed.
+    android.variantFilter { variant ->
+        if (variant.buildType.name == 'release') {
+            variant.getFlavors().each() { flavor ->
+                if (flavor.name == 'fast' || flavor.name == 'mock' || flavor.name == 'vietnam') {
+                    variant.ignore = true;
+                }
+            }
+        }
+    }
+
+//    <!-- DOMAIN -->
+//    <!-- m.gsshop.com 운영 -->
+//    <!-- m.gsshop.com 테스트이면서 DB는 운영으로(스테이징) -->
+//    <!-- tm14.gsshop.com 서버와 DB가 테스트 -->
+//    <!-- dm14.gsshop.com dev테스트(기간계테스트용) -->
+//    <!-- ":446"; // SM 버전 -->
+//    <!-- ":447"; // asm 버전 -->
+//    <!-- ":445"; // TM 버전 -->
+//    <!-- ":444"; // DM 버전 -->
+
+    flavorDimensions "stage", "mode"
+
+    productFlavors {
+
+        fast {
+            minSdkVersion 21
+            resValue "string", "skip_appboy", "false"
+            dimension "mode"
+        }
+
+        full {
+            resValue "string", "skip_appboy", "false"
+            dimension "mode"
+        }
+
+        //QC 베트남용
+        vietnam {
+            resValue "string", "skip_appboy", "true"
+            dimension "mode"
+        }
+
+        // 배포 버전.
+        m {
+            resValue "string", "web_http_root", "http://m.gsshop.com"
+            resValue "string", "server_http_root", "http://m.gsshop.com"
+            resValue "string", "server_https_root", "https://m.gsshop.com"
+            resValue "string", "csp_service_root", "https://csp.gsshop.com"
+            resValue "string", "csp_break_root", "http://image.gsshop.com/ui"
+
+            resValue "string", "open_date", ""
+            resValue "string", "openDateMenuFlag", "Y"
+            resValue "string", "last_prd_image", "image.gsshop.com/image"
+            resValue "string", "asend_env_id", "4a5722e0fd"
+
+            resValue "string", "kakao_app_key", "c4cac3d2f71f88a02b45651f32383b5a"
+
+            dimension "stage"
+        }
+
+        // test
+        develop {
+            resValue "string", "web_http_root", "http://asm.gsshop.com"
+            resValue "string", "server_http_root", "http://asm.gsshop.com"
+            resValue "string", "server_https_root", "https://asm.gsshop.com"
+
+            //모바일라이브 때문에 잠시 tm링크로 변경.
+            //resValue "string", "csp_service_root", "https://csp.gsshop.com"
+            //resValue "string", "csp_break_root", "http://image.gsshop.com/ui/stage"
+            resValue "string", "csp_service_root", "https://csp.gsshop.com"
+            resValue "string", "csp_break_root", "http://image.gsshop.com/ui"
+
+            resValue "string", "open_date", ""
+            resValue "string", "openDateMenuFlag", "Y"
+            resValue "string", "last_prd_image", "devimage.gsshop.com/image"
+            resValue "string", "asend_env_id", "6f4529be9b"
+
+            resValue "string", "kakao_app_key", "c4cac3d2f71f88a02b45651f32383b5a"
+
+            dimension "stage"
+        }
+
+        // mock.
+        mock {
+            dimension "stage"
+            resValue "string", "web_http_root", "http://m.gsshop.com"
+            resValue "string", "server_http_root", MOCK_HTTP
+            resValue "string", "server_https_root", "https://m.gsshop.com"
+            resValue "string", "csp_service_root", "http://cspdev.innolab.us"
+            resValue "string", "csp_break_root", "http://image.gsshop.com/ui"
+
+            resValue "string", "open_date", ""
+            resValue "string", "openDateMenuFlag", "N"
+            resValue "string", "last_prd_image", "image.gsshop.com/image"
+            resValue "string", "asend_env_id", "6f4529be9b"
+
+            resValue "string", "kakao_app_key", "296dee58dc76203f807ade52e981aff0"
+
+            dimension "stage"
+        }
+
+    }
+    lintOptions {
+        abortOnError false
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.properties'
+        exclude 'META-INF/maven/com.google.guava/guava/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okio/okio/pom.xml'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.properties'
+        exclude 'META-INF/maven/com.squareup.okhttp3/okhttp/pom.xml'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    dexOptions {
+        preDexLibraries true
+        maxProcessCount 8
+        javaMaxHeapSize "4g"
+//        incremental true
+    }
+    aaptOptions {
+        cruncherEnabled false
+    }
+}
+
+ext {
+    androidxVersion = "1.0.0"
+    espressoVersion = "2.2.1"
+    androidTestVersion = "0.4"
+    hamcrestVersion = "1.3"
+    junitVersion = "4.12"
+    playServicesVersion = "15.0.0"
+    guavaVersion = '20.0'
+    appacheCommonsVersion = '4.1'
+    brightCoveVersion = '6.4.0'
+    appboyVersion = '3.1.0'
+    firebaseMessagingVersion = "18.0.0"
+    kotlinVersion = '1.4.0'
+}
+//tensera 0718
+repositories {
+    // tensera
+    maven { url "../devkit/maven" }
+    // bright cove
+    maven { url 'http://repo.brightcove.com/releases' }
+    // apptimize
+    maven { url 'http://maven.apptimize.com/artifactory/repo' }
+    // google
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    debugImplementation(name: 'mocha-android-debug', ext: 'aar')
+    releaseImplementation(name: 'mocha-android-release', ext: 'aar')
+//    compile(name: 'callgateSDK_v6.6.1', ext: 'aar')   callgate 삭제
+    implementation(name: 'hashtag-view', ext: 'aar')
+    implementation project(':gsshop-library')
+    implementation ('com.nshmura:snappysmoothscroller:1.0.0') {
+        transitive = false
+    }
+    implementation "com.google.firebase:firebase-core:${playServicesVersion}"
+    implementation "com.google.firebase:firebase-messaging:${firebaseMessagingVersion}"
+    implementation "com.google.firebase:firebase-iid:${playServicesVersion}"
+
+    implementation "com.google.android.gms:play-services-gcm:${playServicesVersion}"
+    implementation "com.google.android.gms:play-services-ads:${playServicesVersion}"
+    implementation "com.google.android.gms:play-services-location:${playServicesVersion}"
+    implementation "com.google.firebase:firebase-appindexing:${playServicesVersion}"
+//    compile "com.google.android.gms:play-services-analytics:${playServicesVersion}"
+    //optimove 추가시 tagmanager와 conflict 발생하여 주석처리
+    //implementation "com.google.android.gms:play-services-tagmanager:${playServicesVersion}"
+    implementation "com.google.firebase:firebase-analytics:${playServicesVersion}"
+
+    implementation ('io.socket:socket.io-client:1.0.0') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    implementation 'com.github.castorflex.verticalviewpager:library:19.0.1'
+//    compile(name: 'facebook-android-sdk-4.7.0', ext: 'aar')
+    implementation 'com.facebook.android:facebook-android-sdk:8.0.0'
+
+    implementation(name: 'oops-gs-1.1', ext: 'aar')
+    implementation 'com.parse.bolts:bolts-android:1.2.1'
+    //facebook-android-sdk에서 사용
+//    compile 'com.google.android.exoplayer:exoplayer:r1.5.9'
+    implementation "com.google.guava:guava:${guavaVersion}"
+    implementation "org.apache.commons:commons-collections4:${appacheCommonsVersion}"
+    implementation "androidx.appcompat:appcompat:${androidxVersion}"
+    implementation "androidx.recyclerview:recyclerview:${androidxVersion}"
+    implementation "androidx.core:core:${androidxVersion}"
+    implementation "com.google.android.material:material:1.1.0"
+    implementation "androidx.cardview:cardview:${androidxVersion}"
+    implementation 'com.github.aakira:expandable-layout:1.6.0@aar'
+    implementation "com.andkulikov:transitionseverywhere:1.8.0"
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.3.0'
+    implementation 'com.google.android:flexbox:0.3.0-alpha2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // 단품 native loading skeleton shimmer effect library.
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // bright cove
+    implementation ("com.brightcove.player:exoplayer2:${brightCoveVersion}") {
+        exclude group: 'javax.inject'
+    }
+    implementation "com.brightcove.player:android-appcompat-plugin:${brightCoveVersion}"
+
+    // 카카오스토리 sdk를 사용하기 위해 필요.
+    implementation group: project.KAKAO_SDK_GROUP, name: getModuleName('kakaolink'), version: project.KAKAO_SDK_VERSION
+    implementation group: project.KAKAO_SDK_GROUP, name: getModuleName('kakaostory'), version: project.KAKAO_SDK_VERSION
+    // 카카오톡 sdk를 사용하기 위해 필요.
+    implementation group: project.KAKAO_SDK_GROUP, name: getModuleName('kakaotalk'), version: project.KAKAO_SDK_VERSION
+    implementation group: project.KAKAO_SDK_GROUP, name: getModuleName('usermgmt'), version: project.KAKAO_SDK_VERSION
+    //appboy (at least Appboy SDK version 2.1.0 for TargetVersion 26 )
+//    compile 'com.appboy:android-sdk-ui:2.2.3'
+    implementation "com.appboy:android-sdk-ui:${appboyVersion}"
+    //airbridge
+    implementation 'io.airbridge:sdk-android:2.10.0'
+    implementation 'com.android.installreferrer:installreferrer:1.0'
+    //Amp 07/14
+    implementation 'com.amplitude:android-sdk:2.14.0'
+
+    //AndroidUtilCode
+    implementation 'com.blankj:utilcode:1.9.12'
+    // Secure, simple key-value storage for Android
+    implementation 'com.orhanobut:hawk:2.0.1'
+    implementation 'org.sufficientlysecure:html-textview:3.5'
+
+    //eventbus
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    //autofittextview
+    implementation 'me.grantland:autofittextview:0.2.1'
+    // circle imageview
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    implementation('org.zakariya.stickyheaders:stickyheaders:0.7.6') {
+        transitive = false
+    }
+
+    //지문로그인 관련
+    implementation 'com.github.ajalt.reprint:core:3.3.2@aar'
+    implementation 'com.github.ajalt.reprint:reprint_spass:3.3.2@aar'
+
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    implementation 'com.timehop.stickyheadersrecyclerview:library:0.4.3@aar'
+
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+    // tensera 0718
+    // 1. Add the following dependency to build.gradle
+//    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0'
+    //tensera end
+
+    // clevertap
+//    compile 'com.clevertap.android:clevertap-android-sdk:3.4.0'
+
+    debugImplementation 'commons-cli:commons-cli:1.3.1'
+    debugImplementation('com.facebook.stetho:stetho:1.4.0') {
+        transitive = false
+    }
+
+    androidTestImplementation "com.google.truth:truth:0.31"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+    androidTestImplementation 'androidx.test:rules:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation "org.hamcrest:hamcrest-core:${hamcrestVersion}"
+    // Need to exclude this when running test
+    androidTestImplementation 'androidx.multidex:multidex-instrumentation:2.0.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'ai.evolv:ascend-android-sdk:0.5.0'
+
+    // Camera library
+    implementation 'com.github.florent37:camerafragment:1.0.9'
+
+    //apptimize
+    implementation 'com.apptimize:apptimize-android:3.8.0'
+
+    //optimove
+//    implementation 'com.optimove.sdk:optimove-sdk:2.6.1'
+
+    // 화려한 애니메이션을 위한, 얼마나 화려 하게 할라고, lottie 애니메이션 라이브러리
+    implementation 'com.airbnb.android:lottie:3.4.1'
+    implementation "androidx.core:core-ktx:1.6.0-rc01"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}"
+
+    implementation(name: 'tms_ffff4f4', ext: 'aar')
+}
+
+apply plugin: 'com.google.gms.google-services'
+
+def getModuleName(moduleName) {
+    println moduleName + ", " + project.defaultDeployPhase
+    def result = moduleName
+    if (project.defaultDeployPhase.toLowerCase() == 'release') {
+        return result
+    }
+
+    return result + "-${project.defaultDeployPhase.toLowerCase()}"
+}

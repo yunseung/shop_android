@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Promotion S type 팝업 다이얼로그 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/promotion_lay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+	android:orientation="vertical" >
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="1dp"
+	    android:layout_marginBottom="65dp"
+	    android:layout_marginLeft="11dp"
+	    android:layout_marginRight="11dp"
+		android:orientation="vertical" >
+	
+	    <!-- 상단 이미지 영역 -->
+	    <ImageView
+			android:id="@+id/promotion_img"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:scaleType="fitXY"/>
+	
+	    <!-- 하단 버튼 영역 -->
+		<LinearLayout
+			android:id="@+id/promotion_bottom"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="45dp"
+			android:background="@drawable/bg_sb_bottom">
+
+			<View
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="#e5e5e5" />
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+				<Button
+					android:id="@+id/promotion_end"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:background="@drawable/selector_share_item"
+					android:textColor="#999999"
+					android:textSize="15dp"
+					android:text="@string/pm_today_stop_show"/>
+
+				<View
+					android:layout_width="1dp"
+					android:layout_height="match_parent"
+					android:background="#e5e5e5" />
+
+				<Button
+					android:id="@+id/promotion_close"
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:background="@drawable/selector_share_item"
+					android:textColor="#111111"
+					android:textSize="15dp"
+					android:text="@string/common_close"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

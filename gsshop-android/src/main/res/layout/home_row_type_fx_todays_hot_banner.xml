@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="11.25dp" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerInside"
+        android:src="@drawable/tit_mart_hot_an" />
+
+    <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="186.44dp"
+        android:layout_marginBottom="6.75dp"
+        android:layout_marginTop="9dp" />
+
+    <gsshop.mobile.v2.home.util.IconTabBar
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="7.87dp"
+        android:layout_gravity="bottom" />
+
+</LinearLayout>

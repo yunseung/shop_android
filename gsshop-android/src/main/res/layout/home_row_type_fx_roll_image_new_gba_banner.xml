@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_plan_shop_big_brand">
+
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="188dp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp"
+            android:paddingTop="10dp">
+
+            <FrameLayout
+                android:id="@+id/button_prev"
+                android:layout_width="34dp"
+                android:layout_height="45dp"
+                android:layout_gravity="left|center_vertical"
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/chevron_left_ban_sld_gba"
+                    />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/button_next"
+                android:layout_width="34dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right|center_vertical"
+                android:clickable="true"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/chevron_right_ban_sld_gba" />
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/text_count"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_66111111_round_14"
+                android:gravity="center"
+                android:paddingLeft="11dp"
+                android:paddingRight="11dp"
+                android:text="1 / 6"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:typeface="sans" />
+        </FrameLayout>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 인기 검색어 목록 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_popular_keyword"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ListView
+        android:id="@+id/list_popular_keyword"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:background="@color/white"
+        android:divider="@drawable/search_listview_divider"
+        android:dividerHeight="0.67dip"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.67dip"
+        android:background="@color/list_item_divider"/>
+
+</LinearLayout>

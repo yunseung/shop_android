@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><!-- exoplayer2 컨트롤러 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    >
+    <LinearLayout
+        android:id="@+id/lay_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <!-- 닫기버튼 -->
+        <View
+            android:id="@+id/btn_close"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="25dp"
+            android:background="@drawable/ic_x_android"
+            android:contentDescription="@string/common_close" />
+    </LinearLayout>
+
+
+    <!--실행, 중지, 시간 -->
+    <CheckBox
+        android:id="@+id/chk_play"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/selector_player_play"
+        android:button="@android:color/transparent"
+        android:contentDescription="@string/common_pause" />
+
+
+    <!--mute, 축소 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lay_chk_mute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/chk_mute"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/selector_live_player_mute"
+                android:button="@android:color/transparent"
+                android:contentDescription="@string/common_sound_mute"
+                android:layout_marginBottom="25dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lay_view_controller_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/view_controller_out"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/ic_out_android"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="25dp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

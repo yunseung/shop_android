@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 홈매장 모바일라이브 바로보기영역 배경 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="#6f74dc"
+        android:endColor="#5bbcb4"
+        android:type="linear"
+        android:angle="0" >
+    </gradient>
+</shape>

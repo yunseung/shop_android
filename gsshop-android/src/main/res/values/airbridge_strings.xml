@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="ExtraTranslation">
+
+    <string name="airbridge_app_token">20cb649a3aa74caca563f778b83780d2</string>
+    <string name="airbridge_web_token">2ddfb0a363604a0699b758eaa8ad23cf</string>
+
+    <string name="airbridge_app_name">gsshop</string>
+    <string name="airbridge_app_scheme_http">http</string>
+    <string name="airbridge_app_scheme_https">https</string>
+    <string name="airbridge_app_host">my.gsshop.com</string>
+
+    <!-- gsshopmobile://~~~와 같이 원하는 형태의 딥링크로 변환하여 onSuccess로 받을 수 있습니다 -->
+    <string name="co_ab180_airbridge_deeplink_scheme">gsshopmobile</string>
+
+    <!-- ~.airbridge.io가 아닌 Customize 된 형태의 Domain로 올바른 deeplink를 받기 위해서는 다음과 같은 설정이 필요합니다 -->
+    <string-array name="co_ab180_airbridge_trackinglink_customDomains">
+        <item>my.gsshop.com</item>
+    </string-array>
+
+</resources>

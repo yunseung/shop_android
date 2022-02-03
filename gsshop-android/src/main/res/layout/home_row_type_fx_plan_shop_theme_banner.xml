@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/vh_blank_space_middle">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_plan_shop_big_brand"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_banner"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@color/plan_shop_prd_image_bg" />
+
+            <ImageView
+                android:id="@+id/image_arrow"
+                android:layout_width="16dp"
+                android:layout_height="8dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:src="@drawable/arrow01" />
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/view_prd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/vh_blank_space_middle">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_prd"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:background="@color/plan_shop_prd_image_bg" />
+
+                <ImageView
+                    android:id="@+id/image_deal"
+                    android:layout_width="54dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/deal_720" />
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/vh_blank_space_large"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="14dp">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lines="2"
+                    android:text="쥬디쥬디 점보특집 수분크림 외 아이크림 이크림"
+                    android:textColor="#444444"
+                    android:textSize="15sp"
+                    android:typeface="sans" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        tools:ignore="InvalidId">
+
+                        <LinearLayout
+                            android:id="@+id/view_percent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginRight="8dp">
+
+                            <TextView
+                                android:id="@+id/text_percent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="25"
+                                android:textColor="#ec2261"
+                                android:textSize="27sp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/text_percent_unit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/percent"
+                                android:textColor="#ec2261"
+                                android:textSize="18sp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text_gs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:text="GS가"
+                            android:textColor="#ed1f60"
+                            android:textSize="18sp"
+                            android:typeface="sans" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <!--dummy text-->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" "
+                                android:textSize="11sp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/text_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#111111"
+                                android:textSize="11sp"
+                                android:typeface="sans" />
+
+
+                            <TextView
+                                android:id="@+id/text_base"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="130,000원"
+                                android:textColor="#999999"
+                                android:textSize="11sp"
+                                android:typeface="sans" />
+
+                        </FrameLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/text_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="98,000"
+                                android:textColor="#111111"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="-2dp"
+                                android:typeface="sans" />
+
+                            <TextView
+                                android:id="@+id/text_won"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="원~"
+                                android:textColor="#111111"
+                                android:textSize="15sp"
+                                android:layout_marginTop="-2dp"
+                                android:typeface="sans" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

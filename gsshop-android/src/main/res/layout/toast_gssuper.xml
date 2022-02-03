@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen_toast_gs_super_height"
+    android:layout_marginBottom="61dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_gravity="center_horizontal|bottom">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_toast_gs_super_height"
+        android:background="@drawable/bg_rounded_toast_gs_super"
+        />
+
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/time_an"
+        />
+
+    <FrameLayout
+        android:id="@+id/view_close"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="12dp"
+        android:paddingLeft="10dp"
+        >
+        <View
+            android:id="@+id/close_fresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/close_fresh"
+            android:layout_marginTop="10dp"
+            />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/img_time"
+        android:layout_toLeftOf="@id/view_close"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/txt_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:typeface="sans"
+            android:layout_marginLeft="10dp"
+            android:text="@string/gs_super_toast_main_1"
+            android:includeFontPadding="false"
+            />
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txt_pre"
+            android:layout_alignTop="@+id/txt_pre"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:typeface="sans"
+            android:text=""
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:ellipsize="none"
+            />
+
+        <FrameLayout
+            android:id="@+id/view_show_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_pre"
+            android:layout_alignLeft="@id/txt_pre"
+            android:layout_marginTop="2dp"
+            >
+            <TextView
+                android:id="@+id/txt_show_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13dp"
+                android:textColor="#d6f24a"
+                android:layout_gravity="center_vertical"
+                android:text="자세히 보기"
+                />
+        </FrameLayout>
+    </RelativeLayout>
+</RelativeLayout>

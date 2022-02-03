@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 무이자할부 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_free_inter_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- 상단라인 -->
+    <View
+        android:id="@+id/view_top_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#f4f4f4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 좌측 이미지 영역 -->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_gravity="top">
+
+            <!-- 무이자할부 섬네일 -->
+            <ImageView
+                android:id="@+id/iv_free_inter_thumbnail"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+
+        </FrameLayout>
+
+        <!-- 중앙 텍스트 영역 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:visibility="visible"
+                app:flexWrap="wrap">
+
+                <TextView
+                    android:id="@+id/tv_free_inter_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:maxLines="2"
+                    android:text="1솔로이스트 브랜드 샵"
+                    android:textColor="#111111"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_free_inter_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:maxLines="1"
+                    android:text="2솔로이스트"
+                    android:textColor="#111111"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/tv_free_inter_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="2솔로이스트"
+                    android:textColor="#111111"
+                    android:textSize="14dp" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <!-- 우측 더보기 영역 -->
+        <LinearLayout
+            android:id="@+id/ll_free_inter_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="12dp"
+            android:orientation="horizontal">
+
+            <!-- 더보기 아이콘 -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/chevron_right_4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

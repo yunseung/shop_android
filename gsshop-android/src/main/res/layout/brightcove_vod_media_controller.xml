@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.brightcove.player.mediacontroller.BrightcoveControlBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/brightcove_control_bar"
+    style="@style/BrightcoveControlBar.Custom.VodShop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33000000"
+    android:orientation="vertical"
+    tools:ignore="Overdraw, InconsistentLayout">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <FrameLayout
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_play_android" />
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_pause"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_pause_android" />
+
+                <ImageView
+                    android:id="@+id/image_vod_controller_replay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_replay_android" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_vod_controller_remained_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:textColor="#ffff"
+                android:textSize="20dp"
+                android:typeface="sans" />
+
+            <ImageView
+                android:id="@+id/close_vod"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_gravity="right"
+                android:src="@drawable/delete_file" />
+
+        </FrameLayout>
+
+
+        <LinearLayout
+            android:id="@+id/goPrdLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:background="@drawable/gradation_goprdlayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/transparent"
+                android:includeFontPadding="false"
+                android:text="상품보기"
+                android:textColor="#ffffff"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/tv_arrow_circle"
+                android:tint="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+
+</com.brightcove.player.mediacontroller.BrightcoveControlBar>

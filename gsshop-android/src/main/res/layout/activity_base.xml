@@ -1,0 +1,120 @@
+<gsshop.mobile.v2.menu.navigation.DrawerLayoutHorizontalSupport
+    android:id="@+id/activity_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:id="@+id/activity_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navigation_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:layout_gravity="start"
+        android:gravity="center">
+        <RelativeLayout
+            android:id="@+id/root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <gsshop.mobile.v2.menu.navigation.ImageViewTopCrop
+                android:id="@+id/background_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="matrix"
+                />
+
+            <ImageView
+                android:id="@+id/background_color_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:fitsSystemWindows="true"
+                >
+
+                <include layout="@layout/navigation_top_layout" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/left_navigation_line"/>
+
+                <ScrollView
+                    android:id="@+id/scene_root"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    >
+                    <LinearLayout
+                        android:id="@+id/scene_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                    </LinearLayout>
+
+                </ScrollView>
+            </LinearLayout>
+
+            <!-- 데이타 연결오류 시 -->
+            <include layout="@layout/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+            <gsshop.mobile.v2.menu.navigation.MassageCardLayout
+                android:id="@+id/message_card_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:layout_marginTop="160dp"
+                    android:layout_centerHorizontal="true"
+                    >
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <Button
+                        android:id="@+id/message_card_close"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:background="@drawable/navigation_close"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        />
+                </RelativeLayout>
+            </gsshop.mobile.v2.menu.navigation.MassageCardLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</gsshop.mobile.v2.menu.navigation.DrawerLayoutHorizontalSupport>

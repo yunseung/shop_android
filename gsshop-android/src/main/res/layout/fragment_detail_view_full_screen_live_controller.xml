@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 생방송/동영상 재생 화면 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_height="match_parent">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoplayer_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:controller_layout_id="@layout/detail_view_live_full_screen_controller"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"/>
+
+    <FrameLayout
+        android:id="@+id/view_live_end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:typeface="sans"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:text="@string/home_tv_live_view_close_da_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            />
+    </FrameLayout>
+
+    <!--3g 과금-->
+    <FrameLayout
+        android:id="@+id/view_live_full_player_mobile_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha=".30"/>
+
+        <include
+            layout="@layout/view_mobile_data_alert_detail_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <include
+        layout="@layout/mc_webview_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 모바일상담 텍스트 입력창 높이 -->
+    <dimen name="mobiletalk_textbox_height">200dp</dimen>
+     
+    
+    <dimen name="viewpager_child_height">160dp</dimen>
+    
+    <!-- FOOTER -->
+    <dimen name="horizontal_bar_padding">6dp</dimen>
+	<dimen name="top_menu_font_size">12dp</dimen>
+
+	<!-- 상품평 -->
+    <dimen name="review_reward_left_margin">33.75dip</dimen>
+    <dimen name="review_reward_right_margin">27.75dip</dimen>
+</resources>

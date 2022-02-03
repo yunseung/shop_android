@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:paddingRight="9dp"
+    android:paddingLeft="9dp"
+    >
+
+    <gsshop.mobile.v2.home.shop.flexible.shoppinglive.items.ShoppingLivePrd2Item
+        android:id="@+id/prd_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+    <gsshop.mobile.v2.home.shop.flexible.shoppinglive.items.ShoppingLivePrd2Item
+        android:id="@+id/prd_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

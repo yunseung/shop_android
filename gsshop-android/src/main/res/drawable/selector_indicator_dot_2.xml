@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_ring_bed730_thick_7"
+        android:state_selected="true"/>
+    <item android:drawable="@drawable/bg_ring_4d111111_thick_7"/>
+</selector>

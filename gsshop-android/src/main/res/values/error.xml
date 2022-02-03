@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 모카 에러메시지 재정의 사용하는ㄷ곳이 모카 이기 때문에 Lint 에서 사용하지 앟는 것으로 나온다. 지우면 안됨-->
+    <!-- 130731_v1 2 App 접속 장애시 Alert 문구 정리 -->    
+    <string name="mc_error_network">@string/network_unresponsive</string>
+    <string name="mc_error_connect_timeout">@string/network_unstable</string>
+    <string name="mc_error_http_io">@string/network_unstable</string>
+    <string name="mc_error_http_client">@string/mc_error_default</string>
+    <string name="mc_error_http_server">@string/error_server</string>
+    <string name="mc_error_server">@string/error_server</string>
+    <string name="mc_error_server_io">@string/network_unstable</string>
+
+    <string-array name="mc_mapping_exceptions">
+        <item>gsshop.mobile.v2.review.CameraPreviewException</item>
+        <item>gsshop.mobile.v2.review.ReviewImageLoadException</item>
+    </string-array>
+    <string-array name="mc_mapping_messages">
+        <item>@string/review_error_camera_preview</item>
+        <item>@string/review_fail_load_image</item>
+    </string-array>
+
+</resources>

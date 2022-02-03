@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 홈매장 생방송,데이타방송 V2 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- airbridge sdk 업데이트 후 생방송 뷰홀더에 포커싱이 자동으로 먹는 현상 발생하여
+        focusable=false 세팅, 원인 확인 필요-->
+    <LinearLayout
+        android:id="@+id/lay_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <!-- 상단 영역 -->
+            <LinearLayout
+                android:id="@+id/layout_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="22dp">
+
+                <!-- 방송타입 -->
+                <ImageView
+                    android:id="@+id/img_brd_type"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@drawable/brd_on" />
+
+                <!-- 방송종류 -->
+                <ImageView
+                    android:id="@+id/img_brd_kind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/tit_live_android"
+                    />
+
+            </LinearLayout>
+            <View
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"/>
+            <FrameLayout
+                android:id="@+id/top_live_talk"
+                android:layout_width="81dp"
+                android:layout_height="24dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_line_d9d9d9_round50"
+                android:layout_gravity="bottom"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:layout_width="62dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_livetalk_button"
+                    >
+                </ImageView>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/renewal_bg_broad_img_border"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/img_main_sumnail"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:adjustViewBounds="true"
+                android:background="#f4f4f4"
+                android:scaleType="fitCenter" />
+
+            <!-- 방송남은시간 -->
+            <LinearLayout
+                android:id="@+id/lay_cv_remain_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/renewal_bg_broad_remain_time"
+                android:layout_gravity="right|bottom"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="4dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:orientation="horizontal">
+
+                <gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout
+                    android:id="@+id/cv_remain_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_remain_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="05:55"
+                        android:includeFontPadding="false"
+                        android:textColor="#ffffff"
+                        android:textSize="14.2sp"
+                        android:typeface="sans" />
+
+                </gsshop.mobile.v2.home.shop.renewal.flexible.RenewalBroadTimeLayout>
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/ic_play" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- 가격정보 -->
+        <include
+            layout="@layout/renewal_product_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+
+        <!-- 함께 방송하는 상품 상단라인 -->
+        <View
+            android:id="@+id/homesub_top_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txt_homesub"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="함께 방송하는 상품"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="#111111"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:visibility="gone"/>
+
+        <!-- 첫번째 부상품 리스트 -->
+        <LinearLayout
+            android:id="@+id/sub_prd_list_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" />
+
+        <!-- 나머지 부상품 리스트 -->
+        <LinearLayout
+            android:id="@+id/sub_prd_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+        <!-- 함께 방송하는 상품 하단라인 -->
+        <View
+            android:id="@+id/homesub_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eeeeee"
+            android:visibility="gone"/>
+
+
+        <!-- 더보기/닫기 -->
+        <LinearLayout
+            android:id="@+id/product_toggle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/product_toggle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:textColor="#a3111111"
+                    android:textSize="16sp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/product_toggle_count_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text=" ("
+                        android:textColor="#a3111111"
+                        android:textSize="16sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/product_toggle_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:textColor="#a3111111"
+                        android:textSize="16dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text=")"
+                        android:textColor="#a3111111"
+                        android:textSize="16sp"
+                        />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/product_toggle_icon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

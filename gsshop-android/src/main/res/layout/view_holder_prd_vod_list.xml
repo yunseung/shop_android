@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cl_vod_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 비디오 플레이어 -->
+        <FrameLayout
+            android:id="@+id/fl_video_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.78:1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 로딩중 -->
+        <include
+            layout="@layout/mc_webview_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_vod_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/black_semi_trans"
+            android:clickable="false"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.78:1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_play_img"
+            android:layout_width="75dp"
+            android:layout_height="74dp"
+            android:background="@drawable/play_circle_line_overlay_big"
+            android:contentDescription="@string/common_play"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 데이타 과금안내 팝업 -->
+        <FrameLayout
+            android:id="@+id/fl_mobile_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                layout="@layout/view_mobile_data_alert_detail_view_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_prd_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!-- 상품이미지 영역 -->
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp">
+
+            <!-- 상품이미지 -->
+            <ImageView
+                android:id="@+id/iv_prd_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!-- 하단 영역 -->
+            <TextView
+                android:id="@+id/tv_brd_time"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="#66111111"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:typeface="sans"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_tv_schedule_main_sub_thumb" />
+
+        </RelativeLayout>
+
+        <!-- 가격정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfo
+            android:id="@+id/layout_product_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_bottom_divider_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#eeeeee"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_bottom_divider_1dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#19111111"
+        android:visibility="visible" />
+
+</LinearLayout>

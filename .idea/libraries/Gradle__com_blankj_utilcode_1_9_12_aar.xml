@@ -1,0 +1,22 @@
+<component name="libraryTable">
+  <library name="Gradle: com.blankj:utilcode:1.9.12@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3acfe4f8fa53d71e8514e362bbdb1c0e/jetified-utilcode-1.9.12/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/155c6ed133ce6fec81f02d3681bc137f/jetified-utilcode-1.9.12/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3acfe4f8fa53d71e8514e362bbdb1c0e/jetified-utilcode-1.9.12/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3acfe4f8fa53d71e8514e362bbdb1c0e/jetified-utilcode-1.9.12/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3acfe4f8fa53d71e8514e362bbdb1c0e/jetified-utilcode-1.9.12/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/155c6ed133ce6fec81f02d3681bc137f/jetified-utilcode-1.9.12/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/155c6ed133ce6fec81f02d3681bc137f/jetified-utilcode-1.9.12/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/155c6ed133ce6fec81f02d3681bc137f/jetified-utilcode-1.9.12/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.blankj/utilcode/1.9.12/4a3486b3a5f9e635efe0bbfb263dc6fb1dcd3c57/utilcode-1.9.12-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.blankj/utilcode/1.9.12/940dad88ce7f5c607c1c5d59d6c85c79bba44987/utilcode-1.9.12-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

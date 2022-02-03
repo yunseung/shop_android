@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 버튼 배경 5 : 뒤로가기 버튼 등 -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape android:shape="rectangle">
+            <solid android:color="@color/button_default_background" />
+
+            <stroke android:width="1.68dp" android:color="#c9c9c9" />
+
+            <corners android:radius="0px" />
+        </shape></item>
+    <item android:state_selected="true"><shape android:shape="rectangle">
+            <solid android:color="@color/button_default_background" />
+
+            <stroke android:width="1.68dp" android:color="#c9c9c9" />
+
+            <corners android:radius="0px" />
+        </shape></item>
+    <item><shape android:shape="rectangle">
+        	<solid android:color="@color/button_adult_background" />
+        	
+            <stroke android:width="1.68dp" android:color="#c9c9c9" />
+
+            <corners android:radius="0px" />
+        </shape></item>
+
+</selector>

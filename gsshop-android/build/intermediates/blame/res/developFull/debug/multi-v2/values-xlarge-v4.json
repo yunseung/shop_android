@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-xlarge\\dimens.xml",
+                    "from": {
+                        "startLines": "6,3,9,11,14",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "189,88,280,356,437",
+                        "endColumns": "61,57,47,47,48",
+                        "endOffsets": "246,141,323,399,481"
+                    },
+                    "to": {
+                        "startLines": "10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "602,664,722,770,818",
+                        "endColumns": "61,57,47,47,48",
+                        "endOffsets": "659,717,765,813,862"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\957b788443faebfd2a49899d369d1918\\appcompat-1.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\c472eaf3c2a8a5a44e20c70439a75754\\jetified-android-sdk-ui-3.1.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,124,184",
+                        "endLines": "2,3,10",
+                        "endColumns": "68,59,10",
+                        "endOffsets": "119,179,540"
+                    },
+                    "to": {
+                        "startLines": "8,9,15",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "473,542,867",
+                        "endLines": "8,9,21",
+                        "endColumns": "68,59,10",
+                        "endOffsets": "537,597,1223"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- 이벤트 메뉴에서 아이템간의 구분 간격 넣기 위해 레이아웃 추가 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/best_shop_category_item_height"
+        android:gravity="center"
+        android:textColor="#666666"
+        android:textSize="14dp"
+        android:typeface="sans" />
+</LinearLayout>

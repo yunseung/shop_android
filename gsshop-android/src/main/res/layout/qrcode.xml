@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- QR코드 화면 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header" />
+
+    <FrameLayout
+        android:id="@+id/frame_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <!-- 이 자리에 SurfaceView가 끼어들어감. -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/bg_qrcode_translucent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="286dip"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_qrcode_translucent" />
+
+                <ImageView
+                    android:layout_width="286dip"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/qrcode_box"
+                    android:contentDescription="@android:string/untitled" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_qrcode_translucent" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="@color/bg_qrcode_translucent"
+                android:focusable="true"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dip"
+                android:shadowColor="#DDDDDD"
+                android:shadowDx="1.3"
+                android:shadowDy="1.3"
+                android:shadowRadius="1.6"
+                android:text="@string/search_qrcode_description"
+                android:textColor="#FFFFFF"
+                android:textSize="14.6sp"
+                android:typeface="sans" >
+
+                <requestFocus />
+            </TextView>
+        </LinearLayout>
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_shadow" />
+
+    </FrameLayout>
+
+</LinearLayout>

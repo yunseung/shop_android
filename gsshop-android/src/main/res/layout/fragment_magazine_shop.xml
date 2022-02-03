@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <!--product list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_magazine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/btn_magazine_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="62.25dp"
+        android:layout_marginRight="11.25dp"
+        android:src="@drawable/top_720" />
+
+    <!--siren-->
+    <RelativeLayout
+        android:id="@+id/view_magazine_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62.25dp"
+        android:layout_marginLeft="11.25dp"
+        android:layout_marginRight="5dp">
+
+        <!-- 사이렌 아이콘 노출 (임직원 대상) -->
+        <LinearLayout
+            android:id="@+id/frame_magazine_siren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/tv_schedule_description_siren"
+            android:orientation="vertical"
+            android:paddingBottom="17.25dp">
+
+            <ImageView
+                android:id="@+id/tooltip_siren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mc_siren" />
+
+            <ImageView
+                android:id="@+id/btn_siren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/btn_siren" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/frame_magazine_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/counting_bg_720"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_current_count"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:paddingBottom="3.62dp"
+                android:textColor="#444444"
+                android:textSize="13.5sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#dcdcdc" />
+
+            <TextView
+                android:id="@+id/txt_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|top"
+                android:textColor="#999999"
+                android:textSize="13.5sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!--refresh view-->
+    <LinearLayout
+        android:id="@+id/frame_magazine_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/refresh" />
+
+        <TextView
+            style="@style/HomeReflashText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_refresh" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rounded_corner">
+
+            <Button
+                android:id="@+id/btn_magazine_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button7"
+                android:contentDescription="@string/tv_schedule_description_refresh"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/app_refresh_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

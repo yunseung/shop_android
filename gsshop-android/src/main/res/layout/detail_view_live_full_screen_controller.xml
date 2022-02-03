@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?><!-- exoplayer2 컨트롤러 -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <View
+        android:id="@+id/view_dim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha=".15"
+        />
+
+    <!-- 닫기버튼 -->
+    <LinearLayout
+        android:id="@+id/lay_btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <!-- 닫기버튼 -->
+        <View
+            android:id="@+id/btn_close"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/close_detail"
+            android:contentDescription="@string/common_close" />
+    </LinearLayout>
+
+    <!--실행, 중지, 시간 -->
+    <!--<CheckBox-->
+        <!--android:id="@+id/chk_play"-->
+        <!--android:layout_width="52dp"-->
+        <!--android:layout_height="52dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/selector_player_play"-->
+        <!--android:button="@android:color/transparent"-->
+        <!--android:contentDescription="@string/common_pause" />-->
+
+    <FrameLayout
+        android:id="@+id/view_player_controller"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/image_vod_controller_play"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_play_android"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/image_vod_controller_pause"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_pause_android"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/image_vod_controller_replay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_replay_android"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+    <gsshop.mobile.v2.web.productDetail.BroadTimeLayoutDetailView
+        android:id="@+id/cv_remain_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view_player_controller"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_remain_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="00:00:00"
+            android:typeface="sans" />
+
+    </gsshop.mobile.v2.web.productDetail.BroadTimeLayoutDetailView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/view_seek_bar_portrait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/current_time_portrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:typeface="sans" />
+
+            <SeekBar
+                android:id="@+id/seek_bar_portrait"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progressDrawable="@drawable/media_player_seekbar_progress"
+                android:thumb="@drawable/bg_bright_cove_seekbar_thumb"
+                android:thumbOffset="0dp" />
+
+            <TextView
+                android:id="@+id/end_time_portrait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:typeface="sans" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:id="@+id/view_seek_bar_land"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginLeft="25dp"
+                >
+
+                <TextView
+                    android:id="@+id/current_time_land"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="00:00"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:typeface="sans" />
+
+                <SeekBar
+                    android:id="@+id/seek_bar_land"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progressDrawable="@drawable/media_player_seekbar_progress"
+                    android:thumb="@drawable/bg_bright_cove_seekbar_thumb"
+                    android:thumbOffset="0dp" />
+
+                <TextView
+                    android:id="@+id/end_time_land"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="00:00"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+            <!--mute, 축소 버튼-->
+            <LinearLayout
+                android:layout_width="121dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right"
+                >
+
+                <LinearLayout
+                    android:id="@+id/lay_chk_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <CheckBox
+                        android:id="@+id/chk_mute"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/selector_live_player_mute"
+                        android:button="@android:color/transparent"
+                        android:contentDescription="@string/common_sound_mute" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lay_view_controller_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/view_controller_out"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="25dp"
+                        android:background="@drawable/ic_out_android" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

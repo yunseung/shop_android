@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 하단 버튼(편성표, 구매하기...) 영역 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <LinearLayout
+        android:id="@+id/price_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/price_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/price_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tag_price_android"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:baselineAligned="true"
+                        >
+                        <TextView
+                            android:id="@+id/txt_base_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="13sp"
+                            android:includeFontPadding="false"
+                            />
+                        <TextView
+                            android:id="@+id/txt_base_price_expose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#666666"
+                            android:textSize="13sp"
+                            android:text="원"
+                            android:includeFontPadding="false"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/price_text_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:baselineAligned="true"
+                        >
+                        <TextView
+                            android:id="@+id/txt_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#111111"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:text="69,000"
+                            android:includeFontPadding="false"
+                            />
+                        <TextView
+                            android:id="@+id/txt_price_expose"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#111111"
+                            android:textSize="16sp"
+                            android:text="원"
+                            android:includeFontPadding="false"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:paddingRight="10dp"
+                >
+                <ImageView
+                    android:id="@+id/badge_1"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/tag_gift_android"
+                    />
+                <ImageView
+                    android:id="@+id/badge_2"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/tag_cash_android"
+                    />
+                <ImageView
+                    android:id="@+id/badge_3"
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/tag_save_android"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cardRantalText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:includeFontPadding="false"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/btn_live_talk"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#888888"
+            >
+            <View
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/ic_livetalk_android"
+                />
+            <TextView
+                android:id="@+id/live_talk_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="5dp"
+                android:textSize="16dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/live_talk_line"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#777777" />
+
+        <Button
+            android:id="@+id/btn_schedule"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#888888"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:orientation="horizontal" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#777777" />
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#ee1f60"
+            android:text="@string/home_tv_live_btn_tv_pay_text"
+            android:textColor="#ffffff"
+            android:textSize="16dp"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d9d9d9" />
+
+</LinearLayout>

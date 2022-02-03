@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/vh_blank_space_middle"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- 양옆 보이는 뷰들의 폭 + 가운데뷰의 양옆여백 만큼 패딩-->
+        <gsshop.mobile.v2.library.viewpager.InfiniteViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="7dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="54dp"
+            android:background="@color/white"/>
+    </FrameLayout>
+
+    <gsshop.mobile.v2.support.ui.IndicatorRecyclerView
+        android:id="@+id/indicator_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/dot_indicator_selector_ab"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:tabIndicatorHeight="0dp"
+        android:orientation="horizontal"
+        android:paddingTop="7dp"
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

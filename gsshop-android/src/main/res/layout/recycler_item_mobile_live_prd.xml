@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 모바일라이브 상품정보 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lay_root"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="68dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_mobilelive_prd">
+
+        <!--썸네일 테두리 위해 padding 1 추가 -->
+        <FrameLayout
+            android:layout_width="68dp"
+            android:layout_height="68dp">
+
+            <!-- 섬네일 -->
+            <ImageView
+                android:id="@+id/img_prd_sumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                />
+
+            <!-- 일시품절 -->
+            <TextView
+                android:id="@+id/txt_prd_comment"
+                android:layout_width="68dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_gravity="bottom"
+                android:background="@drawable/round_left_bottom_corner"
+                android:textColor="#ffffff"
+                android:textSize="11dp"
+                android:typeface="sans"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#387c7c9f" />
+
+        <!-- 우측 상품정보 -->
+        <gsshop.mobile.v2.home.shop.renewal.views.RenewalLayoutProductInfoPrd2
+            android:id="@+id/layout_product_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
