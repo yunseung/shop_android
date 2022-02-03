@@ -1,0 +1,55 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-hdpi-v4\\values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\957b788443faebfd2a49899d369d1918\\appcompat-1.1.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "12",
+                        "startColumns": "4",
+                        "startOffsets": "698",
+                        "endLines": "16",
+                        "endColumns": "13",
+                        "endOffsets": "970"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\c472eaf3c2a8a5a44e20c70439a75754\\jetified-android-sdk-ui-3.1.0\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,128,199,271,341",
+                        "endColumns": "72,70,71,69,72",
+                        "endOffsets": "123,194,266,336,409"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-hdpi\\dimens.xml",
+                    "from": {
+                        "startLines": "6,3,10,11,7",
+                        "startColumns": "4,4,4,4,1",
+                        "startOffsets": "174,88,294,356,226",
+                        "endColumns": "52,57,60,61,46",
+                        "endOffsets": "222,141,350,413,271"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "414,467,525,586,648",
+                        "endColumns": "52,57,60,61,49",
+                        "endOffsets": "462,520,581,643,693"
+                    }
+                }
+            ]
+        }
+    ]
+}

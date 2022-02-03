@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 서명값 : 2riARVqySzbfYzYtr7mWBPDJyLI= -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gsshop.mobile.v2"
+    android:versionCode="321"
+    android:versionName="7.0.10" >
+    <!--
+      마켓 등록 완료/공개 후에 서버단 /apis/AndroidLatestVersion 값을
+      위 versionName 값으로 변경해줄 것.
+    -->
+    <!-- 지원버전 : Gingerbread(2.3.3)부터, Facebook SDK의 경우 minSdkVersion=15 이기때문에 overrideLibrary 사용 -->
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- SMS 자동입력 미사용으로 인한 권한 삭제 20190213 -->
+    <!-- pickup service -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+
+
+    <!-- Needed only if your app targets Android 5.0 (API level 21) or higher. -->
+    <!-- <uses-feature android:name="android.hardware.location.gps" /> -->
+
+
+    <!-- 전화기능 없는 폰도 지원 -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <!-- 전화번호 정보조회, 상담 센터 전화번호 연결시 필요 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+
+
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <!-- GS SHOP GCM -->
+    <permission
+        android:name="gsshop.mobile.v2.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Mocha GCM -->
+    <uses-permission android:name="gsshop.mobile.v2.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- <uses-permission android:name="android.permission.DEVICE_POWER"/> -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- QR코드 검색 및 상품평 사진찍기 화면에서 카메라 사용 카메라 사용부분 추가됨. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+    후면 카메라 없는 폰도 지원(ex. 넥서스7)
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false"/>
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+    -->
+
+
+    <!-- 앱종료를 위한 퍼미션 추가 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+
+    <!-- 지문인식 permission -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <!-- 삼성 지문인식 모듈 -->
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+
+    <queries>
+        <package android:name="com.android.vending" />
+        <package android:name="com.google.android.gms" />
+        <package android:name="com.huawei.hwid" />
+        <package android:name="com.skt.skaf.A000Z00040" />
+        <package android:name="com.kt.olleh.storefront" />
+        <package android:name="com.kt.olleh.istore" />
+        <package android:name="com.lguplus.appstore" />
+        <package android:name="android.lgt.appstore" />
+    </queries>
+
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- 메인웹페이지 원활한 스크롤링을 위해 하드웨어 가속 켬. -->
+    <application
+        android:name="gsshop.mobile.v2.MainApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="false"
+        android:testOnly="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!--
+          인트로 화면.
+          인트로 실행 중 PUSH 알림 수신시 액티비티 재활용하기 위해 singleTop으로 설정.
+          TODO android:noHistory="true" 추가후 테스트.
+        -->
+        <activity
+            android:name="gsshop.mobile.v2.intro.IntroActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoTitleBlackBackgroundTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- APP Home -->
+        <activity
+            android:name="gsshop.mobile.v2.home.HomeActivity"
+            android:exported="false"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.APP_HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.WebActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.web.NalbangWebActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.WEB_NALBANG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.support.tv.MobileLiveChatPlayActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.MOBILELIVE_FULL_VIDEO_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Live Talk -->
+        <activity
+            android:name="gsshop.mobile.v2.web.LiveTalkWebActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.WEB_LIVETALK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 모달웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.ModalWebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 상단 Titlebar 모달웹 화면 (Backbtn 존재) -->
+        <!--
+             기존에 모달웹을 사용하려 했지만 전달받는 UI 및 위치등이 달라서 새로 선언
+            굳이 기존 모달웹을 상속받아 사용할 필요성을 느끼지 못해 BaseWebActivity만 상속
+        -->
+        <activity
+            android:name="gsshop.mobile.v2.web.OutsiteModalWebActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 모달웹 화면(상단 타이틀영역 없음) -->
+        <activity
+            android:name="gsshop.mobile.v2.web.FullModalWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 배경이 투명한 모달 웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.TransparentModalWebActivity"
+            android:theme="@style/DirectOrder"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.TRANSPARENT_MODAL_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 탭 메뉴가 없는 웹 화면 -->
+        <!-- 날방 호출시 맨위에 NoTabWebActivity가 하나만 존재, singleTop 지정 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.NoTabWebActivity"
+            android:configChanges="screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.NO_TAB_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 탭 메뉴가 없는 웹 화면 -->
+        <!-- 날방 호출시 맨위에 NoTabWebActivity가 하나만 존재, singleTop 지정 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.productDetail.ProductDetailWebActivityV2"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.PRODUCT_DETAIL_NATIVE_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 기존에 NoTabWebActivity와 별개로 새로 액티비티 생성 -->
+        <!-- 기존에 사용하던 NoTabWebActivity에 간섭 우려로 인해 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.TvMembersActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.TV_MEMBERS_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 마이쇼핑 웹 화면 singleTop 탭기능으로 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.MyShopWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.MY_SHOP_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 주문서 웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.OrderWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.ORDER_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 하단탭 없는 주문서 웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.OrderNoTabWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.ORDER_NOTAB_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.web.MobileLiveNoTabWebActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.MOBILELIVE_NOTAB_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 바로구매 웹 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.web.DirectOrderWebActivity"
+            android:theme="@style/DirectOrder"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.DIRECT_ORDER_WEB" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          커스텀 URI 스키마를 통해 우리앱을 실행하고자 하는 경우 관문 역할을 하는 액티비티.
+          data 스키마는 반드시 'gsshopmobile'로 설정해야하며, 외부앱(브라우저, ISP앱 등)에서
+          호출할 수 있어야하므로 exported=false로 설정하면 안된다.
+        -->
+        <activity
+            android:name="gsshop.mobile.v2.support.scheme.SchemeGatewayActivity"
+            android:excludeFromRecents="false"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:noHistory="false" >
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="gsshop.deeplink.page"
+                    android:scheme="@string/airbridge_app_scheme_http" />
+                <data
+                    android:host="gsshop.deeplink.page"
+                    android:scheme="@string/airbridge_app_scheme_https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="gsshopmobile" />
+            </intent-filter>
+            <!-- kakao link v3.0 적용 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+
+            <!-- kakao link v3.0 적용 신키 수신 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme_new" />
+            </intent-filter>
+
+            <!-- airbridge -->
+            <intent-filter android:autoVerify="true" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/airbridge_app_host"
+                    android:scheme="@string/airbridge_app_scheme_http" />
+                <data
+                    android:host="@string/airbridge_app_host"
+                    android:scheme="@string/airbridge_app_scheme_https" />
+            </intent-filter>
+        </activity>
+
+        <!-- 홈 검색 화면. 액티비티 히스토리에서 제외 -->
+        <activity
+            android:name="gsshop.mobile.v2.search.HomeSearchActivity"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustResize|stateVisible" > <!-- asis는 adjustResize였으나 디자인 요청사항으로 바뀜(20.04.23배포) -->
+
+            <intent-filter>
+                <action android:name="gsshop.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 로그인 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.user.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.LOGIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- sns 로그인 더미 화면. -->
+        <activity android:name="gsshop.mobile.v2.user.DummyAppBrowserActivity" />
+
+        <!-- PUSH알림 팝업 화면. 액티비티 히스토리에서 제외. pms 도입으로 삭제 -->
+        <!-- <activity -->
+        <!-- android:name=".push.PushPopupActivity" -->
+        <!-- android:excludeFromRecents="true" -->
+        <!-- android:exported="false" -->
+        <!-- android:noHistory="true" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" > -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="gsshop.intent.action.PUSH_POPUP" /> -->
+
+
+        <!-- <category android:name="android.intent.category.DEFAULT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 설정 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.setting.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- PUSH알림 설정 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.setting.PushSettingActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 앱 버전정보 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.setting.VersionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- 상품평 작성 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.review.ReviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!--
+        파일첨부(쇼미카페,이벤트 등) 화면, 파일업로드 후 링크만 웹뷰에 전달
+        <activity
+            android:name=".attach.FileAttachV2Activity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        -->
+        <!-- 파일첨부(쇼미카페,이벤트 등)에서 사진찍기 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.attach.FileAttachTakePictureActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+
+        <!-- 파일첨부(모바일상담) 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.attach.MobileTalkActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- gallery -->
+        <activity
+            android:name="gsshop.mobile.v2.attach.GalleryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.GALLERY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- short bang -->
+        <activity
+            android:name="gsshop.mobile.v2.home.shop.nalbang.ShortbangActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Shortbang"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.SHORT_BANG" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- short bang event -->
+        <activity
+            android:name="gsshop.mobile.v2.home.shop.nalbang.ShortbangEventActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Shortbang"
+            android:windowSoftInputMode="adjustResize" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.SHORT_BANG_EVENT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.home.shop.nalbang.ListViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="gsshop.mobile.v2.home.shop.nalbang.SubActivity"
+            android:theme="@style/AppTheme" />
+
+        <!-- push activity PMS 페이지 -->
+        <activity
+            android:name="gsshop.mobile.v2.tms.InboxActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <!--
+        google-cloud-messaging-client-1.0.jar 파일이 libs에 존재함에도 불구하고
+        NoSuchMethodError 발생(com.google.android.gcm.GCMBaseIntentService)하여 주석처리.
+         pms 푸시발송에는 영향도 없음
+        -->
+        <!-- <service android:name=".GCMIntentService" /> -->
+
+
+        <!-- 메인 앱위젯 -->
+        <receiver android:name="gsshop.mobile.v2.support.appwidget.MainAppWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_info" />
+        </receiver>
+
+        <!--
+          앱위젯에서 생방송 바로보기할 경우 과금안내 팝업화면.
+          launcheMode="singleInstance" 와 taskAffinity=""를 사용하여
+          앱 실행상태에서도 홈 스크린 위에 팝업이 뜨도록 함.
+        -->
+        <activity
+            android:name="gsshop.mobile.v2.support.appwidget.LiveTVPopupActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=".appwidget.LiveTVPopupActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 생방송/동영상 재생. 가로모드. 히스토리에서 제외. -->
+        <activity
+            android:name="gsshop.mobile.v2.support.tv.LiveVideoMediaPlayerActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.LIVE_VIDEO_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 딜 단품 페이지의 가로모드 activity 어떻게 바뀔 지 몰라 LiveVideoMediaPlayerActivity를 상속 받지만 따로 선언. -->
+        <activity
+            android:name="gsshop.mobile.v2.web.productDetail.ActivityDetailViewLiveVideoMediaPlayer"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="gsshop.mobile.v2.support.tv.NalbangFullMediaPlayerActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.NALBANG_FULL_VIDEO_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.support.tv.LiveTalkFullMediaPlayerActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.LIVETALK_FULL_VIDEO_PLAYER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 일반 가로모드 플레이어로(원본 크기로 재생됨). 히스토리에서 제외. -->
+
+
+        <!-- 처음 접속시 도움말 유형 1 -->
+
+
+        <!-- 프로모션 Small Type 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.support.promotion.PromotionSmallActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 프로모션 Medium Type 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.support.promotion.PromotionMediumActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 프로모션 Large Type 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.support.promotion.PromotionLargeActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 매장팝업 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.support.pmopopup.PmoPopupuActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 푸시동의팝업 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.tms.PushApproveActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 비밀번호 변경 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.support.permission.UpdatePassActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.UPDATE_PASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 지문인식 연동 확인 화면 -->
+        <activity
+            android:name="gsshop.mobile.v2.user.CheckFPActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.CHECK_FP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="gsshop.mobile.v2.user.PopupBasicActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.POPUP_BASIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- GS Super 전체 화면 Product List -->
+        <activity
+            android:name="gsshop.mobile.v2.home.shop.gssuper.GSSuperFullScreenBannerPopup"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 왼쪽 네비게이션 화면 -->
+
+
+        <!-- Google Analytics : Used for install referral measurement -->
+        <!-- libGoogleAnalyticsV3.jar 사용시 코드 -->
+        <!-- <service android:name="com.google.analytics.tracking.android.CampaignTrackingService" /> -->
+        <!-- google-play-services_lib 사용시 코드 (메소드 초과 문제로 libGoogleAnalyticsV3.jar 제거 후 아래 코드 사용) -->
+        <!-- <service android:name="com.google.android.gms.analytics.CampaignTrackingService" /> 해당 부분도 Firebase Analytics 로 바뀌면서 사용하지 않음. -->
+
+
+        <!--
+        <receiver android:name="com.google.analytics.tracking.android.CampaignTrackingReceiver" android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        -->
+
+
+        <!-- 앱업데이트 리시버 -->
+        <receiver
+            android:name="gsshop.mobile.v2.support.receiver.PackageReplacedReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- INSTALL_REFERRER 공통함수 -->
+        <receiver
+            android:name="gsshop.mobile.v2.support.advertise.ReferrerReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- FCM 적용 하면서 다음 버전 선언도 삭제, 해당 버전 선언이 있으면 버전 선언 먼저 읽기 때문. -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+
+
+        <!-- kakao link v3.0 적용 -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <receiver android:name="gsshop.mobile.v2.tms.PushNotiReceiver" >
+            <intent-filter>
+                <action android:name="gsshop.intent.action.NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+
+        <!-- pms FCM Receiver -->
+        <receiver
+            android:name="com.tms.sdk.push.PushReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="gsshop.mobile.v2" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="gsshop.mobile.v2.push.PushFcmService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- <service -->
+        <!-- android:name=".support.callgate.CallgateRegistrationIntentService" -->
+        <!-- android:exported="false"></service> -->
+
+
+        <!-- Visual ARS Launcher Receiver 설정 -->
+        <!-- <receiver android:name="com.callgate.launcher.NotificationReceiver"></receiver> -->
+
+
+        <!-- <service android:name="com.callgate.launcher.FCCIntentService" /> -->
+        <!-- <service android:name="com.callgate.launcher.fcc.FCCLockService" /> -->
+
+
+        <!-- Visual ARS 서비스용 Activity 설정 -->
+        <!-- <activity -->
+        <!-- android:name="com.callgate.launcher.view.LauncherWebView" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.callgate.launcher.view.LauncherView" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.callgate.launcher.fcc.FCCServicePopUp" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.callgate.launcher.fcc.FCCEmptyActivity" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+        <!-- <activity -->
+        <!-- android:name="com.callgate.launcher.jsg.PSActivity" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity> -->
+
+
+        <!-- 카카오 간편로그인을 사용하기 위해서 넣어줘야하는 부분 -->
+        <!-- 20190315 KakaoWebViewActivity 삭제 구글 플레이 스토어에서 외부 사기 광고로 인식하는 문제로 인해. -->
+
+
+        <!-- [naveroauthlogin][start] 네이버아이디로로그인을 사용하기 위해서 넣어줘야하는 부분 -->
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app" />
+        <!-- [naveroauthlogin][end] -->
+
+        <meta-data
+            android:name="PMS_NOTI_O_BADGE"
+            android:value="N" />
+
+        <!-- facebook sdk -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@style/com_facebook_activity_theme" />
+        <!-- SDK 업데이트를 하니 테마가 기존에 선언해 놓았던 테마가 겹쳐서 에러 발생, 5.+ 로 업데이트 하면서 테마 삭제. -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+
+        <activity
+            android:name="gsshop.mobile.v2.home.util.crop.CropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="com.google.firebase.MESSAGING_EVENT"/> -->
+            <!-- </intent-filter> -->
+        </activity>
+
+        <!--
+        Private PUSH Receiver
+        <receiver android:name="com.pms.sdk.push.PushReceiver" >
+            <intent-filter>
+                <action android:name="org.mosquitto.android.mqtt.MSGRECVD" />
+
+                <category android:name="gsshop.mobile.v2" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <meta-data
+            android:name="PMS_NOTI_CONTENT"
+            android:value="두손가락을 이용해 아래로 당겨주세요." />
+
+        <!-- Notification Bar Icon -->
+        <meta-data
+            android:name="TMS_SET_ICON"
+            android:resource="@drawable/ic_noti_an" />
+
+        <!-- GS SHOP GCM -->
+        <!--
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="gsshop.mobile.v2" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="gsshop.mobile.v2" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider940243329375632"
+            android:exported="true" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="gsshop.mobile.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- GS SSO Provider -->
+        <provider
+            android:name="gsshop.mobile.v2.sso.SSOProvider"
+            android:authorities="gsshop.mobile.v2.SSOProvider"
+            android:exported="true" />
+
+        <!-- glide configuration 설정. -->
+        <meta-data
+            android:name="gsshop.mobile.v2.util.GlideConfiguration"
+            android:value="GlideModule" />
+
+        <!-- appboy -->
+
+        <activity android:name="com.appboy.ui.AppboyWebViewActivity" />
+        <!-- Appboy FCM 변경 작업 -->
+        <receiver android:name="com.appboy.AppboyFcmReceiver" >
+            <intent-filter>
+                <category android:name="gsshop.mobile.v2" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 카메라 커스텀 프리뷰 -->
+        <activity
+            android:name="gsshop.mobile.v2.attach.customcamera.CameraCustomPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <!-- SMS Receiver 삭제 (구글 정책) 20190304 hklim -->
+
+
+        <!-- clevertap -->
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="@string/CLEVERTAP_ACCOUNT_ID" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="@string/CLEVERTAP_TOKEN" />
+        <meta-data
+            android:name="CLEVERTAP_USE_GOOGLE_AD_ID"
+            android:value="1" />
+        <meta-data
+            android:name="CLEVERTAP_REGION"
+            android:value="sk1" />
+
+        <provider
+            android:name="co.ab180.airbridge.internal.LifecycleProvider"
+            android:authorities="gsshop.mobile.v2.AirbridgeContentProvider"
+            android:exported="false" />
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             but set to not exported to explicitly avoid allowing another app to call it.
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.facebook.CustomTabMainActivity" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cct.gsshop.mobile.v2"
+                    android:scheme="fbconnect" />
+            </intent-filter>
+        </activity>
+        <!--
+         The initialization ContentProvider will call FacebookSdk.sdkInitialize automatically
+         with the application context. This config is merged in with the host app's manifest,
+         but there can only be one provider with the same authority activated at any given
+         point; so if the end user has two or more different apps that use Facebook SDK, only the
+         first one will be able to use the provider. To work around this problem, we use the
+         following placeholder in the authority to identify each host application as if it was
+         a completely different provider.
+        -->
+        <provider
+            android:name="com.facebook.internal.FacebookInitProvider"
+            android:authorities="gsshop.mobile.v2.FacebookInitProvider"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.appboy.ui.activities.AppboyFeedActivity" />
+        <activity android:name="com.appboy.ui.activities.AppboyContentCardsActivity" />
+        <activity android:name="com.appboy.push.AppboyNotificationRoutingActivity" />
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="gsshop.mobile.v2.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.kakao.auth.authorization.authcode.KakaoWebViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="@string/com_kakao_login_button"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+
+        <service
+            android:name="com.brightcove.player.network.DownloadMonitorService"
+            android:exported="false" />
+
+        <activity
+            android:name="com.tms.sdk.DefaultDialog"
+            android:alwaysRetainTaskState="false"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:taskAffinity=".DefaultDialog"
+            android:theme="@style/Theme.AppCompat.Translucent" /> <!-- If we don't register this Activity in the Manifest, apps using the SDK will crash when they try to access it. -->
+        <!-- During the app's build process, this manifest will be merged with the app-level one. -->
+        <activity android:name="com.brightcove.player.captioning.BrightcoveCaptionPropertiesActivity" />
+
+        <service
+            android:name="com.brightcove.player.services.BrightcoveMediaPlayerService"
+            android:enabled="true" />
+        <!--
+    Broadcast receiver to handle background tasks such as requesting data flush and geofence actions. Note that this
+    receiver needs to be exported in order for the system to properly route geofence intents to it.
+        -->
+        <receiver
+            android:name="com.appboy.receivers.AppboyActionReceiver"
+            android:enabled="true"
+            android:exported="true" >
+        </receiver>
+
+        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService" />
+        <service
+            android:name="com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService"
+            android:process=":filedownloader" />
+    </application>
+
+</manifest>

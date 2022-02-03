@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="abc_dialog_fixed_height_major" type="dimen">60%</item>
+    <item name="abc_dialog_fixed_height_minor" type="dimen">90%</item>
+    <item name="abc_dialog_fixed_width_major" type="dimen">50%</item>
+    <item name="abc_dialog_fixed_width_minor" type="dimen">70%</item>
+    <item name="abc_dialog_min_width_major" type="dimen">45%</item>
+    <item name="abc_dialog_min_width_minor" type="dimen">72%</item>
+    <dimen name="com_appboy_content_cards_max_width">600.0dp</dimen>
+    <dimen name="com_appboy_feed_max_width">600.0dp</dimen>
+    <dimen name="inbox_grade_rightmargin_offset">18dp</dimen>
+    <dimen name="mobiletalk_textbox_height">200dp</dimen>
+    <dimen name="scd_live_height">300dp</dimen>
+    <dimen name="scd_main_height">300dp</dimen>
+    <dimen name="sch_img_height">170.5dp</dimen>
+    <style name="Appboy.InAppMessage.Full">
+    <item name="android:layout_height">600.0dp</item>
+    <item name="android:layout_width">375.0dp</item>
+    <item name="android:layout_centerInParent">true</item>
+    <item name="android:background">@drawable/com_appboy_inappmessage_modal_background</item>
+    <item name="android:padding">0.0dp</item>
+  </style>
+</resources>

@@ -1,0 +1,53 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-v24\\values-v24.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\78c603cfc76d3e0aea84f0c2e4864e14\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,121,182,248",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "116,177,243,310"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "406,472,533,599",
+                        "endColumns": "65,60,65,66",
+                        "endOffsets": "467,528,594,661"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\957b788443faebfd2a49899d369d1918\\appcompat-1.1.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    },
+                    "to": {
+                        "startLines": "3,4",
+                        "startColumns": "4,4",
+                        "startOffsets": "114,271",
+                        "endColumns": "156,134",
+                        "endOffsets": "266,401"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\c6ca8e25c1b2413959a5225b4814f47a\\jetified-tms_ffff4f4\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "58",
+                        "endOffsets": "109"
+                    }
+                }
+            ]
+        }
+    ]
+}

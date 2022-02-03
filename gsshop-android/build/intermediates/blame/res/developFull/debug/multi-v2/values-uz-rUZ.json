@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-uz-rUZ\\values-uz-rUZ.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\fbb3e73ffc8ff22ab19ad07380542597\\jetified-exoplayer-ui-2.7.0\\res\\values-uz-rUZ\\values-uz-rUZ.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,140,215,293,365,444,532,613,700,779,861",
+                        "endColumns": "84,74,77,71,78,87,80,86,78,81,70",
+                        "endOffsets": "135,210,288,360,439,527,608,695,774,856,927"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yun\\.gradle\\caches\\transforms-2\\files-2.1\\ee45ffd73b66306dddd9a0d99af0c185\\jetified-core-3.3.2\\res\\values-uz-rUZ\\values-uz-rUZ.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,218,356,493,633,773,895,1026,1173,1338,1485,1601,1698",
+                        "endColumns": "162,137,136,139,139,121,130,146,164,146,115,96,85",
+                        "endOffsets": "213,351,488,628,768,890,1021,1168,1333,1480,1596,1693,1779"
+                    },
+                    "to": {
+                        "startLines": "13,14,15,16,17,18,19,20,21,22,23,24,25",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "932,1095,1233,1370,1510,1650,1772,1903,2050,2215,2362,2478,2575",
+                        "endColumns": "162,137,136,139,139,121,130,146,164,146,115,96,85",
+                        "endOffsets": "1090,1228,1365,1505,1645,1767,1898,2045,2210,2357,2473,2570,2656"
+                    }
+                }
+            ]
+        }
+    ]
+}

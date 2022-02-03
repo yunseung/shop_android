@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\build\\intermediates\\incremental\\mergeDevelopFullDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\yun\\AndroidStudioProject\\gsshop-android-gradle\\gsshop-android\\src\\main\\res\\values-v11\\styles.xml",
+                    "from": {
+                        "startLines": "6,13,19",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "221,538,905",
+                        "endLines": "10,18,22",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "483,899,1061"
+                    },
+                    "to": {
+                        "startLines": "2,7,13",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,318,679",
+                        "endLines": "6,12,16",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "313,674,832"
+                    }
+                }
+            ]
+        }
+    ]
+}

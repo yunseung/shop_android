@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Automatically generated file. DO NOT MODIFY -->
+
+    <!-- Values from product flavor: develop -->
+    <string name="asend_env_id" translatable="false">6f4529be9b</string>
+    <string name="csp_break_root" translatable="false">http://image.gsshop.com/ui</string>
+    <string name="csp_service_root" translatable="false">https://csp.gsshop.com</string>
+    <string name="kakao_app_key" translatable="false">c4cac3d2f71f88a02b45651f32383b5a</string>
+    <string name="last_prd_image" translatable="false">devimage.gsshop.com/image</string>
+    <string name="openDateMenuFlag" translatable="false">Y</string>
+    <string name="open_date" translatable="false"></string>
+    <string name="server_http_root" translatable="false">http://asm.gsshop.com</string>
+    <string name="server_https_root" translatable="false">https://asm.gsshop.com</string>
+    <string name="web_http_root" translatable="false">http://asm.gsshop.com</string>
+    <!-- Values from product flavor: full -->
+    <string name="skip_appboy" translatable="false">false</string>
+
+</resources>
